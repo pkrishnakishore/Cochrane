@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cochrane AI Platform Study Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Executive and Operations Dashboard</p>
+          <h1>Cochrane AI Platform Study</h1>
+          <p class="small-note">Last updated: <span id="lastUpdated"></span> | Designed and Managed by Krishna Kishore Pandalaneni</p>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" onclick="copyMainUpdate()">Copy weekly update</button>
+          <button class="btn primary" onclick="window.print()">Export PDF</button>
+        </div>
+      </header>
+
+<nav class="tabs">
+      <button class="tab active" data-view="executive" onclick="setView('executive')">Executive</button>
+      <button class="tab" data-view="review" onclick="setView('review')">Review Detail</button>
+      <button class="tab" data-view="operations" onclick="setView('operations')">Operations</button>
+      <button class="tab" data-view="meetings" onclick="setView('meetings')">Upcoming Meetings</button>
+      <button class="tab" data-view="protocol" onclick="setView('protocol')">Protocol & Governance</button>
+      <button class="tab" data-view="resources" onclick="setView('resources')">Resources</button>
+      <button class="tab" data-view="tools" onclick="setView('tools')" hidden>Tool View</button>
+    </nav>
+<section class="phase-strip" id="phaseStrip" data-panel="executive"></section>
+
+      <section class="metrics" id="executiveSummary" data-panel="executive"></section>
+
+      <section class="panel" data-panel="executive">
+        <div class="head">
+          <div>
+            <p class="kicker">Management control</p>
+            <h2 id="reviewStatusTitle">Phase 1 Review Status</h2>
+          </div>
+          <span class="note" id="reviewStatusNote">All five reviews</span>
+        </div>
+        <div id="reviewScoreboard"></div>
+      </section>
+
+      <section class="panel" data-panel="executive">
+        <div class="head">
+          <div>
+            <p class="kicker">Immediate attention</p>
+            <h2>Blockers and Actions</h2>
+          </div>
+        </div>
+        <div id="actionFocus" class="action-focus"></div>
+        <div id="decisionList" class="stack"></div>
+      </section>
+      
+      <section class="panel" data-panel="executive">
+        <div class="head">
+          <div>
+            <p class="kicker">Visual tracker</p>
+            <h2>Phase 1 Swimlane</h2>
+          </div>
+          <span class="note">Image-like status view by workflow stage</span>
+        </div>
+        <div id="swimlaneView"></div>
+      </section>
+
+      <section class="panel" data-panel="protocol">
+        <div class="head">
+          <div>
+            <p class="kicker">Future Capability</p>
+            <h2>Protocol Compliance & ADMC Integration</h2>
+            <p class="small-note">Module currently in development for Phase 1 scaling.</p>
+          </div>
+          <span class="note">Coming Next Release</span>
+        </div>
+
+        <div class="empty-state" style="text-align: left; align-items: flex-start; padding: 40px;">
+          <strong style="font-size: 20px; margin-bottom: 12px; display: block;">Advanced Governance Tracking is being staged.</strong>
+          <p style="margin-bottom: 16px; font-size: 14px; color: #475467;">To ensure strict adherence to standards during the AI evidence synthesis, this upcoming module will centralize oversight. Once deployed, leadership will have automated visibility into:</p>
+          
+          <div style="display: grid; gap: 12px; margin-top: 16px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <div>
+                <strong style="font-size:
+
+        <div class="empty-state" style="text-align: left; align-items: flex-start; padding: 40px;">
+          <strong style="font-size: 20px; margin-bottom: 12px; display: block;">Advanced Governance Tracking is being staged.</strong>
+          <p style="margin-bottom: 16px; font-size: 14px; color: #475467;">To ensure strict adherence to standards during the AI evidence synthesis, this upcoming module will centralize oversight. Once deployed, leadership will have automated visibility into:</p>
+          
+          <div style="display: grid; gap: 12px; margin-top: 16px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <div>
+                <strong style="font-size: 14px; color: #111827;">Decision Gate Thresholds</strong>
+                <p style="margin-top: 4px; font-size: 13px; color: #475467;">Real-time tracking of sensitivity, precision, and F1 limits required to pass interim analysis.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <div>
+                <strong style="font-size: 14px; color: #111827;">ADMC Adjudication Queue</strong>
+                <p style="margin-top: 4px; font-size: 13px; color: #475467;">A centralized ledger of discordances between human and AI arms pending committee review.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: start;">
+              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <div>
+                <strong style="font-size: 14px; color: #111827;">Protocol Deviation Audit Trail</strong>
+                <p style="margin-top: 4px; font-size: 13px; color: #475467;">Automated flagging for missing criteria, data item mismatches, or timeline breaches.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel compact-panel" data-panel="meetings">
+        <div class="head">
+          <div>
+            <p class="kicker">Calendar control</p>
+            <h2>Upcoming Meetings</h2>
+          </div>
+          <span class="note">Next 4</span>
+        </div>
+        <div id="upcomingMeetings" class="meeting-list"></div>
+      </section>
+      <section class="panel" data-panel="resources">
+        <div class="head">
+          <div>
+            <p class="kicker">Project resources</p>
+            <h2>Documents, Presentations, Folders and Links</h2>
+            <p class="small-note">Central place to access key project materials, onboarding documents, folders, and survey links.</p>
+          </div>
+          <span class="note">Clickable resources</span>
+        </div>
+
+        <div id="resourceLibrary"></div>
+      </section>
+      <section class="panel" data-panel="tools" hidden>
+        <div class="head">
+          <div>
+            <p class="kicker">Tool control</p>
+            <h2>Tool A vs Tool B Impact</h2>
+            <p class="small-note">Tool-level workload, blockers, dependencies, and Phase 1 delivery pressure.</p>
+          </div>
+          <span class="note">Operational comparison</span>
+        </div>
+        <div id="toolView"></div>
+      </section>
+
+     <section class="panel" data-panel="operations">
+        <div class="head">
+          <div>
+            <p class="kicker">Operations matrix</p>
+            <h2>Full Phase 1 Activity Tracker</h2>
+            <p class="small-note">Every Phase 1 review is tracked against every activity from the Excel Phase 1 sheet.</p>
+          </div>
+          <div class="toolbar">
+            <label for="groupFilter">Group</label>
+            <select id="groupFilter" onchange="renderWorkflowMatrix()"></select>
+          </div>
+        </div>
+        <div id="workflowMatrix"></div>
+      </section>
+
+     <section class="grid equal" data-panel="operations">
+        <div class="panel">
+          <div class="head">
+            <div>
+              <p class="kicker">Risk control</p>
+              <h2>Critical Items</h2>
+            </div>
+          </div>
+          <div id="criticalItems" class="stack"></div>
+        </div>
+
+        <div class="panel">
+          <div class="head">
+            <div>
+              <p class="kicker">Action control</p>
+              <h2>Priority Worklist</h2>
+            </div>
+          </div>
+          <div id="mainTodos" class="stack"></div>
+        </div>
+      </section>
+
+      <section class="panel" data-panel="operations">
+        <div class="head">
+          <div>
+            <p class="kicker">Operations matrix</p>
+            <h2>Full Phase 1 Activity Tracker</h2>
+            <p class="small-note">Every Phase 1 review is tracked against every activity from the Excel Phase 1 sheet.</p>
+          </div>
+          <div class="toolbar">
+            <label for="groupFilter">Group</label>
+            <select id="groupFilter" onchange="renderWorkflowMatrix()"></select>
+          </div>
+        </div>
+        <div id="workflowMatrix"></div>
+      </section>
+
+      <section class="grid review-grid" data-panel="review">
+        <aside class="panel">
+          <div class="head">
+            <div>
+              <p class="kicker">Navigation</p>
+              <h2>Reviews</h2>
+            </div>
+          </div>
+          <div class="search">
+            <span>Search</span>
+            <input id="searchInput" placeholder="Review, lead, status" oninput="renderSearchList()" />
+          </div>
+          <div class="stack" id="searchList"></div>
+        </aside>
+
+        <section id="detailView"></section>
+      </section>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
