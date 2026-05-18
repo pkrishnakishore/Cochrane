@@ -360,10 +360,10 @@ const dashboardData = {
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
-      "currentStage": "Setup package and abstract screening readiness",
-      "currentUpdate": "Sean uploaded the final data items file on 14 May after a minor instruction-field change; Doreen confirmed the change makes sense. Laser AI setup/readiness can proceed.",
-      "nextAction": "Complete Laser AI setup, confirm time tracking, and validate the abstract screening setup before screening begins.",
-      "communicationSupport": "Sean uploaded the final data items file on 14 May after a minor instruction-field change; Doreen confirmed the change makes sense. Laser AI setup/readiness can proceed.",
+      "currentStage": "Check-in scheduled / Abstract screening setup readiness",
+      "currentUpdate": "Sean and Doreen have aligned on data-item instructions. Laser AI setup/readiness can proceed.",
+      "nextAction": "Use 19 May check-in to confirm Laser AI setup, time tracking, and next screening steps.",
+      "communicationSupport": "Sean and Doreen have aligned on data-item instructions. Laser AI setup/readiness can proceed.",
       "communicationLog": [
         {
           "id": "comm-phase1-01-001",
@@ -405,6 +405,20 @@ const dashboardData = {
           "linkedTaskId": "task-phase1-01-004",
           "linkedAction": "Validate abstract screening setup before screening starts",
           "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-01-020",
+          "date": "2026-05-17",
+          "subject": "Blood Pressure check-in confirmations",
+          "people": "UBC Team",
+          "resp": "Krishna",
+          "due": "2026-05-19",
+          "status": "Scheduled",
+          "summary": "Jim Wright, Ciprian Jauca, and Guillaume Grenet accepted the Blood Pressure check-in. Gerald declined due to conflict.",
+          "linkedTaskId": "task-phase1-01-010",
+          "linkedAction": "Prepare agenda for 19 May Blood Pressure check-in",
+          "sourceType": "Calendar",
           "sourceLink": ""
         }
       ],
@@ -490,6 +504,18 @@ const dashboardData = {
           "communication": "Do not mark abstract screening active until the setup is validated and reviewers begin screening.",
           "source": "Project tracking",
           "sourceDate": "2026-05-14"
+        },
+        {
+          "id": "task-phase1-01-010",
+          "task": "Prepare agenda for 19 May Blood Pressure check-in",
+          "owner": "Krishna",
+          "status": "In Progress",
+          "risk": "Medium",
+          "due": "2026-05-19",
+          "dependency": "Review-team meeting",
+          "communication": "Jim Wright, Ciprian Jauca, and Guillaume Grenet accepted; Gerald declined due to conflict.",
+          "source": "Calendar",
+          "sourceDate": "2026-05-17"
         }
       ],
       "criticalItems": [
@@ -498,7 +524,7 @@ const dashboardData = {
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "Pending",
+        "setup": "Active",
         "abstract": "",
         "fullText": "",
         "extraction": "",
@@ -524,8 +550,8 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Setup package and abstract screening readiness",
-        "targetDate": "2026-05-15",
+        "plannedGate": "Check-in scheduled / Abstract screening setup readiness",
+        "targetDate": "2026-05-19",
         "variance": "Data extraction comparability issue appears resolved; final data items now uploaded by Sean.",
         "assessment": "In Progress"
       },
@@ -537,7 +563,7 @@ const dashboardData = {
         },
         {
           "label": "Target",
-          "value": "2026-05-15",
+          "value": "2026-05-19",
           "state": "In Progress"
         },
         {
@@ -556,10 +582,10 @@ const dashboardData = {
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
-      "currentStage": "Full-text readiness / Nested Knowledge full-text issue follow-up",
-      "currentUpdate": "Nested Knowledge completed action items for trial registries and multi-abstract PDFs in the Plaque Psoriasis project. Remaining unavailable or paywalled full texts have been commented on in Study Inspector.",
-      "nextAction": "Confirm remaining full-text gaps with review team and proceed with full-text readiness once unresolved PDFs/access issues are handled.",
-      "communicationSupport": "Nested Knowledge completed action items for trial registries and multi-abstract PDFs in the Plaque Psoriasis project. Remaining unavailable or paywalled full texts have been commented on in Study Inspector.",
+      "currentStage": "Check-in scheduled / Abstract screening appears completed or near-complete; Sean has been asked to confirm data quality. full-text set up done.",
+      "currentUpdate": "Sivem confirmed that the conventional approach will be followed and standalone columns will be added for all additional data items",
+      "nextAction": "Confirm remaining full-text gaps with review team and proceed with full-text readiness once unresolved PDFs/access issues are handled. 19 May catch-up to confirm abstract screening completion, survey completion",
+      "communicationSupport": "Sivem confirmed that the conventional approach will be followed and standalone columns will be added for all additional data items",
       "communicationLog": [
         {
           "id": "comm-phase1-02-001",
@@ -602,15 +628,44 @@ const dashboardData = {
           "linkedAction": "Confirm full-text criteria and handling of remaining full-text issues",
           "sourceType": "Email",
           "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-020",
+          "date": "2026-05-17",
+          "subject": "Psoriasis extraction structure confirmation",
+          "people": "Sivem Afach",
+          "resp": "Sean / Krishna / Meghan",
+          "due": "2026-05-19",
+          "status": "Complete",
+          "summary": "Sivem confirmed that the conventional approach will be followed and standalone columns will be added for all additional data items.",
+          "linkedTaskId": "task-phase1-02-012",
+          "linkedAction": "Prepare agenda for 19 May Psoriasis catch-up",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-021",
+          "date": "2026-05-17",
+          "subject": "Psoriasis catch-up confirmation",
+          "people": "Gerald / Laurence / Sivem",
+          "resp": "Krishna",
+          "due": "2026-05-19",
+          "status": "Scheduled",
+          "summary": "Gerald accepted the Psoriasis catch-up; Laurence and Sivem indicated 9 AM EST on 19 May works.",
+          "linkedTaskId": "task-phase1-02-012",
+          "linkedAction": "Prepare agenda for 19 May Psoriasis catch-up",
+          "sourceType": "Calendar / Email",
+          "sourceLink": ""
         }
       ],
       "files": {
         "RIS": true,
-        "PDFs": false,
+        "PDFs": true,
         "Criteria": false,
         "Extraction": false,
         "Protocol": true,
-        "Time Log": true
+        "Time Log": true,
+        "Survey": false
       },
       "stages": [
         {
@@ -653,15 +708,15 @@ const dashboardData = {
         },
         {
           "id": "task-phase1-02-002",
-          "task": "Confirm full-text readiness after Nested Knowledge fixes",
-          "owner": "Meghan / Response Team",
-          "status": "In Progress",
-          "risk": "Medium",
-          "due": "2026-05-15",
-          "dependency": "Full-text files and criteria",
-          "communication": "Trial registry and multi-abstract PDF issues were addressed by Nested Knowledge; remaining access gaps need confirmation.",
+          "task": "Confirm full-text readiness and transition to screening",
+          "owner": "Meghan / Nested Knowledge / Review Team",
+          "status": "Complete",
+          "risk": "Low",
+          "due": "2026-05-17",
+          "dependency": "NK full-text readiness confirmation",
+          "communication": "Full-text screening is now ready in Nested Knowledge, with only 1 study out of 305 not located.",
           "source": "Email",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-05-17"
         },
         {
           "id": "task-phase1-02-003",
@@ -677,20 +732,45 @@ const dashboardData = {
         },
         {
           "id": "task-phase1-02-004",
-          "task": "Send usability survey after abstract screening completion",
-          "owner": "Krishna",
-          "status": "Not Started",
-          "risk": "Low",
-          "due": "After abstract screening",
+          "task": "Awating Sean confirmation for abstract screenign completion. Send usability survey after abstract screening completion",
+          "owner": "Sean / Krishna",
+          "status": "Pending",
+          "risk": "Medium",
+          "due": "2026-05-18",
           "dependency": "Abstract screening completion",
-          "communication": "Send survey when abstract screening is confirmed complete.",
+          "communication": "Sivem confirmed they will complete the usability survey once Krishna sends the link. Krishna Wating for sean Confimration",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-05-18"
+        },
+        {
+          "id": "task-phase1-02-011",
+          "task": "Confirm abstract screening completion and data quality with Sean",
+          "owner": "Krishna / Sean",
+          "status": "Pending",
+          "risk": "High",
+          "due": "2026-05-18",
+          "dependency": "Abstract screening data",
+          "communication": "Krishna emailed Sean asking whether Sivem’s review completed abstract screening and whether data looks okay.",
+          "source": "Email",
+          "sourceDate": "2026-05-16"
+        },
+        {
+          "id": "task-phase1-02-012",
+          "task": "Prepare agenda for 19 May Psoriasis catch-up",
+          "owner": "Krishna",
+          "status": "In Progress",
+          "risk": "Medium",
+          "due": "2026-05-19",
+          "dependency": "Review-team meeting",
+          "communication": "Gerald, Laurence, and Sivem confirmed availability for the catch-up.",
+          "source": "Email / Calendar",
+          "sourceDate": "2026-05-17"
         }
       ],
       "criticalItems": [
         "Remaining full-text gaps",
-        "Full-text criteria still need confirmation"
+        "Full-text criteria still need confirmation",
+        "Usability survey link pending"
       ],
       "history": [],
       "milestones": {
@@ -720,17 +800,18 @@ const dashboardData = {
         "w16": "Complete",
         "w17": "In Progress",
         "w18": "In Progress",
-        "w26": "Not Started",
-        "w27": "Not Started",
-        "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started"
+        "w26": "Complete",
+        "w27": "Complete",
+        "w28": "Complete",
+        "w29": "Complete",
+        "w30": "In Progress",
+        "w45": "In Progress"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Full-text readiness / Nested Knowledge full-text issue follow-up",
+        "plannedGate": "Check-in scheduled / Abstract screening appears completed or near-complete; Sean has been asked to confirm data quality. full-text set up done.",
         "targetDate": "2026-05-15",
-        "variance": "Full-text issue partially resolved by Nested Knowledge; remaining paywalled/unavailable records may still require review-team input.",
+        "variance": "Full-text issue resolved by Nested Knowledge; Usability survey link still needs to be sent and completion tracked.",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -1429,13 +1510,13 @@ const dashboardData = {
       "communication": "Sean uploaded the final data items file and Doreen confirmed the final change makes sense."
     },
     {
-      "task": "Confirm full-text readiness after Nested Knowledge fixes",
-      "owner": "Meghan / Response Team",
-      "status": "In Progress",
-      "due": "2026-05-15",
-      "dependency": "Full-text files and criteria",
+      "task": "Confirm full-text readiness and transition to screening",
+      "owner": "Meghan / Nested Knowledge / Review Team",
+      "status": "Complete",
+      "due": "2026-05-17",
+      "dependency": "NK full-text readiness confirmation",
       "linkedReviewId": "phase1-02",
-      "communication": "Trial registry and multi-abstract PDF issues were addressed by Nested Knowledge; remaining access gaps need confirmation."
+      "communication": "Full-text screening is now ready in Nested Knowledge, with only 1 study out of 305 not located."
     },
     {
       "task": "Arrange allocated tool training closer to study start date",
@@ -1546,13 +1627,13 @@ const dashboardData = {
       "communication": "Do not mark abstract screening active until the setup is validated and reviewers begin screening."
     },
     {
-      "task": "Send usability survey after abstract screening completion",
-      "owner": "Krishna",
-      "status": "Not Started",
-      "due": "After abstract screening",
+      "task": "Awating Sean confirmation for abstract screenign completion. Send usability survey after abstract screening completion",
+      "owner": "Sean / Krishna",
+      "status": "Pending",
+      "due": "2026-05-18",
       "dependency": "Abstract screening completion",
       "linkedReviewId": "phase1-02",
-      "communication": "Send survey when abstract screening is confirmed complete."
+      "communication": "Sivem confirmed they will complete the usability survey once Krishna sends the link. Krishna Wating for sean Confimration"
     },
     {
       "task": "Begin setup only after RIS and review materials are available",
@@ -1580,6 +1661,33 @@ const dashboardData = {
       "dependency": "Review and tool confirmation",
       "linkedReviewId": "phase1-05",
       "communication": "Start onboarding only after candidate and tool are confirmed."
+    },
+    {
+      "task": "Prepare agenda for 19 May Blood Pressure check-in",
+      "owner": "Krishna",
+      "status": "In Progress",
+      "due": "2026-05-19",
+      "dependency": "Review-team meeting",
+      "linkedReviewId": "phase1-01",
+      "communication": "Jim Wright, Ciprian Jauca, and Guillaume Grenet accepted; Gerald declined due to conflict."
+    },
+    {
+      "task": "Confirm abstract screening completion and data quality with Sean",
+      "owner": "Krishna / Sean",
+      "status": "Pending",
+      "due": "2026-05-18",
+      "dependency": "Abstract screening data",
+      "linkedReviewId": "phase1-02",
+      "communication": "Krishna emailed Sean asking whether Sivem’s review completed abstract screening and whether data looks okay."
+    },
+    {
+      "task": "Prepare agenda for 19 May Psoriasis catch-up",
+      "owner": "Krishna",
+      "status": "In Progress",
+      "due": "2026-05-19",
+      "dependency": "Review-team meeting",
+      "linkedReviewId": "phase1-02",
+      "communication": "Gerald, Laurence, and Sivem confirmed availability for the catch-up."
     },
     {
       "task": "Full-text time not reported",
@@ -1611,11 +1719,11 @@ const dashboardData = {
     {
       "task": "Remaining full-text gaps",
       "owner": "Review Team / Meghan / Nested Knowledge",
-      "status": "Waiting on Others",
-      "due": "2026-05-15",
-      "dependency": "May delay full-text readiness and downstream tool setup.",
+      "status": "Under Review",
+      "due": "2026-05-19",
+      "dependency": "Minimal remaining risk from 1 unresolved full text.",
       "linkedReviewId": "phase1-02",
-      "communication": "Ask review team to source remaining full texts or document unavailable records."
+      "communication": "Confirm whether the single missing full text should be documented or manually retrieved."
     },
     {
       "task": "Full-text criteria still need confirmation",
@@ -1627,6 +1735,24 @@ const dashboardData = {
       "communication": "Confirm full-text criteria and decisions on trial registries, conference abstracts, and unavailable PDFs."
     },
     {
+      "task": "Usability survey link pending",
+      "owner": "Krishna",
+      "status": "Needs Action",
+      "due": "2026-05-18",
+      "dependency": "Survey data may be missed if the team advances stages before completing it.",
+      "linkedReviewId": "phase1-02",
+      "communication": "Send survey link immediately and track completion."
+    },
+    {
+      "task": "Covidence workflow metadata not yet collected",
+      "owner": "Krishna",
+      "status": "Needs Action",
+      "due": "2026-05-18",
+      "dependency": "May delay decisions on extraction suggestion functionality and platform compatibility.",
+      "linkedReviewId": "All",
+      "communication": "Create simple form/tracker and collect Covidence/workflow metadata from active reviews."
+    },
+    {
       "task": "RIS/search results not yet available",
       "owner": "Review Team",
       "status": "Waiting on Others",
@@ -1634,6 +1760,15 @@ const dashboardData = {
       "dependency": "Tool setup cannot proceed until search/RIS materials are available.",
       "linkedReviewId": "phase1-03",
       "communication": "Collect RIS/search results after the scheduled search and then begin setup."
+    },
+    {
+      "task": "Adjudication pilot synthesis pending",
+      "owner": "Krishna / Sean / Afroditi",
+      "status": "In Progress",
+      "due": "2026-05-18",
+      "dependency": "Without synthesis, the May 19 discussion may be less focused.",
+      "linkedReviewId": "All",
+      "communication": "Compile submissions and identify areas of disagreement before the pilot-results discussion."
     },
     {
       "task": "Tool allocation pending",
@@ -1776,16 +1911,16 @@ const dashboardData = {
       "id": "crit-phase1-02-001",
       "phase": "Phase 1",
       "item": "Remaining full-text gaps",
-      "description": "Some full texts in the psoriasis review remain unavailable or paywalled after Nested Knowledge addressed trial registry and multi-abstract PDF issues.",
-      "severity": "Medium",
-      "status": "Waiting on Others",
+      "description": "Full-text readiness risk has substantially reduced. Nested Knowledge full-text screening is now ready, with only 1 study out of 305 missing.",
+      "severity": "Low",
+      "status": "Under Review",
       "owner": "Review Team / Meghan / Nested Knowledge",
-      "due": "2026-05-15",
+      "due": "2026-05-19",
       "linkedReviewId": "phase1-02",
-      "mitigation": "Ask review team to source remaining full texts or document unavailable records.",
-      "impact": "May delay full-text readiness and downstream tool setup.",
+      "mitigation": "Confirm whether the single missing full text should be documented or manually retrieved.",
+      "impact": "Minimal remaining risk from 1 unresolved full text.",
       "source": "Email",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-05-17"
     },
     {
       "id": "crit-phase1-02-002",
@@ -1803,6 +1938,36 @@ const dashboardData = {
       "sourceDate": "2026-05-14"
     },
     {
+      "id": "crit-phase1-02-004",
+      "phase": "Phase 1",
+      "item": "Usability survey link pending",
+      "description": "Sivem confirmed the team will complete the abstract-screening usability survey once Krishna sends the link.",
+      "severity": "High",
+      "status": "Needs Action",
+      "owner": "Krishna",
+      "due": "2026-05-18",
+      "linkedReviewId": "phase1-02",
+      "mitigation": "Send survey link immediately and track completion.",
+      "impact": "Survey data may be missed if the team advances stages before completing it.",
+      "source": "Email",
+      "sourceDate": "2026-05-16"
+    },
+    {
+      "id": "crit-global-003",
+      "phase": "All",
+      "item": "Covidence workflow metadata not yet collected",
+      "description": "The project has not yet collected which active Cochrane reviews use Covidence, but this is needed for the data extraction suggestion feature issue flagged by Ella and Gerald.",
+      "severity": "High",
+      "status": "Needs Action",
+      "owner": "Krishna",
+      "due": "2026-05-18",
+      "linkedReviewId": "All",
+      "mitigation": "Create simple form/tracker and collect Covidence/workflow metadata from active reviews.",
+      "impact": "May delay decisions on extraction suggestion functionality and platform compatibility.",
+      "source": "Email",
+      "sourceDate": "2026-05-16"
+    },
+    {
       "id": "crit-phase1-03-001",
       "phase": "Phase 1",
       "item": "RIS/search results not yet available",
@@ -1816,6 +1981,21 @@ const dashboardData = {
       "impact": "Tool setup cannot proceed until search/RIS materials are available.",
       "source": "Project tracking",
       "sourceDate": "2026-05-14"
+    },
+    {
+      "id": "crit-adj-002",
+      "phase": "Adjudication",
+      "item": "Adjudication pilot synthesis pending",
+      "description": "Adjudication pilot submissions are arriving, including Bartosz and Andreea, but outputs still need consolidation for comparison and discussion.",
+      "severity": "Medium",
+      "status": "In Progress",
+      "owner": "Krishna / Sean / Afroditi",
+      "due": "2026-05-18",
+      "linkedReviewId": "All",
+      "mitigation": "Compile submissions and identify areas of disagreement before the pilot-results discussion.",
+      "impact": "Without synthesis, the May 19 discussion may be less focused.",
+      "source": "Email",
+      "sourceDate": "2026-05-16"
     },
     {
       "id": "crit-phase1-03-002",
@@ -2032,20 +2212,6 @@ const dashboardData = {
   ],
   "upcomingMeetings": [
     {
-      "id": "meet-001",
-      "date": "15 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Usability survey tracking discussion",
-      "agenda": "Discuss survey tracking, review team details, assigned tools, and expected timelines for screening and data extraction.",
-      "attendees": "Krishna; Susan Banda; Ursula Griebler",
-      "owner": "Krishna / Susan",
-      "focus": "All",
-      "status": "Scheduled",
-      "linkedReviewId": "All",
-      "meetingLink": "[insert meeting link]"
-    },
-    {
       "id": "meet-002",
       "date": "18 May 2026",
       "etTime": "TBD",
@@ -2088,18 +2254,18 @@ const dashboardData = {
       "meetingLink": "[insert meeting link]"
     },
     {
-      "id": "meet-005",
+      "id": "meet-007",
       "date": "19 May 2026",
-      "etTime": "COB",
-      "ukTime": "COB",
-      "title": "Adjudication pilot deadline",
-      "agenda": "Deadline for adjudication pilot task completion using shared slides, PDFs, and Excel file.",
-      "attendees": "Adjudication panel; Gerald; Andreea; Krishna",
-      "owner": "Andreea / Krishna",
+      "etTime": "TBD",
+      "ukTime": "TBD",
+      "title": "Adjudication pilot results discussion",
+      "agenda": "Discuss adjudication pilot submissions, compare judgments, identify interpretation differences, and agree next steps for adjudication process.",
+      "attendees": "Andreea; Bartosz; Larisa; Matteo; Amin; Sean; Afroditi; Krishna",
+      "owner": "Krishna / Andreea",
       "focus": "Adjudication",
-      "status": "Pending",
+      "status": "Scheduling",
       "linkedReviewId": "All",
-      "meetingLink": "[insert adjudication folder link]"
+      "meetingLink": "[insert Calendly or meeting link]"
     },
     {
       "id": "meet-006",
