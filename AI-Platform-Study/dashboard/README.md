@@ -2,6 +2,8 @@
 
 Static GitHub Pages dashboard for the Cochrane AI Platform Study. The Excel workbook is the source of truth, and `data.js` is generated from it.
 
+Live dashboard: https://pkrishnakishore.github.io/Cochrane/AI-Platform-Study/dashboard/
+
 ## Commands
 
 ```bash
@@ -44,10 +46,16 @@ Run:
 npm run start
 ```
 
-Open:
+Open locally:
 
 ```text
 http://127.0.0.1:4173/
+```
+
+Published dashboard:
+
+```text
+https://pkrishnakishore.github.io/Cochrane/AI-Platform-Study/dashboard/
 ```
 
 When using the local server, refreshing the dashboard also regenerates `data.js` from Excel.
