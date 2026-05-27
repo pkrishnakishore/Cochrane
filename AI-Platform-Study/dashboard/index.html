@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -35,8 +35,16 @@
     </nav>
 <section class="phase-strip" id="phaseStrip" data-panel="executive"></section>
 
-      <section class="metrics" id="executiveSummary" data-panel="executive"></section>
-
+      <section class="panel" data-panel="executive">
+        <div class="head">
+          <div>
+            <p class="kicker">Review Sourcing</p>
+            <h2>Review Selection Pipeline</h2>
+          </div>
+          <span class="note">Candidate Evaluation & Intake</span>
+        </div>
+        <div class="triage-grid" id="selectionPipeline"></div>
+      </section>
       <section class="panel" data-panel="executive">
         <div class="head">
           <div>
@@ -86,7 +94,7 @@
           
           <div style="display: grid; gap: 12px; margin-top: 16px;">
             <div style="display: flex; gap: 12px; align-items: start;">
-              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <span style="color: var(--navy); font-size: 16px;">â–</span>
               <div>
                 <strong style="font-size:
 
@@ -96,21 +104,21 @@
           
           <div style="display: grid; gap: 12px; margin-top: 16px;">
             <div style="display: flex; gap: 12px; align-items: start;">
-              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <span style="color: var(--navy); font-size: 16px;">â–</span>
               <div>
                 <strong style="font-size: 14px; color: #111827;">Decision Gate Thresholds</strong>
                 <p style="margin-top: 4px; font-size: 13px; color: #475467;">Real-time tracking of sensitivity, precision, and F1 limits required to pass interim analysis.</p>
               </div>
             </div>
             <div style="display: flex; gap: 12px; align-items: start;">
-              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <span style="color: var(--navy); font-size: 16px;">â–</span>
               <div>
                 <strong style="font-size: 14px; color: #111827;">ADMC Adjudication Queue</strong>
                 <p style="margin-top: 4px; font-size: 13px; color: #475467;">A centralized ledger of discordances between human and AI arms pending committee review.</p>
               </div>
             </div>
             <div style="display: flex; gap: 12px; align-items: start;">
-              <span style="color: var(--navy); font-size: 16px;">❖</span>
+              <span style="color: var(--navy); font-size: 16px;">â–</span>
               <div>
                 <strong style="font-size: 14px; color: #111827;">Protocol Deviation Audit Trail</strong>
                 <p style="margin-top: 4px; font-size: 13px; color: #475467;">Automated flagging for missing criteria, data item mismatches, or timeline breaches.</p>
@@ -226,7 +234,8 @@
     </section>
   </main>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data.js?v=20260526-no-summary"></script>
+  <script src="app.js?v=20260526-no-summary"></script>
 </body>
 </html>
+

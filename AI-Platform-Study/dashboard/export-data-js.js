@@ -3,27 +3,9 @@ const os = require("os");
 const path = require("path");
 const childProcess = require("child_process");
 
-const ROOT_WORKBOOK = path.join(__dirname, "cochrane_dashboard_backend_template.xlsx");
-const DATA_WORKBOOK = path.join(__dirname, "data", "cochrane_dashboard_backend_template.xlsx");
-const WORKBOOK = findWorkbook();
 const OUTFILE = path.join(__dirname, "data.js");
 const BACKUP_DIR = path.join(__dirname, "backups");
 const BACKUP_FILE = path.join(BACKUP_DIR, "data.backup.js");
-
-const REQUIRED_SHEETS = ["All_Reviews"];
-const SHEETS = [
-  "Dashboard_Config",
-  "All_Reviews",
-  "Workflow_Master",
-  "Review_Workflow_Status",
-  "Review_Tasks",
-  "Communication_Log",
-  "File_Readiness",
-  "Critical_Items",
-  "Resources",
-  "Upcoming_Meetings",
-  "Stage_Progress"
-];
 
 const DEFAULT_FILES = {
   RIS: false,
@@ -34,48 +16,15 @@ const DEFAULT_FILES = {
   "Time Log": false
 };
 
-const MILESTONE_COLUMNS = {
-  onboarding: "Milestone_Onboarding",
-  setup: "Milestone_Setup",
-  abstract: "Milestone_Abstract",
-  fullText: "Milestone_FullText",
-  extraction: "Milestone_Extraction",
-  analysis: "Milestone_Analysis"
-};
-
-const VALID_STATUSES = new Set([
-  "",
-  "active",
-  "blocked",
-  "closed",
-  "complete",
-  "complete / under review",
-  "in progress",
-  "high",
-  "low",
-  "medium",
-  "missing",
-  "needs action",
-  "not applicable",
-  "not eligible",
-  "not started",
-  "not yet required",
-  "on track",
-  "pending",
-  "ready",
-  "risk",
-  "scheduled",
-  "sent",
-  "starts 20 may",
-  "tbd",
-  "to be updated",
-  "under review",
-  "waiting on others",
-  "wrapping up"
-]);
+const DEFAULT_STAGES = [
+  { name: "Setup / Coordination", human: 0, ai: 0, status: "Not Started" },
+  { name: "Abstract Screening", human: 0, ai: 0, status: "Not Started" },
+  { name: "Full-text Screening", human: 0, ai: 0, status: "Not Started" },
+  { name: "Data Extraction / Analysis", human: 0, ai: 0, status: "Not Started" }
+];
 
 const DEFAULT_TIMELINE = {
-  source: "cochrane_dashboard_backend_template.xlsx",
+  source: "cochrane_dashboard_review_based_template.xlsx",
   phase1Window: "2026-05-01 to 2026-07-31",
   phaseCards: [
     ["pilot", "Pilot", "Mid March to Mid April", "Wrapping Up"],
@@ -103,10 +52,27 @@ function warn(message) {
 }
 
 function findWorkbook() {
-  const candidates = [DATA_WORKBOOK, ROOT_WORKBOOK].filter((file) => fs.existsSync(file));
-  if (!candidates.length) return DATA_WORKBOOK;
+  const explicit = process.argv.find((arg) => arg.startsWith("--workbook="));
+  if (explicit) return path.resolve(explicit.replace("--workbook=", ""));
+
+  const folders = [__dirname, path.join(__dirname, "data")].filter(fs.existsSync);
+  const candidates = folders.flatMap((folder) =>
+    fs.readdirSync(folder)
+      .filter((name) =>
+        /^cochrane_dashboard.*\.xlsx$/i.test(name) &&
+        !name.startsWith("~$")
+      )
+      .map((name) => path.join(folder, name))
+  );
+
+  if (!candidates.length) {
+    return path.join(__dirname, "cochrane_dashboard_review_based_template_v5_new_reviews_pipeline.xlsx");
+  }
+
   return candidates.sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs)[0];
 }
+
+const WORKBOOK = findWorkbook();
 
 function decodeXml(value) {
   return String(value || "")
@@ -126,22 +92,26 @@ function attributes(xml) {
   return output;
 }
 
-function escapeRegex(value) {
-  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
 function unzipWorkbook(workbookPath) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "cochrane-dashboard-xlsx-"));
   const zipPath = path.join(tmp, "workbook.zip");
   fs.copyFileSync(workbookPath, zipPath);
-  const safeZip = zipPath.replace(/'/g, "''");
-  const safeTmp = tmp.replace(/'/g, "''");
 
-  childProcess.execFileSync("powershell", [
-    "-NoProfile",
-    "-Command",
-    `Expand-Archive -LiteralPath '${safeZip}' -DestinationPath '${safeTmp}' -Force`
-  ], { stdio: "ignore" });
+  try {
+    const safeZip = zipPath.replace(/'/g, "''");
+    const safeTmp = tmp.replace(/'/g, "''");
+    childProcess.execFileSync("powershell", [
+      "-NoProfile",
+      "-Command",
+      `Expand-Archive -LiteralPath '${safeZip}' -DestinationPath '${safeTmp}' -Force`
+    ], { stdio: "ignore" });
+  } catch {
+    try {
+      childProcess.execFileSync("unzip", ["-q", "-o", zipPath, "-d", tmp], { stdio: "ignore" });
+    } catch {
+      throw new Error("Could not unzip workbook. Install PowerShell or unzip.");
+    }
+  }
 
   return tmp;
 }
@@ -150,16 +120,21 @@ function readText(root, relativePath) {
   return fs.readFileSync(path.join(root, relativePath), "utf8");
 }
 
+function sheetTarget(target) {
+  const cleaned = String(target || "").replace(/^\//, "");
+  return cleaned.startsWith("xl/") ? cleaned : `xl/${cleaned}`;
+}
+
 function readSharedStrings(root) {
   const file = path.join(root, "xl", "sharedStrings.xml");
   if (!fs.existsSync(file)) return [];
 
   const xml = fs.readFileSync(file, "utf8");
-  return [...xml.matchAll(/<si[\s\S]*?<\/si>/g)].map((match) => {
-    return [...match[0].matchAll(/<t[^>]*>([\s\S]*?)<\/t>/g)]
-      .map((textMatch) => decodeXml(textMatch[1]))
-      .join("");
-  });
+  return [...xml.matchAll(/<(?:\w+:)?si[\s\S]*?<\/(?:\w+:)?si>/g)].map((match) =>
+    [...match[0].matchAll(/<(?:\w+:)?t[^>]*>([\s\S]*?)<\/(?:\w+:)?t>/g)]
+      .map((item) => decodeXml(item[1]))
+      .join("")
+  );
 }
 
 function readSheetMap(root) {
@@ -169,16 +144,15 @@ function readSheetMap(root) {
 
   for (const match of relsXml.matchAll(/<Relationship\b([^>]*)\/>/g)) {
     const attrs = attributes(match[1]);
-    let target = (attrs.Target || "").replace(/^\//, "");
-    if (!target.startsWith("xl/")) target = `xl/${target}`;
-    rels[attrs.Id] = target;
+    rels[attrs.Id] = sheetTarget(attrs.Target);
   }
 
   const sheets = {};
-  for (const match of workbookXml.matchAll(/<sheet\b([^>]*)\/>/g)) {
+  for (const match of workbookXml.matchAll(/<(?:\w+:)?sheet\b([^>]*)\/>/g)) {
     const attrs = attributes(match[1]);
-    sheets[attrs.name] = rels[attrs["r:id"]];
+    if (attrs.name && rels[attrs["r:id"]]) sheets[attrs.name] = rels[attrs["r:id"]];
   }
+
   return sheets;
 }
 
@@ -190,33 +164,40 @@ function columnIndex(cellRef) {
 }
 
 function cellValue(cellXml, sharedStrings) {
-  const attrs = attributes((cellXml.match(/<c\b([^>]*)>/) || [])[1]);
-  const value = (cellXml.match(/<v>([\s\S]*?)<\/v>/) || [])[1];
-  const inline = (cellXml.match(/<is>([\s\S]*?)<\/is>/) || [])[1];
+  const attrs = attributes((cellXml.match(/<(?:\w+:)?c\b([^>]*)>/) || [])[1]);
+  const value = (cellXml.match(/<(?:\w+:)?v>([\s\S]*?)<\/(?:\w+:)?v>/) || [])[1];
+  const inline = (cellXml.match(/<(?:\w+:)?is>([\s\S]*?)<\/(?:\w+:)?is>/) || [])[1];
 
   if (attrs.t === "s") return sharedStrings[Number(value)] || "";
   if (attrs.t === "inlineStr") {
     return decodeXml(
-      [...String(inline || "").matchAll(/<t[^>]*>([\s\S]*?)<\/t>/g)]
-        .map((match) => match[1])
+      [...String(inline || "").matchAll(/<(?:\w+:)?t[^>]*>([\s\S]*?)<\/(?:\w+:)?t>/g)]
+        .map((item) => item[1])
         .join("")
     );
   }
-  if (attrs.t === "b") return value === "1";
+  if (attrs.t === "b") return value === "1" ? "Yes" : "No";
   return decodeXml(value || "");
 }
 
 function readRows(root, sheetPath, sharedStrings) {
   if (!sheetPath) return [];
   const xml = readText(root, sheetPath);
-  return [...xml.matchAll(/<row\b[^>]*>([\s\S]*?)<\/row>/g)].map((rowMatch) => {
+
+  return [...xml.matchAll(/<(?:\w+:)?row\b[^>]*>([\s\S]*?)<\/(?:\w+:)?row>/g)].map((rowMatch) => {
     const row = [];
-    for (const cellMatch of rowMatch[1].matchAll(/<c\b[^>]*\/>|<c\b[^>]*>[\s\S]*?<\/c>/g)) {
-      const attrs = attributes((cellMatch[0].match(/<c\b([^>]*)>/) || [])[1]);
-      row[columnIndex(attrs.r)] = cellValue(cellMatch[0], sharedStrings);
+    for (const cellMatch of rowMatch[1].matchAll(/<(?:\w+:)?c\b[^>]*\/>|<(?:\w+:)?c\b[^>]*>[\s\S]*?<\/(?:\w+:)?c>/g)) {
+      const attrs = attributes((cellMatch[0].match(/<(?:\w+:)?c\b([^>]*)>/) || [])[1]);
+      const index = columnIndex(attrs.r);
+      row[index >= 0 ? index : row.length] = cellValue(cellMatch[0], sharedStrings);
     }
     return row.map((value) => value ?? "");
   });
+}
+
+function sheetRows(sheetMap, root, sharedStrings, sheetName) {
+  if (!sheetMap[sheetName]) return [];
+  return readRows(root, sheetMap[sheetName], sharedStrings);
 }
 
 function normalizeHeader(value) {
@@ -231,11 +212,10 @@ function findHeaderIndex(rows, requiredHeaders) {
   });
 }
 
-function tableFromRows(rows, requiredHeaders) {
-  const headerIndex = findHeaderIndex(rows, requiredHeaders);
+function tableFromHeaderIndex(rows, headerIndex) {
   if (headerIndex < 0) return [];
-
   const headers = rows[headerIndex].map((header) => String(header || "").trim());
+
   return rows.slice(headerIndex + 1)
     .map((row) => {
       const output = {};
@@ -247,18 +227,8 @@ function tableFromRows(rows, requiredHeaders) {
     .filter((row) => Object.values(row).some((value) => String(value ?? "").trim() !== ""));
 }
 
-function isDisplayed(row) {
-  const value = String(row.DisplayInHTML ?? "").trim().toLowerCase();
-  return value === "yes" || value === "true" || value === "1" || value === "y";
-}
-
-function displayValue(row) {
-  return String(row.DisplayInHTML ?? "").trim();
-}
-
-function isYesNoDisplayValue(value) {
-  const normalized = String(value ?? "").trim().toLowerCase();
-  return ["yes", "no", "true", "false", "1", "0", "y", "n", ""].includes(normalized);
+function tableFromRows(rows, requiredHeaders) {
+  return tableFromHeaderIndex(rows, findHeaderIndex(rows, requiredHeaders));
 }
 
 function text(value, fallback = "") {
@@ -267,47 +237,41 @@ function text(value, fallback = "") {
 }
 
 function numberValue(value, fallback = 0) {
-  const parsed = Number(value);
+  const parsed = Number(String(value ?? "").replace("%", ""));
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
 function boolValue(value) {
   const normalized = String(value ?? "").trim().toLowerCase();
-  return normalized === "yes" || normalized === "true" || normalized === "1" || normalized === "ready" || normalized === "complete";
+  return ["yes", "true", "1", "ready", "complete", "active"].includes(normalized);
 }
 
-function milestoneValue(value) {
-  const normalized = String(value ?? "").trim().toLowerCase();
-  const allowed = {
-    complete: "Complete",
-    active: "Active",
-    risk: "Risk",
-    pending: "Pending"
-  };
-  return allowed[normalized] || "";
+function isDisplayed(row) {
+  const raw = row.DisplayInHTML ?? row.Display ?? "";
+  const value = String(raw).trim().toLowerCase();
+  if (!value) return true;
+  return ["yes", "true", "1", "y"].includes(value);
 }
 
 function excelDate(value, format = "iso") {
-  if (value instanceof Date) return formatDate(value, format);
   const raw = String(value ?? "").trim();
   if (!raw) return "";
-  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return format === "long" ? longDate(new Date(`${raw}T00:00:00Z`)) : raw;
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+    return format === "long" ? longDate(new Date(`${raw}T00:00:00Z`)) : raw;
+  }
 
   const serial = Number(raw);
   if (Number.isFinite(serial) && serial > 20000 && serial < 80000) {
     const date = new Date(Date.UTC(1899, 11, 30) + serial * 86400000);
-    return formatDate(date, format);
+    return format === "long" ? longDate(date) : date.toISOString().slice(0, 10);
   }
 
   return raw;
 }
 
-function formatDate(date, format) {
-  if (format === "long") return longDate(date);
-  return date.toISOString().slice(0, 10);
-}
-
 function longDate(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
   return date.toLocaleDateString("en-GB", {
     day: "numeric",
     month: "long",
@@ -316,149 +280,107 @@ function longDate(date) {
   });
 }
 
+function cardFromReviewSheet(rows) {
+  const cardRows = tableFromRows(rows, ["Card Field", "Value"]);
+  const card = {};
+  for (const row of cardRows) {
+    const key = text(row["Card Field"]);
+    if (!key) continue;
+    card[key] = text(row.Value);
+  }
+  return card;
+}
+
+function sectionTable(rows, requiredHeaders) {
+  return tableFromRows(rows, requiredHeaders);
+}
+
 function sortRows(rows) {
   return rows.slice().sort((a, b) => {
-    const orderA = numberValue(a.DisplayOrder, Number.MAX_SAFE_INTEGER);
-    const orderB = numberValue(b.DisplayOrder, Number.MAX_SAFE_INTEGER);
-    if (orderA !== orderB) return orderA - orderB;
+    const aOrder = numberValue(a.DisplayOrder ?? a.StepOrder ?? a.ActionOrder, Number.MAX_SAFE_INTEGER);
+    const bOrder = numberValue(b.DisplayOrder ?? b.StepOrder ?? b.ActionOrder, Number.MAX_SAFE_INTEGER);
+    if (aOrder !== bOrder) return aOrder - bOrder;
+
     return text(a.ReviewID || a.TaskID || a.CommunicationID || a.CriticalItemID || a.ResourceID || a.MeetingID)
       .localeCompare(text(b.ReviewID || b.TaskID || b.CommunicationID || b.CriticalItemID || b.ResourceID || b.MeetingID));
   });
 }
 
-function validateTables(tables) {
-  const errors = [];
-  const warnings = [];
-  const addError = (message) => errors.push(message);
-  const addWarning = (message) => warnings.push(message);
+function sheetNameForReview(review, sheetMap) {
+  const explicit = text(review.ReviewSheet || review.SheetName);
+  if (explicit && sheetMap[explicit]) return explicit;
 
-  const allReviewRows = tables.All_Reviews || [];
-  const displayedReviews = allReviewRows.filter(isDisplayed);
-  const reviewIds = new Set();
-  const duplicateReviewIds = new Set();
+  const reviewId = text(review.ReviewID);
+  const shortName = text(review.ShortName);
+  const candidates = Object.keys(sheetMap);
 
-  for (const row of allReviewRows) {
-    const reviewId = text(row.ReviewID);
-    if (!isYesNoDisplayValue(displayValue(row))) {
-      addWarning(`All_Reviews row "${reviewId || text(row.ShortName, "unknown")}" has DisplayInHTML value "${displayValue(row)}"; expected Yes or No.`);
-    }
-  }
-
-  for (const row of displayedReviews) {
-    const reviewId = text(row.ReviewID);
-    if (!reviewId) {
-      addError(`All_Reviews has a displayed row with missing ReviewID.`);
-      continue;
-    }
-    if (reviewIds.has(reviewId)) duplicateReviewIds.add(reviewId);
-    reviewIds.add(reviewId);
-    validateStatusValue(addWarning, "All_Reviews", reviewId, "Status", row.Status);
-    validateStatusValue(addWarning, "All_Reviews", reviewId, "Assessment", row.Assessment);
-  }
-
-  for (const reviewId of duplicateReviewIds) {
-    addError(`All_Reviews has duplicate ReviewID "${reviewId}".`);
-  }
-
-  const workflowIds = new Set(
-    (tables.Workflow_Master || [])
-      .filter(isDisplayed)
-      .map((row) => text(row.WorkflowStepID))
-      .filter(Boolean)
-  );
-
-  validateDisplayColumn(addWarning, "Workflow_Master", tables.Workflow_Master || [], "WorkflowStepID");
-  validateDisplayColumn(addWarning, "Review_Workflow_Status", tables.Review_Workflow_Status || [], "ReviewID");
-  validateDisplayColumn(addWarning, "Review_Tasks", tables.Review_Tasks || [], "TaskID");
-  validateDisplayColumn(addWarning, "Communication_Log", tables.Communication_Log || [], "CommunicationID");
-  validateDisplayColumn(addWarning, "File_Readiness", tables.File_Readiness || [], "ReviewID");
-  validateDisplayColumn(addWarning, "Critical_Items", tables.Critical_Items || [], "CriticalItemID");
-  validateDisplayColumn(addWarning, "Resources", tables.Resources || [], "ResourceID");
-  validateDisplayColumn(addWarning, "Upcoming_Meetings", tables.Upcoming_Meetings || [], "MeetingID");
-  validateDisplayColumn(addWarning, "Stage_Progress", tables.Stage_Progress || [], "ReviewID");
-
-  for (const row of (tables.Review_Workflow_Status || []).filter(isDisplayed)) {
-    const reviewId = text(row.ReviewID);
-    const stepId = text(row.WorkflowStepID);
-    if (reviewId && !reviewIds.has(reviewId)) addWarning(`Review_Workflow_Status references missing ReviewID "${reviewId}".`);
-    if (!stepId || !workflowIds.has(stepId)) addWarning(`Review_Workflow_Status references invalid WorkflowStepID "${stepId || "(blank)"}".`);
-    validateStatusValue(addWarning, "Review_Workflow_Status", `${reviewId}/${stepId}`, "Status", row.Status);
-  }
-
-  for (const row of (tables.Review_Tasks || []).filter(isDisplayed)) {
-    const taskId = text(row.TaskID, "(blank TaskID)");
-    const reviewId = text(row.ReviewID);
-    if (reviewId && !reviewIds.has(reviewId)) addWarning(`Review_Tasks row "${taskId}" references missing ReviewID "${reviewId}".`);
-    if (!text(row.Owner)) addWarning(`Review_Tasks row "${taskId}" is missing Owner.`);
-    if (!text(row.Status)) addWarning(`Review_Tasks row "${taskId}" is missing Status.`);
-    validateStatusValue(addWarning, "Review_Tasks", taskId, "Status", row.Status);
-  }
-
-  for (const row of (tables.Communication_Log || []).filter(isDisplayed)) {
-    const reviewId = text(row.ReviewID);
-    if (reviewId && !reviewIds.has(reviewId)) addWarning(`Communication_Log row "${text(row.CommunicationID, "(blank CommunicationID)")}" references missing ReviewID "${reviewId}".`);
-    validateStatusValue(addWarning, "Communication_Log", text(row.CommunicationID, "(blank CommunicationID)"), "Status", row.Status);
-  }
-
-  for (const row of (tables.File_Readiness || []).filter(isDisplayed)) {
-    const reviewId = text(row.ReviewID);
-    if (reviewId && !reviewIds.has(reviewId)) addWarning(`File_Readiness row for "${text(row.FileType, "(blank FileType)")}" references missing ReviewID "${reviewId}".`);
-    validateStatusValue(addWarning, "File_Readiness", `${reviewId}/${text(row.FileType)}`, "Status", row.Status);
-  }
-
-  for (const row of (tables.Critical_Items || []).filter(isDisplayed)) {
-    const linkedReviewId = text(row.LinkedReviewID);
-    if (linkedReviewId && linkedReviewId.toLowerCase() !== "all" && !reviewIds.has(linkedReviewId)) {
-      addWarning(`Critical_Items row "${text(row.CriticalItemID, "(blank CriticalItemID)")}" references missing LinkedReviewID "${linkedReviewId}".`);
-    }
-    validateStatusValue(addWarning, "Critical_Items", text(row.CriticalItemID, "(blank CriticalItemID)"), "Status", row.Status);
-    validateStatusValue(addWarning, "Critical_Items", text(row.CriticalItemID, "(blank CriticalItemID)"), "Severity", row.Severity);
-  }
-
-  for (const row of (tables.Resources || []).filter(isDisplayed)) {
-    const resourceId = text(row.ResourceID, text(row.ResourceName, "(blank ResourceID)"));
-    if (!text(row.URL)) addWarning(`Resources row "${resourceId}" is missing URL.`);
-    validateStatusValue(addWarning, "Resources", resourceId, "Status", row.Status);
-  }
-
-  for (const row of (tables.Upcoming_Meetings || []).filter(isDisplayed)) {
-    const meetingId = text(row.MeetingID, text(row.Title, "(blank MeetingID)"));
-    if (!text(row.Date)) addWarning(`Upcoming_Meetings row "${meetingId}" is missing Date.`);
-    if (!text(row.ETTime) && !text(row.UKTime)) addWarning(`Upcoming_Meetings row "${meetingId}" is missing ETTime and UKTime.`);
-    const linkedReviewId = text(row.LinkedReviewID);
-    if (linkedReviewId && linkedReviewId.toLowerCase() !== "all" && !reviewIds.has(linkedReviewId)) {
-      addWarning(`Upcoming_Meetings row "${meetingId}" references missing LinkedReviewID "${linkedReviewId}".`);
-    }
-    validateStatusValue(addWarning, "Upcoming_Meetings", meetingId, "Status", row.Status);
-  }
-
-  return { errors, warnings };
+  return candidates.find((name) => name.startsWith(`${reviewId} `)) ||
+    candidates.find((name) => name.toLowerCase().includes(reviewId.toLowerCase())) ||
+    candidates.find((name) => shortName && name.toLowerCase().includes(shortName.toLowerCase())) ||
+    "";
 }
 
-function validateDisplayColumn(addWarning, sheetName, rows, idColumn) {
-  for (const row of rows) {
-    if (!isYesNoDisplayValue(displayValue(row))) {
-      addWarning(`${sheetName} row "${text(row[idColumn], "unknown")}" has DisplayInHTML value "${displayValue(row)}"; expected Yes or No.`);
-    }
-  }
+function safeReviewFromIndex(row, card) {
+  const status = text(card.Status, text(row.Status, "Not Started"));
+  const risk = text(card.Risk, text(row.Risk, "Medium"));
+  const targetDate = excelDate(card.TargetDate || row.TargetDate) || "TBD";
+  const currentStage = text(card.CurrentStage, text(row.CurrentStage, "Current milestone"));
+  const tool = text(card.Tool, text(row.Tool, "TBD"));
+
+  return {
+    id: text(card.ReviewID, text(row.ReviewID)),
+    title: text(card.ReviewTitle, text(row.ReviewTitle, text(row.ShortName, "Untitled review"))),
+    shortName: text(card.ShortName, text(row.ShortName, "Untitled")),
+    phase: text(card.Phase, text(row.Phase, "Phase 1")),
+    status,
+    tool,
+    lead: text(card.Lead, text(row.Lead, "TBD")),
+    risk,
+    currentStage,
+    currentUpdate: text(card.CurrentUpdate, "No current update entered."),
+    nextAction: text(card.NextAction, text(row.NextAction, "Add next action.")),
+    communicationSupport: text(card.CurrentUpdate, "No current update entered."),
+    communicationLog: [],
+    files: { ...DEFAULT_FILES },
+    stages: [],
+    tasks: [],
+    criticalItems: [],
+    history: [],
+    milestones: {
+      onboarding: "",
+      setup: "",
+      abstract: "",
+      fullText: "",
+      extraction: "",
+      analysis: ""
+    },
+    workflowStatus: {},
+    tracker: {
+      plannedWindow: "",
+      plannedGate: currentStage,
+      targetDate,
+      variance: text(card.Variance, "To be assessed"),
+      assessment: text(card.Assessment, text(row.Assessment, status))
+    },
+    timelineGates: [
+      { label: "Status", value: status, state: status },
+      { label: "Target", value: targetDate, state: status },
+      { label: "Tool", value: tool, state: status }
+    ]
+  };
 }
 
-function validateStatusValue(addWarning, sheetName, rowId, field, value) {
-  const normalized = String(value ?? "").trim().toLowerCase();
-  if (normalized && !VALID_STATUSES.has(normalized)) {
-    addWarning(`${sheetName} row "${rowId}" has invalid ${field} value "${value}".`);
-  }
-}
+function splitByPhase(reviews) {
+  const phaseGroups = { pilot: [], phase1: [], phase2: [] };
 
-function printValidation(validation) {
-  for (const warning of validation.warnings) warn(warning);
-  for (const error of validation.errors) console.error(`Error: ${error}`);
-
-  if (!validation.errors.length && !validation.warnings.length) {
-    console.log("Validation passed with no warnings.");
-  } else {
-    console.log(`Validation completed with ${validation.errors.length} error(s) and ${validation.warnings.length} warning(s).`);
+  for (const review of reviews) {
+    const phase = String(review.phase || "").toLowerCase().replace(/\s+/g, "");
+    if (phase === "pilot") phaseGroups.pilot.push(review);
+    else if (phase === "phase2") phaseGroups.phase2.push(review);
+    else phaseGroups.phase1.push(review);
   }
+
+  return phaseGroups;
 }
 
 function backupDataFile() {
@@ -468,89 +390,13 @@ function backupDataFile() {
   console.log(`Backed up existing data.js to ${path.relative(__dirname, BACKUP_FILE)}.`);
 }
 
-function safeReview(row) {
-  const status = text(row.Status, "Not Started");
-  const risk = text(row.Risk, "Medium");
-  const targetDate = excelDate(row.TargetDate) || "TBD";
-  const currentStage = text(row.CurrentStage, "Current milestone");
-  const milestones = Object.fromEntries(
-    Object.entries(MILESTONE_COLUMNS).map(([key, column]) => [key, milestoneValue(row[column])])
-  );
-
-  return {
-    id: text(row.ReviewID),
-    title: text(row.ReviewTitle, text(row.ShortName, "Untitled review")),
-    shortName: text(row.ShortName, text(row.ReviewTitle, "Untitled")),
-    phase: text(row.Phase, "Phase 1"),
-    status,
-    tool: text(row.Tool, "TBD"),
-    lead: text(row.Lead, "TBD"),
-    risk,
-    currentStage,
-    currentUpdate: text(row.CurrentUpdate, "No current update entered."),
-    nextAction: text(row.NextAction, "Add next action."),
-    communicationSupport: text(row.CurrentUpdate, "No current update entered."),
-    communicationLog: [],
-    files: { ...DEFAULT_FILES },
-    stages: [],
-    tasks: [],
-    criticalItems: [],
-    history: [],
-    milestones,
-    workflowStatus: {},
-    tracker: {
-      plannedWindow: "",
-      plannedGate: currentStage,
-      targetDate,
-      variance: text(row.Variance, "To be assessed"),
-      assessment: text(row.Assessment, status)
-    },
-    timelineGates: [
-      { label: "Status", value: status, state: status },
-      { label: "Target", value: targetDate, state: status },
-      { label: "Tool", value: text(row.Tool, "TBD"), state: status }
-    ]
-  };
+function addDefaultStages(review) {
+  if (!review.stages.length) review.stages = DEFAULT_STAGES.map((stage) => ({ ...stage }));
 }
 
-function buildDashboard(tables) {
-  const config = {};
-  for (const row of tables.Dashboard_Config || []) {
-    const key = text(row.ConfigKey);
-    if (key) config[key] = text(row.ConfigValue);
-  }
-
-  const allReviewRows = tables.All_Reviews || [];
-  const hasMilestoneColumns = allReviewRows.some((row) =>
-    Object.values(MILESTONE_COLUMNS).some((column) =>
-      Object.prototype.hasOwnProperty.call(row, column)
-    )
-  );
-  if (!hasMilestoneColumns) {
-    warn("All_Reviews is missing manual milestone columns. Executive dots will fall back to workflow-derived status.");
-  }
-
-  const workflowIds = new Set(
-    (tables.Workflow_Master || [])
-      .filter(isDisplayed)
-      .map((row) => text(row.WorkflowStepID))
-      .filter(Boolean)
-  );
-
-  const reviewMap = new Map();
-  const reviews = [];
-  for (const row of sortRows((tables.All_Reviews || []).filter(isDisplayed))) {
-    const review = safeReview(row);
-    if (!review.id) {
-      warn("All_Reviews row skipped because ReviewID is blank.");
-      continue;
-    }
-    reviewMap.set(review.id, review);
-    reviews.push(review);
-  }
-
+function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
   const counts = {
-    reviews: reviews.length,
+    reviews: 0,
     workflowStatus: 0,
     tasks: 0,
     communications: 0,
@@ -559,174 +405,210 @@ function buildDashboard(tables) {
     reviewCriticalItems: 0,
     resources: 0,
     meetings: 0,
-    stages: 0
+    stages: 0,
+    newReviews: 0
   };
-  const taskTodos = [];
 
-  for (const row of sortRows((tables.Review_Workflow_Status || []).filter(isDisplayed))) {
-    const reviewId = text(row.ReviewID);
-    const stepId = text(row.WorkflowStepID);
-    const review = reviewMap.get(reviewId);
-    if (!review) {
+  const indexRows = tableFromRows(
+    sheetRows(sheetMap, root, sharedStrings, "Review_Index"),
+    ["ReviewID", "ShortName", "ReviewTitle", "Phase"]
+  ).filter(isDisplayed);
+
+  const reviews = [];
+  const mainTodos = [];
+  const criticalItems = [];
+
+  for (const indexRow of sortRows(indexRows)) {
+    const sheetName = sheetNameForReview(indexRow, sheetMap);
+    if (!sheetName) {
+      warn(`No review sheet found for ${text(indexRow.ReviewID, text(indexRow.ShortName, "unknown review"))}.`);
       continue;
     }
-    if (stepId) {
+
+    const rows = sheetRows(sheetMap, root, sharedStrings, sheetName);
+    const card = cardFromReviewSheet(rows);
+    const review = safeReviewFromIndex(indexRow, card);
+
+    if (!review.id) {
+      warn(`Skipping review sheet "${sheetName}" because ReviewID is missing.`);
+      continue;
+    }
+
+    const milestones = sectionTable(rows, ["Milestone", "Status"]);
+    for (const row of milestones.filter(isDisplayed)) {
+      const key = text(row.Milestone);
+      if (key && Object.prototype.hasOwnProperty.call(review.milestones, key)) {
+        review.milestones[key] = text(row.Status);
+      }
+    }
+
+    const files = sectionTable(rows, ["FileType", "Ready", "Status"]);
+    for (const row of files.filter(isDisplayed)) {
+      const fileType = text(row.FileType);
+      if (!fileType) continue;
+      review.files[fileType] = boolValue(row.Ready || row.Status);
+      counts.fileReadiness += 1;
+    }
+
+    const stages = sectionTable(rows, ["StageName", "HumanProgress", "AIProgress", "Status"]);
+    for (const row of stages.filter(isDisplayed)) {
+      review.stages.push({
+        name: text(row.StageName, "Stage"),
+        human: numberValue(row.HumanProgress),
+        ai: numberValue(row.AIProgress),
+        status: text(row.Status, "Not Started")
+      });
+      counts.stages += 1;
+    }
+
+    const workflowRows = sectionTable(rows, ["ActionOrder", "WorkflowStepID", "Status"]);
+    for (const row of workflowRows.filter(isDisplayed)) {
+      const stepId = text(row.WorkflowStepID);
+      if (!stepId) continue;
       review.workflowStatus[stepId] = text(row.Status, "Not Started");
       counts.workflowStatus += 1;
     }
-  }
 
-  for (const row of sortRows((tables.Review_Tasks || []).filter(isDisplayed))) {
-    const reviewId = text(row.ReviewID);
-    const review = reviewMap.get(reviewId);
-    if (!review) {
-      continue;
+    if (Object.keys(review.workflowStatus).length && Object.keys(review.workflowStatus).length < 63) {
+      warn(`${review.id} has ${Object.keys(review.workflowStatus).length} workflow rows. Expected 63.`);
     }
-    review.tasks.push({
-      id: text(row.TaskID),
-      task: text(row.Task, "Untitled task"),
-      owner: text(row.Owner, "TBD"),
-      status: text(row.Status, "Pending"),
-      risk: text(row.Risk, ""),
-      due: excelDate(row.DueDate) || "TBD",
-      dependency: text(row.Dependency, "None"),
-      communication: text(row.Communication, "Check latest communication."),
-      source: text(row.Source, ""),
-      sourceDate: excelDate(row.SourceDate)
-    });
-    taskTodos.push({
-      task: text(row.Task, "Untitled task"),
-      owner: text(row.Owner, "TBD"),
-      status: text(row.Status, "Pending"),
-      due: excelDate(row.DueDate) || "TBD",
-      dependency: text(row.Dependency, "None"),
-      linkedReviewId: reviewId,
-      communication: text(row.Communication, "Check latest communication.")
-    });
-    counts.tasks += 1;
-  }
 
-  for (const row of sortRows((tables.Communication_Log || []).filter(isDisplayed))) {
-    const reviewId = text(row.ReviewID);
-    const review = reviewMap.get(reviewId);
-    if (!review) {
-      continue;
+    const taskRows = sectionTable(rows, ["TaskID", "Task", "Owner", "Status"]);
+    for (const row of taskRows.filter(isDisplayed)) {
+      const task = {
+        id: text(row.TaskID),
+        task: text(row.Task, "Untitled task"),
+        owner: text(row.Owner, "TBD"),
+        status: text(row.Status, "Pending"),
+        risk: text(row.Risk, ""),
+        due: excelDate(row.DueDate) || "TBD",
+        dependency: text(row.Dependency, "None"),
+        communication: text(row.Communication, "Check latest communication."),
+        source: text(row.Source, ""),
+        sourceDate: excelDate(row.SourceDate)
+      };
+      review.tasks.push(task);
+      mainTodos.push({ ...task, linkedReviewId: review.id });
+      counts.tasks += 1;
     }
-    const linkedTaskId = text(row.LinkedTaskID);
-    const linkedTask = linkedTaskId ? review.tasks.find((task) => task.id === linkedTaskId) : null;
-    review.communicationLog.push({
-      id: text(row.CommunicationID),
-      date: excelDate(row.Date) || "Recent",
-      subject: text(row.ConversationName, "Mail follow-up"),
-      people: text(row.FromPerson, review.lead),
-      resp: text(row.ResponsiblePerson, linkedTask?.owner || review.lead),
-      due: excelDate(row.DueDate) || linkedTask?.due || "TBD",
-      status: text(row.Status, linkedTask?.status || "Pending"),
-      summary: text(row.Summary, "Follow-up conversation pending."),
-      linkedTaskId,
-      linkedAction: linkedTask?.task || text(row.Summary),
-      sourceType: text(row.SourceType),
-      sourceLink: text(row.SourceLink)
-    });
-    counts.communications += 1;
-  }
 
-  for (const row of sortRows((tables.File_Readiness || []).filter(isDisplayed))) {
-    const reviewId = text(row.ReviewID);
-    const review = reviewMap.get(reviewId);
-    if (!review) {
-      continue;
+    const communicationRows = sectionTable(rows, ["CommunicationID", "Date", "Summary"]);
+    for (const row of communicationRows.filter(isDisplayed)) {
+      const linkedTaskId = text(row.LinkedTaskID);
+      const linkedTask = linkedTaskId ? review.tasks.find((task) => task.id === linkedTaskId) : null;
+
+      review.communicationLog.push({
+        id: text(row.CommunicationID),
+        date: excelDate(row.Date) || "Recent",
+        subject: text(row.Subject || row.ConversationName, "Mail follow-up"),
+        people: text(row.People || row.FromPerson, review.lead),
+        resp: text(row.Responsible || row.ResponsiblePerson, linkedTask?.owner || review.lead),
+        due: excelDate(row.DueDate) || linkedTask?.due || "TBD",
+        status: text(row.Status, linkedTask?.status || "Pending"),
+        summary: text(row.Summary, "Follow-up conversation pending."),
+        linkedTaskId,
+        linkedAction: linkedTask?.task || text(row.LinkedAction || row.Summary),
+        sourceType: text(row.SourceType),
+        sourceLink: text(row.SourceLink)
+      });
+      counts.communications += 1;
     }
-    const fileType = text(row.FileType);
-    if (fileType) {
-      review.files[fileType] = boolValue(row.FileReady || row.Status);
-      counts.fileReadiness += 1;
-    }
-  }
 
-  for (const row of sortRows((tables.Stage_Progress || []).filter(isDisplayed))) {
-    const reviewId = text(row.ReviewID);
-    const review = reviewMap.get(reviewId);
-    if (!review) {
-      continue;
-    }
-    review.stages.push({
-      name: text(row.Stage, "Stage"),
-      human: numberValue(row.HumanProgressPct),
-      ai: numberValue(row.AIProgressPct),
-      status: text(row.Status, "Not Started")
-    });
-    counts.stages += 1;
-  }
+    const criticalRows = sectionTable(rows, ["CriticalItem", "Severity", "Status"]);
+    for (const row of criticalRows.filter(isDisplayed)) {
+      const itemTitle = text(row.CriticalItem);
+      if (!itemTitle) continue;
 
-  for (const review of reviews) {
-    if (!review.stages.length) {
-      review.stages = [
-        { name: "Setup / Coordination", human: 0, ai: 0, status: "Not Started" },
-        { name: "Abstract Screening", human: 0, ai: 0, status: "Not Started" },
-        { name: "Full-text Screening", human: 0, ai: 0, status: "Not Started" },
-        { name: "Data Extraction / Analysis", human: 0, ai: 0, status: "Not Started" }
-      ];
-    }
-  }
+      const item = {
+        id: `critical-${review.id}-${criticalItems.length + 1}`,
+        phase: review.phase,
+        item: itemTitle,
+        description: text(row.Notes),
+        severity: text(row.Severity, "Medium"),
+        status: text(row.Status, "Open"),
+        owner: text(row.Owner, "TBD"),
+        due: excelDate(row.DueDate) || "Monitor",
+        linkedReviewId: review.id,
+        mitigation: text(row.Notes),
+        impact: "",
+        source: "Review sheet",
+        sourceDate: excelDate(card.LastUpdated)
+      };
 
-  const mainTodos = [...taskTodos];
-  const criticalItems = [];
-  for (const row of sortRows((tables.Critical_Items || []).filter(isDisplayed))) {
-    const linkedReviewId = text(row.LinkedReviewID);
-    const item = {
-      id: text(row.CriticalItemID, `critical-${criticalItems.length + 1}`),
-      phase: text(row.LinkedPhase, "Program risk"),
-      item: text(row.ItemTitle, text(row.ItemDescription, "Critical item")),
-      description: text(row.ItemDescription),
-      severity: text(row.Severity, "Medium"),
-      status: text(row.Status, "Needs Action"),
-      owner: text(row.Owner, "TBD"),
-      due: excelDate(row.DueDate) || "Monitor",
-      linkedReviewId,
-      mitigation: text(row.Mitigation),
-      impact: text(row.Impact),
-      source: text(row.Source),
-      sourceDate: excelDate(row.SourceDate)
-    };
-    criticalItems.push(item);
-    counts.criticalItems += 1;
-
-    const review = linkedReviewId ? reviewMap.get(linkedReviewId) : null;
-    if (review) {
+      criticalItems.push(item);
       review.criticalItems.push(item.item);
+      mainTodos.push({
+        task: item.item,
+        owner: item.owner,
+        status: item.status || item.severity,
+        due: item.due,
+        dependency: "Monitor risk",
+        linkedReviewId: review.id,
+        communication: item.description
+      });
+
+      counts.criticalItems += 1;
       counts.reviewCriticalItems += 1;
     }
 
-    mainTodos.push({
-      task: item.item,
-      owner: item.owner,
-      status: item.status || item.severity,
-      due: item.due,
-      dependency: item.impact || "Monitor risk",
-      linkedReviewId,
-      communication: item.mitigation || item.description
-    });
+    addDefaultStages(review);
+    reviews.push(review);
+    counts.reviews += 1;
   }
 
-  const resources = sortRows((tables.Resources || []).filter(isDisplayed)).map((row) => {
+  const globalRows = sheetRows(sheetMap, root, sharedStrings, "Global_Dashboard");
+
+  const allowedTimelineKeys = new Set(["pilot", "phase1", "governance", "phase2"]);
+  const timelineRows = tableFromRows(
+    globalRows,
+    ["PhaseKey", "PhaseLabel", "Window", "Note", "Display"]
+  )
+    .filter(isDisplayed)
+    .filter((row) => allowedTimelineKeys.has(text(row.PhaseKey).toLowerCase()) && text(row.PhaseLabel));
+
+  const timelineReference = timelineRows.length ? {
+    source: path.basename(WORKBOOK),
+    phase1Window: "2026-05-01 to 2026-07-31",
+    phaseCards: timelineRows.map((row) => [
+      text(row.PhaseKey),
+      text(row.PhaseLabel),
+      text(row.Window),
+      text(row.Note)
+    ]),
+    majorTimeline: timelineRows.map((row) => ({
+      phase: text(row.PhaseLabel),
+      window: text(row.Window),
+      note: text(row.Note)
+    }))
+  } : DEFAULT_TIMELINE;
+
+  const resourceRows = tableFromRows(
+    globalRows,
+    ["ResourceID", "Name", "Type", "URL", "Display"]
+  );
+
+  const resources = resourceRows.filter(isDisplayed).map((row) => {
     counts.resources += 1;
     return {
       id: text(row.ResourceID),
-      title: text(row.ResourceName, "Untitled resource"),
-      type: text(row.ResourceType, "Link"),
-      purpose: text(row.Description, "Add description"),
-      description: text(row.Description, "Add description"),
-      audience: text(row.LinkedPhase, "Project team"),
+      title: text(row.Name, "Untitled resource"),
+      type: text(row.Type, "Link"),
+      purpose: text(row.Notes, "Add description"),
+      description: text(row.Notes, "Add description"),
+      audience: "Project team",
       owner: text(row.Owner, "TBD"),
       status: text(row.Status, "Active"),
-      linkedReviewId: text(row.LinkedReviewID),
+      linkedReviewId: "",
       url: text(row.URL, "#")
     };
   });
 
-  const upcomingMeetings = sortRows((tables.Upcoming_Meetings || []).filter(isDisplayed)).map((row) => {
-    const linkedReviewId = text(row.LinkedReviewID);
+  const meetingRows = tableFromRows(
+    globalRows,
+    ["MeetingID", "Date", "Title", "Status", "Display"]
+  );
+
+  const upcomingMeetings = meetingRows.filter(isDisplayed).map((row) => {
     counts.meetings += 1;
     return {
       id: text(row.MeetingID),
@@ -734,35 +616,70 @@ function buildDashboard(tables) {
       etTime: text(row.ETTime, "TBD"),
       ukTime: text(row.UKTime, "TBD"),
       title: text(row.Title, "Meeting slot available"),
-      agenda: text(row.Agenda, "Add meeting agenda."),
-      attendees: text(row.Attendees, "TBD"),
+      agenda: text(row.Purpose || row.Notes, "Add meeting agenda."),
+      attendees: text(row.People, "TBD"),
       owner: text(row.Owner, "TBD"),
       focus: text(row.LinkedPhase, "Project coordination"),
       status: text(row.Status, "Scheduled"),
-      linkedReviewId,
+      linkedReviewId: text(row.LinkedReviewID),
       meetingLink: text(row.MeetingLink)
     };
   });
 
-  const phaseGroups = {
-    pilot: [],
-    phase1: [],
-    phase2: []
-  };
+  const newReviewRows = tableFromRows(
+    sheetRows(sheetMap, root, sharedStrings, "New_Reviews"),
+    ["CandidateID", "ReviewName", "Category", "Status", "TargetPhase"]
+  );
 
-  for (const review of reviews) {
-    const phase = review.phase.toLowerCase().replace(/\s+/g, "");
-    if (phase === "pilot") phaseGroups.pilot.push(review);
-    else if (phase === "phase2") phaseGroups.phase2.push(review);
-    else phaseGroups.phase1.push(review);
-  }
+  const excludedNewReviewIds = new Set([
+    "suggested use of categories",
+    "shortlisted",
+    "under shortlisting",
+    "future phase",
+    "not eligible",
+    "on hold",
+    "clarification needed"
+  ]);
+  const newReviews = newReviewRows
+    .filter(isDisplayed)
+    .filter((row) => {
+      const id = text(row.CandidateID).toLowerCase();
+      const name = text(row.ReviewName);
+      const normalizedName = name.toLowerCase();
+      if (!name) return false;
+      if (normalizedName === id || /^new-\d+$/i.test(name)) return false;
+      if (excludedNewReviewIds.has(id)) return false;
+      return true;
+    })
+    .map((row) => {
+      counts.newReviews += 1;
+      return {
+        id: text(row.CandidateID),
+        reviewName: text(row.ReviewName),
+        category: text(row.Category),
+        status: text(row.Status),
+        targetPhase: text(row.TargetPhase),
+        lead: text(row["Lead/Contact"]),
+        expectedTiming: text(row.ExpectedTiming),
+        remarks: text(row.Remarks),
+        moveToFullSheet: text(row.MoveToFullSheet, "No"),
+        display: text(row.Display)
+      };
+    });
+
+  const phaseGroups = splitByPhase(reviews);
+  const lastUpdated = reviews
+    .map((review) => excelDate(review.tracker?.targetDate))
+    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
+    .sort()
+    .at(-1) || new Date().toISOString().slice(0, 10);
 
   return {
     data: {
-      lastUpdated: excelDate(config.LastUpdated) || new Date().toISOString().slice(0, 10),
-      projectName: config.ProjectName || "Cochrane AI Platform Study",
-      dashboardSubtitle: config.DashboardSubtitle || "Executive and Operations Dashboard",
-      timelineReference: DEFAULT_TIMELINE,
+      lastUpdated,
+      projectName: "Cochrane AI Platform Study",
+      dashboardSubtitle: "Executive and Operations Dashboard",
+      timelineReference,
       pilot: phaseGroups.pilot,
       phase1: phaseGroups.phase1,
       phase2: phaseGroups.phase2,
@@ -770,88 +687,66 @@ function buildDashboard(tables) {
       mainTodos,
       criticalItems,
       resources,
-      upcomingMeetings
+      upcomingMeetings,
+      newReviews
     },
     counts
   };
 }
 
+function exportOutput(data, counts) {
+  const output = [
+    "// data.js",
+    `// GENERATED FROM ${path.basename(WORKBOOK)}. Do not edit generated data by hand.`,
+    "",
+    `const dashboardData = ${JSON.stringify(data, null, 2)};`,
+    ""
+  ].join("\n");
+
+  backupDataFile();
+  fs.writeFileSync(OUTFILE, output, "utf8");
+
+  console.log(`Exported ${counts.reviews} reviews to data.js.`);
+  console.log(`Exported ${counts.workflowStatus} workflow status rows.`);
+  console.log(`Exported ${counts.tasks} tasks.`);
+  console.log(`Exported ${counts.communications} communications.`);
+  console.log(`Exported ${counts.fileReadiness} file readiness rows.`);
+  console.log(`Exported ${counts.stages} stage progress rows.`);
+  console.log(`Exported ${counts.criticalItems} critical items (${counts.reviewCriticalItems} linked to reviews).`);
+  console.log(`Exported ${counts.resources} resources.`);
+  console.log(`Exported ${counts.meetings} meetings.`);
+  console.log(`Exported ${counts.newReviews} new review pipeline rows.`);
+}
+
 function main() {
   if (!fs.existsSync(WORKBOOK)) die(`missing workbook file: ${WORKBOOK}`);
-  const validateOnly = process.argv.includes("--validate-only");
 
+  const validateOnly = process.argv.includes("--validate-only");
   let tmp;
+
   try {
     tmp = unzipWorkbook(WORKBOOK);
     const sharedStrings = readSharedStrings(tmp);
     const sheetMap = readSheetMap(tmp);
 
-    for (const sheetName of REQUIRED_SHEETS) {
-      if (!sheetMap[sheetName]) die(`missing required sheet: ${sheetName}`);
+    if (!sheetMap.Review_Index) {
+      die("This exporter expects the new review-based workbook with a Review_Index sheet.");
     }
 
-    const tables = {};
-    for (const sheetName of SHEETS) {
-      if (!sheetMap[sheetName]) {
-        warn(`Optional sheet "${sheetName}" is missing.`);
-        tables[sheetName] = [];
-        continue;
-      }
-      const rows = readRows(tmp, sheetMap[sheetName], sharedStrings);
-      tables[sheetName] = tableFromRows(rows, headerRequirements(sheetName));
-    }
+    console.log(`Detected review-based workbook: ${path.basename(WORKBOOK)}.`);
+    const { data, counts } = buildReviewBasedDashboard(sheetMap, tmp, sharedStrings);
 
-    const validation = validateTables(tables);
-    printValidation(validation);
-    if (validation.errors.length) {
-      die("validation failed. Fix the workbook errors above and rerun the export.");
-    }
     if (validateOnly) {
       console.log("Validation-only mode complete. data.js was not changed.");
+      console.log(`Found ${counts.reviews} displayed reviews.`);
+      console.log(`Found ${counts.newReviews} new review pipeline rows.`);
       return;
     }
 
-    const { data, counts } = buildDashboard(tables);
-    const output = [
-      "// data.js",
-      "// GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.",
-      "",
-      `const dashboardData = ${JSON.stringify(data, null, 2)};`,
-      ""
-    ].join("\n");
-
-    backupDataFile();
-    fs.writeFileSync(OUTFILE, output, "utf8");
-
-    console.log(`Exported ${counts.reviews} reviews to data.js.`);
-    console.log(`Exported ${counts.workflowStatus} workflow status rows.`);
-    console.log(`Exported ${counts.tasks} tasks.`);
-    console.log(`Exported ${counts.communications} communications.`);
-    console.log(`Exported ${counts.fileReadiness} file readiness rows.`);
-    console.log(`Exported ${counts.stages} stage progress rows.`);
-    console.log(`Exported ${counts.criticalItems} critical items (${counts.reviewCriticalItems} linked to reviews).`);
-    console.log(`Exported ${counts.resources} resources.`);
-    console.log(`Exported ${counts.meetings} meetings.`);
+    exportOutput(data, counts);
   } finally {
     if (tmp) fs.rmSync(tmp, { recursive: true, force: true });
   }
-}
-
-function headerRequirements(sheetName) {
-  const requirements = {
-    Dashboard_Config: ["ConfigKey", "ConfigValue"],
-    All_Reviews: ["ReviewID", "ShortName", "ReviewTitle", "Phase", "DisplayInHTML"],
-    Workflow_Master: ["WorkflowStepID", "DisplayInHTML"],
-    Review_Workflow_Status: ["ReviewID", "WorkflowStepID", "Status", "DisplayInHTML"],
-    Review_Tasks: ["TaskID", "ReviewID", "Task", "DisplayInHTML"],
-    Communication_Log: ["CommunicationID", "ReviewID", "Summary", "DisplayInHTML"],
-    File_Readiness: ["ReviewID", "FileType", "FileReady", "DisplayInHTML"],
-    Critical_Items: ["CriticalItemID", "ItemTitle", "DisplayInHTML"],
-    Resources: ["ResourceID", "ResourceName", "URL", "DisplayInHTML"],
-    Upcoming_Meetings: ["MeetingID", "Date", "Title", "DisplayInHTML"],
-    Stage_Progress: ["ReviewID", "Stage", "DisplayInHTML"]
-  };
-  return requirements[sheetName] || [];
 }
 
 main();

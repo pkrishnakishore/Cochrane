@@ -4496,3 +4496,426 @@ body {
     min-height: auto !important;
   }
 }
+
+
+/* Data-driven onboarding pipeline under the executive phase strip */
+.phase-strip {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+}
+
+.phase-strip-row,
+.onboarding-pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.phase-count {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  min-width: 56px;
+  border: 2px solid #0e6380;
+  background: #f8fbfd;
+  color: #0f172a;
+  padding: 8px 10px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 850;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.phase-count b {
+  font-size: 18px;
+}
+
+.pipeline-column {
+  min-height: 132px;
+  position: relative;
+}
+
+.pipeline-column-title {
+  border: 2px solid #0e6380;
+  background: #c8eafa;
+  color: #0f172a;
+  padding: 10px 14px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 750;
+}
+
+.pipeline-review-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pipeline-review {
+  width: 100%;
+  min-height: 42px;
+  border: 2px solid #0e6380;
+  border-radius: 0;
+  background: #fff;
+  color: #0f172a;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.pipeline-review:hover,
+.pipeline-review:focus {
+  outline: 2px solid #0e6380;
+  outline-offset: 2px;
+  background: #f5fbff;
+}
+
+.pipeline-review strong,
+.pipeline-review span {
+  display: block;
+}
+
+.pipeline-review strong {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.pipeline-review span {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.pipeline-empty {
+  border: 1px dashed #9eb3c7;
+  background: #f8fafc;
+  color: #64748b;
+  padding: 11px 12px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.pipeline-detail {
+  position: fixed;
+  right: 28px;
+  top: 128px;
+  z-index: 30;
+  width: min(440px, calc(100vw - 56px));
+  border: 1px solid #cbd5e1;
+  border-top: 5px solid #0e6380;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, .18);
+  padding: 18px;
+}
+
+.pipeline-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.pipeline-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pipeline-detail-grid p,
+.pipeline-notes {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.pipeline-detail-grid b,
+.pipeline-detail-grid span,
+.pipeline-notes b,
+.pipeline-notes p {
+  display: block;
+}
+
+.pipeline-detail-grid b,
+.pipeline-notes b {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pipeline-detail-grid span,
+.pipeline-notes p {
+  margin: 5px 0 0;
+  color: #0f172a;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.pipeline-notes {
+  margin-top: 10px;
+}
+
+
+/* Onboarding pipeline: five fixed entry slots per category */
+.pipeline-review-list {
+  grid-template-rows: repeat(5, 42px);
+}
+
+.pipeline-review {
+  min-height: 42px !important;
+  height: 42px;
+  overflow: hidden;
+}
+
+.pipeline-review-blank {
+  border: 2px solid #0e6380;
+  background: rgba(255, 255, 255, .72);
+}
+
+
+/* Phase count KPI and onboarding pipeline polish */
+.phase-count {
+  min-width: 76px !important;
+  border: 1px solid #0e6380 !important;
+  border-radius: 0 !important;
+  background: #f8fbfd !important;
+  padding: 7px 9px !important;
+  box-shadow: none !important;
+}
+
+.phase-count span {
+  display: block !important;
+  color: #475569 !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .05em !important;
+  text-transform: uppercase !important;
+}
+
+.phase-count b {
+  display: block !important;
+  margin-top: 3px !important;
+  color: #0f172a !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.pipeline-column-title {
+  border: 1px solid #0e6380 !important;
+  background: #c8eafa !important;
+  padding: 8px 12px !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+.pipeline-review-list {
+  gap: 6px !important;
+  margin-top: 5px !important;
+  grid-template-rows: repeat(5, 34px) !important;
+}
+
+.pipeline-review {
+  height: 34px !important;
+  min-height: 34px !important;
+  border: 1px solid #0e6380 !important;
+  background: #ffffff !important;
+  padding: 6px 10px !important;
+}
+
+.pipeline-review strong {
+  font-size: 13px !important;
+}
+
+.pipeline-review span {
+  margin-top: 2px !important;
+  font-size: 9px !important;
+}
+
+.pipeline-review-blank {
+  background: rgba(255, 255, 255, .45) !important;
+  border: 1px solid #0e6380 !important;
+}
+
+
+/* 5-column review selection pipeline */
+.triage-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.triage-column {
+  background: #f8fafc;
+  border-top: 4px solid var(--line2);
+  border-radius: 0 0 8px 8px;
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px var(--line);
+  min-height: 180px;
+}
+
+.triage-col-ident { border-top-color: var(--blue); }
+.triage-col-eval { border-top-color: var(--orange); }
+.triage-col-current { border-top-color: var(--navy); }
+.triage-col-future { border-top-color: var(--amber); }
+.triage-col-rejected { border-top-color: var(--slate); opacity: .82; }
+
+.triage-column-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.triage-column-head h3 {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 850;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.triage-count {
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 850;
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+.triage-card {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  text-align: left;
+}
+
+.triage-card:hover,
+.triage-card:focus {
+  border-color: var(--navy);
+  outline: 2px solid rgba(20, 33, 61, .12);
+  outline-offset: 1px;
+}
+
+.triage-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.triage-card strong {
+  display: block;
+  margin-top: 4px;
+  color: #0f172a;
+  font-size: 12.5px;
+}
+
+.triage-card p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 11.5px;
+  line-height: 1.35;
+}
+
+.triage-empty {
+  color: #94a3b8;
+  font-size: 11px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+.triage-col-rejected .triage-card {
+  background: transparent;
+  border: 1px dashed var(--line2);
+  box-shadow: none;
+}
+
+
+/* Restore executive phase strip to horizontal lifecycle row */
+#phaseStrip.phase-strip {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+
+#phaseStrip.phase-strip .phase {
+  width: auto !important;
+}
+
+
+/* Six-column review intake pipeline, aligned to Excel category names */
+.triage-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.triage-column {
+  min-height: 220px;
+}
+
+.triage-col-shortlisted,
+.triage-col-current {
+  border-top-color: var(--navy);
+}
+
+.triage-col-shortlisting,
+.triage-col-eval {
+  border-top-color: var(--orange);
+}
+
+.triage-col-future {
+  border-top-color: var(--amber);
+}
+
+.triage-col-hold {
+  border-top-color: var(--slate);
+}
+
+.triage-col-clarify {
+  border-top-color: var(--red);
+}
+
+.triage-col-rejected {
+  border-top-color: var(--slate);
+  opacity: .82;
+}
+
+.triage-column-head h3 {
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.triage-card {
+  min-height: 74px;
+}
+
+
+/* Five-column review intake pipeline */
+.triage-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}

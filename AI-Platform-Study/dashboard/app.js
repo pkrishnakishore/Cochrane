@@ -744,8 +744,8 @@ function setView(view) {
 
 function renderDashboard() {
   document.getElementById("lastUpdated").textContent = dashboardData.lastUpdated || "Not set";
-  renderExecutiveSummary();
   renderPhaseStrip();
+  renderSelectionPipeline();
   renderReviewScoreboard();
   renderDecisionList();
   renderScopePanels();
@@ -1142,14 +1142,200 @@ function renderScopePanels() {
 }
 
 function renderPhaseStrip() {
-  const phases = dashboardData.timelineReference?.phaseCards || [
+  const fallbackPhases = [
     ["pilot", "Pilot", "Mid March to Mid April", "Wrapping Up"],
     ["phase1", "Phase 1", dashboardData.timelineReference?.phase1Window || "Mid April to End June", "Current Focus"],
     ["governance", "Interim Analysis", "End June", "Decision Gate"],
     ["phase2", "Phase 2", "Start July to End September", "Scheduled"],
     ["governance", "Report", "October 2026", "Planned"]
   ];
-  document.getElementById("phaseStrip").innerHTML = phases.map((p) => '<button class="phase ' + (p[1] === "Phase 1" ? "current " : "") + (actionFocus === p[0] ? "focus-active" : "") + '" onclick="setActionFocus(\'' + p[0] + '\')"><span>' + escapeHtml(p[3]) + '</span><strong>' + escapeHtml(p[1]) + '</strong><p>' + escapeHtml(p[2]) + '</p></button>').join("");
+  const allowedPhaseKeys = new Set(["pilot", "phase1", "governance", "phase2"]);
+  const sourcePhases = dashboardData.timelineReference?.phaseCards || fallbackPhases;
+  const phases = sourcePhases
+    .filter((p) => allowedPhaseKeys.has(String(p[0] || "").toLowerCase()) && p[1])
+    .slice(0, 5);
+  const finalPhases = phases.length ? phases : fallbackPhases;
+  const phaseCards = finalPhases.map((p) =>
+    '<button class="phase ' + (p[1] === "Phase 1" ? "current " : "") + (actionFocus === p[0] ? "focus-active" : "") + '" onclick="setActionFocus(\'' + p[0] + '\')">' +
+      '<span>' + escapeHtml(p[3]) + '</span>' +
+      '<strong>' + escapeHtml(p[1]) + '</strong>' +
+      '<p>' + escapeHtml(p[2]) + '</p>' +
+      phaseReviewCountBadge(p) +
+    '</button>'
+  ).join("");
+  document.getElementById("phaseStrip").innerHTML = phaseCards;
+}
+
+function phaseReviewCountBadge(phase) {
+  const key = String(phase[0] || "").toLowerCase();
+  if (key === "pilot") {
+    const total = (dashboardData.pilot || []).length;
+    return '<em class="phase-count"><span>Reviews</span><b>' + total + ' / ' + total + '</b></em>';
+  }
+  if (key === "phase1") {
+    const confirmed = (dashboardData.phase1 || []).filter((review) => !/tbd|under review|pending/i.test(String(review.status || ""))).length;
+    return '<em class="phase-count"><span>Reviews</span><b>' + confirmed + ' / ' + (dashboardData.phase1 || []).length + '</b></em>';
+  }
+  return "";
+}
+
+function onboardingCandidates() {
+  const categoryHeaders = [
+    "suggested use of categories",
+    "shortlisted",
+    "under shortlisting",
+    "future phase",
+    "not eligible",
+    "on hold",
+    "clarification needed"
+  ];
+  return (dashboardData.newReviews || []).filter((review) => {
+    const id = String(review.id || "").trim().toLowerCase();
+    const name = String(review.reviewName || "").trim();
+    const display = String(review.display || "").trim().toLowerCase();
+    if (!name) return false;
+    if (display && !["yes", "true", "1", "y"].includes(display)) return false;
+    if (categoryHeaders.includes(id)) return false;
+    return true;
+  });
+}
+
+function onboardingBucket(candidate) {
+  const category = String(candidate.category || "").toLowerCase();
+  const target = String(candidate.targetPhase || "").toLowerCase();
+  if (category.includes("shortlist") && !category.includes("under")) return "shortlisted";
+  if (category.includes("under") || category.includes("consider")) return "consideration";
+  if (category.includes("future")) return "future";
+  if (category.includes("not eligible") && target.includes("phase 2")) return "notEligiblePhase2";
+  if (category.includes("not eligible")) return "notEligibleOther";
+  if (target.includes("phase 2") || target.includes("future")) return "future";
+  return "consideration";
+}
+
+function pipelineCategory(candidate) {
+  const category = String(candidate.category || "").toLowerCase();
+  const status = String(candidate.status || "").toLowerCase();
+  const target = String(candidate.targetPhase || "").toLowerCase();
+
+  if (category.includes("clarification") || category.includes("clarify")) return "Clarification Needed";
+  if (category.includes("on hold") || /\bhold\b/.test(category)) return "Clarification Needed";
+  if (category.includes("not eligible") || category.includes("rejected")) return "Not Eligible";
+  if (category.includes("future phase") || category.includes("future")) return "Future Phase";
+  if (category.includes("under shortlisting") || category.includes("under consideration") || category.includes("evaluation") || category.includes("consider")) return "Under Shortlisting";
+  if (category.includes("shortlist") || category.includes("phase 1")) return "Shortlisted";
+
+  const fallback = [status, target].join(" ");
+  if (fallback.includes("clarification") || fallback.includes("clarify")) return "Clarification Needed";
+  if (fallback.includes("on hold") || /\bhold\b/.test(fallback)) return "Clarification Needed";
+  if (fallback.includes("not eligible") || fallback.includes("rejected")) return "Not Eligible";
+  if (fallback.includes("future phase") || target.includes("phase 2") || fallback.includes("future")) return "Future Phase";
+  if (fallback.includes("under review") || fallback.includes("pending")) return "Under Shortlisting";
+  return "Under Shortlisting";
+}
+
+function renderSelectionPipeline() {
+  const target = document.getElementById("selectionPipeline");
+  if (!target) return;
+
+  const pipelineData = onboardingCandidates().map((candidate) => ({
+    title: candidate.reviewName || "Untitled review",
+    lead: candidate.lead || "",
+    category: pipelineCategory(candidate),
+    action: candidate.remarks || candidate.expectedTiming || candidate.status || "Decision pending",
+    id: candidate.id || candidate.reviewName
+  }));
+
+  const columns = [
+    { name: "Shortlisted", filter: "Shortlisted", class: "triage-col-shortlisted" },
+    { name: "Under Shortlisting", filter: "Under Shortlisting", class: "triage-col-shortlisting" },
+    { name: "Future Phase", filter: "Future Phase", class: "triage-col-future" },
+    { name: "Not Eligible", filter: "Not Eligible", class: "triage-col-rejected" },
+    { name: "Clarification Needed", filter: "Clarification Needed", class: "triage-col-clarify" }
+  ];
+
+  target.innerHTML = columns.map((col) => {
+    const cards = pipelineData.filter((item) => item.category === col.filter).slice(0, 5);
+    const cardsHtml = cards.map((card) =>
+      '<button class="triage-card" onclick="openPipelineReview(\'' + escapeHtml(card.id || card.title) + '\')">' +
+        (card.lead ? '<span>' + escapeHtml(card.lead) + '</span>' : '') +
+        '<strong>' + escapeHtml(card.title) + '</strong>' +
+        '<p>' + escapeHtml(card.action) + '</p>' +
+      '</button>'
+    ).join("");
+
+    return '<div class="triage-column ' + col.class + '">' +
+      '<div class="triage-column-head">' +
+        '<h3>' + escapeHtml(col.name) + '</h3>' +
+        '<span class="triage-count">' + cards.length + '</span>' +
+      '</div>' +
+      (cardsHtml || '<p class="triage-empty">No items</p>') +
+    '</div>';
+  }).join("") + renderPipelineDetailPanel();
+}
+
+function renderOnboardingPipeline() {
+  const columns = [
+    ["shortlisted", "Shortlisted"],
+    ["consideration", "Under Consideration"],
+    ["future", "For Future Phases"],
+    ["notEligiblePhase2", "Not eligible"],
+    ["notEligibleOther", "Not eligible"]
+  ];
+  const candidates = onboardingCandidates();
+  return '<div class="onboarding-pipeline">' + columns.map(([key, label]) => {
+    const rows = candidates.filter((candidate) => onboardingBucket(candidate) === key).slice(0, 5);
+    const slots = Array.from({ length: 5 }, (_, index) => rows[index] || null);
+    return '<section class="pipeline-column">' +
+      '<div class="pipeline-column-title">' + escapeHtml(label) + '</div>' +
+      '<div class="pipeline-review-list">' +
+        slots.map(renderPipelineReviewSlot).join("") +
+      '</div>' +
+    '</section>';
+  }).join("") + '</div>' + renderPipelineDetailPanel();
+}
+
+function renderPipelineReviewSlot(candidate) {
+  if (!candidate) return '<div class="pipeline-review pipeline-review-blank" aria-hidden="true"></div>';
+  const name = candidate.reviewName;
+  return '<button class="pipeline-review" onclick="openPipelineReview(\'' + escapeHtml(candidate.id || name) + '\')" title="' + escapeHtml(name) + '">' +
+    '<strong>' + escapeHtml(name) + '</strong>' +
+    '<span>' + escapeHtml(candidate.status || "Status pending") + '</span>' +
+  '</button>';
+}
+
+function renderPipelineDetailPanel() {
+  return '<aside id="pipelineReviewDetail" class="pipeline-detail" hidden>' +
+    '<button class="pipeline-close" onclick="closePipelineReview()" aria-label="Close review details">x</button>' +
+    '<p class="kicker">Candidate review</p>' +
+    '<h2 id="pipelineDetailTitle">Review name</h2>' +
+    '<div id="pipelineDetailBody"></div>' +
+  '</aside>';
+}
+
+function openPipelineReview(id) {
+  const candidate = onboardingCandidates().find((review) => String(review.id || review.reviewName) === String(id));
+  if (!candidate) return;
+  const panel = document.getElementById("pipelineReviewDetail");
+  const title = document.getElementById("pipelineDetailTitle");
+  const body = document.getElementById("pipelineDetailBody");
+  if (!panel || !title || !body) return;
+  title.textContent = candidate.reviewName || "Review name";
+  body.innerHTML =
+    '<div class="pipeline-detail-grid">' +
+      '<p><b>Reviewer / lead</b><span>' + escapeHtml(candidate.lead || "TBD") + '</span></p>' +
+      '<p><b>Status</b><span>' + escapeHtml(candidate.status || "TBD") + '</span></p>' +
+      '<p><b>Category</b><span>' + escapeHtml(candidate.category || "TBD") + '</span></p>' +
+      '<p><b>Target phase</b><span>' + escapeHtml(candidate.targetPhase || "TBD") + '</span></p>' +
+      '<p><b>Expected timing</b><span>' + escapeHtml(candidate.expectedTiming || "TBD") + '</span></p>' +
+      '<p><b>Move to full sheet</b><span>' + escapeHtml(candidate.moveToFullSheet || "No") + '</span></p>' +
+    '</div>' +
+    '<div class="pipeline-notes"><b>Notes</b><p>' + escapeHtml(candidate.remarks || "No notes added yet.") + '</p></div>';
+  panel.hidden = false;
+}
+
+function closePipelineReview() {
+  const panel = document.getElementById("pipelineReviewDetail");
+  if (panel) panel.hidden = true;
 }
 
 function currentWorkflowItems(review) {
@@ -1376,7 +1562,6 @@ function actionScopeForLinkedId(id, fallback = "governance") {
 function setActionFocus(scope) {
   actionFocus = scope;
   renderPhaseStrip();
-  renderExecutiveSummary();
   renderReviewScoreboard();
   renderDecisionList();
 }
