@@ -443,9 +443,10 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     }
 
     const files = sectionTable(rows, ["FileType", "Ready", "Status"]);
+    const allowedFileTypes = new Set(["RIS", "PDFs", "Criteria", "Extraction", "Protocol", "Time Log"]);
     for (const row of files.filter(isDisplayed)) {
       const fileType = text(row.FileType);
-      if (!fileType) continue;
+      if (!allowedFileTypes.has(fileType)) continue;
       review.files[fileType] = boolValue(row.Ready || row.Status);
       counts.fileReadiness += 1;
     }
@@ -474,11 +475,18 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     }
 
     const taskRows = sectionTable(rows, ["TaskID", "Task", "Owner", "Status"]);
+    const ignoredTaskLabels = new Set(["", "task", "taskid", "severity", "low", "medium", "high", "display", "owner", "status"]);
     for (const row of taskRows.filter(isDisplayed)) {
+      const taskName = text(row.Task);
+      const taskId = text(row.TaskID).toLowerCase();
+      const owner = text(row.Owner);
+      if (!taskName || ignoredTaskLabels.has(taskName.toLowerCase()) || /^untitled task$/i.test(taskName)) continue;
+      if (["severity", "low", "medium", "high"].includes(taskId)) continue;
+      if (!owner || owner.toLowerCase() === "owner") continue;
       const task = {
         id: text(row.TaskID),
-        task: text(row.Task, "Untitled task"),
-        owner: text(row.Owner, "TBD"),
+        task: taskName,
+        owner: owner,
         status: text(row.Status, "Pending"),
         risk: text(row.Risk, ""),
         due: excelDate(row.DueDate) || "TBD",
@@ -582,23 +590,25 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     }))
   } : DEFAULT_TIMELINE;
 
-  const resourceRows = tableFromRows(
-    globalRows,
-    ["ResourceID", "Name", "Type", "URL", "Display"]
-  );
+  const resourceSheetRows = sheetRows(sheetMap, root, sharedStrings, "Resources");
+  const resourceRows = resourceSheetRows.length
+    ? tableFromRows(resourceSheetRows, ["ResourceID", "ResourceName", "ResourceType", "URL", "DisplayInHTML"])
+    : tableFromRows(globalRows, ["ResourceID", "Name", "Type", "URL", "Display"]);
 
   const resources = resourceRows.filter(isDisplayed).map((row) => {
     counts.resources += 1;
+    const description = text(row.Description || row.Notes, "Add description");
     return {
       id: text(row.ResourceID),
-      title: text(row.Name, "Untitled resource"),
-      type: text(row.Type, "Link"),
-      purpose: text(row.Notes, "Add description"),
-      description: text(row.Notes, "Add description"),
-      audience: "Project team",
+      title: text(row.ResourceName || row.Name, "Untitled resource"),
+      type: text(row.ResourceType || row.Type, "Link"),
+      purpose: description,
+      description,
+      audience: text(row.Audience, "Project team"),
       owner: text(row.Owner, "TBD"),
       status: text(row.Status, "Active"),
-      linkedReviewId: "",
+      linkedReviewId: text(row.LinkedReviewID),
+      linkedPhase: text(row.LinkedPhase),
       url: text(row.URL, "#")
     };
   });

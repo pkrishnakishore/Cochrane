@@ -4999,3 +4999,33 @@ body {
   border-color: var(--navy);
   box-shadow: 0 8px 18px rgba(15, 23, 42, .10);
 }
+
+
+/* Executive milestone override: completed green, current navy, future quiet */
+.milestone-done i {
+  border-color: #087f5b !important;
+  background: #087f5b !important;
+}
+
+.milestone-done strong {
+  color: #087f5b !important;
+}
+
+.milestone-active i {
+  border-color: #111827 !important;
+  background: #111827 !important;
+}
+
+.milestone-active strong {
+  color: #111827 !important;
+  font-weight: 900 !important;
+}
+
+.milestone-blank i {
+  border-color: #cbd5e1 !important;
+  background: #ffffff !important;
+}
+
+.milestone-blank strong {
+  color: #cbd5e1 !important;
+}

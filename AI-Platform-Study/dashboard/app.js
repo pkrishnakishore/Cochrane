@@ -1500,26 +1500,73 @@ function reviewMilestoneHtml(review) {
     return "pending";
   }
 
+  function currentMilestoneKey() {
+    const statusValue = String(review.status || "").toLowerCase();
+    const stageValue = String([review.currentStage, review.tracker?.currentFocus].filter(Boolean).join(" ")).toLowerCase();
+
+    if (statusValue.includes("analysis")) return "analysis";
+    if (statusValue.includes("data extraction") || statusValue.includes("extraction")) return "extraction";
+    if (statusValue.includes("full-text") || statusValue.includes("full text")) return "fullText";
+    if (statusValue.includes("abstract screening")) return "abstract";
+    if (statusValue.includes("training") || statusValue.includes("under review") || statusValue.includes("tbd")) return "onboarding";
+
+    if (stageValue.includes("analysis")) return "analysis";
+    if (stageValue.includes("data extraction") || stageValue.includes("extraction")) return "extraction";
+    if (stageValue.includes("full-text") || stageValue.includes("full text")) return "fullText";
+    if (stageValue.includes("abstract screening")) return "abstract";
+    if (stageValue.includes("training") || stageValue.includes("confirmation") || stageValue.includes("onboarding")) return "onboarding";
+    if (stageValue.includes("setup")) return "setup";
+    return "";
+  }
+
   const hasManualMilestones = !!review.milestones && manualMilestones.some((item) =>
     Object.prototype.hasOwnProperty.call(review.milestones, item.key)
   );
 
-  const groups = hasManualMilestones ? manualMilestones.map((item) => ({
-    group: item.group,
-    label: item.label,
-    state: manualState(review.milestones?.[item.key])
-  })) : workflowGroups.map((group) => {
+  const candidateStatus = String([review.status, review.currentStage, review.shortName, review.title].filter(Boolean).join(" ")).toLowerCase();
+  const suppressMilestoneHighlight = (
+    candidateStatus.includes("under review") ||
+    candidateStatus.includes("tbd") ||
+    candidateStatus.includes("additional review identification")
+  ) && !String(review.status || "").toLowerCase().includes("abstract screening");
+
+  const activeKey = suppressMilestoneHighlight ? "" : currentMilestoneKey();
+
+  const activeIndex = manualMilestones.findIndex((item) => item.key === activeKey);
+
+  const groups = hasManualMilestones ? manualMilestones.map((item, index) => {
+    let state = manualState(review.milestones?.[item.key]);
+    if (activeIndex >= 0) {
+      if (index < activeIndex) state = "done";
+      if (item.key === activeKey) state = "active";
+      if (index > activeIndex && state !== "risk") state = "blank";
+    }
+    return {
+      group: item.group,
+      label: item.label,
+      state
+    };
+  }) : workflowGroups.map((group) => {
     const items = phase1Workflow.filter((item) => item.group === group);
 
     // IMPORTANT:
     // Use rawWorkflowStatus here, not workflowStatus.
     // This prevents dependency-derived Blocked statuses from making future phases look active.
     const statuses = items.map((item) => rawWorkflowStatus(review, item));
+    const milestone = manualMilestones.find((item) => item.group === group);
+    const milestoneIndex = manualMilestones.findIndex((item) => item.group === group);
+    let state = milestoneState(statuses);
+
+    if (activeIndex >= 0) {
+      if (milestoneIndex < activeIndex) state = "done";
+      if (milestone?.key === activeKey) state = "active";
+      if (milestoneIndex > activeIndex && state !== "risk") state = "blank";
+    }
 
     return {
       group,
       label: labels[group] || group,
-      state: milestoneState(statuses)
+      state
     };
   });
 
