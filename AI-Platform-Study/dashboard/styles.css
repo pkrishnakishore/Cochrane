@@ -4919,3 +4919,83 @@ body {
 .triage-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
 }
+
+
+/* Stage-gate status colors: final override for dependency nodes */
+.dependency-node {
+  border-width: 1px !important;
+  border-left-width: 6px !important;
+  color: #0f172a !important;
+}
+
+.dependency-green {
+  background: #ecfdf3 !important;
+  border-color: #abefc6 !important;
+  border-left-color: #087f5b !important;
+}
+
+.dependency-green span {
+  color: #087f5b !important;
+}
+
+.dependency-blue {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  border-left-color: #2563eb !important;
+}
+
+.dependency-blue span {
+  color: #1d4ed8 !important;
+}
+
+.dependency-amber {
+  background: #fffaeb !important;
+  border-color: #fedf89 !important;
+  border-left-color: #b7791f !important;
+}
+
+.dependency-amber span {
+  color: #92400e !important;
+}
+
+.dependency-orange {
+  background: #fff4ed !important;
+  border-color: #fed7aa !important;
+  border-left-color: #c2410c !important;
+}
+
+.dependency-orange span {
+  color: #c2410c !important;
+}
+
+.dependency-red {
+  background: #fff1f0 !important;
+  border-color: #fecdca !important;
+  border-left-color: #b42318 !important;
+}
+
+.dependency-red span {
+  color: #b42318 !important;
+}
+
+.dependency-slate {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  border-left-color: #64748b !important;
+}
+
+.dependency-slate span {
+  color: #475569 !important;
+}
+
+
+/* Upcoming meeting review linkage */
+.meeting-card.is-linked {
+  cursor: pointer;
+  border-left: 4px solid var(--blue);
+}
+
+.meeting-card.is-linked:hover {
+  border-color: var(--navy);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, .10);
+}

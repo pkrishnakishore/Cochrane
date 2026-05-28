@@ -2,8 +2,6 @@
 
 Static GitHub Pages dashboard for the Cochrane AI Platform Study. The Excel workbook is the source of truth, and `data.js` is generated from it.
 
-Live dashboard: https://pkrishnakishore.github.io/Cochrane/AI-Platform-Study/dashboard/
-
 ## Commands
 
 ```bash
@@ -46,16 +44,10 @@ Run:
 npm run start
 ```
 
-Open locally:
+Open:
 
 ```text
 http://127.0.0.1:4173/
-```
-
-Published dashboard:
-
-```text
-https://pkrishnakishore.github.io/Cochrane/AI-Platform-Study/dashboard/
 ```
 
 When using the local server, refreshing the dashboard also regenerates `data.js` from Excel.
@@ -85,3 +77,13 @@ Krishna owns dashboard content updates. The regular workflow is:
 ```text
 Update Excel -> validate/export -> review local dashboard -> commit and push
 ```
+
+
+## Upcoming Meetings Sheet
+
+Add meetings in the `Upcoming_Meetings` tab.
+
+Required columns:
+`MeetingID`, `Date`, `ETTime`, `UKTime`, `Title`, `Purpose`, `People`, `Owner`, `LinkedPhase`, `Status`, `LinkedReviewID`, `MeetingLink`, `Display`.
+
+Set `Display` to `Yes` to show a meeting on the dashboard. If `LinkedReviewID` matches a review ID, the meeting card links to that review detail page.

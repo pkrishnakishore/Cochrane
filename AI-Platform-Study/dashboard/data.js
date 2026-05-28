@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-05-20",
+  "lastUpdated": "2026-05-28",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -783,14 +783,14 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "In Progress",
+      "status": "Abstract Screening",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
-      "currentStage": "Setup package and abstract screening readiness",
-      "currentUpdate": "Sean uploaded the final data items file on 14 May after a minor instruction-field change; Doreen confirmed the change makes sense. Laser AI setup/readiness can proceed.",
-      "nextAction": "Complete Laser AI setup, confirm time tracking, and validate the abstract screening setup before screening begins.",
-      "communicationSupport": "Sean uploaded the final data items file on 14 May after a minor instruction-field change; Doreen confirmed the change makes sense. Laser AI setup/readiness can proceed.",
+      "currentStage": "AI-assisted abstract screening completed; usability survey shared",
+      "currentUpdate": "AI-assisted title/abstract screening has been completed and the title/abstract usability survey has been shared. Confirmation is still pending on whether conventional human abstract screening is completed or ongoing.",
+      "nextAction": "Confirm conventional human abstract screening status and whether time taken has been recorded; follow up on AI title/abstract usability survey completion.",
+      "communicationSupport": "AI-assisted title/abstract screening has been completed and the title/abstract usability survey has been shared. Confirmation is still pending on whether conventional human abstract screening is completed or ongoing.",
       "communicationLog": [
         {
           "id": "comm-phase1-01-001",
@@ -800,7 +800,7 @@ const dashboardData = {
           "resp": "Sean / Meghan / Response Team",
           "due": "2026-05-15",
           "status": "Complete / Under Review",
-          "summary": "Sean uploaded the final data items file after moving the instruction “Record timepoint, if applicable” into the instruction field for outcome data items.",
+          "summary": "Sean uploaded the final data items file after moving the instruction &#8220;Record timepoint, if applicable&#8221; into the instruction field for outcome data items.",
           "linkedTaskId": "task-phase1-01-002",
           "linkedAction": "Confirm use of final data items file",
           "sourceType": "Email",
@@ -814,7 +814,7 @@ const dashboardData = {
           "resp": "Krishna / Response Team",
           "due": "2026-05-15",
           "status": "Complete",
-          "summary": "Doreen confirmed that Sean’s final minor change makes sense.",
+          "summary": "Doreen confirmed that Sean&#8217;s final minor change makes sense.",
           "linkedTaskId": "task-phase1-01-002",
           "linkedAction": "Confirm use of final data items file",
           "sourceType": "Email",
@@ -1089,13 +1089,13 @@ const dashboardData = {
         "w12": "Complete",
         "w13": "Complete",
         "w14": "Complete",
-        "w15": "In Progress",
-        "w16": "In Progress",
-        "w17": "Not Started",
-        "w18": "Not Started",
+        "w15": "Complete",
+        "w16": "Complete",
+        "w17": "In Progress",
+        "w18": "Complete",
         "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
+        "w20": "Complete",
+        "w21": "Complete",
         "w22": "Not Started",
         "w23": "Not Started",
         "w24": "Not Started",
@@ -1149,26 +1149,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Setup package and abstract screening readiness",
+        "plannedGate": "AI-assisted abstract screening completed; usability survey shared",
         "targetDate": "2026-05-15",
-        "variance": "Data extraction comparability issue appears resolved; final data items now uploaded by Sean.",
+        "variance": "Awaiting confirmation of conventional human abstract screening status and time log.",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "In Progress",
-          "state": "In Progress"
+          "value": "Abstract Screening",
+          "state": "Abstract Screening"
         },
         {
           "label": "Target",
           "value": "2026-05-15",
-          "state": "In Progress"
+          "state": "Abstract Screening"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "In Progress"
+          "state": "Abstract Screening"
         }
       ]
     },
@@ -1177,14 +1177,14 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "In Progress",
+      "status": "Abstract Screening",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
-      "currentStage": "Full-text readiness / Nested Knowledge full-text issue follow-up",
-      "currentUpdate": "Nested Knowledge completed action items for trial registries and multi-abstract PDFs in the Plaque Psoriasis project. Remaining unavailable or paywalled full texts have been commented on in Study Inspector.",
-      "nextAction": "Confirm remaining full-text gaps with review team and proceed with full-text readiness once unresolved PDFs/access issues are handled.",
-      "communicationSupport": "Nested Knowledge completed action items for trial registries and multi-abstract PDFs in the Plaque Psoriasis project. Remaining unavailable or paywalled full texts have been commented on in Study Inspector.",
+      "currentStage": "NK abstract screening survey responses received; data extraction setup underway",
+      "currentUpdate": "Nested Knowledge title/abstract screening survey responses have been received. Data extraction setup is underway, with updated data items uploaded and NK fields being entered. Conventional extraction team has clarified the expected files and standalone data item format.",
+      "nextAction": "Finalize NK data extraction setup; confirm extractors use the agreed instructions/definitions; ensure conventional extraction outputs are provided in the agreed standalone format.",
+      "communicationSupport": "Nested Knowledge title/abstract screening survey responses have been received. Data extraction setup is underway, with updated data items uploaded and NK fields being entered. Conventional extraction team has clarified the expected files and standalone data item format.",
       "communicationLog": [
         {
           "id": "comm-phase1-02-001",
@@ -1520,11 +1520,11 @@ const dashboardData = {
         "w15": "Complete",
         "w16": "Complete",
         "w17": "In Progress",
-        "w18": "In Progress",
-        "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
-        "w22": "Not Started",
+        "w18": "Complete",
+        "w19": "Complete",
+        "w20": "Complete",
+        "w21": "Complete",
+        "w22": "Complete",
         "w23": "Not Started",
         "w24": "Not Started",
         "w25": "Not Started",
@@ -1577,26 +1577,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Full-text readiness / Nested Knowledge full-text issue follow-up",
-        "targetDate": "2026-05-15",
-        "variance": "Full-text issue partially resolved by Nested Knowledge; remaining paywalled/unavailable records may still require review-team input.",
+        "plannedGate": "NK abstract screening survey responses received; data extraction setup underway",
+        "targetDate": "2026-05-27",
+        "variance": "To be assessed",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "In Progress",
-          "state": "In Progress"
+          "value": "Abstract Screening",
+          "state": "Abstract Screening"
         },
         {
           "label": "Target",
-          "value": "2026-05-15",
-          "state": "In Progress"
+          "value": "2026-05-27",
+          "state": "Abstract Screening"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "In Progress"
+          "state": "Abstract Screening"
         }
       ]
     },
@@ -1605,14 +1605,14 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Starts 20 May",
-      "tool": "Allocated tool pending",
+      "status": "Training completed; re-onboarding to be scheduled",
+      "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Training and setup planning",
-      "currentUpdate": "Search is expected around 20 May; training and tool setup should be timed closer to active start.",
-      "nextAction": "Confirm allocated tool, review team access, and collect RIS/search results after the scheduled search.",
-      "communicationSupport": "Search is expected around 20 May; training and tool setup should be timed closer to active start.",
+      "currentStage": "Laser AI training completed; Re-onboarding pending",
+      "currentUpdate": "Updated search was run on 20 May. Laser AI training has been completed. A brief Re-onboarding/check-in with Gerald is still pending this week before active screening.",
+      "nextAction": "Schedule 30-minute methodology re-onboarding with Gerald; confirm search completion and human screening status before active screening.",
+      "communicationSupport": "Updated search was run on 20 May. Laser AI training has been completed. A brief Re-onboarding/check-in with Gerald is still pending this week before active screening.",
       "communicationLog": [
         {
           "id": "comm-phase1-03-001",
@@ -1992,33 +1992,33 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Training and setup planning",
-        "targetDate": "2026-05-20",
+        "plannedGate": "Laser AI training completed; Re-onboarding pending",
+        "targetDate": "2026-05-28",
         "variance": "Waiting for search/RIS before setup can proceed.",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Starts 20 May",
-          "state": "Starts 20 May"
+          "value": "Training completed; re-onboarding to be scheduled",
+          "state": "Training completed; re-onboarding to be scheduled"
         },
         {
           "label": "Target",
-          "value": "2026-05-20",
-          "state": "Starts 20 May"
+          "value": "2026-05-28",
+          "state": "Training completed; re-onboarding to be scheduled"
         },
         {
           "label": "Tool",
-          "value": "Allocated tool pending",
-          "state": "Starts 20 May"
+          "value": "Laser AI",
+          "state": "Training completed; re-onboarding to be scheduled"
         }
       ]
     },
     {
       "id": "phase1-04",
       "title": "Screening for genital chlamydia infection",
-      "shortName": "Chlamydia",
+      "shortName": "TBD",
       "phase": "Phase 1",
       "status": "Under Review",
       "tool": "AI tool pending",
@@ -3951,7 +3951,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-05-27"
     },
     {
       "id": "critical-phase1-02-3",
@@ -3966,7 +3966,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-05-27"
     },
     {
       "id": "critical-phase1-03-4",
@@ -3981,7 +3981,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-05-27"
     },
     {
       "id": "critical-phase1-03-5",
@@ -3996,7 +3996,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-05-27"
     },
     {
       "id": "critical-phase1-04-6",
@@ -4205,96 +4205,11 @@ const dashboardData = {
       "url": "Sent"
     }
   ],
-  "upcomingMeetings": [
-    {
-      "id": "meet-001",
-      "date": "15 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Usability survey tracking discussion",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Scheduled",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    },
-    {
-      "id": "meet-002",
-      "date": "18 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Core team discussion with Meghan",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Sent",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    },
-    {
-      "id": "meet-003",
-      "date": "19 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "BP Targets review team check-in",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Sent",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    },
-    {
-      "id": "meet-004",
-      "date": "19 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Psoriasis review team check-in",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Sent",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    },
-    {
-      "id": "meet-005",
-      "date": "19 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Adjudication pilot deadline",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Pending",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    },
-    {
-      "id": "meet-006",
-      "date": "21 May 2026",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "PM + PI meeting",
-      "agenda": "Add meeting agenda.",
-      "attendees": "TBD",
-      "owner": "TBD",
-      "focus": "Project coordination",
-      "status": "Sent",
-      "linkedReviewId": "",
-      "meetingLink": ""
-    }
-  ],
+  "upcomingMeetings": [],
   "newReviews": [
     {
       "id": "new-01",
-      "reviewName": "Mohan Pammi — Human milk-derived fortifier versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
+      "reviewName": "Mohan Pammi &#8212; Human milk-derived fortifier versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "category": "Under Shortlisting",
       "status": "Pending",
       "targetPhase": "Phase 1",
@@ -4302,50 +4217,170 @@ const dashboardData = {
       "expectedTiming": "",
       "remarks": "",
       "moveToFullSheet": "No",
-      "display": ""
+      "display": "Yes"
     },
     {
       "id": "new-02",
-      "reviewName": "Amanda Cross — review title/details pending",
-      "category": "Clarification Needed",
-      "status": "Under Reviedsdfsfw",
+      "reviewName": "Amanda Cross &#8212; rInterventions for improving medication&#8208;taking ability and adherence in older adults prescribed multiple medications",
+      "category": "Shortlisted",
+      "status": "Onbarding and Training in week of June 8th. Awating response",
       "targetPhase": "Phase 1",
       "lead": "",
       "expectedTiming": "",
       "remarks": "",
       "moveToFullSheet": "No",
-      "display": ""
+      "display": "Yes"
     },
     {
       "id": "new-03",
-      "reviewName": "Jai Das — Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
+      "reviewName": "Jai Das &#8212; Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
       "category": "Under Shortlisting",
-      "status": "Not Yet Required",
+      "status": "Search by July 2026",
       "targetPhase": "Phase 1",
       "lead": "",
       "expectedTiming": "",
       "remarks": "",
       "moveToFullSheet": "No",
-      "display": ""
+      "display": "Yes"
     },
     {
       "id": "new-04",
-      "reviewName": "Jai Das — Vitamin C supplementation for prevention and treatment of pneumonia",
+      "reviewName": "Jai Das &#8212; Vitamin C supplementation for prevention and treatment of pneumonia",
       "category": "Under Shortlisting",
-      "status": "Not Eligible",
+      "status": "Search by July 2026",
       "targetPhase": "Future Phase",
       "lead": "",
       "expectedTiming": "",
       "remarks": "",
       "moveToFullSheet": "No",
+      "display": "Yes"
+    },
+    {
+      "id": "new-06",
+      "reviewName": "Lesly Chavez Rimache / Cochrane Peru",
+      "category": "Future Phase",
+      "status": "Two systematic review proposals have been submitted to Cochrane, but they are still awaiting evaluation/acceptance and are not yet at protocol/search stage.",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
       "display": ""
     },
     {
-      "id": "new-05",
-      "reviewName": "Kate O’Brien / Rebecca Hodder — Interventions for increasing fruit and vegetable consumption in children ages five years and under",
-      "category": "Shortlisted",
-      "status": "Scheduled",
-      "targetPhase": "Phase 1",
+      "id": "new-07",
+      "reviewName": "Minyahil Tadesse / Cochrane Ethiopia",
+      "category": "Future Phase",
+      "status": "Two Cochrane protocols have been published, but the full review work/searches have not yet started",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-08",
+      "reviewName": "Francesco Nonino",
+      "category": "Future Phase",
+      "status": "No suitable updates are currently available, but he will monitor and share any potential review updates later this year.",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-09",
+      "reviewName": "Giulio Cherubini &#8212; Impact of Manual Therapy on Instrumentalist Musicians With Playing-Related Musculoskeletal Disorders: A Systematic Review",
+      "category": "Not Eligible",
+      "status": "Non-Cochrane review",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-10",
+      "reviewName": "Francesca Cecchi / Giulio Cherubini &#8212; Effects of lower limb botulinum toxin injections on gait functional outcomes in stroke survivors",
+      "category": "Not Eligible",
+      "status": "Non-Cochrane review",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-11",
+      "reviewName": "Feng Sun / Zuhaer &#8212; Automated Insulin Delivery Systems in Children and Adolescents With Type 1 Diabetes",
+      "category": "Not Eligible",
+      "status": "Non-Cochrane review",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-12",
+      "reviewName": "Patricia Clark &#8212; Effectiveness and safety of pharmacological interventions for the primary prevention of osteoporosis in postmenopausal women",
+      "category": "Not Eligible",
+      "status": "Independent/non-Cochrane review",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-13",
+      "reviewName": "Alison Edelman &#8212; Meningioma and hormonal contraceptives",
+      "category": "Not Eligible",
+      "status": "Currently planned outside Cochrane",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-14",
+      "reviewName": "Elena Kostova &#8212; Screening for genital chlamydia infection",
+      "category": "Not Eligible",
+      "status": "Cochrane review update, but not eligible because abstract screening had already started and more than half of the records had already been screened. The team also could not meet the required parallel workflow structure.",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-15",
+      "reviewName": "Patricia C. Heyn &#8212; Aerobic and Resistance Training Interventions for Cognitive Outcomes in Older Adults with Mild Cognitive Impairment and Alzheimer's Disease and Related Dementias: An Umbrella Review of Meta-Analyses of Randomized Trials",
+      "category": "Not Eligible",
+      "status": "Not eligible because it is not a Cochrane review update and most methods are already completed, with the team validating the database and starting analysis.",
+      "targetPhase": "",
+      "lead": "",
+      "expectedTiming": "",
+      "remarks": "",
+      "moveToFullSheet": "No",
+      "display": ""
+    },
+    {
+      "id": "new-16",
+      "reviewName": "Zuhaer / Feng Sun &#8212; Gas gangrene Cochrane Review update",
+      "category": "Not Eligible",
+      "status": "Not eligible for the current phase because the team is considering expanding the scope to include observational studies, which would require a major methodological change and may not align with the current validation workflow/timeline.",
+      "targetPhase": "",
       "lead": "",
       "expectedTiming": "",
       "remarks": "",

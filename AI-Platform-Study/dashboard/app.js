@@ -1995,8 +1995,13 @@ function renderUpcomingMeetings() {
     });
   }
 
-  target.innerHTML = rows.map((meeting, index) =>
-    '<article class="meeting-card">' +
+  target.innerHTML = rows.map((meeting, index) => {
+    const linkedReview = meeting.linkedReviewId ? reviewById(meeting.linkedReviewId) : null;
+    const linkedLabel = linkedReview ? shortName(linkedReview) : meeting.focus || "Project coordination";
+    const clickAttr = linkedReview ? " onclick=\"selectReview('" + escapeHtml(linkedReview.id) + "')\" role=\"button\" tabindex=\"0\" title=\"Open linked review\"" : "";
+    const linkedClass = linkedReview ? " is-linked" : "";
+
+    return '<article class="meeting-card' + linkedClass + '"' + clickAttr + '>' +
       '<div class="meeting-date">' +
         '<strong>' + escapeHtml(meeting.date || "TBD") + '</strong>' +
         '<span><b>ET:</b> ' + escapeHtml(meeting.etTime || meeting.time || "TBD") + '</span>' +
@@ -2013,10 +2018,11 @@ function renderUpcomingMeetings() {
           '<p><b>Attendees:</b><br>' + escapeHtml(meeting.attendees || "TBD") + '</p>' +
           '<p><b>Owner:</b><br>' + escapeHtml(meeting.owner || "TBD") + '</p>' +
           '<p><b>Status:</b><br>' + escapeHtml(meeting.status || "TBD") + '</p>' +
+          '<p><b>Linked review:</b><br>' + escapeHtml(linkedLabel) + '</p>' +
         '</div>' +
       '</div>' +
-    '</article>'
-  ).join("");
+    '</article>';
+  }).join("");
 }
 function renderResourceLibrary() {
   const target = document.getElementById("resourceLibrary");

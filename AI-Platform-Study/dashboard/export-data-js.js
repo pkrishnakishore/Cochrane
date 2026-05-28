@@ -603,8 +603,9 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     };
   });
 
+  const meetingSheetRows = sheetRows(sheetMap, root, sharedStrings, "Upcoming_Meetings");
   const meetingRows = tableFromRows(
-    globalRows,
+    meetingSheetRows.length ? meetingSheetRows : globalRows,
     ["MeetingID", "Date", "Title", "Status", "Display"]
   );
 
