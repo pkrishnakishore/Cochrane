@@ -2051,8 +2051,8 @@ function renderUpcomingMeetings() {
     return '<article class="meeting-card' + linkedClass + '"' + clickAttr + '>' +
       '<div class="meeting-date">' +
         '<strong>' + escapeHtml(meeting.date || "TBD") + '</strong>' +
-        '<span><b>ET:</b> ' + escapeHtml(meeting.etTime || meeting.time || "TBD") + '</span>' +
-        '<span><b>UK time:</b> ' + escapeHtml(meeting.ukTime || "TBD") + '</span>' +
+        '<span><b>EDT:</b> ' + escapeHtml(meeting.etTime || meeting.time || "TBD") + '</span>' +
+        '<span><b>BST:</b> ' + escapeHtml(meeting.ukTime || "TBD") + '</span>' +
       '</div>' +
 
       '<div>' +

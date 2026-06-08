@@ -3494,7 +3494,64 @@ const dashboardData = {
       "url": "https://example.com/onboarding"
     }
   ],
-  "upcomingMeetings": [],
+  "upcomingMeetings": [
+    {
+      "id": "mtg-01",
+      "date": "8 June 2026",
+      "etTime": "2:00-3:00 AM EDT",
+      "ukTime": "7:00-8:00 AM BST",
+      "title": "NK Training - Medication Adherence",
+      "agenda": "CDT calendar time: Jun 8, 1:00-2:00 AM. Nested Knowledge training for Medication Adherence.",
+      "attendees": "Amanda Cross / Rehan Sarwar / Krishna / Nested Knowledge",
+      "owner": "Krishna",
+      "focus": "Phase 1",
+      "status": "Scheduled",
+      "linkedReviewId": "phase1-04",
+      "meetingLink": ""
+    },
+    {
+      "id": "mtg-02",
+      "date": "8 June 2026",
+      "etTime": "3:00-4:00 AM EDT",
+      "ukTime": "8:00-9:00 AM BST",
+      "title": "Onboarding - Medication Adherence",
+      "agenda": "CDT calendar time: Jun 8, 2:00-3:00 AM. Onboarding and split-team workflow confirmation.",
+      "attendees": "Amanda Cross / Rehan Sarwar / Krishna",
+      "owner": "Krishna",
+      "focus": "Phase 1",
+      "status": "Scheduled",
+      "linkedReviewId": "phase1-04",
+      "meetingLink": ""
+    },
+    {
+      "id": "mtg-03",
+      "date": "12 June 2026",
+      "etTime": "5:00-6:00 AM EDT",
+      "ukTime": "10:00-11:00 AM BST",
+      "title": "Vitamin C Onboarding",
+      "agenda": "CDT calendar time: Jun 12, 4:00-5:00 AM. Review onboarding for Vitamin C.",
+      "attendees": "Jai Das / Krishna / Core Team",
+      "owner": "Krishna",
+      "focus": "Phase 1",
+      "status": "Scheduled",
+      "linkedReviewId": "phase1-05",
+      "meetingLink": ""
+    },
+    {
+      "id": "mtg-04",
+      "date": "8 June 2026",
+      "etTime": "10:00-11:00 AM EDT",
+      "ukTime": "3:00-4:00 PM BST",
+      "title": "AI Pilot Core Project Team Catch-up",
+      "agenda": "CDT calendar time: 9:00-10:00 AM. Core project team catch-up.",
+      "attendees": "Core Project Team",
+      "owner": "Krishna",
+      "focus": "Project coordination",
+      "status": "Scheduled",
+      "linkedReviewId": "",
+      "meetingLink": ""
+    }
+  ],
   "newReviews": [
     {
       "id": "new-01",
