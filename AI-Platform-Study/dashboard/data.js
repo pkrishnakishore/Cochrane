@@ -68,7 +68,570 @@ const dashboardData = {
       }
     ]
   },
-  "pilot": [],
+  "pilot": [
+    {
+      "id": "pilot-01",
+      "title": "Cessation of caffeine",
+      "shortName": "Caffeine",
+      "phase": "Pilot",
+      "status": "Wrapping Up",
+      "tool": "TBD",
+      "lead": "Matteo Bruschettini",
+      "risk": "Medium",
+      "currentStage": "Pilot closeout / lessons learned",
+      "currentUpdate": "Time-on-task values and survey receipt still need verification for pilot closeout.",
+      "nextAction": "Add next action.",
+      "communicationSupport": "Time-on-task values and survey receipt still need verification for pilot closeout.",
+      "communicationLog": [
+        {
+          "id": "comm-pilot-01-002",
+          "date": "2026-05-07",
+          "subject": "Pilot survey completion update",
+          "people": "Matteo Bruschettini",
+          "resp": "Krishna / Susan",
+          "due": "2026-05-10",
+          "status": "Pending",
+          "summary": "Matteo indicated survey completion, but receipt should be confirmed in the survey system.",
+          "linkedTaskId": "task-pilot-01-002",
+          "linkedAction": "Consolidate usability survey receipt",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "Critical Items Displayed in Dashboard",
+          "date": "Recent",
+          "subject": "Mail follow-up",
+          "people": "Matteo Bruschettini",
+          "resp": "Matteo Bruschettini",
+          "due": "TBD",
+          "status": "Pending",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        },
+        {
+          "id": "CriticalItem",
+          "date": "Severity",
+          "subject": "Owner",
+          "people": "DueDate",
+          "resp": "Status",
+          "due": "Notes",
+          "status": "Display",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        },
+        {
+          "id": "Full-text time not reported",
+          "date": "Medium",
+          "subject": "Mail follow-up",
+          "people": "Matteo Bruschettini",
+          "resp": "Open",
+          "due": "TBD",
+          "status": "Yes",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        }
+      ],
+      "files": {
+        "RIS": false,
+        "PDFs": false,
+        "Criteria": false,
+        "Extraction": false,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "CriticalItem",
+          "human": 0,
+          "ai": 0,
+          "status": "DueDate"
+        },
+        {
+          "name": "Full-text time not reported",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-pilot-01-002",
+          "task": "Consolidate usability survey receipt",
+          "owner": "Susan",
+          "status": "Pending",
+          "risk": "Medium",
+          "due": "2026-05-10",
+          "dependency": "Survey access",
+          "communication": "Matteo said all surveys were submitted; confirm in survey system.",
+          "source": "Email",
+          "sourceDate": "2026-05-07"
+        },
+        {
+          "id": "task-pilot-01-003",
+          "task": "Capture lessons learned before pilot closeout",
+          "owner": "Krishna / Core Team",
+          "status": "In Progress",
+          "risk": "Medium",
+          "due": "2026-05-10",
+          "dependency": "Lessons document",
+          "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
+          "source": "MoM",
+          "sourceDate": "2026-05-10"
+        }
+      ],
+      "criticalItems": [
+        "Full-text time not reported"
+      ],
+      "history": [],
+      "milestones": {
+        "onboarding": "",
+        "setup": "",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Not Started",
+        "w02": "Not Started",
+        "w03": "Not Started",
+        "w04": "Not Started",
+        "w05": "Not Started",
+        "w06": "Not Started",
+        "w07": "Not Started",
+        "w08": "Not Started",
+        "w09": "Not Started",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Consolidate usability survey receipt": "Email",
+        "Capture lessons learned before pilot closeout": "MoM",
+        "2026-05-07": "task-pilot-01-002",
+        "Severity": "Not Started",
+        "Medium": "Not Started"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Pilot closeout / lessons learned",
+        "targetDate": "2026-05-10",
+        "variance": "Full-text time not reported.",
+        "assessment": "Wrapping Up"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Wrapping Up",
+          "state": "Wrapping Up"
+        },
+        {
+          "label": "Target",
+          "value": "2026-05-10",
+          "state": "Wrapping Up"
+        },
+        {
+          "label": "Tool",
+          "value": "TBD",
+          "state": "Wrapping Up"
+        }
+      ]
+    },
+    {
+      "id": "pilot-02",
+      "title": "DMARDs / Rheumatoid arthritis",
+      "shortName": "DMARDs / RA",
+      "phase": "Pilot",
+      "status": "Needs Action",
+      "tool": "TBD",
+      "lead": "Jordi Pardo Pardo / Glen Hazlewood",
+      "risk": "Medium",
+      "currentStage": "Pilot completion check",
+      "currentUpdate": "No fresh completion update found in the latest email batch.",
+      "nextAction": "Add next action.",
+      "communicationSupport": "No fresh completion update found in the latest email batch.",
+      "communicationLog": [
+        {
+          "id": "comm-pilot-02-001",
+          "date": "2026-05-10",
+          "subject": "DMARDs pilot completion follow-up",
+          "people": "Core Team / Sean",
+          "resp": "Sean / Laser AI / Review Team",
+          "due": "2026-05-13",
+          "status": "Needs Action",
+          "summary": "Latest Laser AI completion status and availability of outputs for adjudication preparation remain unclear.",
+          "linkedTaskId": "task-pilot-02-001",
+          "linkedAction": "Confirm latest Laser AI progress and outputs",
+          "sourceType": "MoM",
+          "sourceLink": ""
+        },
+        {
+          "id": "Critical Items Displayed in Dashboard",
+          "date": "Recent",
+          "subject": "Mail follow-up",
+          "people": "Jordi Pardo Pardo / Glen Hazlewood",
+          "resp": "Jordi Pardo Pardo / Glen Hazlewood",
+          "due": "TBD",
+          "status": "Pending",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        },
+        {
+          "id": "CriticalItem",
+          "date": "Severity",
+          "subject": "Owner",
+          "people": "DueDate",
+          "resp": "Status",
+          "due": "Notes",
+          "status": "Display",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        },
+        {
+          "id": "Pilot output status unclear",
+          "date": "Medium",
+          "subject": "Mail follow-up",
+          "people": "Jordi Pardo Pardo / Glen Hazlewood",
+          "resp": "Open",
+          "due": "TBD",
+          "status": "Yes",
+          "summary": "Follow-up conversation pending.",
+          "linkedTaskId": "",
+          "linkedAction": "",
+          "sourceType": "",
+          "sourceLink": ""
+        }
+      ],
+      "files": {
+        "RIS": false,
+        "PDFs": false,
+        "Criteria": false,
+        "Extraction": false,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "CriticalItem",
+          "human": 0,
+          "ai": 0,
+          "status": "DueDate"
+        },
+        {
+          "name": "Pilot output status unclear",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-pilot-02-001",
+          "task": "Confirm latest Laser AI progress and outputs",
+          "owner": "Sean / Laser AI / Review Team",
+          "status": "Needs Action",
+          "risk": "Medium",
+          "due": "2026-05-13",
+          "dependency": "Vendor/team update",
+          "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
+          "source": "MoM",
+          "sourceDate": "2026-05-10"
+        },
+        {
+          "id": "task-pilot-02-002",
+          "task": "Confirm whether outputs can move toward adjudication preparation",
+          "owner": "Sean / Laser AI / Review Team",
+          "status": "Needs Action",
+          "risk": "Medium",
+          "due": "2026-05-13",
+          "dependency": "Pilot completion status",
+          "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
+          "source": "MoM",
+          "sourceDate": "2026-05-10"
+        }
+      ],
+      "criticalItems": [
+        "Pilot output status unclear"
+      ],
+      "history": [],
+      "milestones": {
+        "onboarding": "",
+        "setup": "",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Not Started",
+        "w02": "Not Started",
+        "w03": "Not Started",
+        "w04": "Not Started",
+        "w05": "Not Started",
+        "w06": "Not Started",
+        "w07": "Not Started",
+        "w08": "Not Started",
+        "w09": "Not Started",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Confirm latest Laser AI progress and outputs": "MoM",
+        "Confirm whether outputs can move toward adjudication preparation": "MoM",
+        "2026-05-10": "task-pilot-02-001",
+        "Severity": "Not Started",
+        "Medium": "Not Started"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Pilot completion check",
+        "targetDate": "2026-05-13",
+        "variance": "Pilot output status still unclear.",
+        "assessment": "Needs Action"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Needs Action",
+          "state": "Needs Action"
+        },
+        {
+          "label": "Target",
+          "value": "2026-05-13",
+          "state": "Needs Action"
+        },
+        {
+          "label": "Tool",
+          "value": "TBD",
+          "state": "Needs Action"
+        }
+      ]
+    }
+  ],
   "phase1": [
     {
       "id": "phase1-01",
@@ -2718,6 +3281,76 @@ const dashboardData = {
       "source": "Project tracking",
       "sourceDate": "2026-05-14",
       "linkedReviewId": "phase2-01"
+    },
+    {
+      "id": "task-pilot-01-002",
+      "task": "Consolidate usability survey receipt",
+      "owner": "Susan",
+      "status": "Pending",
+      "risk": "Medium",
+      "due": "2026-05-10",
+      "dependency": "Survey access",
+      "communication": "Matteo said all surveys were submitted; confirm in survey system.",
+      "source": "Email",
+      "sourceDate": "2026-05-07",
+      "linkedReviewId": "pilot-01"
+    },
+    {
+      "id": "task-pilot-01-003",
+      "task": "Capture lessons learned before pilot closeout",
+      "owner": "Krishna / Core Team",
+      "status": "In Progress",
+      "risk": "Medium",
+      "due": "2026-05-10",
+      "dependency": "Lessons document",
+      "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
+      "source": "MoM",
+      "sourceDate": "2026-05-10",
+      "linkedReviewId": "pilot-01"
+    },
+    {
+      "task": "Full-text time not reported",
+      "owner": "TBD",
+      "status": "Open",
+      "due": "Monitor",
+      "dependency": "Monitor risk",
+      "linkedReviewId": "pilot-01",
+      "communication": ""
+    },
+    {
+      "id": "task-pilot-02-001",
+      "task": "Confirm latest Laser AI progress and outputs",
+      "owner": "Sean / Laser AI / Review Team",
+      "status": "Needs Action",
+      "risk": "Medium",
+      "due": "2026-05-13",
+      "dependency": "Vendor/team update",
+      "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
+      "source": "MoM",
+      "sourceDate": "2026-05-10",
+      "linkedReviewId": "pilot-02"
+    },
+    {
+      "id": "task-pilot-02-002",
+      "task": "Confirm whether outputs can move toward adjudication preparation",
+      "owner": "Sean / Laser AI / Review Team",
+      "status": "Needs Action",
+      "risk": "Medium",
+      "due": "2026-05-13",
+      "dependency": "Pilot completion status",
+      "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
+      "source": "MoM",
+      "sourceDate": "2026-05-10",
+      "linkedReviewId": "pilot-02"
+    },
+    {
+      "task": "Pilot output status unclear",
+      "owner": "TBD",
+      "status": "Open",
+      "due": "Monitor",
+      "dependency": "Monitor risk",
+      "linkedReviewId": "pilot-02",
+      "communication": ""
     }
   ],
   "criticalItems": [
@@ -2855,6 +3488,36 @@ const dashboardData = {
       "impact": "",
       "source": "Review sheet",
       "sourceDate": "2026-07-06"
+    },
+    {
+      "id": "critical-pilot-01-10",
+      "phase": "Pilot",
+      "item": "Full-text time not reported",
+      "description": "",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "TBD",
+      "due": "Monitor",
+      "linkedReviewId": "pilot-01",
+      "mitigation": "",
+      "impact": "",
+      "source": "Review sheet",
+      "sourceDate": "2026-05-14"
+    },
+    {
+      "id": "critical-pilot-02-11",
+      "phase": "Pilot",
+      "item": "Pilot output status unclear",
+      "description": "",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "TBD",
+      "due": "Monitor",
+      "linkedReviewId": "pilot-02",
+      "mitigation": "",
+      "impact": "",
+      "source": "Review sheet",
+      "sourceDate": "2026-05-14"
     }
   ],
   "resources": [
