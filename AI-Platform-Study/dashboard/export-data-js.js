@@ -338,7 +338,7 @@ function safeReviewFromIndex(row, card) {
     risk,
     currentStage,
     currentUpdate: text(card.CurrentUpdate, "No current update entered."),
-    nextAction: text(card.NextAction, text(row.NextAction, "Add next action.")),
+    nextAction: text(card.NextAction, text(row.NextAction)),
     communicationSupport: text(card.CurrentUpdate, "No current update entered."),
     communicationLog: [],
     files: { ...DEFAULT_FILES },

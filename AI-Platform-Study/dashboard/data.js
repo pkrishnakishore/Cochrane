@@ -13,7 +13,7 @@ const dashboardData = {
         "pilot",
         "Pilot",
         "Mid March to Mid April",
-        "Wrapping Up"
+        "Closed"
       ],
       [
         "phase1",
@@ -44,7 +44,7 @@ const dashboardData = {
       {
         "phase": "Pilot",
         "window": "Mid March to Mid April",
-        "note": "Wrapping Up"
+        "note": "Closed"
       },
       {
         "phase": "Phase 1",
@@ -74,14 +74,14 @@ const dashboardData = {
       "title": "Cessation of caffeine",
       "shortName": "Caffeine",
       "phase": "Pilot",
-      "status": "Wrapping Up",
+      "status": "Closed",
       "tool": "TBD",
       "lead": "Matteo Bruschettini",
       "risk": "Medium",
-      "currentStage": "Pilot closeout / lessons learned",
-      "currentUpdate": "Time-on-task values and survey receipt still need verification for pilot closeout.",
-      "nextAction": "Add next action.",
-      "communicationSupport": "Time-on-task values and survey receipt still need verification for pilot closeout.",
+      "currentStage": "Pilot closeout closed",
+      "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
+      "nextAction": "",
+      "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
           "id": "comm-pilot-01-002",
@@ -90,8 +90,8 @@ const dashboardData = {
           "people": "Matteo Bruschettini",
           "resp": "Krishna / Susan",
           "due": "2026-05-10",
-          "status": "Pending",
-          "summary": "Matteo indicated survey completion, but receipt should be confirmed in the survey system.",
+          "status": "Closed",
+          "summary": "Closed; no active follow-up required.",
           "linkedTaskId": "task-pilot-01-002",
           "linkedAction": "Consolidate usability survey receipt",
           "sourceType": "Email",
@@ -130,9 +130,9 @@ const dashboardData = {
           "date": "Medium",
           "subject": "Mail follow-up",
           "people": "Matteo Bruschettini",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
+          "resp": "Closed",
+          "due": "Closed; no active follow-up required.",
+          "status": "No",
           "summary": "Follow-up conversation pending.",
           "linkedTaskId": "",
           "linkedAction": "",
@@ -221,11 +221,11 @@ const dashboardData = {
           "id": "task-pilot-01-002",
           "task": "Consolidate usability survey receipt",
           "owner": "Susan",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-10",
           "dependency": "Survey access",
-          "communication": "Matteo said all surveys were submitted; confirm in survey system.",
+          "communication": "Closed; no active follow-up required.",
           "source": "Email",
           "sourceDate": "2026-05-07"
         },
@@ -233,18 +233,16 @@ const dashboardData = {
           "id": "task-pilot-01-003",
           "task": "Capture lessons learned before pilot closeout",
           "owner": "Krishna / Core Team",
-          "status": "In Progress",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-10",
           "dependency": "Lessons document",
-          "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
+          "communication": "Closed; no active follow-up required.",
           "source": "MoM",
           "sourceDate": "2026-05-10"
         }
       ],
-      "criticalItems": [
-        "Full-text time not reported"
-      ],
+      "criticalItems": [],
       "history": [],
       "milestones": {
         "onboarding": "",
@@ -327,26 +325,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Pilot closeout / lessons learned",
+        "plannedGate": "Pilot closeout closed",
         "targetDate": "2026-05-10",
-        "variance": "Full-text time not reported.",
-        "assessment": "Wrapping Up"
+        "variance": "Closed.",
+        "assessment": "Closed"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Wrapping Up",
-          "state": "Wrapping Up"
+          "value": "Closed",
+          "state": "Closed"
         },
         {
           "label": "Target",
           "value": "2026-05-10",
-          "state": "Wrapping Up"
+          "state": "Closed"
         },
         {
           "label": "Tool",
           "value": "TBD",
-          "state": "Wrapping Up"
+          "state": "Closed"
         }
       ]
     },
@@ -355,14 +353,14 @@ const dashboardData = {
       "title": "DMARDs / Rheumatoid arthritis",
       "shortName": "DMARDs / RA",
       "phase": "Pilot",
-      "status": "Needs Action",
+      "status": "Closed",
       "tool": "TBD",
       "lead": "Jordi Pardo Pardo / Glen Hazlewood",
       "risk": "Medium",
-      "currentStage": "Pilot completion check",
-      "currentUpdate": "No fresh completion update found in the latest email batch.",
-      "nextAction": "Add next action.",
-      "communicationSupport": "No fresh completion update found in the latest email batch.",
+      "currentStage": "Pilot closeout closed",
+      "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
+      "nextAction": "",
+      "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
           "id": "comm-pilot-02-001",
@@ -371,8 +369,8 @@ const dashboardData = {
           "people": "Core Team / Sean",
           "resp": "Sean / Laser AI / Review Team",
           "due": "2026-05-13",
-          "status": "Needs Action",
-          "summary": "Latest Laser AI completion status and availability of outputs for adjudication preparation remain unclear.",
+          "status": "Closed",
+          "summary": "Closed; no active follow-up required.",
           "linkedTaskId": "task-pilot-02-001",
           "linkedAction": "Confirm latest Laser AI progress and outputs",
           "sourceType": "MoM",
@@ -411,9 +409,9 @@ const dashboardData = {
           "date": "Medium",
           "subject": "Mail follow-up",
           "people": "Jordi Pardo Pardo / Glen Hazlewood",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
+          "resp": "Closed",
+          "due": "Closed; no active follow-up required.",
+          "status": "No",
           "summary": "Follow-up conversation pending.",
           "linkedTaskId": "",
           "linkedAction": "",
@@ -502,11 +500,11 @@ const dashboardData = {
           "id": "task-pilot-02-001",
           "task": "Confirm latest Laser AI progress and outputs",
           "owner": "Sean / Laser AI / Review Team",
-          "status": "Needs Action",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-13",
           "dependency": "Vendor/team update",
-          "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
+          "communication": "Closed; no active follow-up required.",
           "source": "MoM",
           "sourceDate": "2026-05-10"
         },
@@ -514,18 +512,16 @@ const dashboardData = {
           "id": "task-pilot-02-002",
           "task": "Confirm whether outputs can move toward adjudication preparation",
           "owner": "Sean / Laser AI / Review Team",
-          "status": "Needs Action",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-13",
           "dependency": "Pilot completion status",
-          "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
+          "communication": "Closed; no active follow-up required.",
           "source": "MoM",
           "sourceDate": "2026-05-10"
         }
       ],
-      "criticalItems": [
-        "Pilot output status unclear"
-      ],
+      "criticalItems": [],
       "history": [],
       "milestones": {
         "onboarding": "",
@@ -608,26 +604,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Pilot completion check",
+        "plannedGate": "Pilot closeout closed",
         "targetDate": "2026-05-13",
-        "variance": "Pilot output status still unclear.",
-        "assessment": "Needs Action"
+        "variance": "Closed.",
+        "assessment": "Closed"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Needs Action",
-          "state": "Needs Action"
+          "value": "Closed",
+          "state": "Closed"
         },
         {
           "label": "Target",
           "value": "2026-05-13",
-          "state": "Needs Action"
+          "state": "Closed"
         },
         {
           "label": "Tool",
           "value": "TBD",
-          "state": "Needs Action"
+          "state": "Closed"
         }
       ]
     }
@@ -3286,11 +3282,11 @@ const dashboardData = {
       "id": "task-pilot-01-002",
       "task": "Consolidate usability survey receipt",
       "owner": "Susan",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-10",
       "dependency": "Survey access",
-      "communication": "Matteo said all surveys were submitted; confirm in survey system.",
+      "communication": "Closed; no active follow-up required.",
       "source": "Email",
       "sourceDate": "2026-05-07",
       "linkedReviewId": "pilot-01"
@@ -3299,33 +3295,24 @@ const dashboardData = {
       "id": "task-pilot-01-003",
       "task": "Capture lessons learned before pilot closeout",
       "owner": "Krishna / Core Team",
-      "status": "In Progress",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-10",
       "dependency": "Lessons document",
-      "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
+      "communication": "Closed; no active follow-up required.",
       "source": "MoM",
       "sourceDate": "2026-05-10",
       "linkedReviewId": "pilot-01"
     },
     {
-      "task": "Full-text time not reported",
-      "owner": "TBD",
-      "status": "Open",
-      "due": "Monitor",
-      "dependency": "Monitor risk",
-      "linkedReviewId": "pilot-01",
-      "communication": ""
-    },
-    {
       "id": "task-pilot-02-001",
       "task": "Confirm latest Laser AI progress and outputs",
       "owner": "Sean / Laser AI / Review Team",
-      "status": "Needs Action",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-13",
       "dependency": "Vendor/team update",
-      "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
+      "communication": "Closed; no active follow-up required.",
       "source": "MoM",
       "sourceDate": "2026-05-10",
       "linkedReviewId": "pilot-02"
@@ -3334,23 +3321,14 @@ const dashboardData = {
       "id": "task-pilot-02-002",
       "task": "Confirm whether outputs can move toward adjudication preparation",
       "owner": "Sean / Laser AI / Review Team",
-      "status": "Needs Action",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-13",
       "dependency": "Pilot completion status",
-      "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
+      "communication": "Closed; no active follow-up required.",
       "source": "MoM",
       "sourceDate": "2026-05-10",
       "linkedReviewId": "pilot-02"
-    },
-    {
-      "task": "Pilot output status unclear",
-      "owner": "TBD",
-      "status": "Open",
-      "due": "Monitor",
-      "dependency": "Monitor risk",
-      "linkedReviewId": "pilot-02",
-      "communication": ""
     }
   ],
   "criticalItems": [
@@ -3488,36 +3466,6 @@ const dashboardData = {
       "impact": "",
       "source": "Review sheet",
       "sourceDate": "2026-07-06"
-    },
-    {
-      "id": "critical-pilot-01-10",
-      "phase": "Pilot",
-      "item": "Full-text time not reported",
-      "description": "",
-      "severity": "Medium",
-      "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
-      "linkedReviewId": "pilot-01",
-      "mitigation": "",
-      "impact": "",
-      "source": "Review sheet",
-      "sourceDate": "2026-05-14"
-    },
-    {
-      "id": "critical-pilot-02-11",
-      "phase": "Pilot",
-      "item": "Pilot output status unclear",
-      "description": "",
-      "severity": "Medium",
-      "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
-      "linkedReviewId": "pilot-02",
-      "mitigation": "",
-      "impact": "",
-      "source": "Review sheet",
-      "sourceDate": "2026-05-14"
     }
   ],
   "resources": [
