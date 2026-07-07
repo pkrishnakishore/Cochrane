@@ -25,7 +25,13 @@ function shouldRefreshData(target) {
 function refreshData() {
   if (!exportInProgress) {
     exportInProgress = new Promise((resolve, reject) => {
-      childProcess.execFile("node", ["export-data-js.js"], { cwd: root }, (error, stdout, stderr) => {
+      childProcess.execFile("node", ["export-data-js.js"], {
+        cwd: root,
+        env: {
+          ...process.env,
+          DASHBOARD_LAST_UPDATED: process.env.DASHBOARD_LAST_UPDATED || "2026-07-07"
+        }
+      }, (error, stdout, stderr) => {
         exportInProgress = null;
         if (stdout) process.stdout.write(stdout);
         if (stderr) process.stderr.write(stderr);

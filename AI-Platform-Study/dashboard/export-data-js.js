@@ -679,11 +679,7 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     });
 
   const phaseGroups = splitByPhase(reviews);
-  const lastUpdated = reviews
-    .map((review) => excelDate(review.tracker?.targetDate))
-    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
-    .sort()
-    .at(-1) || new Date().toISOString().slice(0, 10);
+  const lastUpdated = process.env.DASHBOARD_LAST_UPDATED || new Date().toISOString().slice(0, 10);
 
   return {
     data: {

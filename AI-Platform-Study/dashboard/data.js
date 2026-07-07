@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-06-12",
+  "lastUpdated": "2026-07-07",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -68,611 +68,21 @@ const dashboardData = {
       }
     ]
   },
-  "pilot": [
-    {
-      "id": "pilot-01",
-      "title": "Cessation of caffeine",
-      "shortName": "Caffeine",
-      "phase": "Pilot",
-      "status": "Wrapping Up",
-      "tool": "TBD",
-      "lead": "Matteo Bruschettini",
-      "risk": "Medium",
-      "currentStage": "Pilot closeout / lessons learned",
-      "currentUpdate": "Time-on-task values and survey receipt still need verification for pilot closeout.",
-      "nextAction": "Verify Matteo time-on-task values, confirm usability survey receipt, and finalize pilot lessons learned.",
-      "communicationSupport": "Time-on-task values and survey receipt still need verification for pilot closeout.",
-      "communicationLog": [
-        {
-          "id": "comm-pilot-01-001",
-          "date": "2026-05-07",
-          "subject": "Pilot time-on-task update",
-          "people": "Matteo Bruschettini",
-          "resp": "Krishna / Amin",
-          "due": "2026-05-10",
-          "status": "Needs Action",
-          "summary": "Matteo reported title/abstract and data extraction timing values; full-text time was not reported and needs to be documented as a limitation.",
-          "linkedTaskId": "task-pilot-01-001",
-          "linkedAction": "Verify Matteo time-on-task values",
-          "sourceType": "Email",
-          "sourceLink": ""
-        },
-        {
-          "id": "comm-pilot-01-002",
-          "date": "2026-05-07",
-          "subject": "Pilot survey completion update",
-          "people": "Matteo Bruschettini",
-          "resp": "Krishna / Susan",
-          "due": "2026-05-10",
-          "status": "Pending",
-          "summary": "Matteo indicated survey completion, but receipt should be confirmed in the survey system.",
-          "linkedTaskId": "task-pilot-01-002",
-          "linkedAction": "Consolidate usability survey receipt",
-          "sourceType": "Email",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Matteo Bruschettini",
-          "resp": "Matteo Bruschettini",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Full-text time not reported",
-          "date": "Medium",
-          "subject": "Mail follow-up",
-          "people": "Matteo Bruschettini",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        }
-      ],
-      "files": {
-        "RIS": false,
-        "PDFs": false,
-        "Criteria": false,
-        "Extraction": false,
-        "Protocol": false,
-        "Time Log": false
-      },
-      "stages": [
-        {
-          "name": "Setup / Coordination",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Abstract Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Full-text Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Data Extraction / Analysis",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Review Workflow Status: Full 63 Actions",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "63",
-          "human": 0,
-          "ai": 0,
-          "status": "Final analysis"
-        },
-        {
-          "name": "Review Tasks Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Recent Mail / Communication Log Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Critical Items Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "CriticalItem",
-          "human": 0,
-          "ai": 0,
-          "status": "DueDate"
-        },
-        {
-          "name": "Full-text time not reported",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        }
-      ],
-      "tasks": [
-        {
-          "id": "task-pilot-01-001",
-          "task": "Verify Matteo time-on-task values",
-          "owner": "Krishna / Amin",
-          "status": "Complete",
-          "risk": "Medium",
-          "due": "2026-05-10",
-          "dependency": "Matteo self-reported time",
-          "communication": "Check whether reported title/abstract and data extraction times are sufficiently reliable for pilot note.",
-          "source": "Email",
-          "sourceDate": "2026-05-07"
-        },
-        {
-          "id": "task-pilot-01-002",
-          "task": "Consolidate usability survey receipt",
-          "owner": "Susan",
-          "status": "Pending",
-          "risk": "Medium",
-          "due": "2026-05-10",
-          "dependency": "Survey access",
-          "communication": "Matteo said all surveys were submitted; confirm in survey system.",
-          "source": "Email",
-          "sourceDate": "2026-05-07"
-        },
-        {
-          "id": "task-pilot-01-003",
-          "task": "Capture lessons learned before pilot closeout",
-          "owner": "Krishna / Core Team",
-          "status": "In Progress",
-          "risk": "Medium",
-          "due": "2026-05-10",
-          "dependency": "Lessons document",
-          "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
-          "source": "MoM",
-          "sourceDate": "2026-05-10"
-        }
-      ],
-      "criticalItems": [
-        "Full-text time not reported"
-      ],
-      "history": [],
-      "milestones": {
-        "onboarding": "",
-        "setup": "",
-        "abstract": "",
-        "fullText": "",
-        "extraction": "",
-        "analysis": ""
-      },
-      "workflowStatus": {
-        "w01": "Not Started",
-        "w02": "Not Started",
-        "w03": "Not Started",
-        "w04": "Not Started",
-        "w05": "Not Started",
-        "w06": "Not Started",
-        "w07": "Not Started",
-        "w08": "Not Started",
-        "w09": "Not Started",
-        "w10": "Not Started",
-        "w11": "Not Started",
-        "w12": "Not Started",
-        "w13": "Not Started",
-        "w14": "Not Started",
-        "w15": "Not Started",
-        "w16": "Not Started",
-        "w17": "Not Started",
-        "w18": "Not Started",
-        "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
-        "w22": "Not Started",
-        "w23": "Not Started",
-        "w24": "Not Started",
-        "w25": "Not Started",
-        "w26": "Not Started",
-        "w27": "Not Started",
-        "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
-        "w34": "Not Started",
-        "w35": "Not Started",
-        "w36": "Not Started",
-        "w37": "Not Started",
-        "w38": "Not Started",
-        "w39": "Not Started",
-        "w40": "Not Started",
-        "w41": "Not Started",
-        "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
-        "w47": "Not Started",
-        "w48": "Not Started",
-        "w49": "Not Started",
-        "w50": "Not Started",
-        "w51": "Not Started",
-        "w52": "Not Started",
-        "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
-        "w56": "Not Started",
-        "w57": "Not Started",
-        "w58": "Not Started",
-        "w59": "Not Started",
-        "w60": "Not Started",
-        "w61": "Not Started",
-        "w62": "Not Started",
-        "w63": "Not Started",
-        "Task": "Source",
-        "Verify Matteo time-on-task values": "Email",
-        "Consolidate usability survey receipt": "Email",
-        "Capture lessons learned before pilot closeout": "MoM",
-        "2026-05-07": "task-pilot-01-002",
-        "Severity": "Not Started",
-        "Medium": "Not Started"
-      },
-      "tracker": {
-        "plannedWindow": "",
-        "plannedGate": "Pilot closeout / lessons learned",
-        "targetDate": "2026-05-10",
-        "variance": "Full-text time not reported.",
-        "assessment": "Wrapping Up"
-      },
-      "timelineGates": [
-        {
-          "label": "Status",
-          "value": "Wrapping Up",
-          "state": "Wrapping Up"
-        },
-        {
-          "label": "Target",
-          "value": "2026-05-10",
-          "state": "Wrapping Up"
-        },
-        {
-          "label": "Tool",
-          "value": "TBD",
-          "state": "Wrapping Up"
-        }
-      ]
-    },
-    {
-      "id": "pilot-02",
-      "title": "DMARDs / Rheumatoid arthritis",
-      "shortName": "DMARDs / RA",
-      "phase": "Pilot",
-      "status": "Needs Action",
-      "tool": "TBD",
-      "lead": "Jordi Pardo Pardo / Glen Hazlewood",
-      "risk": "Medium",
-      "currentStage": "Pilot completion check",
-      "currentUpdate": "No fresh completion update found in the latest email batch.",
-      "nextAction": "Confirm latest Laser AI completion status and whether outputs are ready for Sean/adjudication package.",
-      "communicationSupport": "No fresh completion update found in the latest email batch.",
-      "communicationLog": [
-        {
-          "id": "comm-pilot-02-001",
-          "date": "2026-05-10",
-          "subject": "DMARDs pilot completion follow-up",
-          "people": "Core Team / Sean",
-          "resp": "Sean / Laser AI / Review Team",
-          "due": "2026-05-13",
-          "status": "Needs Action",
-          "summary": "Latest Laser AI completion status and availability of outputs for adjudication preparation remain unclear.",
-          "linkedTaskId": "task-pilot-02-001",
-          "linkedAction": "Confirm latest Laser AI progress and outputs",
-          "sourceType": "MoM",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Jordi Pardo Pardo / Glen Hazlewood",
-          "resp": "Jordi Pardo Pardo / Glen Hazlewood",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Pilot output status unclear",
-          "date": "Medium",
-          "subject": "Mail follow-up",
-          "people": "Jordi Pardo Pardo / Glen Hazlewood",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        }
-      ],
-      "files": {
-        "RIS": false,
-        "PDFs": false,
-        "Criteria": false,
-        "Extraction": false,
-        "Protocol": false,
-        "Time Log": false
-      },
-      "stages": [
-        {
-          "name": "Setup / Coordination",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Abstract Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Full-text Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Data Extraction / Analysis",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Review Workflow Status: Full 63 Actions",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "63",
-          "human": 0,
-          "ai": 0,
-          "status": "Final analysis"
-        },
-        {
-          "name": "Review Tasks Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Recent Mail / Communication Log Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Critical Items Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "CriticalItem",
-          "human": 0,
-          "ai": 0,
-          "status": "DueDate"
-        },
-        {
-          "name": "Pilot output status unclear",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        }
-      ],
-      "tasks": [
-        {
-          "id": "task-pilot-02-001",
-          "task": "Confirm latest Laser AI progress and outputs",
-          "owner": "Sean / Laser AI / Review Team",
-          "status": "Needs Action",
-          "risk": "Medium",
-          "due": "2026-05-13",
-          "dependency": "Vendor/team update",
-          "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
-          "source": "MoM",
-          "sourceDate": "2026-05-10"
-        },
-        {
-          "id": "task-pilot-02-002",
-          "task": "Confirm whether outputs can move toward adjudication preparation",
-          "owner": "Sean / Laser AI / Review Team",
-          "status": "Needs Action",
-          "risk": "Medium",
-          "due": "2026-05-13",
-          "dependency": "Pilot completion status",
-          "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
-          "source": "MoM",
-          "sourceDate": "2026-05-10"
-        }
-      ],
-      "criticalItems": [
-        "Pilot output status unclear"
-      ],
-      "history": [],
-      "milestones": {
-        "onboarding": "",
-        "setup": "",
-        "abstract": "",
-        "fullText": "",
-        "extraction": "",
-        "analysis": ""
-      },
-      "workflowStatus": {
-        "w01": "Not Started",
-        "w02": "Not Started",
-        "w03": "Not Started",
-        "w04": "Not Started",
-        "w05": "Not Started",
-        "w06": "Not Started",
-        "w07": "Not Started",
-        "w08": "Not Started",
-        "w09": "Not Started",
-        "w10": "Not Started",
-        "w11": "Not Started",
-        "w12": "Not Started",
-        "w13": "Not Started",
-        "w14": "Not Started",
-        "w15": "Not Started",
-        "w16": "Not Started",
-        "w17": "Not Started",
-        "w18": "Not Started",
-        "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
-        "w22": "Not Started",
-        "w23": "Not Started",
-        "w24": "Not Started",
-        "w25": "Not Started",
-        "w26": "Not Started",
-        "w27": "Not Started",
-        "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
-        "w34": "Not Started",
-        "w35": "Not Started",
-        "w36": "Not Started",
-        "w37": "Not Started",
-        "w38": "Not Started",
-        "w39": "Not Started",
-        "w40": "Not Started",
-        "w41": "Not Started",
-        "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
-        "w47": "Not Started",
-        "w48": "Not Started",
-        "w49": "Not Started",
-        "w50": "Not Started",
-        "w51": "Not Started",
-        "w52": "Not Started",
-        "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
-        "w56": "Not Started",
-        "w57": "Not Started",
-        "w58": "Not Started",
-        "w59": "Not Started",
-        "w60": "Not Started",
-        "w61": "Not Started",
-        "w62": "Not Started",
-        "w63": "Not Started",
-        "Task": "Source",
-        "Confirm latest Laser AI progress and outputs": "MoM",
-        "Confirm whether outputs can move toward adjudication preparation": "MoM",
-        "2026-05-10": "task-pilot-02-001",
-        "Severity": "Not Started",
-        "Medium": "Not Started"
-      },
-      "tracker": {
-        "plannedWindow": "",
-        "plannedGate": "Pilot completion check",
-        "targetDate": "2026-05-13",
-        "variance": "Pilot output status still unclear.",
-        "assessment": "Needs Action"
-      },
-      "timelineGates": [
-        {
-          "label": "Status",
-          "value": "Needs Action",
-          "state": "Needs Action"
-        },
-        {
-          "label": "Target",
-          "value": "2026-05-13",
-          "state": "Needs Action"
-        },
-        {
-          "label": "Tool",
-          "value": "TBD",
-          "state": "Needs Action"
-        }
-      ]
-    }
-  ],
+  "pilot": [],
   "phase1": [
     {
       "id": "phase1-01",
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Abstract Screening",
+      "status": "Full-text screening",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
-      "currentStage": "AI-assisted abstract screening completed; usability survey shared",
-      "currentUpdate": "Conventional title/abstract screening completed",
-      "nextAction": "Wade CSV received from conventional team; reconciliation pending",
-      "communicationSupport": "Conventional title/abstract screening completed",
+      "currentStage": "Full-text screening nearing completion; data extraction setup underway",
+      "currentUpdate": "Full-text screening nearing completion; expected completion 2026-07-08; data extraction setup underway",
+      "nextAction": "Complete full-text screening by 2026-07-08 and continue data extraction setup",
+      "communicationSupport": "Full-text screening nearing completion; expected completion 2026-07-08; data extraction setup underway",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -934,9 +344,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Pending",
-        "fullText": "",
-        "extraction": "",
+        "abstract": "Complete",
+        "fullText": "Active",
+        "extraction": "Setup underway",
         "analysis": ""
       },
       "workflowStatus": {
@@ -1020,26 +430,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "AI-assisted abstract screening completed; usability survey shared",
-        "targetDate": "Conventional and Laser AI workflows both in full-text screening stage",
-        "variance": "Next step: compare conventional includes vs AI includes and add any missing records",
+        "plannedGate": "Full-text screening nearing completion; data extraction setup underway",
+        "targetDate": "2026-07-08",
+        "variance": "On track for full-text completion; data extraction setup next dependency",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract Screening",
-          "state": "Abstract Screening"
+          "value": "Full-text screening",
+          "state": "Full-text screening"
         },
         {
           "label": "Target",
-          "value": "Conventional and Laser AI workflows both in full-text screening stage",
-          "state": "Abstract Screening"
+          "value": "2026-07-08",
+          "state": "Full-text screening"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Abstract Screening"
+          "state": "Full-text screening"
         }
       ]
     },
@@ -1052,10 +462,10 @@ const dashboardData = {
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
-      "currentStage": "NK abstract screening survey responses received; data extraction setup underway",
-      "currentUpdate": "Nested Knowledge title/abstract screening survey responses have been received. Data extraction setup is underway, with updated data items uploaded and NK fields being entered. Conventional extraction team has clarified the expected files and standalone data item format.",
-      "nextAction": "Complete Conventional Abstract screeing ; Continue Data extraction set up",
-      "communicationSupport": "Nested Knowledge title/abstract screening survey responses have been received. Data extraction setup is underway, with updated data items uploaded and NK fields being entered. Conventional extraction team has clarified the expected files and standalone data item format.",
+      "currentStage": "Conventional title/abstract screening nearing completion; AI-assisted full-text selection almost complete; data extraction preparation/sample planning underway",
+      "currentUpdate": "Conventional title/abstract screening is nearing completion; AI-assisted full-text selection is almost complete. The team is preparing a common sample of up to 10 studies for later data extraction.",
+      "nextAction": "Complete conventional title/abstract screening; prepare common sample of up to 10 studies for later data extraction",
+      "communicationSupport": "Conventional title/abstract screening is nearing completion; AI-assisted full-text selection is almost complete. The team is preparing a common sample of up to 10 studies for later data extraction.",
       "communicationLog": [
         {
           "id": "",
@@ -1376,9 +786,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Active",
-        "fullText": "",
-        "extraction": "",
+        "abstract": "Active / nearing completion",
+        "fullText": "AI-assisted full-text selection almost complete",
+        "extraction": "Preparation only",
         "analysis": ""
       },
       "workflowStatus": {
@@ -1467,9 +877,9 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "NK abstract screening survey responses received; data extraction setup underway",
-        "targetDate": "2026-05-27",
-        "variance": "To be assessed",
+        "plannedGate": "Conventional title/abstract screening nearing completion; AI-assisted full-text selection almost complete; data extraction preparation/sample planning underway",
+        "targetDate": "TBD",
+        "variance": "Main workflow remains in abstract screening; data extraction is only in preparation/sample planning stage",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -1480,7 +890,7 @@ const dashboardData = {
         },
         {
           "label": "Target",
-          "value": "2026-05-27",
+          "value": "TBD",
           "state": "Abstract Screening"
         },
         {
@@ -1495,14 +905,14 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Training completed; re-onboarding to be scheduled",
+      "status": "Setup complete / awaiting abstract screening",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Laser AI training completed; Re-onboarding pending",
-      "currentUpdate": "Updated search was run on 20 May. Laser AI training has been completed. A brief Re-onboarding/check-in with Gerald is still pending this week before active screening.",
-      "nextAction": "Schedule 30-minute methodology re-onboarding with Gerald; confirm search completion and human screening status before active screening.",
-      "communicationSupport": "Updated search was run on 20 May. Laser AI training has been completed. A brief Re-onboarding/check-in with Gerald is still pending this week before active screening.",
+      "currentStage": "Project setup and workflow configuration complete; internal team meeting scheduled for 2026-07-08 before abstract screening starts",
+      "currentUpdate": "Project setup and workflow configuration are complete; internal team meeting scheduled for 2026-07-08 prior to commencing abstract screening",
+      "nextAction": "Confirm readiness at 2026-07-08 internal meeting and commence abstract screening",
+      "communicationSupport": "Project setup and workflow configuration are complete; internal team meeting scheduled for 2026-07-08 prior to commencing abstract screening",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1540,7 +950,7 @@ const dashboardData = {
           "resp": "Gerald / Krishna",
           "due": "This week",
           "status": "Open",
-          "summary": "Gerald was informed that Laser AI session was scheduled for Rebecca and Kate&#8217;s team",
+          "summary": "Gerald was informed that Laser AI session was scheduled for Rebecca and Kate’s team",
           "linkedTaskId": "task-phase1-03-006",
           "linkedAction": "Schedule methodology re-onboarding",
           "sourceType": "Email",
@@ -1660,7 +1070,7 @@ const dashboardData = {
         }
       ],
       "files": {
-        "RIS": false,
+        "RIS": true,
         "PDFs": false,
         "Criteria": false,
         "Extraction": false,
@@ -1816,9 +1226,9 @@ const dashboardData = {
       ],
       "history": [],
       "milestones": {
-        "onboarding": "Active",
-        "setup": "",
-        "abstract": "",
+        "onboarding": "Complete",
+        "setup": "Complete",
+        "abstract": "Pending start",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -1906,333 +1316,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Laser AI training completed; Re-onboarding pending",
-        "targetDate": "2026-05-28",
-        "variance": "Waiting for search/RIS before setup can proceed.",
+        "plannedGate": "Project setup and workflow configuration complete; internal team meeting scheduled for 2026-07-08 before abstract screening starts",
+        "targetDate": "2026-07-08",
+        "variance": "Abstract screening not yet commenced pending internal meeting",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Training completed; re-onboarding to be scheduled",
-          "state": "Training completed; re-onboarding to be scheduled"
+          "value": "Setup complete / awaiting abstract screening",
+          "state": "Setup complete / awaiting abstract screening"
         },
         {
           "label": "Target",
-          "value": "2026-05-28",
-          "state": "Training completed; re-onboarding to be scheduled"
+          "value": "2026-07-08",
+          "state": "Setup complete / awaiting abstract screening"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Training completed; re-onboarding to be scheduled"
-        }
-      ]
-    },
-    {
-      "id": "phase1-04",
-      "title": "Interventions for improving medication-taking ability and adherence in older adults prescribed multiple medications",
-      "shortName": "Med Adherence",
-      "phase": "Phase 1",
-      "status": "Onboarding Scheduled",
-      "tool": "Nested Knowledge",
-      "lead": "Amanda Cross / Rehan Sarwar",
-      "risk": "Low",
-      "currentStage": "Search complete; screening not started; NK training/onboarding scheduled",
-      "currentUpdate": "Amanda Cross / Monash medication adherence review has been converted into the Phase 1 dashboard. NK training and onboarding are scheduled.",
-      "nextAction": "Conduct NK training/onboarding; confirm split-team workflow.",
-      "communicationSupport": "Amanda Cross / Monash medication adherence review has been converted into the Phase 1 dashboard. NK training and onboarding are scheduled.",
-      "communicationLog": [
-        {
-          "id": "comm-phase1-04-001",
-          "date": "2026-05-08",
-          "subject": "Chlamydia candidate tracking",
-          "people": "Elena Kostov / Core Team",
-          "resp": "Krishna / Gerald / Ella",
-          "due": "2026-05-15",
-          "status": "Under Review",
-          "summary": "Screening for genital chlamydia infection remains under review as a possible Phase 1 review. Eligibility, participation, timeline, and tool allocation need confirmation before setup.",
-          "linkedTaskId": "task-phase1-04-001",
-          "linkedAction": "Confirm review eligibility and participation",
-          "sourceType": "Email",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Amanda Cross / Rehan Sarwar",
-          "resp": "Amanda Cross / Rehan Sarwar",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Eligibility and participation not confirmed",
-          "date": "High",
-          "subject": "Mail follow-up",
-          "people": "Amanda Cross / Rehan Sarwar",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        }
-      ],
-      "files": {
-        "RIS": false,
-        "PDFs": false,
-        "Criteria": false,
-        "Extraction": false,
-        "Protocol": false,
-        "Time Log": false
-      },
-      "stages": [
-        {
-          "name": "Setup / Coordination",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Abstract Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Full-text Screening",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Data Extraction / Analysis",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Review Workflow Status: Full 63 Actions",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "63",
-          "human": 0,
-          "ai": 0,
-          "status": "Final analysis"
-        },
-        {
-          "name": "Review Tasks Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Recent Mail / Communication Log Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "Critical Items Displayed in Dashboard",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        },
-        {
-          "name": "CriticalItem",
-          "human": 0,
-          "ai": 0,
-          "status": "DueDate"
-        },
-        {
-          "name": "Eligibility and participation not confirmed",
-          "human": 0,
-          "ai": 0,
-          "status": "Not Started"
-        }
-      ],
-      "tasks": [
-        {
-          "id": "task-phase1-04-001",
-          "task": "Confirm review eligibility and participation",
-          "owner": "Core Team / Review Team",
-          "status": "Under Review",
-          "risk": "High",
-          "due": "2026-05-15",
-          "dependency": "Review confirmation",
-          "communication": "Confirm whether this review can be included in Phase 1.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
-        },
-        {
-          "id": "task-phase1-04-002",
-          "task": "Confirm review timeline and start date",
-          "owner": "Krishna / Review Team",
-          "status": "Pending",
-          "risk": "Medium",
-          "due": "TBD",
-          "dependency": "Team availability",
-          "communication": "Agree realistic start date only if review is confirmed.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
-        },
-        {
-          "id": "task-phase1-04-003",
-          "task": "Confirm allocated AI tool after eligibility decision",
-          "owner": "Core Team",
-          "status": "Pending",
-          "risk": "Medium",
-          "due": "TBD",
-          "dependency": "Eligibility decision",
-          "communication": "Assign one AI tool only after eligibility and participation are confirmed.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
-        },
-        {
-          "id": "task-phase1-04-004",
-          "task": "Hold setup materials request until confirmation",
-          "owner": "Krishna / Review Team",
-          "status": "Not Started",
-          "risk": "Low",
-          "due": "After confirmation",
-          "dependency": "Eligibility and allocation",
-          "communication": "Do not request RIS, PDFs, criteria, or extraction materials until the review is confirmed.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
-        }
-      ],
-      "criticalItems": [
-        "Eligibility and participation not confirmed"
-      ],
-      "history": [],
-      "milestones": {
-        "onboarding": "Active",
-        "setup": "",
-        "abstract": "",
-        "fullText": "",
-        "extraction": "",
-        "analysis": ""
-      },
-      "workflowStatus": {
-        "w01": "Under Review",
-        "w02": "Not Started",
-        "w03": "Not Started",
-        "w04": "Not Started",
-        "w05": "Not Started",
-        "w06": "Not Started",
-        "w07": "Not Started",
-        "w08": "Not Started",
-        "w09": "Not Started",
-        "w10": "Not Started",
-        "w11": "Not Started",
-        "w12": "Not Started",
-        "w13": "Not Started",
-        "w14": "Not Started",
-        "w15": "Not Started",
-        "w16": "Not Started",
-        "w17": "Not Started",
-        "w18": "Not Started",
-        "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
-        "w22": "Not Started",
-        "w23": "Not Started",
-        "w24": "Not Started",
-        "w25": "Not Started",
-        "w26": "Not Started",
-        "w27": "Not Started",
-        "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
-        "w34": "Not Started",
-        "w35": "Not Started",
-        "w36": "Not Started",
-        "w37": "Not Started",
-        "w38": "Not Started",
-        "w39": "Not Started",
-        "w40": "Not Started",
-        "w41": "Not Started",
-        "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
-        "w47": "Not Started",
-        "w48": "Not Started",
-        "w49": "Not Started",
-        "w50": "Not Started",
-        "w51": "Not Started",
-        "w52": "Not Started",
-        "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
-        "w56": "Not Started",
-        "w57": "Not Started",
-        "w58": "Not Started",
-        "w59": "Not Started",
-        "w60": "Not Started",
-        "w61": "Not Started",
-        "w62": "Not Started",
-        "w63": "Not Started",
-        "Task": "Source",
-        "Confirm review eligibility and participation": "Project tracking",
-        "Confirm review timeline and start date": "Project tracking",
-        "Confirm allocated AI tool after eligibility decision": "Project tracking",
-        "Hold setup materials request until confirmation": "Project tracking",
-        "2026-05-08": "task-phase1-04-001",
-        "Severity": "Not Started",
-        "High": "Not Started"
-      },
-      "tracker": {
-        "plannedWindow": "",
-        "plannedGate": "Search complete; screening not started; NK training/onboarding scheduled",
-        "targetDate": "2026-06-08",
-        "variance": "Onboarding scheduled; confirm split-team workflow before screening starts.",
-        "assessment": "In Progress"
-      },
-      "timelineGates": [
-        {
-          "label": "Status",
-          "value": "Onboarding Scheduled",
-          "state": "Onboarding Scheduled"
-        },
-        {
-          "label": "Target",
-          "value": "2026-06-08",
-          "state": "Onboarding Scheduled"
-        },
-        {
-          "label": "Tool",
-          "value": "Nested Knowledge",
-          "state": "Onboarding Scheduled"
+          "state": "Setup complete / awaiting abstract screening"
         }
       ]
     },
@@ -2241,14 +1344,14 @@ const dashboardData = {
       "title": "Vitamin C supplementation for prevention and treatment of pneumonia",
       "shortName": "Vitamin C",
       "phase": "Phase 1",
-      "status": "Onboarding Scheduled",
-      "tool": "AI tool pending",
-      "lead": "Jai Das",
-      "risk": "Low",
-      "currentStage": "Search by July 2026; onboarding to be scheduled",
-      "currentUpdate": "Vitamin C review has been converted into the Phase 1 dashboard sheet for onboarding tracking.",
-      "nextAction": "Confirm eligibility, timeline, allocated AI tool, and onboarding plan.",
-      "communicationSupport": "Vitamin C review has been converted into the Phase 1 dashboard sheet for onboarding tracking.",
+      "status": "Setup phase",
+      "tool": "Laser AI",
+      "lead": "Syeda Kanza Naqvi / Jai Das",
+      "risk": "Medium",
+      "currentStage": "Setup phase underway; Laser AI allocated; search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced",
+      "currentUpdate": "Vitamin C is in the setup phase with Laser AI allocated. Search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced.",
+      "nextAction": "Complete setup materials and Laser AI configuration before commencing abstract screening",
+      "communicationSupport": "Vitamin C is in the setup phase with Laser AI allocated. Search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced.",
       "communicationLog": [
         {
           "id": "comm-phase1-05-001",
@@ -2268,8 +1371,8 @@ const dashboardData = {
           "id": "Critical Items Displayed in Dashboard",
           "date": "Recent",
           "subject": "Mail follow-up",
-          "people": "Jai Das",
-          "resp": "Jai Das",
+          "people": "Syeda Kanza Naqvi / Jai Das",
+          "resp": "Syeda Kanza Naqvi / Jai Das",
           "due": "TBD",
           "status": "Pending",
           "summary": "Follow-up conversation pending.",
@@ -2296,7 +1399,7 @@ const dashboardData = {
           "id": "Open Phase 1 review slot",
           "date": "High",
           "subject": "Mail follow-up",
-          "people": "Jai Das",
+          "people": "Syeda Kanza Naqvi / Jai Das",
           "resp": "Open",
           "due": "TBD",
           "status": "Yes",
@@ -2438,9 +1541,9 @@ const dashboardData = {
       ],
       "history": [],
       "milestones": {
-        "onboarding": "Active",
-        "setup": "",
-        "abstract": "",
+        "onboarding": "Complete",
+        "setup": "Pending",
+        "abstract": "Not Started",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2520,26 +1623,464 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Search by July 2026; onboarding to be scheduled",
-        "targetDate": "2026-06-12",
-        "variance": "Onboarding metadata pending confirmation.",
+        "plannedGate": "Setup phase underway; Laser AI allocated; search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced",
+        "targetDate": "TBD",
+        "variance": "Screening start depends on completion of setup materials and Laser AI configuration",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Onboarding Scheduled",
-          "state": "Onboarding Scheduled"
+          "value": "Setup phase",
+          "state": "Setup phase"
         },
         {
           "label": "Target",
-          "value": "2026-06-12",
-          "state": "Onboarding Scheduled"
+          "value": "TBD",
+          "state": "Setup phase"
         },
         {
           "label": "Tool",
-          "value": "AI tool pending",
-          "state": "Onboarding Scheduled"
+          "value": "Laser AI",
+          "state": "Setup phase"
+        }
+      ]
+    },
+    {
+      "id": "phase1-06",
+      "title": "Probiotics for the prevention of paediatric antibiotic-associated diarrhoea",
+      "shortName": "Probiotics AAD",
+      "phase": "Phase 1",
+      "status": "Onboarded / awaiting template revisions",
+      "tool": "Nested Knowledge",
+      "lead": "Jeremy Steen / Bradley Johnston",
+      "risk": "Medium",
+      "currentStage": "Onboarding and tool training completed; RIS file, protocol, eligibility criteria, and draft data extraction template received",
+      "currentUpdate": "RIS file, protocol, eligibility criteria, and draft data extraction template received; awaiting final template revisions before project configuration and screening begin",
+      "nextAction": "Await final template revisions before project configuration and screening begin",
+      "communicationSupport": "RIS file, protocol, eligibility criteria, and draft data extraction template received; awaiting final template revisions before project configuration and screening begin",
+      "communicationLog": [],
+      "files": {
+        "RIS": true,
+        "PDFs": false,
+        "Criteria": true,
+        "Extraction": true,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "CriticalItem",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Open Phase 1 review slot",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-phase1-05-001",
+          "task": "Identify additional eligible review",
+          "owner": "Core Team",
+          "status": "Under Review",
+          "risk": "High",
+          "due": "2026-05-19",
+          "dependency": "Candidate pool",
+          "communication": "Shortlist review options.",
+          "source": "Project tracking",
+          "sourceDate": "2026-05-14"
+        },
+        {
+          "id": "task-phase1-05-002",
+          "task": "Confirm team availability after candidate selection",
+          "owner": "Krishna / Review Team",
+          "status": "Not Started",
+          "risk": "Medium",
+          "due": "TBD",
+          "dependency": "Review identification",
+          "communication": "Contact review team once candidate is selected.",
+          "source": "Project tracking",
+          "sourceDate": "2026-05-14"
+        }
+      ],
+      "criticalItems": [],
+      "history": [],
+      "milestones": {
+        "onboarding": "Complete",
+        "setup": "Awaiting final template revisions",
+        "abstract": "Not Started",
+        "fullText": "Not Started",
+        "extraction": "Draft template received",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Under Review",
+        "w02": "Not Started",
+        "w03": "Not Started",
+        "w04": "Not Started",
+        "w05": "Not Started",
+        "w06": "Not Started",
+        "w07": "Not Started",
+        "w08": "Not Started",
+        "w09": "Not Started",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Identify additional eligible review": "Project tracking",
+        "Confirm team availability after candidate selection": "Project tracking"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Onboarding and tool training completed; RIS file, protocol, eligibility criteria, and draft data extraction template received",
+        "targetDate": "TBD",
+        "variance": "Project configuration and screening depend on final data extraction template revisions",
+        "assessment": "In Progress"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Onboarded / awaiting template revisions",
+          "state": "Onboarded / awaiting template revisions"
+        },
+        {
+          "label": "Target",
+          "value": "TBD",
+          "state": "Onboarded / awaiting template revisions"
+        },
+        {
+          "label": "Tool",
+          "value": "Nested Knowledge",
+          "state": "Onboarded / awaiting template revisions"
+        }
+      ]
+    },
+    {
+      "id": "phase1-07",
+      "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
+      "shortName": "Human Milk Fortifier",
+      "phase": "Phase 1",
+      "status": "Onboarding / materials collection",
+      "tool": "Nested Knowledge",
+      "lead": "Mohan Pammi",
+      "risk": "Medium",
+      "currentStage": "Participation confirmed; team roles agreed; onboarding and study material collection underway; tool training pending",
+      "currentUpdate": "Participation confirmed; team roles agreed; study material collection and onboarding are underway",
+      "nextAction": "Collect study materials, complete Nested Knowledge tool training, and configure project for screening",
+      "communicationSupport": "Participation confirmed; team roles agreed; study material collection and onboarding are underway",
+      "communicationLog": [],
+      "files": {
+        "RIS": false,
+        "PDFs": false,
+        "Criteria": false,
+        "Extraction": false,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "CriticalItem",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Open Phase 1 review slot",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-phase1-05-001",
+          "task": "Identify additional eligible review",
+          "owner": "Core Team",
+          "status": "Under Review",
+          "risk": "High",
+          "due": "2026-05-19",
+          "dependency": "Candidate pool",
+          "communication": "Shortlist review options.",
+          "source": "Project tracking",
+          "sourceDate": "2026-05-14"
+        },
+        {
+          "id": "task-phase1-05-002",
+          "task": "Confirm team availability after candidate selection",
+          "owner": "Krishna / Review Team",
+          "status": "Not Started",
+          "risk": "Medium",
+          "due": "TBD",
+          "dependency": "Review identification",
+          "communication": "Contact review team once candidate is selected.",
+          "source": "Project tracking",
+          "sourceDate": "2026-05-14"
+        }
+      ],
+      "criticalItems": [],
+      "history": [],
+      "milestones": {
+        "onboarding": "Underway",
+        "setup": "Pending",
+        "abstract": "Not Started",
+        "fullText": "Not Started",
+        "extraction": "Not Started",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Under Review",
+        "w02": "Not Started",
+        "w03": "Not Started",
+        "w04": "Not Started",
+        "w05": "Not Started",
+        "w06": "Not Started",
+        "w07": "Not Started",
+        "w08": "Not Started",
+        "w09": "Not Started",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Identify additional eligible review": "Project tracking",
+        "Confirm team availability after candidate selection": "Project tracking"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Participation confirmed; team roles agreed; onboarding and study material collection underway; tool training pending",
+        "targetDate": "TBD",
+        "variance": "Tool training and project configuration pending",
+        "assessment": "In Progress"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Onboarding / materials collection",
+          "state": "Onboarding / materials collection"
+        },
+        {
+          "label": "Target",
+          "value": "TBD",
+          "state": "Onboarding / materials collection"
+        },
+        {
+          "label": "Tool",
+          "value": "Nested Knowledge",
+          "state": "Onboarding / materials collection"
         }
       ]
     }
@@ -3053,67 +2594,6 @@ const dashboardData = {
       "communication": "Search was run around 20 May, but final completion/status needs confirmation"
     },
     {
-      "id": "task-phase1-04-001",
-      "task": "Confirm review eligibility and participation",
-      "owner": "Core Team / Review Team",
-      "status": "Under Review",
-      "risk": "High",
-      "due": "2026-05-15",
-      "dependency": "Review confirmation",
-      "communication": "Confirm whether this review can be included in Phase 1.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
-      "linkedReviewId": "phase1-04"
-    },
-    {
-      "id": "task-phase1-04-002",
-      "task": "Confirm review timeline and start date",
-      "owner": "Krishna / Review Team",
-      "status": "Pending",
-      "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Team availability",
-      "communication": "Agree realistic start date only if review is confirmed.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
-      "linkedReviewId": "phase1-04"
-    },
-    {
-      "id": "task-phase1-04-003",
-      "task": "Confirm allocated AI tool after eligibility decision",
-      "owner": "Core Team",
-      "status": "Pending",
-      "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Eligibility decision",
-      "communication": "Assign one AI tool only after eligibility and participation are confirmed.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
-      "linkedReviewId": "phase1-04"
-    },
-    {
-      "id": "task-phase1-04-004",
-      "task": "Hold setup materials request until confirmation",
-      "owner": "Krishna / Review Team",
-      "status": "Not Started",
-      "risk": "Low",
-      "due": "After confirmation",
-      "dependency": "Eligibility and allocation",
-      "communication": "Do not request RIS, PDFs, criteria, or extraction materials until the review is confirmed.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
-      "linkedReviewId": "phase1-04"
-    },
-    {
-      "task": "Eligibility and participation not confirmed",
-      "owner": "TBD",
-      "status": "Open",
-      "due": "Monitor",
-      "dependency": "Monitor risk",
-      "linkedReviewId": "phase1-04",
-      "communication": ""
-    },
-    {
       "id": "task-phase1-05-001",
       "task": "Identify additional eligible review",
       "owner": "Core Team",
@@ -3175,6 +2655,58 @@ const dashboardData = {
       "communication": ""
     },
     {
+      "id": "task-phase1-05-001",
+      "task": "Identify additional eligible review",
+      "owner": "Core Team",
+      "status": "Under Review",
+      "risk": "High",
+      "due": "2026-05-19",
+      "dependency": "Candidate pool",
+      "communication": "Shortlist review options.",
+      "source": "Project tracking",
+      "sourceDate": "2026-05-14",
+      "linkedReviewId": "phase1-06"
+    },
+    {
+      "id": "task-phase1-05-002",
+      "task": "Confirm team availability after candidate selection",
+      "owner": "Krishna / Review Team",
+      "status": "Not Started",
+      "risk": "Medium",
+      "due": "TBD",
+      "dependency": "Review identification",
+      "communication": "Contact review team once candidate is selected.",
+      "source": "Project tracking",
+      "sourceDate": "2026-05-14",
+      "linkedReviewId": "phase1-06"
+    },
+    {
+      "id": "task-phase1-05-001",
+      "task": "Identify additional eligible review",
+      "owner": "Core Team",
+      "status": "Under Review",
+      "risk": "High",
+      "due": "2026-05-19",
+      "dependency": "Candidate pool",
+      "communication": "Shortlist review options.",
+      "source": "Project tracking",
+      "sourceDate": "2026-05-14",
+      "linkedReviewId": "phase1-07"
+    },
+    {
+      "id": "task-phase1-05-002",
+      "task": "Confirm team availability after candidate selection",
+      "owner": "Krishna / Review Team",
+      "status": "Not Started",
+      "risk": "Medium",
+      "due": "TBD",
+      "dependency": "Review identification",
+      "communication": "Contact review team once candidate is selected.",
+      "source": "Project tracking",
+      "sourceDate": "2026-05-14",
+      "linkedReviewId": "phase1-07"
+    },
+    {
       "id": "task-phase2-01-001",
       "task": "Keep Phase 2 placeholder until Phase 1 stabilizes",
       "owner": "Krishna / Core Team",
@@ -3186,89 +2718,6 @@ const dashboardData = {
       "source": "Project tracking",
       "sourceDate": "2026-05-14",
       "linkedReviewId": "phase2-01"
-    },
-    {
-      "id": "task-pilot-01-001",
-      "task": "Verify Matteo time-on-task values",
-      "owner": "Krishna / Amin",
-      "status": "Complete",
-      "risk": "Medium",
-      "due": "2026-05-10",
-      "dependency": "Matteo self-reported time",
-      "communication": "Check whether reported title/abstract and data extraction times are sufficiently reliable for pilot note.",
-      "source": "Email",
-      "sourceDate": "2026-05-07",
-      "linkedReviewId": "pilot-01"
-    },
-    {
-      "id": "task-pilot-01-002",
-      "task": "Consolidate usability survey receipt",
-      "owner": "Susan",
-      "status": "Pending",
-      "risk": "Medium",
-      "due": "2026-05-10",
-      "dependency": "Survey access",
-      "communication": "Matteo said all surveys were submitted; confirm in survey system.",
-      "source": "Email",
-      "sourceDate": "2026-05-07",
-      "linkedReviewId": "pilot-01"
-    },
-    {
-      "id": "task-pilot-01-003",
-      "task": "Capture lessons learned before pilot closeout",
-      "owner": "Krishna / Core Team",
-      "status": "In Progress",
-      "risk": "Medium",
-      "due": "2026-05-10",
-      "dependency": "Lessons document",
-      "communication": "Include review retention, tool support, workload clarity, and volunteer usability points.",
-      "source": "MoM",
-      "sourceDate": "2026-05-10",
-      "linkedReviewId": "pilot-01"
-    },
-    {
-      "task": "Full-text time not reported",
-      "owner": "TBD",
-      "status": "Open",
-      "due": "Monitor",
-      "dependency": "Monitor risk",
-      "linkedReviewId": "pilot-01",
-      "communication": ""
-    },
-    {
-      "id": "task-pilot-02-001",
-      "task": "Confirm latest Laser AI progress and outputs",
-      "owner": "Sean / Laser AI / Review Team",
-      "status": "Needs Action",
-      "risk": "Medium",
-      "due": "2026-05-13",
-      "dependency": "Vendor/team update",
-      "communication": "Clarify whether remaining pilot outputs are ready for closeout and adjudication preparation.",
-      "source": "MoM",
-      "sourceDate": "2026-05-10",
-      "linkedReviewId": "pilot-02"
-    },
-    {
-      "id": "task-pilot-02-002",
-      "task": "Confirm whether outputs can move toward adjudication preparation",
-      "owner": "Sean / Laser AI / Review Team",
-      "status": "Needs Action",
-      "risk": "Medium",
-      "due": "2026-05-13",
-      "dependency": "Pilot completion status",
-      "communication": "Confirm whether outputs are complete enough to share with Sean/data manager.",
-      "source": "MoM",
-      "sourceDate": "2026-05-10",
-      "linkedReviewId": "pilot-02"
-    },
-    {
-      "task": "Pilot output status unclear",
-      "owner": "TBD",
-      "status": "Open",
-      "due": "Monitor",
-      "dependency": "Monitor risk",
-      "linkedReviewId": "pilot-02",
-      "communication": ""
     }
   ],
   "criticalItems": [
@@ -3285,7 +2734,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3300,7 +2749,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3315,7 +2764,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3330,7 +2779,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-27"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3345,7 +2794,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-27"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3360,7 +2809,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-27"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3375,7 +2824,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-27"
+      "sourceDate": "2026-07-06"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3390,25 +2839,10 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-05-27"
+      "sourceDate": "2026-07-06"
     },
     {
-      "id": "critical-phase1-04-9",
-      "phase": "Phase 1",
-      "item": "Eligibility and participation not confirmed",
-      "description": "",
-      "severity": "High",
-      "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
-      "linkedReviewId": "phase1-04",
-      "mitigation": "",
-      "impact": "",
-      "source": "Review sheet",
-      "sourceDate": "2026-06-07"
-    },
-    {
-      "id": "critical-phase1-05-10",
+      "id": "critical-phase1-05-9",
       "phase": "Phase 1",
       "item": "Open Phase 1 review slot",
       "description": "",
@@ -3420,37 +2854,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-06-07"
-    },
-    {
-      "id": "critical-pilot-01-11",
-      "phase": "Pilot",
-      "item": "Full-text time not reported",
-      "description": "",
-      "severity": "Medium",
-      "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
-      "linkedReviewId": "pilot-01",
-      "mitigation": "",
-      "impact": "",
-      "source": "Review sheet",
-      "sourceDate": "2026-05-14"
-    },
-    {
-      "id": "critical-pilot-02-12",
-      "phase": "Pilot",
-      "item": "Pilot output status unclear",
-      "description": "",
-      "severity": "Medium",
-      "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
-      "linkedReviewId": "pilot-02",
-      "mitigation": "",
-      "impact": "",
-      "source": "Review sheet",
-      "sourceDate": "2026-05-14"
+      "sourceDate": "2026-07-06"
     }
   ],
   "resources": [
@@ -3554,20 +2958,20 @@ const dashboardData = {
   ],
   "newReviews": [
     {
-      "id": "new-01",
-      "reviewName": "Mohan Pammi &#8212; Human milk-derived fortifier versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
-      "category": "Shortlisted",
-      "status": "Pending",
+      "id": "new-02",
+      "reviewName": "Amanda Cross ? Interventions for improving medication-taking ability and adherence in older adults prescribed multiple medications",
+      "category": "Withdrawn",
+      "status": "Team has withdrawn from the platform study due to capacity constraints",
       "targetPhase": "Phase 1",
-      "lead": "Mohan Pammi",
-      "expectedTiming": "Future candidate",
-      "remarks": "Moved back to shortlisted pipeline.",
+      "lead": "Amanda Cross / Rehan Sarwar",
+      "expectedTiming": "2026-06-08",
+      "remarks": "Withdrawn due to capacity constraints; retain as historical record",
       "moveToFullSheet": "No",
       "display": "Yes"
     },
     {
       "id": "new-03",
-      "reviewName": "Jai Das &#8212; Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
+      "reviewName": "Jai Das — Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
       "category": "Under Shortlisting",
       "status": "Search by July 2026",
       "targetPhase": "Phase 1",
@@ -3615,7 +3019,7 @@ const dashboardData = {
     },
     {
       "id": "new-09",
-      "reviewName": "Giulio Cherubini &#8212; Impact of Manual Therapy on Instrumentalist Musicians With Playing-Related Musculoskeletal Disorders: A Systematic Review",
+      "reviewName": "Giulio Cherubini — Impact of Manual Therapy on Instrumentalist Musicians With Playing-Related Musculoskeletal Disorders: A Systematic Review",
       "category": "Not Eligible",
       "status": "Non-Cochrane review",
       "targetPhase": "",
@@ -3627,7 +3031,7 @@ const dashboardData = {
     },
     {
       "id": "new-10",
-      "reviewName": "Francesca Cecchi / Giulio Cherubini &#8212; Effects of lower limb botulinum toxin injections on gait functional outcomes in stroke survivors",
+      "reviewName": "Francesca Cecchi / Giulio Cherubini — Effects of lower limb botulinum toxin injections on gait functional outcomes in stroke survivors",
       "category": "Not Eligible",
       "status": "Non-Cochrane review",
       "targetPhase": "",
@@ -3639,7 +3043,7 @@ const dashboardData = {
     },
     {
       "id": "new-11",
-      "reviewName": "Feng Sun / Zuhaer &#8212; Automated Insulin Delivery Systems in Children and Adolescents With Type 1 Diabetes",
+      "reviewName": "Feng Sun / Zuhaer — Automated Insulin Delivery Systems in Children and Adolescents With Type 1 Diabetes",
       "category": "Not Eligible",
       "status": "Non-Cochrane review",
       "targetPhase": "",
@@ -3651,7 +3055,7 @@ const dashboardData = {
     },
     {
       "id": "new-12",
-      "reviewName": "Patricia Clark &#8212; Effectiveness and safety of pharmacological interventions for the primary prevention of osteoporosis in postmenopausal women",
+      "reviewName": "Patricia Clark — Effectiveness and safety of pharmacological interventions for the primary prevention of osteoporosis in postmenopausal women",
       "category": "Not Eligible",
       "status": "Independent/non-Cochrane review",
       "targetPhase": "",
@@ -3663,7 +3067,7 @@ const dashboardData = {
     },
     {
       "id": "new-13",
-      "reviewName": "Alison Edelman &#8212; Meningioma and hormonal contraceptives",
+      "reviewName": "Alison Edelman — Meningioma and hormonal contraceptives",
       "category": "Not Eligible",
       "status": "Currently planned outside Cochrane",
       "targetPhase": "",
@@ -3675,7 +3079,7 @@ const dashboardData = {
     },
     {
       "id": "new-14",
-      "reviewName": "Elena Kostova &#8212; Screening for genital chlamydia infection",
+      "reviewName": "Elena Kostova — Screening for genital chlamydia infection",
       "category": "Not Eligible",
       "status": "Cochrane review update, but not eligible because abstract screening had already started and more than half of the records had already been screened. The team also could not meet the required parallel workflow structure.",
       "targetPhase": "",
@@ -3687,7 +3091,7 @@ const dashboardData = {
     },
     {
       "id": "new-15",
-      "reviewName": "Patricia C. Heyn &#8212; Aerobic and Resistance Training Interventions for Cognitive Outcomes in Older Adults with Mild Cognitive Impairment and Alzheimer's Disease and Related Dementias: An Umbrella Review of Meta-Analyses of Randomized Trials",
+      "reviewName": "Patricia C. Heyn — Aerobic and Resistance Training Interventions for Cognitive Outcomes in Older Adults with Mild Cognitive Impairment and Alzheimer's Disease and Related Dementias: An Umbrella Review of Meta-Analyses of Randomized Trials",
       "category": "Not Eligible",
       "status": "Not eligible because it is not a Cochrane review update and most methods are already completed, with the team validating the database and starting analysis.",
       "targetPhase": "",
@@ -3699,7 +3103,7 @@ const dashboardData = {
     },
     {
       "id": "new-16",
-      "reviewName": "Zuhaer / Feng Sun &#8212; Gas gangrene Cochrane Review update",
+      "reviewName": "Zuhaer / Feng Sun — Gas gangrene Cochrane Review update",
       "category": "Not Eligible",
       "status": "Not eligible for the current phase because the team is considering expanding the scope to include observational studies, which would require a major methodological change and may not align with the current validation workflow/timeline.",
       "targetPhase": "",
