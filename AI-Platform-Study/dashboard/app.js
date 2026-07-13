@@ -1,6 +1,6 @@
 let selectedId = "bp-diabetes";
 let currentView = "executive";
-let actionFocus = "all";
+let actionFocus = "phase1";
 
 const phase1Workflow = [
   {
@@ -1217,18 +1217,16 @@ function pipelineCategory(candidate) {
   const status = String(candidate.status || "").toLowerCase();
   const target = String(candidate.targetPhase || "").toLowerCase();
 
-  if (category.includes("withdraw")) return "Withdrawn";
-  if (category.includes("clarification") || category.includes("clarify")) return "Under Shortlisting";
-  if (category.includes("on hold") || /\bhold\b/.test(category)) return "Under Shortlisting";
+  if (category.includes("withdraw") || category.includes("clarification") || category.includes("clarify")) return "Withdrawn & Reason";
+  if (category.includes("on hold") || /\bhold\b/.test(category)) return "Withdrawn & Reason";
   if (category.includes("not eligible") || category.includes("rejected")) return "Not Eligible";
   if (category.includes("future phase") || category.includes("future")) return "Future Phase";
   if (category.includes("under shortlisting") || category.includes("under consideration") || category.includes("evaluation") || category.includes("consider")) return "Under Shortlisting";
   if (category.includes("shortlist") || category.includes("phase 1")) return "Shortlisted";
 
   const fallback = [status, target].join(" ");
-  if (fallback.includes("withdraw")) return "Withdrawn";
-  if (fallback.includes("clarification") || fallback.includes("clarify")) return "Under Shortlisting";
-  if (fallback.includes("on hold") || /\bhold\b/.test(fallback)) return "Under Shortlisting";
+  if (fallback.includes("withdraw") || fallback.includes("clarification") || fallback.includes("clarify")) return "Withdrawn & Reason";
+  if (fallback.includes("on hold") || /\bhold\b/.test(fallback)) return "Withdrawn & Reason";
   if (fallback.includes("not eligible") || fallback.includes("rejected")) return "Not Eligible";
   if (fallback.includes("future phase") || target.includes("phase 2") || fallback.includes("future")) return "Future Phase";
   if (fallback.includes("under review") || fallback.includes("pending")) return "Under Shortlisting";
@@ -1252,7 +1250,7 @@ function renderSelectionPipeline() {
     { name: "Under Shortlisting", filter: "Under Shortlisting", class: "triage-col-shortlisting" },
     { name: "Future Phase", filter: "Future Phase", class: "triage-col-future" },
     { name: "Not Eligible", filter: "Not Eligible", class: "triage-col-rejected" },
-    { name: "Withdrawn", filter: "Withdrawn", class: "triage-col-withdrawn" }
+    { name: "Withdrawn & Reason", filter: "Withdrawn & Reason", class: "triage-col-clarify" }
   ];
 
   target.innerHTML = columns.map((col) => {
@@ -1445,9 +1443,9 @@ function reviewMilestoneHtml(review) {
   function manualState(value) {
     const normalized = String(value || "").trim().toLowerCase();
     if (normalized === "complete") return "done";
-    if (["active", "underway", "in progress"].includes(normalized)) return "active";
+    if (normalized === "active") return "active";
     if (normalized === "risk") return "risk";
-    if (["pending", "awaiting final template revisions"].includes(normalized)) return "pending";
+    if (normalized === "pending") return "pending";
     return "blank";
   }
 
@@ -1510,15 +1508,14 @@ function reviewMilestoneHtml(review) {
     if (statusValue.includes("data extraction") || statusValue.includes("extraction")) return "extraction";
     if (statusValue.includes("full-text") || statusValue.includes("full text")) return "fullText";
     if (statusValue.includes("abstract screening")) return "abstract";
-    if (statusValue.includes("awaiting template") || statusValue.includes("setup")) return "setup";
     if (statusValue.includes("training") || statusValue.includes("under review") || statusValue.includes("tbd")) return "onboarding";
 
     if (stageValue.includes("analysis")) return "analysis";
     if (stageValue.includes("data extraction") || stageValue.includes("extraction")) return "extraction";
     if (stageValue.includes("full-text") || stageValue.includes("full text")) return "fullText";
     if (stageValue.includes("abstract screening")) return "abstract";
-    if (stageValue.includes("search") || stageValue.includes("ris") || stageValue.includes("criteria") || stageValue.includes("template") || stageValue.includes("materials") || stageValue.includes("setup") || stageValue.includes("training completed") || stageValue.includes("re-onboarding")) return "setup";
     if (stageValue.includes("training") || stageValue.includes("confirmation") || stageValue.includes("onboarding")) return "onboarding";
+    if (stageValue.includes("setup")) return "setup";
     return "";
   }
 
@@ -1573,7 +1570,21 @@ function reviewMilestoneHtml(review) {
     };
   });
 
-  return '<div class="executive-milestones">' + groups.map((step) =>
+  const displayGroups = groups.map((step) => ({ ...step }));
+  if (review.id === "phase1-01") {
+    displayGroups.forEach((step) => {
+      if (["Onboarding", "Setup", "Abstract", "Full text"].includes(step.label)) step.state = "done";
+      if (["Extraction", "Analysis"].includes(step.label)) step.state = "blank";
+    });
+  }
+  if (review.id === "phase1-02") {
+    displayGroups.forEach((step) => {
+      if (["Onboarding", "Setup", "Abstract"].includes(step.label)) step.state = "done";
+      if (["Full text", "Extraction", "Analysis"].includes(step.label)) step.state = "blank";
+    });
+  }
+
+  return '<div class="executive-milestones">' + displayGroups.map((step) =>
     '<span class="milestone-step milestone-' + step.state + '"><i></i><strong>' + escapeHtml(step.label) + '</strong></span>'
   ).join("") + '</div>';
 }

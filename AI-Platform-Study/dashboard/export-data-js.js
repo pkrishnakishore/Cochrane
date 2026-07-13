@@ -338,7 +338,8 @@ function safeReviewFromIndex(row, card) {
     risk,
     currentStage,
     currentUpdate: text(card.CurrentUpdate, "No current update entered."),
-    nextAction: text(card.NextAction, text(row.NextAction)),
+    nextAction: text(card.NextAction, text(row.NextAction, "Add next action.")),
+    lastUpdated: excelDate(card.LastUpdated || row.LastUpdated),
     communicationSupport: text(card.CurrentUpdate, "No current update entered."),
     communicationLog: [],
     files: { ...DEFAULT_FILES },
@@ -679,7 +680,12 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     });
 
   const phaseGroups = splitByPhase(reviews);
-  const lastUpdated = process.env.DASHBOARD_LAST_UPDATED || new Date().toISOString().slice(0, 10);
+  const today = new Date().toISOString().slice(0, 10);
+  const lastUpdated = reviews
+    .map((review) => review.lastUpdated)
+    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date) && date <= today)
+    .sort()
+    .at(-1) || today;
 
   return {
     data: {
