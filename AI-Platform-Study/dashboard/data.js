@@ -1468,15 +1468,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "AI screening paused",
+      "status": "AI screening on hold",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Conventional abstract screening may continue, but AI-assisted screening is paused until 2026-07-20 while workflow and Laser AI updates are addressed.",
-      "currentUpdate": "Conventional abstract screening may continue, but AI-assisted screening is paused until 2026-07-20 while workflow and Laser AI updates are addressed.",
-      "nextAction": "Confirm the restart decision on 2026-07-20; resume AI-assisted screening only after guidance and continue documenting preparation effort.",
+      "currentStage": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
+      "currentUpdate": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
+      "nextAction": "Confirm the restart decision on 2026-07-20; resume AI-assisted screening only after guidance is agreed and continue documenting preparation effort.",
       "lastUpdated": "2026-07-16",
-      "communicationSupport": "Conventional abstract screening may continue, but AI-assisted screening is paused until 2026-07-20 while workflow and Laser AI updates are addressed.",
+      "communicationSupport": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1880,7 +1880,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Conventional abstract screening may continue, but AI-assisted screening is paused until 2026-07-20 while workflow and Laser AI updates are addressed.",
+        "plannedGate": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
         "targetDate": "2026-07-20",
         "variance": "Abstract screening has commenced; preparation effort was higher than expected and DE setup constraints may need core/Laser AI discussion",
         "assessment": "In Progress"
@@ -1888,18 +1888,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "AI screening paused",
-          "state": "AI screening paused"
+          "value": "AI screening on hold",
+          "state": "AI screening on hold"
         },
         {
           "label": "Target",
           "value": "2026-07-20",
-          "state": "AI screening paused"
+          "state": "AI screening on hold"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "AI screening paused"
+          "state": "AI screening on hold"
         }
       ]
     },
