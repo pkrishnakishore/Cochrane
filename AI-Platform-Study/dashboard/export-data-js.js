@@ -683,7 +683,7 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
   const today = new Date().toISOString().slice(0, 10);
   const lastUpdated = reviews
     .map((review) => review.lastUpdated)
-    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date) && date <= today)
+    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
     .sort()
     .at(-1) || today;
 
