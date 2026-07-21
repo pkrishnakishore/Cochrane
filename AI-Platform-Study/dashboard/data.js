@@ -1349,7 +1349,7 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Active",
+        "abstract": "Complete",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2107,7 +2107,7 @@ const dashboardData = {
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "",
+        "setup": "Complete",
         "abstract": "",
         "fullText": "",
         "extraction": "",
@@ -2551,7 +2551,7 @@ const dashboardData = {
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "Pending",
+        "onboarding": "Complete",
         "setup": "Pending",
         "abstract": "",
         "fullText": "",
