@@ -5072,3 +5072,39 @@ body {
 .executive-score .milestone-step::before {
   top: 5px !important;
 }
+
+/* Final executive milestone clarity override */
+.executive-score .milestone-step i {
+  width: 13px !important;
+  height: 13px !important;
+  border-width: 2px !important;
+}
+
+.executive-score .milestone-done i {
+  background: #087f5b !important;
+  border-color: #087f5b !important;
+  opacity: 1 !important;
+}
+
+.executive-score .milestone-active i {
+  background: #111827 !important;
+  border-color: #111827 !important;
+  opacity: 1 !important;
+}
+
+.executive-score .milestone-risk i {
+  background: #b42318 !important;
+  border-color: #b42318 !important;
+  opacity: 1 !important;
+}
+
+.executive-score .milestone-pending i {
+  background: #c2410c !important;
+  border-color: #c2410c !important;
+  opacity: 1 !important;
+}
+
+.executive-score .milestone-blank i,
+.executive-score .milestone-blank strong {
+  opacity: 0 !important;
+}
