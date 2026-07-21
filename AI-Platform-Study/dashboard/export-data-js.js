@@ -295,6 +295,16 @@ function sectionTable(rows, requiredHeaders) {
   return tableFromRows(rows, requiredHeaders);
 }
 
+function milestoneValue(value) {
+  const normalized = String(value ?? "").trim().toLowerCase();
+  if (!normalized || normalized === "blank") return "";
+  if (normalized === "complete" || normalized.startsWith("complete ")) return "Complete";
+  if (normalized === "active" || normalized.startsWith("active ")) return "Active";
+  if (normalized === "risk" || normalized.includes("blocked") || normalized.includes("needs action")) return "Risk";
+  if (normalized === "pending" || normalized.startsWith("pending ") || normalized.includes("scheduled")) return "Pending";
+  return "";
+}
+
 function sortRows(rows) {
   return rows.slice().sort((a, b) => {
     const aOrder = numberValue(a.DisplayOrder ?? a.StepOrder ?? a.ActionOrder, Number.MAX_SAFE_INTEGER);
@@ -439,7 +449,7 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     for (const row of milestones.filter(isDisplayed)) {
       const key = text(row.Milestone);
       if (key && Object.prototype.hasOwnProperty.call(review.milestones, key)) {
-        review.milestones[key] = text(row.Status);
+        review.milestones[key] = milestoneValue(row.Status);
       }
     }
 

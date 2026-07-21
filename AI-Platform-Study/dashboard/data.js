@@ -908,7 +908,7 @@ const dashboardData = {
         "setup": "Complete",
         "abstract": "Complete",
         "fullText": "Complete",
-        "extraction": "DE setup pending improved Laser AI form",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -1349,9 +1349,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Active / nearing completion",
-        "fullText": "AI-assisted full-text selection almost complete",
-        "extraction": "Preparation only",
+        "abstract": "Active",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -2107,8 +2107,8 @@ const dashboardData = {
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "RIS uploaded / remaining files pending",
-        "abstract": "Not Started",
+        "setup": "",
+        "abstract": "",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2333,9 +2333,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Ready to start",
-        "fullText": "Not Started",
-        "extraction": "Draft template received",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -2551,11 +2551,11 @@ const dashboardData = {
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "Scheduled",
+        "onboarding": "Pending",
         "setup": "Pending",
-        "abstract": "Not Started",
-        "fullText": "Not Started",
-        "extraction": "Not Started",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {

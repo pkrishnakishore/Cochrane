@@ -5027,8 +5027,9 @@ body {
 }
 
 .milestone-blank i {
-  border-color: #cbd5e1 !important;
-  background: #ffffff !important;
+  border-color: transparent !important;
+  background: transparent !important;
+  opacity: 0;
 }
 
 .milestone-blank strong {

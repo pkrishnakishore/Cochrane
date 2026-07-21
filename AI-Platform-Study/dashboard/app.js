@@ -1534,13 +1534,8 @@ function reviewMilestoneHtml(review) {
 
   const activeIndex = manualMilestones.findIndex((item) => item.key === activeKey);
 
-  const groups = hasManualMilestones ? manualMilestones.map((item, index) => {
-    let state = manualState(review.milestones?.[item.key]);
-    if (activeIndex >= 0) {
-      if (index < activeIndex) state = "done";
-      if (item.key === activeKey) state = "active";
-      if (index > activeIndex && state !== "risk") state = "blank";
-    }
+  const groups = hasManualMilestones ? manualMilestones.map((item) => {
+    const state = manualState(review.milestones?.[item.key]);
     return {
       group: item.group,
       label: item.label,
@@ -1570,21 +1565,7 @@ function reviewMilestoneHtml(review) {
     };
   });
 
-  const displayGroups = groups.map((step) => ({ ...step }));
-  if (review.id === "phase1-01") {
-    displayGroups.forEach((step) => {
-      if (["Onboarding", "Setup", "Abstract", "Full text"].includes(step.label)) step.state = "done";
-      if (["Extraction", "Analysis"].includes(step.label)) step.state = "blank";
-    });
-  }
-  if (review.id === "phase1-02") {
-    displayGroups.forEach((step) => {
-      if (["Onboarding", "Setup", "Abstract"].includes(step.label)) step.state = "done";
-      if (["Full text", "Extraction", "Analysis"].includes(step.label)) step.state = "blank";
-    });
-  }
-
-  return '<div class="executive-milestones">' + displayGroups.map((step) =>
+  return '<div class="executive-milestones">' + groups.map((step) =>
     '<span class="milestone-step milestone-' + step.state + '"><i></i><strong>' + escapeHtml(step.label) + '</strong></span>'
   ).join("") + '</div>';
 }
