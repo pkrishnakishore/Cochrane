@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-07-17",
+  "lastUpdated": "2026-07-21",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -18,26 +18,26 @@ const dashboardData = {
       [
         "phase1",
         "Phase 1",
-        "Mid April to End June",
+        "Mid April onward",
         "Current Focus"
       ],
       [
         "governance",
         "Interim Analysis",
-        "End June",
-        "Decision Gate"
+        "July 2026",
+        "In Progress"
       ],
       [
         "phase2",
         "Phase 2",
-        "Start July to End September",
-        "Scheduled"
+        "TBD",
+        "Pending decision"
       ],
       [
         "governance",
         "Report",
-        "October",
-        "Planned"
+        "Q3 2026",
+        "Interim snapshot ready"
       ]
     ],
     "majorTimeline": [
@@ -48,23 +48,23 @@ const dashboardData = {
       },
       {
         "phase": "Phase 1",
-        "window": "Mid April to End June",
+        "window": "Mid April onward",
         "note": "Current Focus"
       },
       {
         "phase": "Interim Analysis",
-        "window": "End June",
-        "note": "Decision Gate"
+        "window": "July 2026",
+        "note": "In Progress"
       },
       {
         "phase": "Phase 2",
-        "window": "Start July to End September",
-        "note": "Scheduled"
+        "window": "TBD",
+        "note": "Pending decision"
       },
       {
         "phase": "Report",
-        "window": "October",
-        "note": "Planned"
+        "window": "Q3 2026",
+        "note": "Interim snapshot ready"
       }
     ]
   },
@@ -81,7 +81,7 @@ const dashboardData = {
       "currentStage": "Pilot closeout closed",
       "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
       "nextAction": "Add next action.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
@@ -361,7 +361,7 @@ const dashboardData = {
       "currentStage": "Pilot closeout closed",
       "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
       "nextAction": "Add next action.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
@@ -643,7 +643,7 @@ const dashboardData = {
       "currentStage": "Laser AI data-extraction template is uploaded and ready. The AI-assisted team will extract only studies included by the conventional team; if more than 10 are included, a random sample of 10 will be used.",
       "currentUpdate": "Laser AI data-extraction template is uploaded and ready. The AI-assisted team will extract only studies included by the conventional team; if more than 10 are included, a random sample of 10 will be used.",
       "nextAction": "Begin data extraction using the conventional included-study set; randomly select 10 studies if the conventional set exceeds 10.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Laser AI data-extraction template is uploaded and ready. The AI-assisted team will extract only studies included by the conventional team; if more than 10 are included, a random sample of 10 will be used.",
       "communicationLog": [
         {
@@ -1027,7 +1027,7 @@ const dashboardData = {
       "currentStage": "Nested Knowledge screening is complete and the DE workflow is being finalised. A separate Laser AI abstract-screening comparison is set up with 2,225 citations and is ready to begin.",
       "currentUpdate": "Nested Knowledge screening is complete and the DE workflow is being finalised. A separate Laser AI abstract-screening comparison is set up with 2,225 citations and is ready to begin.",
       "nextAction": "Finalise the Nested Knowledge DE workflow; run the Laser AI comparison and provide preliminary output for the interim snapshot.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Nested Knowledge screening is complete and the DE workflow is being finalised. A separate Laser AI abstract-screening comparison is set up with 2,225 citations and is ready to begin.",
       "communicationLog": [
         {
@@ -1475,7 +1475,7 @@ const dashboardData = {
       "currentStage": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
       "currentUpdate": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
       "nextAction": "Confirm the restart decision on 2026-07-20; resume AI-assisted screening only after guidance is agreed and continue documenting preparation effort.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "The review team has been asked to hold AI-assisted abstract screening while workflow guidance and Laser AI updates are addressed. Conventional abstract screening may continue.",
       "communicationLog": [
         {
@@ -1915,7 +1915,7 @@ const dashboardData = {
       "currentStage": "RIS/search files are uploaded, but the protocol, eligibility criteria and selected data-extraction items are still missing. Screening has not been approved to start.",
       "currentUpdate": "RIS/search files are uploaded, but the protocol, eligibility criteria and selected data-extraction items are still missing. Screening has not been approved to start.",
       "nextAction": "Obtain the protocol, inclusion/exclusion criteria and approximately 35 data items; then allow 2-3 working days for Laser AI setup and confirm the screening start.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "RIS/search files are uploaded, but the protocol, eligibility criteria and selected data-extraction items are still missing. Screening has not been approved to start.",
       "communicationLog": [
         {
@@ -2223,7 +2223,7 @@ const dashboardData = {
       "currentStage": "Nested Knowledge is ready with 1,077 citations. Screening had not started as of 2026-07-15; the team is completing a 100-record calibration and has agreed screening milestones.",
       "currentUpdate": "Nested Knowledge is ready with 1,077 citations. Screening had not started as of 2026-07-15; the team is completing a 100-record calibration and has agreed screening milestones.",
       "nextAction": "Complete calibration, start conventional and AI-assisted abstract screening, and finish title/abstract screening by 2026-07-28.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Nested Knowledge is ready with 1,077 citations. Screening had not started as of 2026-07-15; the team is completing a 100-record calibration and has agreed screening milestones.",
       "communicationLog": [],
       "files": {
@@ -2443,7 +2443,7 @@ const dashboardData = {
       "currentStage": "Onboarding and Nested Knowledge training were completed on 2026-07-14. Project setup is waiting for RIS/search results, eligibility criteria, the protocol and approximately 35 data-extraction items.",
       "currentUpdate": "Onboarding and Nested Knowledge training were completed on 2026-07-14. Project setup is waiting for RIS/search results, eligibility criteria, the protocol and approximately 35 data-extraction items.",
       "nextAction": "Collect the missing study files; finalise a comparable 35-item data-extraction list with Sean; then configure the Nested Knowledge project.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "Onboarding and Nested Knowledge training were completed on 2026-07-14. Project setup is waiting for RIS/search results, eligibility criteria, the protocol and approximately 35 data-extraction items.",
       "communicationLog": [],
       "files": {
@@ -2665,7 +2665,7 @@ const dashboardData = {
       "currentStage": "Future batch planning",
       "currentUpdate": "No update recorded.",
       "nextAction": "Keep placeholders until Phase 1 stabilizes.",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-21",
       "communicationSupport": "No update recorded.",
       "communicationLog": [
         {
@@ -3354,7 +3354,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3369,7 +3369,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3384,7 +3384,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3399,7 +3399,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3414,7 +3414,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3429,7 +3429,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3444,7 +3444,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3459,7 +3459,7 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3474,7 +3474,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-17"
+      "sourceDate": "2026-07-21"
     }
   ],
   "resources": [
