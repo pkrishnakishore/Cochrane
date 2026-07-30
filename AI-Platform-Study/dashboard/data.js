@@ -80,7 +80,8 @@ const dashboardData = {
       "risk": "Medium",
       "currentStage": "Pilot closeout closed",
       "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
-      "nextAction": "",
+      "nextAction": "Add next action.",
+      "lastUpdated": "2026-07-07",
       "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
@@ -359,7 +360,8 @@ const dashboardData = {
       "risk": "Medium",
       "currentStage": "Pilot closeout closed",
       "currentUpdate": "Pilot closeout record closed; no active follow-up required.",
-      "nextAction": "",
+      "nextAction": "Add next action.",
+      "lastUpdated": "2026-07-07",
       "communicationSupport": "Pilot closeout record closed; no active follow-up required.",
       "communicationLog": [
         {
@@ -634,14 +636,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Full-text screening",
+      "status": "Data Extraction / Analysis",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
-      "currentStage": "Full-text screening nearing completion; data extraction setup underway",
-      "currentUpdate": "Full-text screening nearing completion; expected completion 2026-07-08; data extraction setup underway",
-      "nextAction": "Complete full-text screening by 2026-07-08 and continue data extraction setup",
-      "communicationSupport": "Full-text screening nearing completion; expected completion 2026-07-08; data extraction setup underway",
+      "currentStage": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
+      "currentUpdate": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
+      "nextAction": "Continue data extraction and analysis preparation; reconcile full-text decisions and submit extraction outputs/time logs.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -769,25 +772,25 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Complete"
         },
         {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Complete"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Complete"
         },
         {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Active"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -903,9 +906,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Complete",
-        "fullText": "Active",
-        "extraction": "Setup underway",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -989,7 +992,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Full-text screening nearing completion; data extraction setup underway",
+        "plannedGate": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
         "targetDate": "2026-07-08",
         "variance": "On track for full-text completion; data extraction setup next dependency",
         "assessment": "In Progress"
@@ -997,18 +1000,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Full-text screening",
-          "state": "Full-text screening"
+          "value": "Data Extraction / Analysis",
+          "state": "Data Extraction / Analysis"
         },
         {
           "label": "Target",
           "value": "2026-07-08",
-          "state": "Full-text screening"
+          "state": "Data Extraction / Analysis"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Full-text screening"
+          "state": "Data Extraction / Analysis"
         }
       ]
     },
@@ -1017,14 +1020,15 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Abstract Screening",
+      "status": "Full-text Screening",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
-      "currentStage": "Conventional title/abstract screening nearing completion; AI-assisted full-text selection almost complete; data extraction preparation/sample planning underway",
-      "currentUpdate": "Conventional title/abstract screening is nearing completion; AI-assisted full-text selection is almost complete. The team is preparing a common sample of up to 10 studies for later data extraction.",
-      "nextAction": "Complete conventional title/abstract screening; prepare common sample of up to 10 studies for later data extraction",
-      "communicationSupport": "Conventional title/abstract screening is nearing completion; AI-assisted full-text selection is almost complete. The team is preparing a common sample of up to 10 studies for later data extraction.",
+      "currentStage": "Full-text screening phase; abstract screening has moved forward into full-text review preparation",
+      "currentUpdate": "Full-text screening phase; abstract screening has moved forward into full-text review preparation",
+      "nextAction": "Complete full-text screening and prepare the agreed common sample for later data extraction.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Full-text screening phase; abstract screening has moved forward into full-text review preparation",
       "communicationLog": [
         {
           "id": "",
@@ -1194,19 +1198,19 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Complete"
         },
         {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Complete"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Active"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -1345,9 +1349,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "Active / nearing completion",
-        "fullText": "AI-assisted full-text selection almost complete",
-        "extraction": "Preparation only",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -1436,7 +1440,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Conventional title/abstract screening nearing completion; AI-assisted full-text selection almost complete; data extraction preparation/sample planning underway",
+        "plannedGate": "Full-text screening phase; abstract screening has moved forward into full-text review preparation",
         "targetDate": "TBD",
         "variance": "Main workflow remains in abstract screening; data extraction is only in preparation/sample planning stage",
         "assessment": "In Progress"
@@ -1444,18 +1448,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract Screening",
-          "state": "Abstract Screening"
+          "value": "Full-text Screening",
+          "state": "Full-text Screening"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Abstract Screening"
+          "state": "Full-text Screening"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Abstract Screening"
+          "state": "Full-text Screening"
         }
       ]
     },
@@ -1464,14 +1468,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Abstract Screening",
+      "status": "Abstract Screening Complete",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Laser AI abstract screening is complete. Fifteen studies have advanced to full-text screening. The conventional team is consolidating its abstract-screening results.",
-      "currentUpdate": "Laser AI abstract screening is complete. Fifteen studies have advanced to full-text screening. The conventional team is consolidating its abstract-screening results.",
-      "nextAction": "Complete the usability survey, await conventional-team consolidation, retrieve the PDFs for the 15 studies, and proceed with full-text screening setup.",
-      "communicationSupport": "Laser AI abstract screening is complete. Fifteen studies have advanced to full-text screening. The conventional team is consolidating its abstract-screening results.",
+      "currentStage": "Abstract screening completed; fifteen studies identified for full-text screening setup",
+      "currentUpdate": "Abstract screening completed; fifteen studies identified for full-text screening setup",
+      "nextAction": "Complete usability survey, retrieve PDFs for the 15 studies, and prepare full-text screening setup.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Abstract screening completed; fifteen studies identified for full-text screening setup",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1647,7 +1652,7 @@ const dashboardData = {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "AI complete; conventional consolidation pending"
+          "status": "Complete"
         },
         {
           "name": "Full-text Screening",
@@ -1787,8 +1792,8 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "AI complete; conventional consolidation pending",
-        "fullText": "15 studies identified; PDF retrieval and full-text setup pending",
+        "abstract": "",
+        "fullText": "",
         "extraction": "",
         "analysis": ""
       },
@@ -1875,7 +1880,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Laser AI abstract screening is complete. Fifteen studies have advanced to full-text screening. The conventional team is consolidating its abstract-screening results.",
+        "plannedGate": "Abstract screening completed; fifteen studies identified for full-text screening setup",
         "targetDate": "TBD",
         "variance": "The agreed decision-flow changes were initially not saved in Laser AI. Version 2 was subsequently applied, but earlier screened records may not include the comparator assessment; document this during the comparison.",
         "assessment": "In Progress"
@@ -1883,18 +1888,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract Screening",
-          "state": "Abstract Screening"
+          "value": "Abstract Screening Complete",
+          "state": "Abstract Screening Complete"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Abstract Screening"
+          "state": "Abstract Screening Complete"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Abstract Screening"
+          "state": "Abstract Screening Complete"
         }
       ]
     },
@@ -1907,10 +1912,11 @@ const dashboardData = {
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Setup phase underway; Laser AI allocated; search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced",
-      "currentUpdate": "Vitamin C is in the setup phase with Laser AI allocated. Search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced.",
-      "nextAction": "Complete setup materials and Laser AI configuration before commencing abstract screening",
-      "communicationSupport": "Vitamin C is in the setup phase with Laser AI allocated. Search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced.",
+      "currentStage": "Setup phase underway; configuration and source materials are being finalized before screening starts",
+      "currentUpdate": "Setup phase underway; configuration and source materials are being finalized before screening starts",
+      "nextAction": "Complete setup materials and Laser AI configuration before commencing abstract screening.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Setup phase underway; configuration and source materials are being finalized before screening starts",
       "communicationLog": [
         {
           "id": "comm-phase1-05-001",
@@ -1982,7 +1988,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Active"
         },
         {
           "name": "Abstract Screening",
@@ -2102,7 +2108,7 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Pending",
-        "abstract": "Not Started",
+        "abstract": "",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2182,7 +2188,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Setup phase underway; Laser AI allocated; search/LILACS clarification and remaining setup materials are being finalized; abstract screening has not yet commenced",
+        "plannedGate": "Setup phase underway; configuration and source materials are being finalized before screening starts",
         "targetDate": "TBD",
         "variance": "Screening start depends on completion of setup materials and Laser AI configuration",
         "assessment": "In Progress"
@@ -2210,14 +2216,15 @@ const dashboardData = {
       "title": "Probiotics for the prevention of paediatric antibiotic-associated diarrhoea",
       "shortName": "Probiotics AAD",
       "phase": "Phase 1",
-      "status": "Onboarded / awaiting template revisions",
+      "status": "Setup phase",
       "tool": "Nested Knowledge",
       "lead": "Jeremy Steen / Bradley Johnston",
       "risk": "Medium",
-      "currentStage": "Onboarding and tool training completed; RIS file, protocol, eligibility criteria, and draft data extraction template received",
-      "currentUpdate": "RIS file, protocol, eligibility criteria, and draft data extraction template received; awaiting final template revisions before project configuration and screening begin",
-      "nextAction": "Await final template revisions before project configuration and screening begin",
-      "communicationSupport": "RIS file, protocol, eligibility criteria, and draft data extraction template received; awaiting final template revisions before project configuration and screening begin",
+      "currentStage": "Setup phase underway; template revisions and project configuration remain before screening begins",
+      "currentUpdate": "Setup phase underway; template revisions and project configuration remain before screening begins",
+      "nextAction": "Finalize template revisions, complete project configuration, and then begin screening.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -2232,7 +2239,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Active"
         },
         {
           "name": "Abstract Screening",
@@ -2325,10 +2332,10 @@ const dashboardData = {
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "Awaiting final template revisions",
-        "abstract": "Not Started",
-        "fullText": "Not Started",
-        "extraction": "Draft template received",
+        "setup": "",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -2401,7 +2408,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Onboarding and tool training completed; RIS file, protocol, eligibility criteria, and draft data extraction template received",
+        "plannedGate": "Setup phase underway; template revisions and project configuration remain before screening begins",
         "targetDate": "TBD",
         "variance": "Project configuration and screening depend on final data extraction template revisions",
         "assessment": "In Progress"
@@ -2409,18 +2416,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Onboarded / awaiting template revisions",
-          "state": "Onboarded / awaiting template revisions"
+          "value": "Setup phase",
+          "state": "Setup phase"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Onboarded / awaiting template revisions"
+          "state": "Setup phase"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Onboarded / awaiting template revisions"
+          "state": "Setup phase"
         }
       ]
     },
@@ -2429,14 +2436,15 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Onboarding / materials collection",
+      "status": "Setup phase",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "Medium",
-      "currentStage": "Participation confirmed; team roles agreed; onboarding and study material collection underway; tool training pending",
-      "currentUpdate": "Participation confirmed; team roles agreed; study material collection and onboarding are underway",
-      "nextAction": "Collect study materials, complete Nested Knowledge tool training, and configure project for screening",
-      "communicationSupport": "Participation confirmed; team roles agreed; study material collection and onboarding are underway",
+      "currentStage": "Setup phase underway; study materials, training, and configuration are still being completed",
+      "currentUpdate": "Setup phase underway; study materials, training, and configuration are still being completed",
+      "nextAction": "Collect study materials, complete Nested Knowledge tool training, and configure the project for screening.",
+      "lastUpdated": "2026-07-30",
+      "communicationSupport": "Setup phase underway; study materials, training, and configuration are still being completed",
       "communicationLog": [],
       "files": {
         "RIS": false,
@@ -2451,7 +2459,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Active"
         },
         {
           "name": "Abstract Screening",
@@ -2543,11 +2551,11 @@ const dashboardData = {
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "Underway",
+        "onboarding": "",
         "setup": "Pending",
-        "abstract": "Not Started",
-        "fullText": "Not Started",
-        "extraction": "Not Started",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
         "analysis": ""
       },
       "workflowStatus": {
@@ -2620,7 +2628,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Participation confirmed; team roles agreed; onboarding and study material collection underway; tool training pending",
+        "plannedGate": "Setup phase underway; study materials, training, and configuration are still being completed",
         "targetDate": "TBD",
         "variance": "Tool training and project configuration pending",
         "assessment": "In Progress"
@@ -2628,18 +2636,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Onboarding / materials collection",
-          "state": "Onboarding / materials collection"
+          "value": "Setup phase",
+          "state": "Setup phase"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Onboarding / materials collection"
+          "state": "Setup phase"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Onboarding / materials collection"
+          "state": "Setup phase"
         }
       ]
     }
@@ -2657,6 +2665,7 @@ const dashboardData = {
       "currentStage": "Future batch planning",
       "currentUpdate": "No update recorded.",
       "nextAction": "Keep placeholders until Phase 1 stabilizes.",
+      "lastUpdated": "2026-05-14",
       "communicationSupport": "No update recorded.",
       "communicationLog": [
         {
@@ -3345,7 +3354,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3360,7 +3369,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3375,7 +3384,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3390,7 +3399,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3405,7 +3414,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3420,7 +3429,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-29"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3435,7 +3444,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-29"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3450,7 +3459,7 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-29"
+      "sourceDate": "2026-07-30"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3465,7 +3474,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-06"
+      "sourceDate": "2026-07-30"
     }
   ],
   "resources": [
