@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "validate": "node export-data-js.js --validate-only",
+    "export": "node export-data-js.js",
+    "start": "node serve-dashboard.js"
+  }
+}
