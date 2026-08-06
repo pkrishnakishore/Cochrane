@@ -1020,7 +1020,7 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Full-text Screening",
+      "status": "Data extraction / analysis",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
@@ -1448,18 +1448,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Full-text Screening",
-          "state": "Full-text Screening"
+          "value": "Data extraction / analysis",
+          "state": "Data extraction / analysis"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Full-text Screening"
+          "state": "Data extraction / analysis"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Full-text Screening"
+          "state": "Data extraction / analysis"
         }
       ]
     },
@@ -2216,7 +2216,7 @@ const dashboardData = {
       "title": "Probiotics for the prevention of paediatric antibiotic-associated diarrhoea",
       "shortName": "Probiotics AAD",
       "phase": "Phase 1",
-      "status": "Setup phase",
+      "status": "Abstract screening underway",
       "tool": "Nested Knowledge",
       "lead": "Jeremy Steen / Bradley Johnston",
       "risk": "Medium",
@@ -2416,18 +2416,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Setup phase",
-          "state": "Setup phase"
+          "value": "Abstract screening underway",
+          "state": "Abstract screening underway"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Setup phase"
+          "state": "Abstract screening underway"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Setup phase"
+          "state": "Abstract screening underway"
         }
       ]
     },
