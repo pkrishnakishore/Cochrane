@@ -636,7 +636,7 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Data Extraction / Analysis",
+      "status": "Data extraction underway",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
@@ -1000,18 +1000,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Data Extraction / Analysis",
-          "state": "Data Extraction / Analysis"
+          "value": "Data extraction underway",
+          "state": "Data extraction underway"
         },
         {
           "label": "Target",
           "value": "2026-07-08",
-          "state": "Data Extraction / Analysis"
+          "state": "Data extraction underway"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Data Extraction / Analysis"
+          "state": "Data extraction underway"
         }
       ]
     },
@@ -1020,7 +1020,7 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Data extraction / analysis",
+      "status": "Data extraction underway",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
@@ -1448,18 +1448,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Data extraction / analysis",
-          "state": "Data extraction / analysis"
+          "value": "Data extraction underway",
+          "state": "Data extraction underway"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Data extraction / analysis"
+          "state": "Data extraction underway"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Data extraction / analysis"
+          "state": "Data extraction underway"
         }
       ]
     },
