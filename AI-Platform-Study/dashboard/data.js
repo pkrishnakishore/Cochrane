@@ -906,9 +906,9 @@ const dashboardData = {
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "",
-        "fullText": "",
-        "extraction": "",
+        "abstract": "Complete",
+        "fullText": "Complete",
+        "extraction": "Active",
         "analysis": ""
       },
       "workflowStatus": {
