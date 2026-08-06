@@ -1793,7 +1793,7 @@ const dashboardData = {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Complete",
-        "fullText": "",
+        "fullText": "Active",
         "extraction": "",
         "analysis": ""
       },
@@ -2107,7 +2107,7 @@ const dashboardData = {
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "",
+        "setup": "Active",
         "abstract": "",
         "fullText": "",
         "extraction": "",
@@ -2222,7 +2222,7 @@ const dashboardData = {
       "risk": "Medium",
       "currentStage": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "currentUpdate": "Setup phase underway; template revisions and project configuration remain before screening begins",
-      "nextAction": "Finalize template revisions, complete project configuration, and then begin screening.",
+      "nextAction": "Continue conventional and AI-assisted abstract screening; monitor progress and time logs; then prepare the full-text screening stage.",
       "lastUpdated": "2026-07-30",
       "communicationSupport": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "communicationLog": [],
