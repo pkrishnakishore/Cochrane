@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-08-05",
+  "lastUpdated": "2026-08-07",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -640,11 +640,11 @@ const dashboardData = {
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Low",
-      "currentStage": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
-      "currentUpdate": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
-      "nextAction": "Continue data extraction and analysis preparation; reconcile full-text decisions and submit extraction outputs/time logs.",
-      "lastUpdated": "2026-07-30",
-      "communicationSupport": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
+      "currentStage": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
+      "currentUpdate": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
+      "nextAction": "Complete data extraction, collect extraction outputs and time logs, and send the data-extraction usability survey once the stage is complete.",
+      "lastUpdated": "2026-08-07",
+      "communicationSupport": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -992,9 +992,9 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Data extraction phase; full-text screening outputs are feeding extraction and analysis setup",
-        "targetDate": "2026-07-08",
-        "variance": "On track for full-text completion; data extraction setup next dependency",
+        "plannedGate": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
+        "targetDate": "Week of 2026-08-10",
+        "variance": "Data extraction is underway; completion is now expected during the week of 2026-08-10.",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -1005,7 +1005,7 @@ const dashboardData = {
         },
         {
           "label": "Target",
-          "value": "2026-07-08",
+          "value": "Week of 2026-08-10",
           "state": "Data extraction underway"
         },
         {
@@ -1024,11 +1024,11 @@ const dashboardData = {
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Low",
-      "currentStage": "Nested Knowledge abstract screening and AI-assisted full-text screening are complete; 10 studies are selected for data extraction. Conventional timing is now available: Emilie—abstract 3h36m10s and full text 12h; Robin—abstract 6h35m and full text 4h12m (corrected from 3h06m). Repeated Laser AI output issues remain: Run 10 appears incomplete and 44 citations in Runs 3–5 remain unevaluated.",
-      "currentUpdate": "Nested Knowledge abstract screening and AI-assisted full-text screening are complete; 10 studies are selected for data extraction. Conventional timing is now available: Emilie—abstract 3h36m10s and full text 12h; Robin—abstract 6h35m and full text 4h12m (corrected from 3h06m). Repeated Laser AI output issues remain: Run 10 appears incomplete and 44 citations in Runs 3–5 remain unevaluated.",
-      "nextAction": "Finalise the Nested Knowledge data-extraction workflow; validate and consolidate conventional and AI-assisted time logs; correct Run 10 and resolve the 44 unevaluated citations; complete the interim comparison.",
+      "currentStage": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
+      "currentUpdate": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
+      "nextAction": "Finalise the Nested Knowledge data-extraction workflow; correct Run 10 and resolve the 44 unevaluated citations in Runs 3-5; complete the interim comparison.",
       "lastUpdated": "2026-08-05",
-      "communicationSupport": "Nested Knowledge abstract screening and AI-assisted full-text screening are complete; 10 studies are selected for data extraction. Conventional timing is now available: Emilie—abstract 3h36m10s and full text 12h; Robin—abstract 6h35m and full text 4h12m (corrected from 3h06m). Repeated Laser AI output issues remain: Run 10 appears incomplete and 44 citations in Runs 3–5 remain unevaluated.",
+      "communicationSupport": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
       "communicationLog": [
         {
           "id": "",
@@ -1440,9 +1440,9 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Nested Knowledge abstract screening and AI-assisted full-text screening are complete; 10 studies are selected for data extraction. Conventional timing is now available: Emilie—abstract 3h36m10s and full text 12h; Robin—abstract 6h35m and full text 4h12m (corrected from 3h06m). Repeated Laser AI output issues remain: Run 10 appears incomplete and 44 citations in Runs 3–5 remain unevaluated.",
+        "plannedGate": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
         "targetDate": "TBD",
-        "variance": "Conventional timing has been received; repeated Laser AI output validation issues remain before final reporting.",
+        "variance": "Repeated Laser AI outputs still require validation before final reporting; conventional screening timing has now been received and updated.",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -1468,15 +1468,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Abstract screening complete / full-text preparation",
+      "status": "Full-text screening preparation",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Laser AI and conventional abstract screening are complete. The AI workflow advanced 15 records to full text. The conventional export and DOIs are still awaited. Before full-text screening, the team must confirm whether 128 records from prior monthly searches should be added to both arms, agree a PDF-sharing method, and finalise amendments to the full-text decision flow.",
-      "currentUpdate": "Laser AI and conventional abstract screening are complete. The AI workflow advanced 15 records to full text. The conventional export and DOIs are still awaited. Before full-text screening, the team must confirm whether 128 records from prior monthly searches should be added to both arms, agree a PDF-sharing method, and finalise amendments to the full-text decision flow.",
-      "nextAction": "Receive and reconcile the conventional full-text export; confirm inclusion of the 128 prior records and the PDF-sharing method; finalise the full-text decision flow; then start parallel full-text screening.",
-      "lastUpdated": "2026-08-05",
-      "communicationSupport": "Laser AI and conventional abstract screening are complete. The AI workflow advanced 15 records to full text. The conventional export and DOIs are still awaited. Before full-text screening, the team must confirm whether 128 records from prior monthly searches should be added to both arms, agree a PDF-sharing method, and finalise amendments to the full-text decision flow.",
+      "currentStage": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
+      "currentUpdate": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
+      "nextAction": "Consolidate the final full-text record set and DOIs, upload PDFs, finalise any full-text decision-flow amendments, and proceed with full-text screening in both arms.",
+      "lastUpdated": "2026-08-07",
+      "communicationSupport": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1636,7 +1636,7 @@ const dashboardData = {
       "files": {
         "RIS": true,
         "PDFs": false,
-        "Criteria": false,
+        "Criteria": true,
         "Extraction": false,
         "Protocol": false,
         "Time Log": false
@@ -1880,26 +1880,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Laser AI and conventional abstract screening are complete. The AI workflow advanced 15 records to full text. The conventional export and DOIs are still awaited. Before full-text screening, the team must confirm whether 128 records from prior monthly searches should be added to both arms, agree a PDF-sharing method, and finalise amendments to the full-text decision flow.",
+        "plannedGate": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
         "targetDate": "TBD - after full-text set reconciliation",
-        "variance": "The earlier AI-screening pause is resolved. Full-text start now depends on reconciling records and PDFs and confirming the full-text workflow.",
+        "variance": "Abstract screening is complete; the current dependency is consolidating the full-text set and PDFs, including the additional 128 prior-search records.",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract screening complete / full-text preparation",
-          "state": "Abstract screening complete / full-text preparation"
+          "value": "Full-text screening preparation",
+          "state": "Full-text screening preparation"
         },
         {
           "label": "Target",
           "value": "TBD - after full-text set reconciliation",
-          "state": "Abstract screening complete / full-text preparation"
+          "state": "Full-text screening preparation"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Abstract screening complete / full-text preparation"
+          "state": "Full-text screening preparation"
         }
       ]
     },
@@ -1908,15 +1908,15 @@ const dashboardData = {
       "title": "Vitamin C supplementation for prevention and treatment of pneumonia",
       "shortName": "Vitamin C",
       "phase": "Phase 1",
-      "status": "Setup phase",
+      "status": "Setup in progress - search strategy/access issue",
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "The protocol, eligibility criteria and 35 selected data-extraction items are available. Sean is running the accessible Index Medicus searches, while a wildcard inconsistency in the search strategy requires clarification. LILACS and IBECS remain inaccessible and the Native Health Research Database is retired. Screening has not started.",
-      "currentUpdate": "The protocol, eligibility criteria and 35 selected data-extraction items are available. Sean is running the accessible Index Medicus searches, while a wildcard inconsistency in the search strategy requires clarification. LILACS and IBECS remain inaccessible and the Native Health Research Database is retired. Screening has not started.",
-      "nextAction": "Resolve the wildcard/search-strategy question; complete the accessible searches; document the unavailable databases; consolidate the final RIS set; then finalise Laser AI setup and approve screening to start.",
-      "lastUpdated": "2026-08-05",
-      "communicationSupport": "The protocol, eligibility criteria and 35 selected data-extraction items are available. Sean is running the accessible Index Medicus searches, while a wildcard inconsistency in the search strategy requires clarification. LILACS and IBECS remain inaccessible and the Native Health Research Database is retired. Screening has not started.",
+      "currentStage": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
+      "currentUpdate": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
+      "nextAction": "Clarify wildcard use, complete accessible searches, document LILACS/IBECS limitations, finalise Laser AI setup, and confirm the screening start.",
+      "lastUpdated": "2026-08-07",
+      "communicationSupport": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
       "communicationLog": [
         {
           "id": "comm-phase1-05-001",
@@ -2188,26 +2188,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "The protocol, eligibility criteria and 35 selected data-extraction items are available. Sean is running the accessible Index Medicus searches, while a wildcard inconsistency in the search strategy requires clarification. LILACS and IBECS remain inaccessible and the Native Health Research Database is retired. Screening has not started.",
+        "plannedGate": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
         "targetDate": "TBD",
-        "variance": "Core protocol and data-item inputs are complete. Search-strategy clarification and inaccessible database documentation remain the gating issues.",
+        "variance": "Most setup materials are available; search-strategy clarification and database-access issues remain before screening can start.",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Setup phase",
-          "state": "Setup phase"
+          "value": "Setup in progress - search strategy/access issue",
+          "state": "Setup in progress - search strategy/access issue"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Setup phase"
+          "state": "Setup in progress - search strategy/access issue"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Setup phase"
+          "state": "Setup in progress - search strategy/access issue"
         }
       ]
     },
@@ -2436,15 +2436,15 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Setup inputs complete / configuration underway",
+      "status": "Setup in progress",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "Medium",
-      "currentStage": "The deduplicated RIS/search set (2,053 records), eligibility criteria, protocol information and 35 selected data-extraction items have been received. Questions on the selected items and deduplication were addressed; Nested Knowledge configuration and setup validation are next.",
-      "currentUpdate": "The deduplicated RIS/search set (2,053 records), eligibility criteria, protocol information and 35 selected data-extraction items have been received. Questions on the selected items and deduplication were addressed; Nested Knowledge configuration and setup validation are next.",
-      "nextAction": "Configure Nested Knowledge using the received RIS, criteria, protocol information and 35-item list; obtain final confirmation on the extraction structure; validate the setup before screening starts.",
-      "lastUpdated": "2026-08-05",
-      "communicationSupport": "The deduplicated RIS/search set (2,053 records), eligibility criteria, protocol information and 35 selected data-extraction items have been received. Questions on the selected items and deduplication were addressed; Nested Knowledge configuration and setup validation are next.",
+      "currentStage": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
+      "currentUpdate": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
+      "nextAction": "Configure the Nested Knowledge project, confirm screening instructions/calibration, and begin abstract screening once setup is complete.",
+      "lastUpdated": "2026-08-03",
+      "communicationSupport": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -2551,8 +2551,8 @@ const dashboardData = {
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "",
-        "setup": "",
+        "onboarding": "Complete",
+        "setup": "Active",
         "abstract": "",
         "fullText": "",
         "extraction": "",
@@ -2628,26 +2628,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "The deduplicated RIS/search set (2,053 records), eligibility criteria, protocol information and 35 selected data-extraction items have been received. Questions on the selected items and deduplication were addressed; Nested Knowledge configuration and setup validation are next.",
+        "plannedGate": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
         "targetDate": "TBD - after setup validation",
-        "variance": "Input collection is complete; tool configuration, final form confirmation and setup validation remain.",
+        "variance": "Key setup inputs are now received; Nested Knowledge configuration is the next step. Full-text PDFs can be assembled later for the full-text stage.",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Setup inputs complete / configuration underway",
-          "state": "Setup inputs complete / configuration underway"
+          "value": "Setup in progress",
+          "state": "Setup in progress"
         },
         {
           "label": "Target",
           "value": "TBD - after setup validation",
-          "state": "Setup inputs complete / configuration underway"
+          "state": "Setup in progress"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Setup inputs complete / configuration underway"
+          "state": "Setup in progress"
         }
       ]
     }
@@ -3354,7 +3354,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-30"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3369,7 +3369,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-30"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3384,7 +3384,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-07-30"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3429,7 +3429,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3444,7 +3444,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3459,7 +3459,7 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-07"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3474,7 +3474,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-07"
     }
   ],
   "resources": [
@@ -3566,13 +3566,13 @@ const dashboardData = {
       "date": "10 August 2026",
       "etTime": "3:00-4:00 AM EDT",
       "ukTime": "8:00-9:00 AM BST",
-      "title": "Oral Galactagogues Onboarding",
-      "agenda": "Initial onboarding, study workflow explanation and next-step planning before tool training/setup.",
-      "attendees": "Siew Cheng Foong / full review team / two Cochrane elective students / CESAR project team",
+      "title": "Oral galactagogues onboarding",
+      "agenda": "Initial onboarding and pilot workflow overview; tool training/setup to follow",
+      "attendees": "Siew Cheng Foong / full review team / 2 Cochrane elective students / project team",
       "owner": "Krishna",
-      "focus": "Later phase / Phase 2",
+      "focus": "Phase 2",
       "status": "Scheduled",
-      "linkedReviewId": "new-19",
+      "linkedReviewId": "",
       "meetingLink": ""
     }
   ],
@@ -3734,32 +3734,44 @@ const dashboardData = {
       "display": ""
     },
     {
+      "id": "new-19",
+      "reviewName": "Siew Cheng Foong - Oral galactagogues for increasing breast milk production in mothers of non-hospitalised term infants",
+      "category": "Shortlisted",
+      "status": "Onboarding confirmed for 2026-08-10 at 3:00 PM Malaysia time; full team and two Cochrane elective students will attend.",
+      "targetPhase": "Phase 2",
+      "lead": "Siew Cheng Foong",
+      "expectedTiming": "Onboarding 2026-08-10; tool training and setup to follow.",
+      "remarks": "Initial onboarding will cover the study and parallel workflow; tool training and setup will be scheduled afterward.",
+      "moveToFullSheet": "No",
+      "display": "Yes"
+    },
+    {
       "id": "new-20",
-      "reviewName": "Melissa Moraes — review update details pending",
+      "reviewName": "Melissa Moraes &#8212; review update details pending",
       "category": "Under Shortlisting",
       "status": "Interested and gathering the review topic, scope, eligible designs, search/screening status, expected new studies and timeline for eligibility review",
       "targetPhase": "TBD",
       "lead": "Melissa Moraes",
-      "expectedTiming": "TBD — awaiting review details",
+      "expectedTiming": "TBD &#8212; awaiting review details",
       "remarks": "No separate eligibility form is required; review details are pending.",
       "moveToFullSheet": "No",
       "display": "Yes"
     },
     {
       "id": "new-21",
-      "reviewName": "Prof Iram Manzoor / Akhtar Saeed Medical and Dental College — review details pending",
+      "reviewName": "Prof Iram Manzoor / Akhtar Saeed Medical and Dental College &#8212; review details pending",
       "category": "Under Shortlisting",
       "status": "Interest received; review title, status, timeline, parallel-workflow capacity and data-access details requested",
       "targetPhase": "TBD",
       "lead": "Prof Iram Manzoor / Sohail Sabir",
-      "expectedTiming": "TBD — awaiting review details",
+      "expectedTiming": "TBD &#8212; awaiting review details",
       "remarks": "Eligibility questions sent on 2026-07-31; no review-specific information received yet.",
       "moveToFullSheet": "No",
       "display": "Yes"
     },
     {
       "id": "new-22",
-      "reviewName": "Eva Madrid / Cochrane Evidence Synthesis Unit Iberoamérica",
+      "reviewName": "Eva Madrid / Cochrane Evidence Synthesis Unit Iberoam&#233;rica",
       "category": "Future Phase",
       "status": "Interested, but no ongoing Cochrane review updates are currently available",
       "targetPhase": "Future opportunity",
