@@ -2650,6 +2650,217 @@ const dashboardData = {
           "state": "Setup in progress"
         }
       ]
+    },
+    {
+      "id": "phase1-08",
+      "title": "Oral galactagogues (natural therapies or drugs) for increasing breast milk production in mothers of non-hospitalised term infants",
+      "shortName": "Oral Galactagogues",
+      "phase": "Phase 1",
+      "status": "Onboarding confirmed",
+      "tool": "TBD",
+      "lead": "Siew Cheng Foong",
+      "risk": "Medium",
+      "currentStage": "Onboarding is confirmed for 2026-08-10 at 3:00 PM Malaysia time with the full review team and two Cochrane elective students. Tool training and setup will follow after onboarding.",
+      "currentUpdate": "Onboarding is confirmed for 2026-08-10 at 3:00 PM Malaysia time with the full review team and two Cochrane elective students. Tool training and setup will follow after onboarding.",
+      "nextAction": "Complete onboarding, confirm tool allocation and team split, then schedule tool training and setup.",
+      "lastUpdated": "2026-08-10",
+      "communicationSupport": "Onboarding is confirmed for 2026-08-10 at 3:00 PM Malaysia time with the full review team and two Cochrane elective students. Tool training and setup will follow after onboarding.",
+      "communicationLog": [
+        {
+          "id": "comm-phase1-08-001",
+          "date": "2026-08-10",
+          "subject": "Oral galactagogues onboarding confirmed",
+          "people": "Siew Cheng Foong / review team / Cochrane elective students / project team",
+          "resp": "Krishna",
+          "due": "2026-08-10",
+          "status": "Scheduled",
+          "summary": "Initial onboarding will cover the study and parallel workflow; tool training and setup will be scheduled afterward.",
+          "linkedTaskId": "task-phase1-08-001",
+          "linkedAction": "Complete onboarding and confirm tool-training/setup plan",
+          "sourceType": "Project tracking",
+          "sourceLink": ""
+        }
+      ],
+      "files": {
+        "RIS": false,
+        "PDFs": false,
+        "Criteria": false,
+        "Extraction": false,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "In Progress"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-phase1-08-001",
+          "task": "Complete onboarding and confirm tool-training/setup plan",
+          "owner": "Krishna / Siew Cheng Foong / Project Team",
+          "status": "In Progress",
+          "risk": "Medium",
+          "due": "2026-08-10",
+          "dependency": "Onboarding meeting",
+          "communication": "Onboarding confirmed; tool training and setup to follow.",
+          "source": "Project tracking",
+          "sourceDate": "2026-08-10"
+        }
+      ],
+      "criticalItems": [],
+      "history": [],
+      "milestones": {
+        "onboarding": "Active",
+        "setup": "",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Complete",
+        "w02": "Complete",
+        "w03": "Complete",
+        "w04": "Pending",
+        "w05": "Not Started",
+        "w06": "Not Started",
+        "w07": "Not Started",
+        "w08": "Not Started",
+        "w09": "Not Started",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Complete onboarding and confirm tool-training/setup plan": "Project tracking",
+        "2026-08-10": "task-phase1-08-001"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Onboarding is confirmed for 2026-08-10 at 3:00 PM Malaysia time with the full review team and two Cochrane elective students. Tool training and setup will follow after onboarding.",
+        "targetDate": "2026-08-10",
+        "variance": "New Phase 1 review added from the onboarding pipeline; setup has not started yet.",
+        "assessment": "In Progress"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Onboarding confirmed",
+          "state": "Onboarding confirmed"
+        },
+        {
+          "label": "Target",
+          "value": "2026-08-10",
+          "state": "Onboarding confirmed"
+        },
+        {
+          "label": "Tool",
+          "value": "TBD",
+          "state": "Onboarding confirmed"
+        }
+      ]
     }
   ],
   "phase2": [
@@ -3275,6 +3486,19 @@ const dashboardData = {
       "linkedReviewId": "phase1-07"
     },
     {
+      "id": "task-phase1-08-001",
+      "task": "Complete onboarding and confirm tool-training/setup plan",
+      "owner": "Krishna / Siew Cheng Foong / Project Team",
+      "status": "In Progress",
+      "risk": "Medium",
+      "due": "2026-08-10",
+      "dependency": "Onboarding meeting",
+      "communication": "Onboarding confirmed; tool training and setup to follow.",
+      "source": "Project tracking",
+      "sourceDate": "2026-08-10",
+      "linkedReviewId": "phase1-08"
+    },
+    {
       "id": "task-phase2-01-001",
       "task": "Keep Phase 2 placeholder until Phase 1 stabilizes",
       "owner": "Krishna / Core Team",
@@ -3570,9 +3794,9 @@ const dashboardData = {
       "agenda": "Initial onboarding and pilot workflow overview; tool training/setup to follow",
       "attendees": "Siew Cheng Foong / full review team / 2 Cochrane elective students / project team",
       "owner": "Krishna",
-      "focus": "Phase 2",
+      "focus": "Phase 1",
       "status": "Scheduled",
-      "linkedReviewId": "",
+      "linkedReviewId": "phase1-08",
       "meetingLink": ""
     }
   ],
@@ -3732,18 +3956,6 @@ const dashboardData = {
       "remarks": "",
       "moveToFullSheet": "No",
       "display": ""
-    },
-    {
-      "id": "new-19",
-      "reviewName": "Siew Cheng Foong - Oral galactagogues for increasing breast milk production in mothers of non-hospitalised term infants",
-      "category": "Shortlisted",
-      "status": "Onboarding confirmed for 2026-08-10 at 3:00 PM Malaysia time; full team and two Cochrane elective students will attend.",
-      "targetPhase": "Phase 2",
-      "lead": "Siew Cheng Foong",
-      "expectedTiming": "Onboarding 2026-08-10; tool training and setup to follow.",
-      "remarks": "Initial onboarding will cover the study and parallel workflow; tool training and setup will be scheduled afterward.",
-      "moveToFullSheet": "No",
-      "display": "Yes"
     },
     {
       "id": "new-20",
