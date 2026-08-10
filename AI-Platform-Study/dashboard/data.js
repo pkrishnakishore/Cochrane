@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-08-07",
+  "lastUpdated": "2026-08-10",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -643,7 +643,7 @@ const dashboardData = {
       "currentStage": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
       "currentUpdate": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
       "nextAction": "Complete data extraction, collect extraction outputs and time logs, and send the data-extraction usability survey once the stage is complete.",
-      "lastUpdated": "2026-08-07",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "Data extraction remains underway. Blood Pressure Targets is expected to complete the Laser AI data-extraction stage during the week of 2026-08-10. Completed outputs will then be collected for analysis.",
       "communicationLog": [
         {
@@ -1027,7 +1027,7 @@ const dashboardData = {
       "currentStage": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
       "currentUpdate": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
       "nextAction": "Finalise the Nested Knowledge data-extraction workflow; correct Run 10 and resolve the 44 unevaluated citations in Runs 3-5; complete the interim comparison.",
-      "lastUpdated": "2026-08-05",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "Abstract and full-text screening are complete in the AI-assisted and conventional workflows. Ten studies are selected for data extraction. Conventional screening time-on-task is now complete; Robin's full-text time was corrected to 4h12. Repeated Laser AI run-validation issues remain provisional.",
       "communicationLog": [
         {
@@ -1475,7 +1475,7 @@ const dashboardData = {
       "currentStage": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
       "currentUpdate": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
       "nextAction": "Consolidate the final full-text record set and DOIs, upload PDFs, finalise any full-text decision-flow amendments, and proceed with full-text screening in both arms.",
-      "lastUpdated": "2026-08-07",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "AI-assisted and conventional abstract screening are complete. Fifteen April/May records are moving to full text, and 128 prior-search records will also be added to both arms. Shared-folder access for PDFs is in place.",
       "communicationLog": [
         {
@@ -1915,7 +1915,7 @@ const dashboardData = {
       "currentStage": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
       "currentUpdate": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
       "nextAction": "Clarify wildcard use, complete accessible searches, document LILACS/IBECS limitations, finalise Laser AI setup, and confirm the screening start.",
-      "lastUpdated": "2026-08-07",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "Protocol and 35 selected extraction items are received. Screening has not started. Sean is awaiting clarification on wildcard operators before executing available database searches; LILACS/IBECS access remains unresolved.",
       "communicationLog": [
         {
@@ -2223,7 +2223,7 @@ const dashboardData = {
       "currentStage": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "currentUpdate": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "nextAction": "Continue conventional and AI-assisted abstract screening; monitor progress and time logs; then prepare the full-text screening stage.",
-      "lastUpdated": "2026-07-30",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "Setup phase underway; template revisions and project configuration remain before screening begins",
       "communicationLog": [],
       "files": {
@@ -2443,7 +2443,7 @@ const dashboardData = {
       "currentStage": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
       "currentUpdate": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
       "nextAction": "Configure the Nested Knowledge project, confirm screening instructions/calibration, and begin abstract screening once setup is complete.",
-      "lastUpdated": "2026-08-03",
+      "lastUpdated": "2026-08-10",
       "communicationSupport": "Onboarding/training are complete. The team has supplied a deduplicated RIS file with 2,053 records, 35 selected data items, and Study Protocol Info containing inclusion/exclusion/PICOS details. Nested Knowledge configuration can proceed.",
       "communicationLog": [],
       "files": {
@@ -3354,7 +3354,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3369,7 +3369,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3384,7 +3384,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3399,7 +3399,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3414,7 +3414,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-05"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3429,7 +3429,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3444,7 +3444,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3459,7 +3459,7 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3474,7 +3474,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-07"
+      "sourceDate": "2026-08-10"
     }
   ],
   "resources": [
