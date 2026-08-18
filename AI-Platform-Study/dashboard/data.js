@@ -2653,18 +2653,18 @@ const dashboardData = {
     },
     {
       "id": "phase1-08",
-      "title": "Oral galactagogues (natural therapies or drugs) for increasing breast milk production in mothers of non-hospitalised term infants",
-      "shortName": "Oral Galactagogues",
+      "title": "Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
+      "shortName": "LNS",
       "phase": "Phase 1",
-      "status": "Withdrawn",
-      "tool": "TBD",
-      "lead": "Siew Cheng Foong",
+      "status": "Laser AI setup preparation; confirmation pending",
+      "tool": "Laser AI",
+      "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Team declined participation because all relevant studies had already undergone screening, INSPECT-SR, data extraction and ROB 2; blinding was not feasible.",
-      "currentUpdate": "Team declined participation because all relevant studies had already undergone screening, INSPECT-SR, data extraction and ROB 2; blinding was not feasible.",
-      "nextAction": "Retain as withdrawn/historical record; no active onboarding or tool setup required.",
+      "currentStage": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
+      "currentUpdate": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
+      "nextAction": "Confirm Laser AI setup preparation, complete setup confirmation, and agree screening start plan.",
       "lastUpdated": "2026-08-18",
-      "communicationSupport": "Team declined participation because all relevant studies had already undergone screening, INSPECT-SR, data extraction and ROB 2; blinding was not feasible.",
+      "communicationSupport": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
       "communicationLog": [
         {
           "id": "comm-phase1-08-001",
@@ -2694,25 +2694,25 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Withdrawn"
+          "status": "In Progress - setup confirmation pending"
         },
         {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Withdrawn"
+          "status": "Not Started"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Withdrawn"
+          "status": "Not Started"
         },
         {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Withdrawn"
+          "status": "Not Started"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -2762,7 +2762,7 @@ const dashboardData = {
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "Active",
+        "onboarding": "Pending",
         "setup": "",
         "abstract": "",
         "fullText": "",
@@ -2774,17 +2774,17 @@ const dashboardData = {
         "w02": "Complete",
         "w03": "Complete",
         "w04": "Pending",
-        "w05": "Not Started",
-        "w06": "Not Started",
-        "w07": "Not Started",
-        "w08": "Not Started",
-        "w09": "Not Started",
-        "w10": "Not Started",
-        "w11": "Not Started",
-        "w12": "Not Started",
-        "w13": "Not Started",
-        "w14": "Not Started",
-        "w15": "Not Started",
+        "w05": "Pending",
+        "w06": "Pending",
+        "w07": "Pending",
+        "w08": "Pending",
+        "w09": "Pending",
+        "w10": "Pending",
+        "w11": "Pending",
+        "w12": "Pending",
+        "w13": "Pending",
+        "w14": "Pending",
+        "w15": "Pending",
         "w16": "Not Started",
         "w17": "Not Started",
         "w18": "Not Started",
@@ -2839,26 +2839,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Team declined participation because all relevant studies had already undergone screening, INSPECT-SR, data extraction and ROB 2; blinding was not feasible.",
-        "targetDate": "2026-08-10",
-        "variance": "Rerun search produced 377 records, but all relevant studies had already been processed. Team formally declined on 2026-08-11.",
-        "assessment": "Withdrawn"
+        "plannedGate": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
+        "targetDate": "Setup requested 2026-08-17",
+        "variance": "Laser AI setup preparation is active; setup confirmation is still pending.",
+        "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Withdrawn",
-          "state": "Withdrawn"
+          "value": "Laser AI setup preparation; confirmation pending",
+          "state": "Laser AI setup preparation; confirmation pending"
         },
         {
           "label": "Target",
-          "value": "2026-08-10",
-          "state": "Withdrawn"
+          "value": "Setup requested 2026-08-17",
+          "state": "Laser AI setup preparation; confirmation pending"
         },
         {
           "label": "Tool",
-          "value": "TBD",
-          "state": "Withdrawn"
+          "value": "Laser AI",
+          "state": "Laser AI setup preparation; confirmation pending"
         }
       ]
     }
@@ -3810,18 +3810,6 @@ const dashboardData = {
       "lead": "Amanda Cross / Rehan Sarwar",
       "expectedTiming": "2026-06-08",
       "remarks": "Withdrawn due to capacity constraints; retain as historical record",
-      "moveToFullSheet": "No",
-      "display": "Yes"
-    },
-    {
-      "id": "new-03",
-      "reviewName": "Jai Das &#8212; Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
-      "category": "Shortlisted",
-      "status": "Laser AI setup preparation; confirmation pending",
-      "targetPhase": "Phase 1",
-      "lead": "Syeda Kanza Naqvi/Jai Das",
-      "expectedTiming": "Setup requested 2026-08-17",
-      "remarks": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending",
       "moveToFullSheet": "No",
       "display": "Yes"
     },
