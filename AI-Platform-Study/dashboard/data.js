@@ -552,7 +552,7 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Extraction complete; analysis access partially restored",
+      "status": "Analysis in progress; access partially restored",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
@@ -754,8 +754,8 @@ const dashboardData = {
         "setup": "Complete",
         "abstract": "Complete",
         "fullText": "Complete",
-        "extraction": "",
-        "analysis": ""
+        "extraction": "Complete",
+        "analysis": "Active"
       },
       "workflowStatus": {
         "46169": "task-phase1-01-008",
@@ -840,24 +840,24 @@ const dashboardData = {
         "plannedWindow": "",
         "plannedGate": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
         "targetDate": "Immediate",
-        "variance": "Extraction complete; analysis pending output retrieval",
+        "variance": "Analysis pending Laser AI output retrieval",
         "assessment": "Needs Action"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Extraction complete; analysis access partially restored",
-          "state": "Extraction complete; analysis access partially restored"
+          "value": "Analysis in progress; access partially restored",
+          "state": "Analysis in progress; access partially restored"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Extraction complete; analysis access partially restored"
+          "state": "Analysis in progress; access partially restored"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Extraction complete; analysis access partially restored"
+          "state": "Analysis in progress; access partially restored"
         }
       ]
     },
@@ -1159,15 +1159,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Abstract screening complete; full-text setup underway",
+      "status": "Full-text setup underway",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
-      "currentUpdate": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
-      "nextAction": "Confirm full-text setup and commence both screening arms",
+      "currentStage": "Abstract screening complete; full-text setup underway with 145 uploaded records",
+      "currentUpdate": "Abstract screening complete; full-text setup underway with 145 uploaded records",
+      "nextAction": "Confirm full-text project readiness and commence both screening arms",
       "lastUpdated": "2026-08-20",
-      "communicationSupport": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
+      "communicationSupport": "Abstract screening complete; full-text setup underway with 145 uploaded records",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1400,7 +1400,7 @@ const dashboardData = {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Complete",
-        "fullText": "",
+        "fullText": "Active",
         "extraction": "",
         "analysis": ""
       },
@@ -1487,7 +1487,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
+        "plannedGate": "Abstract screening complete; full-text setup underway with 145 uploaded records",
         "targetDate": "Immediate",
         "variance": "Full-text setup awaiting final confirmation",
         "assessment": "In Progress"
@@ -1495,18 +1495,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract screening complete; full-text setup underway",
-          "state": "Abstract screening complete; full-text setup underway"
+          "value": "Full-text setup underway",
+          "state": "Full-text setup underway"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Abstract screening complete; full-text setup underway"
+          "state": "Full-text setup underway"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Abstract screening complete; full-text setup underway"
+          "state": "Full-text setup underway"
         }
       ]
     },
