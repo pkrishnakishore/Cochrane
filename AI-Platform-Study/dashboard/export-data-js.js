@@ -513,11 +513,14 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
 
     const communicationRows = sectionTable(rows, ["CommunicationID", "Date", "Summary"]);
     for (const row of communicationRows.filter(isDisplayed)) {
+      const communicationId = text(row.CommunicationID);
+      if (!/^comm-/i.test(communicationId)) continue;
+
       const linkedTaskId = text(row.LinkedTaskID);
       const linkedTask = linkedTaskId ? review.tasks.find((task) => task.id === linkedTaskId) : null;
 
       review.communicationLog.push({
-        id: text(row.CommunicationID),
+        id: communicationId,
         date: excelDate(row.Date) || "Recent",
         subject: text(row.Subject || row.ConversationName, "Mail follow-up"),
         people: text(row.People || row.FromPerson, review.lead),
@@ -534,9 +537,10 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     }
 
     const criticalRows = sectionTable(rows, ["CriticalItem", "Severity", "Status"]);
+    const ignoredCriticalLabels = new Set(["", "criticalitem", "critical items displayed in dashboard"]);
     for (const row of criticalRows.filter(isDisplayed)) {
       const itemTitle = text(row.CriticalItem);
-      if (!itemTitle) continue;
+      if (!itemTitle || ignoredCriticalLabels.has(itemTitle.toLowerCase())) continue;
 
       const item = {
         id: `critical-${review.id}-${criticalItems.length + 1}`,

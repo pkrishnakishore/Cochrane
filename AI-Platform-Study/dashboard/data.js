@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-08-18",
+  "lastUpdated": "2026-08-20",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -96,48 +96,6 @@ const dashboardData = {
           "linkedTaskId": "task-pilot-01-002",
           "linkedAction": "Consolidate usability survey receipt",
           "sourceType": "Email",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Matteo Bruschettini",
-          "resp": "Matteo Bruschettini",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Full-text time not reported",
-          "date": "Medium",
-          "subject": "Mail follow-up",
-          "people": "Matteo Bruschettini",
-          "resp": "Closed",
-          "due": "Closed; no active follow-up required.",
-          "status": "No",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
           "sourceLink": ""
         }
       ],
@@ -377,48 +335,6 @@ const dashboardData = {
           "linkedAction": "Confirm latest Laser AI progress and outputs",
           "sourceType": "MoM",
           "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Jordi Pardo Pardo / Glen Hazlewood",
-          "resp": "Jordi Pardo Pardo / Glen Hazlewood",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Pilot output status unclear",
-          "date": "Medium",
-          "subject": "Mail follow-up",
-          "people": "Jordi Pardo Pardo / Glen Hazlewood",
-          "resp": "Closed",
-          "due": "Closed; no active follow-up required.",
-          "status": "No",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
         }
       ],
       "files": {
@@ -636,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Extraction complete; Laser AI access pending",
+      "status": "Extraction complete; analysis access partially restored",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Both extractions complete; conventional outputs received; Laser AI retrieval pending",
-      "currentUpdate": "Both extractions complete; conventional outputs received; Laser AI retrieval pending",
-      "nextAction": "Resolve access, download outputs and begin comparison",
-      "lastUpdated": "2026-08-18",
-      "communicationSupport": "Both extractions complete; conventional outputs received; Laser AI retrieval pending",
+      "currentStage": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
+      "currentUpdate": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
+      "nextAction": "Verify project visibility, download Laser AI outputs and begin comparison",
+      "lastUpdated": "2026-08-20",
+      "communicationSupport": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -667,7 +583,7 @@ const dashboardData = {
           "people": "Doreen Larvie / Krishna",
           "resp": "Doreen Larvie / Review Team",
           "due": "Immediate",
-          "status": "Open",
+          "status": "Closed",
           "summary": "Asked team to confirm conventional human abstract screening status",
           "linkedTaskId": "task-phase1-01-007",
           "linkedAction": "Confirm human abstract screening status",
@@ -681,81 +597,11 @@ const dashboardData = {
           "people": "Doreen Larvie / Krishna",
           "resp": "Review Team",
           "due": "Immediate",
-          "status": "Open",
+          "status": "Closed",
           "summary": "Asked team to confirm whether time taken was recorded",
           "linkedTaskId": "task-phase1-01-008",
           "linkedAction": "Confirm abstract screening time log",
           "sourceType": "Email",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Doreen Larvie",
-          "resp": "Doreen Larvie",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Data items finalization recently resolved",
-          "date": "Low",
-          "subject": "Mail follow-up",
-          "people": "Doreen Larvie",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Human abstract screening status not yet confirmed",
-          "date": "High",
-          "subject": "Doreen Larvie / Review Team",
-          "people": "Immediate",
-          "resp": "Open",
-          "due": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Abstract screening time log pending",
-          "date": "Medium",
-          "subject": "Review Team",
-          "people": "Immediate",
-          "resp": "Open",
-          "due": "Required for study analysis and comparison",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
           "sourceLink": ""
         }
       ],
@@ -835,13 +681,13 @@ const dashboardData = {
           "status": "Not Started"
         },
         {
-          "name": "Human abstract screening status not yet confirmed",
+          "name": "Conventional workflow completed",
           "human": 0,
           "ai": 0,
           "status": "Immediate"
         },
         {
-          "name": "Abstract screening time log pending",
+          "name": "Time logs received",
           "human": 0,
           "ai": 0,
           "status": "Immediate"
@@ -876,7 +722,7 @@ const dashboardData = {
           "id": "task-phase1-01-007",
           "task": "Confirm human abstract screening status",
           "owner": "Doreen Larvie / Review Team",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "High",
           "due": "Immediate",
           "dependency": "Parallel workflow tracking",
@@ -888,7 +734,7 @@ const dashboardData = {
           "id": "task-phase1-01-008",
           "task": "Confirm abstract screening time log",
           "owner": "Doreen Larvie / Review Team",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "Medium",
           "due": "Immediate",
           "dependency": "Human screening status confirmation",
@@ -899,8 +745,8 @@ const dashboardData = {
       ],
       "criticalItems": [
         "Data items finalization recently resolved",
-        "Human abstract screening status not yet confirmed",
-        "Abstract screening time log pending"
+        "Conventional workflow completed",
+        "Time logs received"
       ],
       "history": [],
       "milestones": {
@@ -909,7 +755,7 @@ const dashboardData = {
         "abstract": "Complete",
         "fullText": "Complete",
         "extraction": "",
-        "analysis": "Risk"
+        "analysis": ""
       },
       "workflowStatus": {
         "46169": "task-phase1-01-008",
@@ -919,7 +765,7 @@ const dashboardData = {
         "w04": "Complete",
         "w05": "Complete",
         "w06": "Complete",
-        "w07": "Complete",
+        "w07": "Under Review",
         "w08": "Complete",
         "w09": "Complete",
         "w10": "Complete",
@@ -929,7 +775,7 @@ const dashboardData = {
         "w14": "Complete",
         "w15": "Complete",
         "w16": "Complete",
-        "w17": "In Progress",
+        "w17": "Complete",
         "w18": "Complete",
         "w19": "Complete",
         "w20": "Complete",
@@ -992,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Both extractions complete; conventional outputs received; Laser AI retrieval pending",
+        "plannedGate": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
         "targetDate": "Immediate",
-        "variance": "Extraction complete; analysis delayed by access",
+        "variance": "Extraction complete; analysis pending output retrieval",
         "assessment": "Needs Action"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Extraction complete; Laser AI access pending",
-          "state": "Extraction complete; Laser AI access pending"
+          "value": "Extraction complete; analysis access partially restored",
+          "state": "Extraction complete; analysis access partially restored"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Extraction complete; Laser AI access pending"
+          "state": "Extraction complete; analysis access partially restored"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Extraction complete; Laser AI access pending"
+          "state": "Extraction complete; analysis access partially restored"
         }
       ]
     },
@@ -1027,164 +873,9 @@ const dashboardData = {
       "currentStage": "Screening complete; awaiting final extraction files and times",
       "currentUpdate": "Screening complete; awaiting final extraction files and times",
       "nextAction": "Obtain final extraction files/times and complete validation",
-      "lastUpdated": "2026-08-18",
+      "lastUpdated": "2026-08-20",
       "communicationSupport": "Screening complete; awaiting final extraction files and times",
-      "communicationLog": [
-        {
-          "id": "",
-          "date": "comm-phase1-02-004",
-          "subject": "46161",
-          "people": "Psoriasis / NK survey responses",
-          "resp": "Susan / Krishna",
-          "due": "Susan / Ursula",
-          "status": "46161",
-          "summary": "Complete",
-          "linkedTaskId": "Two new NK title and abstract screening survey responses received",
-          "linkedAction": "task-phase1-02-005",
-          "sourceType": "Confirm survey responses",
-          "sourceLink": "Email"
-        },
-        {
-          "id": "",
-          "date": "comm-phase1-02-005",
-          "subject": "46162",
-          "people": "Psoriasis NK data field setup",
-          "resp": "Meghan / Sivem / Sean",
-          "due": "Meghan",
-          "status": "46173",
-          "summary": "In Progress",
-          "linkedTaskId": "Meghan confirmed she would start entering data fields into Nested Knowledge",
-          "linkedAction": "task-phase1-02-007",
-          "sourceType": "Enter NK data fields",
-          "sourceLink": "Email"
-        },
-        {
-          "id": "",
-          "date": "comm-phase1-02-006",
-          "subject": "46167",
-          "people": "Psoriasis updated data item list",
-          "resp": "Sean / Sivem / Meghan",
-          "due": "Sean / Meghan",
-          "status": "46167",
-          "summary": "Complete",
-          "linkedTaskId": "Updated data item list uploaded to shared folder",
-          "linkedAction": "task-phase1-02-006",
-          "sourceType": "Finalize data items",
-          "sourceLink": "Email"
-        },
-        {
-          "id": "",
-          "date": "comm-phase1-02-007",
-          "subject": "46168",
-          "people": "Psoriasis conventional extraction format",
-          "resp": "Emilie / Sean / Meghan",
-          "due": "Emilie / Robin",
-          "status": "46173",
-          "summary": "In Progress",
-          "linkedTaskId": "Conventional team clarified planned Excel and Word outputs",
-          "linkedAction": "task-phase1-02-008",
-          "sourceType": "Confirm conventional extraction format",
-          "sourceLink": "Email"
-        },
-        {
-          "id": "",
-          "date": "comm-phase1-02-008",
-          "subject": "46169",
-          "people": "Psoriasis extraction definitions",
-          "resp": "Sean / Emilie / Meghan / Sivem",
-          "due": "Review Team",
-          "status": "Immediate",
-          "summary": "Open",
-          "linkedTaskId": "Sean asked extractors to follow agreed definitions before AI extraction begins",
-          "linkedAction": "task-phase1-02-009",
-          "sourceType": "Confirm no further changes",
-          "sourceLink": "Email"
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Laurence Le Cleach / Sivem Afach",
-          "resp": "Laurence Le Cleach / Sivem Afach",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Remaining full-text gaps",
-          "date": "Low",
-          "subject": "Mail follow-up",
-          "people": "Laurence Le Cleach / Sivem Afach",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "No",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Full-text criteria still need confirmation",
-          "date": "Low",
-          "subject": "Mail follow-up",
-          "people": "Laurence Le Cleach / Sivem Afach",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "No",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Confirm no further data item changes before AI extraction",
-          "date": "High",
-          "subject": "Sean / Review Team",
-          "people": "Immediate",
-          "resp": "Open",
-          "due": "Needed before AI-assisted data extraction begins in NK",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Conventional extraction format alignment",
-          "date": "Medium",
-          "subject": "Emilie / Robin / Sean",
-          "people": "46173",
-          "resp": "In Progress",
-          "due": "Conventional outputs need to match agreed standalone data item structure",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        }
-      ],
+      "communicationLog": [],
       "files": {
         "RIS": true,
         "PDFs": false,
@@ -1468,15 +1159,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Full-text workflow decision pending",
+      "status": "Abstract screening complete; full-text setup underway",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Screening substantially complete; decision pending for 128 studies and 3 abstracts",
-      "currentUpdate": "Screening substantially complete; decision pending for 128 studies and 3 abstracts",
-      "nextAction": "Obtain team&#8217;s selected option and finish 3 abstracts",
-      "lastUpdated": "2026-08-18",
-      "communicationSupport": "Screening substantially complete; decision pending for 128 studies and 3 abstracts",
+      "currentStage": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
+      "currentUpdate": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
+      "nextAction": "Confirm full-text setup and commence both screening arms",
+      "lastUpdated": "2026-08-20",
+      "communicationSupport": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1547,95 +1238,11 @@ const dashboardData = {
           "linkedAction": "Confirm human abstract screening status",
           "sourceType": "Email",
           "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Rebecca K. Hodder",
-          "resp": "Rebecca K. Hodder",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Methodology re-onboarding still pending",
-          "date": "Medium",
-          "subject": "Gerald / Krishna / Review Team",
-          "people": "This week",
-          "resp": "Open",
-          "due": "Needed because Krishna could not join the Laser AI tool training session",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Human abstract screening status not confirmed",
-          "date": "High",
-          "subject": "Rebecca / Kate",
-          "people": "Immediate",
-          "resp": "Open",
-          "due": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Updated search completion not confirmed",
-          "date": "Medium",
-          "subject": "Rebecca / Kate",
-          "people": "Immediate",
-          "resp": "Open",
-          "due": "Search was run around 20 May, but final completion/status needs confirmation",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
         }
       ],
       "files": {
         "RIS": true,
-        "PDFs": false,
+        "PDFs": true,
         "Criteria": true,
         "Extraction": false,
         "Protocol": false,
@@ -1652,13 +1259,13 @@ const dashboardData = {
           "name": "Abstract Screening",
           "human": 100,
           "ai": 100,
-          "status": "Substantially complete&#8212;3 abstracts pending"
+          "status": "Complete"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Blocked&#8212;workflow option pending"
+          "status": "Setup in progress"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -1703,19 +1310,19 @@ const dashboardData = {
           "status": "DueDate"
         },
         {
-          "name": "Methodology re-onboarding still pending",
+          "name": "Re-onboarding no longer required",
           "human": 0,
           "ai": 0,
           "status": "This week"
         },
         {
-          "name": "Human abstract screening status not confirmed",
+          "name": "Human abstract screening confirmed complete",
           "human": 0,
           "ai": 0,
           "status": "Immediate"
         },
         {
-          "name": "Updated search completion not confirmed",
+          "name": "Updated search confirmed complete",
           "human": 0,
           "ai": 0,
           "status": "Immediate"
@@ -1738,7 +1345,7 @@ const dashboardData = {
           "id": "task-phase1-03-006",
           "task": "Schedule methodology re-onboarding",
           "owner": "Gerald / Krishna / Review Team",
-          "status": "Pending",
+          "status": "Complete / No longer required",
           "risk": "Medium",
           "due": "This week",
           "dependency": "Krishna could not join tool training",
@@ -1750,7 +1357,7 @@ const dashboardData = {
           "id": "task-phase1-03-007",
           "task": "Confirm updated search completion",
           "owner": "Rebecca / Kate",
-          "status": "Pending",
+          "status": "Complete / No longer required",
           "risk": "Medium",
           "due": "Immediate",
           "dependency": "Search run around 20 May",
@@ -1762,7 +1369,7 @@ const dashboardData = {
           "id": "task-phase1-03-008",
           "task": "Confirm human abstract screening status",
           "owner": "Rebecca / Kate",
-          "status": "Pending",
+          "status": "Complete / No longer required",
           "risk": "High",
           "due": "Immediate",
           "dependency": "Parallel workflow tracking",
@@ -1784,15 +1391,15 @@ const dashboardData = {
         }
       ],
       "criticalItems": [
-        "Methodology re-onboarding still pending",
-        "Human abstract screening status not confirmed",
-        "Updated search completion not confirmed"
+        "Re-onboarding no longer required",
+        "Human abstract screening confirmed complete",
+        "Updated search confirmed complete"
       ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "",
+        "abstract": "Complete",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -1816,21 +1423,21 @@ const dashboardData = {
         "w13": "Under Review",
         "w14": "Under Review",
         "w15": "Complete",
-        "w16": "Under Review",
-        "w17": "Under Review",
+        "w16": "Complete",
+        "w17": "Complete",
         "w18": "Complete",
         "w19": "Complete",
         "w20": "Complete",
         "w21": "Complete",
         "w22": "Not Started",
         "w23": "Not Started",
-        "w24": "Under Review",
+        "w24": "Complete",
         "w25": "Not Started",
-        "w26": "Under Review",
+        "w26": "Complete",
         "w27": "Not Started",
         "w28": "Not Started",
         "w29": "Under Review",
-        "w30": "Under Review",
+        "w30": "In Progress",
         "w31": "Not Started",
         "w32": "Not Started",
         "w33": "Not Started",
@@ -1880,26 +1487,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Screening substantially complete; decision pending for 128 studies and 3 abstracts",
-        "targetDate": "Awaiting review team",
-        "variance": "Full-text work held pending workflow decision",
-        "assessment": "Waiting on Others"
+        "plannedGate": "Abstract-screening discrepancies resolved; PDFs for 145 full-text records uploaded",
+        "targetDate": "Immediate",
+        "variance": "Full-text setup awaiting final confirmation",
+        "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Full-text workflow decision pending",
-          "state": "Full-text workflow decision pending"
+          "value": "Abstract screening complete; full-text setup underway",
+          "state": "Abstract screening complete; full-text setup underway"
         },
         {
           "label": "Target",
-          "value": "Awaiting review team",
-          "state": "Full-text workflow decision pending"
+          "value": "Immediate",
+          "state": "Abstract screening complete; full-text setup underway"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Full-text workflow decision pending"
+          "state": "Abstract screening complete; full-text setup underway"
         }
       ]
     },
@@ -1908,79 +1515,37 @@ const dashboardData = {
       "title": "Vitamin C supplementation for prevention and treatment of pneumonia",
       "shortName": "Vitamin C",
       "phase": "Phase 1",
-      "status": "Laser AI setup scheduled/confirmation pending",
+      "status": "Laser AI setup complete; decision-flow approval pending",
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Documents re-forwarded; setup planned for August 18",
-      "currentUpdate": "Documents re-forwarded; setup planned for August 18",
-      "nextAction": "Confirm setup, access, documents and start date",
-      "lastUpdated": "2026-08-18",
-      "communicationSupport": "Documents re-forwarded; setup planned for August 18",
+      "currentStage": "Laser AI project created with 3,486 deduplicated references",
+      "currentUpdate": "Laser AI project created with 3,486 deduplicated references",
+      "nextAction": "Review team to approve decision flow; then provide access and start screening",
+      "lastUpdated": "2026-08-20",
+      "communicationSupport": "Laser AI project created with 3,486 deduplicated references",
       "communicationLog": [
         {
           "id": "comm-phase1-05-001",
-          "date": "2026-05-14",
-          "subject": "Additional Phase 1 review slot",
-          "people": "Core Team",
-          "resp": "Krishna / Core Team",
-          "due": "2026-05-19",
-          "status": "Under Review",
-          "summary": "One additional eligible review still needs to be identified or confirmed for Phase 1.",
-          "linkedTaskId": "task-phase1-05-001",
-          "linkedAction": "Identify additional eligible review",
-          "sourceType": "Project tracking",
-          "sourceLink": ""
-        },
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "Syeda Kanza Naqvi / Jai Das",
-          "resp": "Syeda Kanza Naqvi / Jai Das",
-          "due": "TBD",
+          "date": "2026-08-20",
+          "subject": "Vitamin C setup completed",
+          "people": "Krishna / Response Team / Review Team",
+          "resp": "Review Team",
+          "due": "Awaiting review team approval",
           "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "Open Phase 1 review slot",
-          "date": "High",
-          "subject": "Mail follow-up",
-          "people": "Syeda Kanza Naqvi / Jai Das",
-          "resp": "Open",
-          "due": "TBD",
-          "status": "Yes",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
+          "summary": "Laser AI project created with 3,486 deduplicated references; decision-flow approval is the next gating step.",
+          "linkedTaskId": "task-phase1-05-001",
+          "linkedAction": "Approve Vitamin C decision flow",
+          "sourceType": "Email",
           "sourceLink": ""
         }
       ],
       "files": {
-        "RIS": false,
+        "RIS": true,
         "PDFs": false,
-        "Criteria": false,
-        "Extraction": false,
-        "Protocol": false,
+        "Criteria": true,
+        "Extraction": true,
+        "Protocol": true,
         "Time Log": false
       },
       "stages": [
@@ -1988,7 +1553,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "In Progress&#8212;setup confirmation pending"
+          "status": "Setup complete-validation pending"
         },
         {
           "name": "Abstract Screening",
@@ -2045,69 +1610,69 @@ const dashboardData = {
           "status": "DueDate"
         },
         {
-          "name": "Open Phase 1 review slot",
+          "name": "Decision-flow approval pending",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Awaiting review team approval"
         }
       ],
       "tasks": [
         {
           "id": "task-phase1-05-001",
-          "task": "Identify additional eligible review",
-          "owner": "Core Team",
-          "status": "Under Review",
+          "task": "Approve Vitamin C decision flow",
+          "owner": "Syeda Kanza Naqvi / Jai Das",
+          "status": "Pending",
           "risk": "High",
-          "due": "2026-05-19",
-          "dependency": "Candidate pool",
-          "communication": "Shortlist review options.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "due": "Awaiting review team approval",
+          "dependency": "Laser AI setup complete",
+          "communication": "Decision flow prepared; approval required before screening begins.",
+          "source": "Email",
+          "sourceDate": "2026-08-20"
         },
         {
           "id": "task-phase1-05-002",
-          "task": "Confirm team availability after candidate selection",
-          "owner": "Krishna / Review Team",
-          "status": "Not Started",
-          "risk": "Medium",
-          "due": "TBD",
-          "dependency": "Review identification",
-          "communication": "Contact review team once candidate is selected.",
+          "task": "Provide Laser AI access to allocated users",
+          "owner": "Response Team / Laser AI",
+          "status": "Pending",
+          "risk": "High",
+          "due": "After decision-flow approval",
+          "dependency": "Decision-flow approval",
+          "communication": "Provide reviewer access after the team approves the configured flow.",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-08-20"
         },
         {
           "id": "task-phase1-05-003",
-          "task": "Assign allocated AI tool after candidate selection",
-          "owner": "Core Team",
+          "task": "Start parallel abstract screening and time tracking",
+          "owner": "Review Team / Krishna",
           "status": "Not Started",
           "risk": "Medium",
-          "due": "TBD",
-          "dependency": "Tool allocation",
-          "communication": "Assign one tool only after a review is selected.",
+          "due": "After access",
+          "dependency": "Tool access and team readiness",
+          "communication": "Begin both screening arms and confirm time-tracking method.",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-08-20"
         },
         {
           "id": "task-phase1-05-004",
-          "task": "Hold onboarding until review is confirmed",
-          "owner": "Krishna / Response Team",
-          "status": "Not Started",
-          "risk": "Low",
-          "due": "After confirmation",
-          "dependency": "Review and tool confirmation",
-          "communication": "Start onboarding only after candidate and tool are confirmed.",
+          "task": "Confirm finalized SharePoint package",
+          "owner": "Krishna / Review Team",
+          "status": "Under Review",
+          "risk": "Medium",
+          "due": "Immediate",
+          "dependency": "Protocol, criteria and data items",
+          "communication": "Confirm the SharePoint package contains final protocol, criteria and selected data items.",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-08-20"
         }
       ],
       "criticalItems": [
-        "Open Phase 1 review slot"
+        "Decision-flow approval pending"
       ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "Pending",
+        "setup": "",
         "abstract": "",
         "fullText": "",
         "extraction": "",
@@ -2123,12 +1688,12 @@ const dashboardData = {
         "w07": "Under Review",
         "w08": "Under Review",
         "w09": "Not Started",
-        "w10": "Not Started",
+        "w10": "Complete",
         "w11": "Complete",
         "w12": "Complete",
         "w13": "Under Review",
         "w14": "Under Review",
-        "w15": "Scheduled",
+        "w15": "Complete",
         "w16": "Pending",
         "w17": "Not Started",
         "w18": "Not Started",
@@ -2178,36 +1743,37 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Identify additional eligible review": "Project tracking",
-        "Confirm team availability after candidate selection": "Project tracking",
-        "Assign allocated AI tool after candidate selection": "Project tracking",
-        "Hold onboarding until review is confirmed": "Project tracking",
-        "2026-05-14": "task-phase1-05-001",
+        "Approve Vitamin C decision flow": "Email",
+        "Provide Laser AI access to allocated users": "Project tracking",
+        "Start parallel abstract screening and time tracking": "Project tracking",
+        "Confirm finalized SharePoint package": "Project tracking",
+        "Date": "LinkedTaskID",
+        "2026-08-20": "task-phase1-05-001",
         "Severity": "Not Started",
         "High": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Documents re-forwarded; setup planned for August 18",
-        "targetDate": "2026-08-18",
-        "variance": "Documents re-shared; setup/access confirmation pending",
+        "plannedGate": "Laser AI project created with 3,486 deduplicated references",
+        "targetDate": "Awaiting review team approval",
+        "variance": "Setup complete; screening awaits validation",
         "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Laser AI setup scheduled/confirmation pending",
-          "state": "Laser AI setup scheduled/confirmation pending"
+          "value": "Laser AI setup complete; decision-flow approval pending",
+          "state": "Laser AI setup complete; decision-flow approval pending"
         },
         {
           "label": "Target",
-          "value": "2026-08-18",
-          "state": "Laser AI setup scheduled/confirmation pending"
+          "value": "Awaiting review team approval",
+          "state": "Laser AI setup complete; decision-flow approval pending"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Laser AI setup scheduled/confirmation pending"
+          "state": "Laser AI setup complete; decision-flow approval pending"
         }
       ]
     },
@@ -2223,9 +1789,24 @@ const dashboardData = {
       "currentStage": "Calibration and conventional screening complete; NK screening continuing",
       "currentUpdate": "Calibration and conventional screening complete; NK screening continuing",
       "nextAction": "Complete NK screening/time capture, then begin full text",
-      "lastUpdated": "2026-08-18",
+      "lastUpdated": "2026-08-20",
       "communicationSupport": "Calibration and conventional screening complete; NK screening continuing",
-      "communicationLog": [],
+      "communicationLog": [
+        {
+          "id": "comm-phase1-06-001",
+          "date": "2026-08-20",
+          "subject": "Probiotics full text paused",
+          "people": "Jeremy Steen / Bradley Johnston / Krishna",
+          "resp": "Review Team",
+          "due": "After NK abstract screening",
+          "status": "In Progress",
+          "summary": "Team confirmed Covidence full-text screening will remain paused until Nested Knowledge abstract screening is complete.",
+          "linkedTaskId": "task-phase1-06-001",
+          "linkedAction": "Complete Nested Knowledge abstract screening",
+          "sourceType": "Email",
+          "sourceLink": ""
+        }
+      ],
       "files": {
         "RIS": true,
         "PDFs": false,
@@ -2293,42 +1874,68 @@ const dashboardData = {
           "name": "CriticalItem",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "DueDate"
         },
         {
-          "name": "Open Phase 1 review slot",
+          "name": "Full-text screening deliberately paused",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "After NK abstract screening"
         }
       ],
       "tasks": [
         {
-          "id": "task-phase1-05-001",
-          "task": "Identify additional eligible review",
-          "owner": "Core Team",
-          "status": "Under Review",
-          "risk": "High",
-          "due": "2026-05-19",
-          "dependency": "Candidate pool",
-          "communication": "Shortlist review options.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
-        },
-        {
-          "id": "task-phase1-05-002",
-          "task": "Confirm team availability after candidate selection",
-          "owner": "Krishna / Review Team",
-          "status": "Not Started",
+          "id": "task-phase1-06-001",
+          "task": "Complete Nested Knowledge abstract screening",
+          "owner": "Review Team / Nested Knowledge",
+          "status": "In Progress",
           "risk": "Medium",
           "due": "TBD",
-          "dependency": "Review identification",
-          "communication": "Contact review team once candidate is selected.",
+          "dependency": "NK screening completion",
+          "communication": "Continue NK abstract screening before full-text work resumes.",
+          "source": "Email",
+          "sourceDate": "2026-08-20"
+        },
+        {
+          "id": "task-phase1-06-002",
+          "task": "Keep Covidence full-text screening paused",
+          "owner": "Jeremy Steen / Bradley Johnston",
+          "status": "Complete",
+          "risk": "Low",
+          "due": "Confirmed",
+          "dependency": "Parallel workflow sequencing",
+          "communication": "Conventional full-text screening will remain paused until NK abstract screening finishes.",
+          "source": "Email",
+          "sourceDate": "2026-08-20"
+        },
+        {
+          "id": "task-phase1-06-003",
+          "task": "Confirm NK screening completion and export",
+          "owner": "Review Team / Response Team",
+          "status": "Not Started",
+          "risk": "Medium",
+          "due": "After NK screening",
+          "dependency": "NK abstract screening",
+          "communication": "Export output once NK screening is complete.",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-08-20"
+        },
+        {
+          "id": "task-phase1-06-004",
+          "task": "Start full-text screening after both arms align",
+          "owner": "Review Team / Response Team",
+          "status": "Not Started",
+          "risk": "Medium",
+          "due": "After abstract-screening closeout",
+          "dependency": "NK and conventional abstract-screening completion",
+          "communication": "Resume full-text workflow only after abstract-screening outputs are ready.",
+          "source": "Project tracking",
+          "sourceDate": "2026-08-20"
         }
       ],
-      "criticalItems": [],
+      "criticalItems": [
+        "Full-text screening deliberately paused"
+      ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
@@ -2403,8 +2010,14 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Identify additional eligible review": "Project tracking",
-        "Confirm team availability after candidate selection": "Project tracking"
+        "Complete Nested Knowledge abstract screening": "Email",
+        "Keep Covidence full-text screening paused": "Email",
+        "Confirm NK screening completion and export": "Project tracking",
+        "Start full-text screening after both arms align": "Project tracking",
+        "Date": "LinkedTaskID",
+        "2026-08-20": "task-phase1-06-001",
+        "Severity": "Not Started",
+        "Medium": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
@@ -2436,22 +2049,37 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Nested Knowledge setup confirmation pending",
+      "status": "Nested Knowledge setup complete; criteria validation pending",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "Medium",
-      "currentStage": "Search results and data items received; awaiting setup confirmation",
-      "currentUpdate": "Search results and data items received; awaiting setup confirmation",
-      "nextAction": "Obtain setup/access/start confirmation",
-      "lastUpdated": "2026-08-18",
-      "communicationSupport": "Search results and data items received; awaiting setup confirmation",
-      "communicationLog": [],
+      "currentStage": "NK project created with 2,024 references; awaiting Murali's screening-criteria approval",
+      "currentUpdate": "NK project created with 2,024 references; awaiting Murali's screening-criteria approval",
+      "nextAction": "Confirm access and approve abstract/full-text criteria before screening",
+      "lastUpdated": "2026-08-20",
+      "communicationSupport": "NK project created with 2,024 references; awaiting Murali's screening-criteria approval",
+      "communicationLog": [
+        {
+          "id": "comm-phase1-07-001",
+          "date": "2026-08-20",
+          "subject": "Human Milk NK setup complete",
+          "people": "Krishna / Murali / Response Team",
+          "resp": "Murali / Review Team",
+          "due": "Awaiting review team approval",
+          "status": "Pending",
+          "summary": "NK project contains 2,024 references; Murali's access and screening-criteria approval remain the next actions.",
+          "linkedTaskId": "task-phase1-07-002",
+          "linkedAction": "Approve abstract and full-text criteria",
+          "sourceType": "Email",
+          "sourceLink": ""
+        }
+      ],
       "files": {
         "RIS": true,
         "PDFs": false,
         "Criteria": false,
         "Extraction": true,
-        "Protocol": false,
+        "Protocol": true,
         "Time Log": false
       },
       "stages": [
@@ -2459,7 +2087,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "In Progress&#8212;setup confirmation pending"
+          "status": "Setup complete-validation pending"
         },
         {
           "name": "Abstract Screening",
@@ -2513,42 +2141,68 @@ const dashboardData = {
           "name": "CriticalItem",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "DueDate"
         },
         {
-          "name": "Open Phase 1 review slot",
+          "name": "Criteria approval pending",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Awaiting review team approval"
         }
       ],
       "tasks": [
         {
-          "id": "task-phase1-05-001",
-          "task": "Identify additional eligible review",
-          "owner": "Core Team",
+          "id": "task-phase1-07-001",
+          "task": "Confirm Murali's Nested Knowledge access",
+          "owner": "Murali / Response Team",
           "status": "Under Review",
           "risk": "High",
-          "due": "2026-05-19",
-          "dependency": "Candidate pool",
-          "communication": "Shortlist review options.",
-          "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "due": "Awaiting review team approval",
+          "dependency": "NK invitation",
+          "communication": "Murali invited using both email addresses; access confirmation pending.",
+          "source": "Email",
+          "sourceDate": "2026-08-20"
         },
         {
-          "id": "task-phase1-05-002",
-          "task": "Confirm team availability after candidate selection",
-          "owner": "Krishna / Review Team",
+          "id": "task-phase1-07-002",
+          "task": "Approve abstract and full-text criteria",
+          "owner": "Murali / Review Team",
+          "status": "Pending",
+          "risk": "High",
+          "due": "Awaiting review team approval",
+          "dependency": "NK project setup",
+          "communication": "Screening criteria configured and awaiting Murali's approval.",
+          "source": "Project tracking",
+          "sourceDate": "2026-08-20"
+        },
+        {
+          "id": "task-phase1-07-003",
+          "task": "Begin Nested Knowledge screening after validation",
+          "owner": "Review Team / Nested Knowledge",
           "status": "Not Started",
           "risk": "Medium",
-          "due": "TBD",
-          "dependency": "Review identification",
-          "communication": "Contact review team once candidate is selected.",
+          "due": "After criteria approval",
+          "dependency": "Access and criteria approval",
+          "communication": "Start screening once access and criteria validation are confirmed.",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-08-20"
+        },
+        {
+          "id": "task-phase1-07-004",
+          "task": "Confirm published review/protocol package",
+          "owner": "Krishna / Review Team",
+          "status": "Complete",
+          "risk": "Low",
+          "due": "Complete",
+          "dependency": "Protocol replacement",
+          "communication": "Published review accepted in lieu of a separate protocol.",
+          "source": "Project tracking",
+          "sourceDate": "2026-08-20"
         }
       ],
-      "criticalItems": [],
+      "criticalItems": [
+        "Criteria approval pending"
+      ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
@@ -2565,7 +2219,7 @@ const dashboardData = {
         "w04": "Complete",
         "w05": "Complete",
         "w06": "Complete",
-        "w07": "Not Started",
+        "w07": "Under Review",
         "w08": "Under Review",
         "w09": "Not Started",
         "w10": "Complete",
@@ -2573,8 +2227,8 @@ const dashboardData = {
         "w12": "Complete",
         "w13": "Complete",
         "w14": "Under Review",
-        "w15": "Pending",
-        "w16": "Not Started",
+        "w15": "Complete",
+        "w16": "Pending",
         "w17": "Not Started",
         "w18": "Not Started",
         "w19": "Not Started",
@@ -2623,31 +2277,37 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Identify additional eligible review": "Project tracking",
-        "Confirm team availability after candidate selection": "Project tracking"
+        "Confirm Murali's Nested Knowledge access": "Email",
+        "Approve abstract and full-text criteria": "Project tracking",
+        "Begin Nested Knowledge screening after validation": "Project tracking",
+        "Confirm published review/protocol package": "Project tracking",
+        "Date": "LinkedTaskID",
+        "2026-08-20": "task-phase1-07-002",
+        "Severity": "Not Started",
+        "High": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Search results and data items received; awaiting setup confirmation",
-        "targetDate": "Awaiting setup confirmation",
-        "variance": "Files available; setup confirmation/document check pending",
+        "plannedGate": "NK project created with 2,024 references; awaiting Murali's screening-criteria approval",
+        "targetDate": "Awaiting review team approval",
+        "variance": "Setup complete; screening not yet started",
         "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Nested Knowledge setup confirmation pending",
-          "state": "Nested Knowledge setup confirmation pending"
+          "value": "Nested Knowledge setup complete; criteria validation pending",
+          "state": "Nested Knowledge setup complete; criteria validation pending"
         },
         {
           "label": "Target",
-          "value": "Awaiting setup confirmation",
-          "state": "Nested Knowledge setup confirmation pending"
+          "value": "Awaiting review team approval",
+          "state": "Nested Knowledge setup complete; criteria validation pending"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Nested Knowledge setup confirmation pending"
+          "state": "Nested Knowledge setup complete; criteria validation pending"
         }
       ]
     },
@@ -2656,27 +2316,27 @@ const dashboardData = {
       "title": "Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
       "shortName": "LNS",
       "phase": "Phase 1",
-      "status": "Laser AI setup preparation; confirmation pending",
+      "status": "Laser AI setup started; four searches outstanding",
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
-      "currentUpdate": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
-      "nextAction": "Confirm Laser AI setup preparation, complete setup confirmation, and agree screening start plan.",
-      "lastUpdated": "2026-08-18",
-      "communicationSupport": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
+      "currentStage": "Initial setup started; selected data items finalized; completion awaits four database searches",
+      "currentUpdate": "Initial setup started; selected data items finalized; completion awaits four database searches",
+      "nextAction": "Obtain four remaining searches, complete upload and validate decision flow",
+      "lastUpdated": "2026-08-20",
+      "communicationSupport": "Initial setup started; selected data items finalized; completion awaits four database searches",
       "communicationLog": [
         {
           "id": "comm-phase1-08-001",
-          "date": "2026-08-10",
-          "subject": "Oral galactagogues onboarding confirmed",
-          "people": "Siew Cheng Foong / review team / Cochrane elective students / project team",
-          "resp": "Krishna",
-          "due": "2026-08-10",
-          "status": "Scheduled",
-          "summary": "Initial onboarding will cover the study and parallel workflow; tool training and setup will be scheduled afterward.",
+          "date": "2026-08-20",
+          "subject": "LNS Laser AI setup started",
+          "people": "Syeda Kanza Naqvi / Jai Das / Krishna",
+          "resp": "Review Team",
+          "due": "Awaiting four searches",
+          "status": "Waiting on Others",
+          "summary": "Initial setup started and selected data items saved; final upload awaits four outstanding database searches.",
           "linkedTaskId": "task-phase1-08-001",
-          "linkedAction": "Complete onboarding and confirm tool-training/setup plan",
+          "linkedAction": "Obtain four outstanding database searches",
           "sourceType": "Project tracking",
           "sourceLink": ""
         }
@@ -2685,7 +2345,7 @@ const dashboardData = {
         "RIS": false,
         "PDFs": false,
         "Criteria": false,
-        "Extraction": false,
+        "Extraction": true,
         "Protocol": false,
         "Time Log": false
       },
@@ -2694,7 +2354,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "In Progress - setup confirmation pending"
+          "status": "In progress-search set incomplete"
         },
         {
           "name": "Abstract Screening",
@@ -2748,15 +2408,15 @@ const dashboardData = {
       "tasks": [
         {
           "id": "task-phase1-08-001",
-          "task": "Complete onboarding and confirm tool-training/setup plan",
-          "owner": "Krishna / Siew Cheng Foong / Project Team",
-          "status": "In Progress",
+          "task": "Obtain four outstanding database searches",
+          "owner": "Syeda Kanza Naqvi / Jai Das",
+          "status": "Waiting on Others",
           "risk": "Medium",
-          "due": "2026-08-10",
-          "dependency": "Onboarding meeting",
-          "communication": "Onboarding confirmed; tool training and setup to follow.",
+          "due": "Awaiting four searches",
+          "dependency": "Search completion",
+          "communication": "Four remaining database searches are needed before final upload and validation can complete.",
           "source": "Project tracking",
-          "sourceDate": "2026-08-10"
+          "sourceDate": "2026-08-20"
         }
       ],
       "criticalItems": [],
@@ -2781,10 +2441,10 @@ const dashboardData = {
         "w09": "Pending",
         "w10": "Pending",
         "w11": "Pending",
-        "w12": "Pending",
+        "w12": "Complete",
         "w13": "Pending",
         "w14": "Pending",
-        "w15": "Pending",
+        "w15": "In Progress",
         "w16": "Not Started",
         "w17": "Not Started",
         "w18": "Not Started",
@@ -2834,31 +2494,31 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Complete onboarding and confirm tool-training/setup plan": "Project tracking",
-        "2026-08-10": "task-phase1-08-001"
+        "Obtain four outstanding database searches": "Project tracking",
+        "2026-08-20": "task-phase1-08-001"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Initial files received; consolidated search set, protocol/eligibility, timeline and setup confirmation pending.",
-        "targetDate": "Setup requested 2026-08-17",
-        "variance": "Laser AI setup preparation is active; setup confirmation is still pending.",
+        "plannedGate": "Initial setup started; selected data items finalized; completion awaits four database searches",
+        "targetDate": "Awaiting four searches",
+        "variance": "Setup partially complete; final search set unavailable",
         "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Laser AI setup preparation; confirmation pending",
-          "state": "Laser AI setup preparation; confirmation pending"
+          "value": "Laser AI setup started; four searches outstanding",
+          "state": "Laser AI setup started; four searches outstanding"
         },
         {
           "label": "Target",
-          "value": "Setup requested 2026-08-17",
-          "state": "Laser AI setup preparation; confirmation pending"
+          "value": "Awaiting four searches",
+          "state": "Laser AI setup started; four searches outstanding"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Laser AI setup preparation; confirmation pending"
+          "state": "Laser AI setup started; four searches outstanding"
         }
       ]
     }
@@ -2878,50 +2538,7 @@ const dashboardData = {
       "nextAction": "Keep placeholders until Phase 1 stabilizes.",
       "lastUpdated": "2026-08-18",
       "communicationSupport": "No update recorded.",
-      "communicationLog": [
-        {
-          "id": "Critical Items Displayed in Dashboard",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "TBD",
-          "resp": "TBD",
-          "due": "TBD",
-          "status": "Pending",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "CriticalItem",
-          "date": "Severity",
-          "subject": "Owner",
-          "people": "DueDate",
-          "resp": "Status",
-          "due": "Notes",
-          "status": "Display",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        },
-        {
-          "id": "",
-          "date": "Recent",
-          "subject": "Mail follow-up",
-          "people": "TBD",
-          "resp": "TBD",
-          "due": "TBD",
-          "status": "No",
-          "summary": "Follow-up conversation pending.",
-          "linkedTaskId": "",
-          "linkedAction": "",
-          "sourceType": "",
-          "sourceLink": ""
-        }
-      ],
+      "communicationLog": [],
       "files": {
         "RIS": false,
         "PDFs": false,
@@ -3148,7 +2765,7 @@ const dashboardData = {
       "id": "task-phase1-01-007",
       "task": "Confirm human abstract screening status",
       "owner": "Doreen Larvie / Review Team",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "High",
       "due": "Immediate",
       "dependency": "Parallel workflow tracking",
@@ -3161,7 +2778,7 @@ const dashboardData = {
       "id": "task-phase1-01-008",
       "task": "Confirm abstract screening time log",
       "owner": "Doreen Larvie / Review Team",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "Medium",
       "due": "Immediate",
       "dependency": "Human screening status confirmation",
@@ -3180,18 +2797,18 @@ const dashboardData = {
       "communication": ""
     },
     {
-      "task": "Human abstract screening status not yet confirmed",
+      "task": "Conventional workflow completed",
       "owner": "Doreen Larvie / Review Team",
-      "status": "Open",
+      "status": "Closed",
       "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-01",
       "communication": "Needed to confirm whether AI and conventional workflows are aligned before next stage"
     },
     {
-      "task": "Abstract screening time log pending",
+      "task": "Time logs received",
       "owner": "Review Team",
-      "status": "Open",
+      "status": "Closed",
       "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-01",
@@ -3297,7 +2914,7 @@ const dashboardData = {
       "id": "task-phase1-03-006",
       "task": "Schedule methodology re-onboarding",
       "owner": "Gerald / Krishna / Review Team",
-      "status": "Pending",
+      "status": "Complete / No longer required",
       "risk": "Medium",
       "due": "This week",
       "dependency": "Krishna could not join tool training",
@@ -3310,7 +2927,7 @@ const dashboardData = {
       "id": "task-phase1-03-007",
       "task": "Confirm updated search completion",
       "owner": "Rebecca / Kate",
-      "status": "Pending",
+      "status": "Complete / No longer required",
       "risk": "Medium",
       "due": "Immediate",
       "dependency": "Search run around 20 May",
@@ -3323,7 +2940,7 @@ const dashboardData = {
       "id": "task-phase1-03-008",
       "task": "Confirm human abstract screening status",
       "owner": "Rebecca / Kate",
-      "status": "Pending",
+      "status": "Complete / No longer required",
       "risk": "High",
       "due": "Immediate",
       "dependency": "Parallel workflow tracking",
@@ -3346,27 +2963,27 @@ const dashboardData = {
       "linkedReviewId": "phase1-03"
     },
     {
-      "task": "Methodology re-onboarding still pending",
+      "task": "Re-onboarding no longer required",
       "owner": "Gerald / Krishna / Review Team",
-      "status": "Open",
+      "status": "Closed",
       "due": "This week",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-03",
       "communication": "Needed because Krishna could not join the Laser AI tool training session"
     },
     {
-      "task": "Human abstract screening status not confirmed",
+      "task": "Human abstract screening confirmed complete",
       "owner": "Rebecca / Kate",
-      "status": "Open",
+      "status": "Closed",
       "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-03",
       "communication": "Needed to ensure AI-assisted and human workflows are tracked in parallel"
     },
     {
-      "task": "Updated search completion not confirmed",
+      "task": "Updated search confirmed complete",
       "owner": "Rebecca / Kate",
-      "status": "Open",
+      "status": "Closed",
       "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-03",
@@ -3374,128 +2991,198 @@ const dashboardData = {
     },
     {
       "id": "task-phase1-05-001",
-      "task": "Identify additional eligible review",
-      "owner": "Core Team",
-      "status": "Under Review",
+      "task": "Approve Vitamin C decision flow",
+      "owner": "Syeda Kanza Naqvi / Jai Das",
+      "status": "Pending",
       "risk": "High",
-      "due": "2026-05-19",
-      "dependency": "Candidate pool",
-      "communication": "Shortlist review options.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "due": "Awaiting review team approval",
+      "dependency": "Laser AI setup complete",
+      "communication": "Decision flow prepared; approval required before screening begins.",
+      "source": "Email",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-05"
     },
     {
       "id": "task-phase1-05-002",
-      "task": "Confirm team availability after candidate selection",
-      "owner": "Krishna / Review Team",
-      "status": "Not Started",
-      "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Review identification",
-      "communication": "Contact review team once candidate is selected.",
+      "task": "Provide Laser AI access to allocated users",
+      "owner": "Response Team / Laser AI",
+      "status": "Pending",
+      "risk": "High",
+      "due": "After decision-flow approval",
+      "dependency": "Decision-flow approval",
+      "communication": "Provide reviewer access after the team approves the configured flow.",
       "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-05"
     },
     {
       "id": "task-phase1-05-003",
-      "task": "Assign allocated AI tool after candidate selection",
-      "owner": "Core Team",
+      "task": "Start parallel abstract screening and time tracking",
+      "owner": "Review Team / Krishna",
       "status": "Not Started",
       "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Tool allocation",
-      "communication": "Assign one tool only after a review is selected.",
+      "due": "After access",
+      "dependency": "Tool access and team readiness",
+      "communication": "Begin both screening arms and confirm time-tracking method.",
       "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-05"
     },
     {
       "id": "task-phase1-05-004",
-      "task": "Hold onboarding until review is confirmed",
-      "owner": "Krishna / Response Team",
-      "status": "Not Started",
-      "risk": "Low",
-      "due": "After confirmation",
-      "dependency": "Review and tool confirmation",
-      "communication": "Start onboarding only after candidate and tool are confirmed.",
+      "task": "Confirm finalized SharePoint package",
+      "owner": "Krishna / Review Team",
+      "status": "Under Review",
+      "risk": "Medium",
+      "due": "Immediate",
+      "dependency": "Protocol, criteria and data items",
+      "communication": "Confirm the SharePoint package contains final protocol, criteria and selected data items.",
       "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-05"
     },
     {
-      "task": "Open Phase 1 review slot",
-      "owner": "TBD",
+      "task": "Decision-flow approval pending",
+      "owner": "Syeda Kanza Naqvi / Jai Das",
       "status": "Open",
-      "due": "Monitor",
+      "due": "Awaiting review team approval",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-05",
-      "communication": ""
+      "communication": "Screening cannot start until the configured decision flow is approved."
     },
     {
-      "id": "task-phase1-05-001",
-      "task": "Identify additional eligible review",
-      "owner": "Core Team",
-      "status": "Under Review",
-      "risk": "High",
-      "due": "2026-05-19",
-      "dependency": "Candidate pool",
-      "communication": "Shortlist review options.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "id": "task-phase1-06-001",
+      "task": "Complete Nested Knowledge abstract screening",
+      "owner": "Review Team / Nested Knowledge",
+      "status": "In Progress",
+      "risk": "Medium",
+      "due": "TBD",
+      "dependency": "NK screening completion",
+      "communication": "Continue NK abstract screening before full-text work resumes.",
+      "source": "Email",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-06"
     },
     {
-      "id": "task-phase1-05-002",
-      "task": "Confirm team availability after candidate selection",
-      "owner": "Krishna / Review Team",
-      "status": "Not Started",
-      "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Review identification",
-      "communication": "Contact review team once candidate is selected.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "id": "task-phase1-06-002",
+      "task": "Keep Covidence full-text screening paused",
+      "owner": "Jeremy Steen / Bradley Johnston",
+      "status": "Complete",
+      "risk": "Low",
+      "due": "Confirmed",
+      "dependency": "Parallel workflow sequencing",
+      "communication": "Conventional full-text screening will remain paused until NK abstract screening finishes.",
+      "source": "Email",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-06"
     },
     {
-      "id": "task-phase1-05-001",
-      "task": "Identify additional eligible review",
-      "owner": "Core Team",
+      "id": "task-phase1-06-003",
+      "task": "Confirm NK screening completion and export",
+      "owner": "Review Team / Response Team",
+      "status": "Not Started",
+      "risk": "Medium",
+      "due": "After NK screening",
+      "dependency": "NK abstract screening",
+      "communication": "Export output once NK screening is complete.",
+      "source": "Project tracking",
+      "sourceDate": "2026-08-20",
+      "linkedReviewId": "phase1-06"
+    },
+    {
+      "id": "task-phase1-06-004",
+      "task": "Start full-text screening after both arms align",
+      "owner": "Review Team / Response Team",
+      "status": "Not Started",
+      "risk": "Medium",
+      "due": "After abstract-screening closeout",
+      "dependency": "NK and conventional abstract-screening completion",
+      "communication": "Resume full-text workflow only after abstract-screening outputs are ready.",
+      "source": "Project tracking",
+      "sourceDate": "2026-08-20",
+      "linkedReviewId": "phase1-06"
+    },
+    {
+      "task": "Full-text screening deliberately paused",
+      "owner": "Review Team",
+      "status": "Open",
+      "due": "After NK abstract screening",
+      "dependency": "Monitor risk",
+      "linkedReviewId": "phase1-06",
+      "communication": "Sequencing dependency is intentional and should be monitored."
+    },
+    {
+      "id": "task-phase1-07-001",
+      "task": "Confirm Murali's Nested Knowledge access",
+      "owner": "Murali / Response Team",
       "status": "Under Review",
       "risk": "High",
-      "due": "2026-05-19",
-      "dependency": "Candidate pool",
-      "communication": "Shortlist review options.",
-      "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "due": "Awaiting review team approval",
+      "dependency": "NK invitation",
+      "communication": "Murali invited using both email addresses; access confirmation pending.",
+      "source": "Email",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-07"
     },
     {
-      "id": "task-phase1-05-002",
-      "task": "Confirm team availability after candidate selection",
-      "owner": "Krishna / Review Team",
+      "id": "task-phase1-07-002",
+      "task": "Approve abstract and full-text criteria",
+      "owner": "Murali / Review Team",
+      "status": "Pending",
+      "risk": "High",
+      "due": "Awaiting review team approval",
+      "dependency": "NK project setup",
+      "communication": "Screening criteria configured and awaiting Murali's approval.",
+      "source": "Project tracking",
+      "sourceDate": "2026-08-20",
+      "linkedReviewId": "phase1-07"
+    },
+    {
+      "id": "task-phase1-07-003",
+      "task": "Begin Nested Knowledge screening after validation",
+      "owner": "Review Team / Nested Knowledge",
       "status": "Not Started",
       "risk": "Medium",
-      "due": "TBD",
-      "dependency": "Review identification",
-      "communication": "Contact review team once candidate is selected.",
+      "due": "After criteria approval",
+      "dependency": "Access and criteria approval",
+      "communication": "Start screening once access and criteria validation are confirmed.",
       "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-07"
+    },
+    {
+      "id": "task-phase1-07-004",
+      "task": "Confirm published review/protocol package",
+      "owner": "Krishna / Review Team",
+      "status": "Complete",
+      "risk": "Low",
+      "due": "Complete",
+      "dependency": "Protocol replacement",
+      "communication": "Published review accepted in lieu of a separate protocol.",
+      "source": "Project tracking",
+      "sourceDate": "2026-08-20",
+      "linkedReviewId": "phase1-07"
+    },
+    {
+      "task": "Criteria approval pending",
+      "owner": "Murali / Review Team",
+      "status": "Open",
+      "due": "Awaiting review team approval",
+      "dependency": "Monitor risk",
+      "linkedReviewId": "phase1-07",
+      "communication": "Abstract and full-text screening should not start until criteria are approved."
     },
     {
       "id": "task-phase1-08-001",
-      "task": "Complete onboarding and confirm tool-training/setup plan",
-      "owner": "Krishna / Siew Cheng Foong / Project Team",
-      "status": "In Progress",
+      "task": "Obtain four outstanding database searches",
+      "owner": "Syeda Kanza Naqvi / Jai Das",
+      "status": "Waiting on Others",
       "risk": "Medium",
-      "due": "2026-08-10",
-      "dependency": "Onboarding meeting",
-      "communication": "Onboarding confirmed; tool training and setup to follow.",
+      "due": "Awaiting four searches",
+      "dependency": "Search completion",
+      "communication": "Four remaining database searches are needed before final upload and validation can complete.",
       "source": "Project tracking",
-      "sourceDate": "2026-08-10",
+      "sourceDate": "2026-08-20",
       "linkedReviewId": "phase1-08"
     },
     {
@@ -3578,37 +3265,37 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-01-2",
       "phase": "Phase 1",
-      "item": "Human abstract screening status not yet confirmed",
+      "item": "Conventional workflow completed",
       "description": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "severity": "High",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Doreen Larvie / Review Team",
       "due": "Immediate",
       "linkedReviewId": "phase1-01",
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-01-3",
       "phase": "Phase 1",
-      "item": "Abstract screening time log pending",
+      "item": "Time logs received",
       "description": "Required for study analysis and comparison",
       "severity": "Medium",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Review Team",
       "due": "Immediate",
       "linkedReviewId": "phase1-01",
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3623,7 +3310,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3638,67 +3325,97 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-03-6",
       "phase": "Phase 1",
-      "item": "Methodology re-onboarding still pending",
+      "item": "Re-onboarding no longer required",
       "description": "Needed because Krishna could not join the Laser AI tool training session",
       "severity": "Medium",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Gerald / Krishna / Review Team",
       "due": "This week",
       "linkedReviewId": "phase1-03",
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-03-7",
       "phase": "Phase 1",
-      "item": "Human abstract screening status not confirmed",
+      "item": "Human abstract screening confirmed complete",
       "description": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "severity": "High",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Rebecca / Kate",
       "due": "Immediate",
       "linkedReviewId": "phase1-03",
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-03-8",
       "phase": "Phase 1",
-      "item": "Updated search completion not confirmed",
+      "item": "Updated search confirmed complete",
       "description": "Search was run around 20 May, but final completion/status needs confirmation",
       "severity": "Medium",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Rebecca / Kate",
       "due": "Immediate",
       "linkedReviewId": "phase1-03",
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
     },
     {
       "id": "critical-phase1-05-9",
       "phase": "Phase 1",
-      "item": "Open Phase 1 review slot",
-      "description": "",
+      "item": "Decision-flow approval pending",
+      "description": "Screening cannot start until the configured decision flow is approved.",
       "severity": "High",
       "status": "Open",
-      "owner": "TBD",
-      "due": "Monitor",
+      "owner": "Syeda Kanza Naqvi / Jai Das",
+      "due": "Awaiting review team approval",
       "linkedReviewId": "phase1-05",
-      "mitigation": "",
+      "mitigation": "Screening cannot start until the configured decision flow is approved.",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-18"
+      "sourceDate": "2026-08-20"
+    },
+    {
+      "id": "critical-phase1-06-10",
+      "phase": "Phase 1",
+      "item": "Full-text screening deliberately paused",
+      "description": "Sequencing dependency is intentional and should be monitored.",
+      "severity": "Medium",
+      "status": "Open",
+      "owner": "Review Team",
+      "due": "After NK abstract screening",
+      "linkedReviewId": "phase1-06",
+      "mitigation": "Sequencing dependency is intentional and should be monitored.",
+      "impact": "",
+      "source": "Review sheet",
+      "sourceDate": "2026-08-20"
+    },
+    {
+      "id": "critical-phase1-07-11",
+      "phase": "Phase 1",
+      "item": "Criteria approval pending",
+      "description": "Abstract and full-text screening should not start until criteria are approved.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Murali / Review Team",
+      "due": "Awaiting review team approval",
+      "linkedReviewId": "phase1-07",
+      "mitigation": "Abstract and full-text screening should not start until criteria are approved.",
+      "impact": "",
+      "source": "Review sheet",
+      "sourceDate": "2026-08-20"
     }
   ],
   "resources": [
@@ -3742,68 +3459,11 @@ const dashboardData = {
       "url": "https://example.com/onboarding"
     }
   ],
-  "upcomingMeetings": [
-    {
-      "id": "mtg-05",
-      "date": "TBD",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Fruit & Veg Re-onboarding",
-      "agenda": "Re-onboarding meeting for Fruit & Veg; time TBD.",
-      "attendees": "Rebecca K. Hodder / Krishna / Core Team",
-      "owner": "Krishna",
-      "focus": "Phase 1",
-      "status": "Scheduled",
-      "linkedReviewId": "phase1-03",
-      "meetingLink": ""
-    },
-    {
-      "id": "mtg-06",
-      "date": "TBD",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "NK Training - Human Milk Fortifier",
-      "agenda": "Nested Knowledge training for Human Milk Fortifier; time TBD.",
-      "attendees": "Mohan Pammi / Krishna / Nested Knowledge",
-      "owner": "Krishna",
-      "focus": "Phase 1",
-      "status": "Scheduled",
-      "linkedReviewId": "phase1-07",
-      "meetingLink": ""
-    },
-    {
-      "id": "mtg-07",
-      "date": "TBD",
-      "etTime": "TBD",
-      "ukTime": "TBD",
-      "title": "Human Milk Fortifier Onboarding",
-      "agenda": "Onboarding meeting for Human Milk Fortifier; time TBD.",
-      "attendees": "Mohan Pammi / Krishna / Core Team",
-      "owner": "Krishna",
-      "focus": "Phase 1",
-      "status": "Scheduled",
-      "linkedReviewId": "phase1-07",
-      "meetingLink": ""
-    },
-    {
-      "id": "mtg-08",
-      "date": "10 August 2026",
-      "etTime": "3:00-4:00 AM EDT",
-      "ukTime": "8:00-9:00 AM BST",
-      "title": "Oral galactagogues onboarding",
-      "agenda": "Initial onboarding and pilot workflow overview; tool training/setup to follow",
-      "attendees": "Siew Cheng Foong / full review team / 2 Cochrane elective students / project team",
-      "owner": "Krishna",
-      "focus": "Phase 1",
-      "status": "Scheduled",
-      "linkedReviewId": "phase1-08",
-      "meetingLink": ""
-    }
-  ],
+  "upcomingMeetings": [],
   "newReviews": [
     {
       "id": "new-02",
-      "reviewName": "Amanda Cross ? Interventions for improving medication-taking ability and adherence in older adults prescribed multiple medications",
+      "reviewName": "Amanda Cross - Interventions for improving medication-taking ability and adherence in older adults prescribed multiple medications",
       "category": "Withdrawn",
       "status": "Team has withdrawn from the platform study due to capacity constraints",
       "targetPhase": "Phase 1",
@@ -3990,6 +3650,18 @@ const dashboardData = {
       "lead": "Eva Madrid",
       "expectedTiming": "No current update",
       "remarks": "Keep in mind for future calls when an eligible Cochrane review update is available.",
+      "moveToFullSheet": "No",
+      "display": "Yes"
+    },
+    {
+      "id": "new-23",
+      "reviewName": "Michelle Butler - Hospital nurse staffing review",
+      "category": "Under Shortlisting",
+      "status": "Interested; search expected to be completed and screening ready at the end of September",
+      "targetPhase": "Phase 1 / timeline assessment",
+      "lead": "Michelle Butler",
+      "expectedTiming": "End of September 2026",
+      "remarks": "Standard eligibility and workflow questions sent; awaiting detailed response",
       "moveToFullSheet": "No",
       "display": "Yes"
     }
