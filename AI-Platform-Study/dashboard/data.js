@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-08-20",
+  "lastUpdated": "2026-08-24",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -552,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Analysis in progress; access partially restored",
+      "status": "Analysis underway; reference-standard clarification pending",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
-      "currentUpdate": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
-      "nextAction": "Verify project visibility, download Laser AI outputs and begin comparison",
-      "lastUpdated": "2026-08-20",
-      "communicationSupport": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
+      "currentStage": "Both extraction outputs received; Sean is analysing the results and awaiting reference-standard clarification",
+      "currentUpdate": "Sean has begun analysing the project data; clarification requested from Doreen on the Study Tree file",
+      "nextAction": "Confirm whether the Study Tree represents the final post-extraction reference standard, then continue comparison",
+      "lastUpdated": "2026-08-24",
+      "communicationSupport": "Sean has begun analysing the project data; clarification requested from Doreen on the Study Tree file",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 100,
           "ai": 100,
-          "status": "Extraction complete; analysis access-blocked"
+          "status": "Extraction complete; analysis underway"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -765,7 +765,7 @@ const dashboardData = {
         "w04": "Complete",
         "w05": "Complete",
         "w06": "Complete",
-        "w07": "Under Review",
+        "w07": "Complete",
         "w08": "Complete",
         "w09": "Complete",
         "w10": "Complete",
@@ -799,21 +799,21 @@ const dashboardData = {
         "w38": "Not Started",
         "w39": "Not Started",
         "w40": "Not Started",
-        "w41": "Not Started",
-        "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
+        "w41": "Complete",
+        "w42": "Complete",
+        "w43": "Complete",
+        "w44": "Complete",
+        "w45": "Complete",
+        "w46": "Complete",
         "w47": "Complete",
         "w48": "Complete",
-        "w49": "Pending",
-        "w50": "Pending",
+        "w49": "Complete",
+        "w50": "Complete",
         "w51": "Not Started",
         "w52": "Not Started",
         "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
+        "w54": "Under Review",
+        "w55": "Pending",
         "w56": "Not Started",
         "w57": "Not Started",
         "w58": "Not Started",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Both extractions complete; Krishna's Laser AI access restored; output retrieval and Sean's access require confirmation",
-        "targetDate": "Immediate",
-        "variance": "Analysis pending Laser AI output retrieval",
-        "assessment": "Needs Action"
+        "plannedGate": "Both extraction outputs received; Sean is analysing the results and awaiting reference-standard clarification",
+        "targetDate": "Awaiting review-team clarification",
+        "variance": "Analysis underway; final reference standard not yet confirmed",
+        "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Analysis in progress; access partially restored",
-          "state": "Analysis in progress; access partially restored"
+          "value": "Analysis underway; reference-standard clarification pending",
+          "state": "Analysis underway; reference-standard clarification pending"
         },
         {
           "label": "Target",
-          "value": "Immediate",
-          "state": "Analysis in progress; access partially restored"
+          "value": "Awaiting review-team clarification",
+          "state": "Analysis underway; reference-standard clarification pending"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Analysis in progress; access partially restored"
+          "state": "Analysis underway; reference-standard clarification pending"
         }
       ]
     },
@@ -866,23 +866,94 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Data-extraction confirmation pending",
+      "status": "Data extraction complete; validation underway",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "Medium",
-      "currentStage": "Screening complete; awaiting final extraction files and times",
-      "currentUpdate": "Screening complete; awaiting final extraction files and times",
-      "nextAction": "Obtain final extraction files/times and complete validation",
-      "lastUpdated": "2026-08-20",
-      "communicationSupport": "Screening complete; awaiting final extraction files and times",
-      "communicationLog": [],
+      "currentStage": "Conventional and AI extraction files received; validation can begin",
+      "currentUpdate": "Sivem provided both extraction files; conventional time 2h45 and AI time 2h10",
+      "nextAction": "Validate extraction outputs and prepare the comparison/adjudication dataset",
+      "lastUpdated": "2026-08-24",
+      "communicationSupport": "Sivem provided both extraction files; conventional time 2h45 and AI time 2h10",
+      "communicationLog": [
+        {
+          "id": "comm-phase1-02-004",
+          "date": "2026-05-19",
+          "subject": "Psoriasis / NK survey responses",
+          "people": "Susan / Krishna",
+          "resp": "Susan / Ursula",
+          "due": "2026-05-19",
+          "status": "Complete",
+          "summary": "Two new NK title and abstract screening survey responses received",
+          "linkedTaskId": "task-phase1-02-005",
+          "linkedAction": "Confirm NK abstract screening survey responses",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-005",
+          "date": "2026-05-20",
+          "subject": "Psoriasis NK data field setup",
+          "people": "Meghan / Sivem / Sean",
+          "resp": "Meghan",
+          "due": "2026-05-31",
+          "status": "In Progress",
+          "summary": "Meghan confirmed she would start entering data fields into Nested Knowledge",
+          "linkedTaskId": "task-phase1-02-007",
+          "linkedAction": "Enter data extraction fields into NK",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-006",
+          "date": "2026-05-25",
+          "subject": "Psoriasis updated data item list",
+          "people": "Sean / Sivem / Meghan",
+          "resp": "Sean / Meghan",
+          "due": "2026-05-25",
+          "status": "Complete",
+          "summary": "Updated data item list uploaded to shared folder",
+          "linkedTaskId": "task-phase1-02-006",
+          "linkedAction": "Finalize data item list for extraction",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-007",
+          "date": "2026-05-26",
+          "subject": "Psoriasis conventional extraction format",
+          "people": "Emilie / Sean / Meghan",
+          "resp": "Emilie / Robin",
+          "due": "2026-05-31",
+          "status": "In Progress",
+          "summary": "Conventional team clarified planned Excel and Word outputs",
+          "linkedTaskId": "task-phase1-02-008",
+          "linkedAction": "Confirm conventional extraction format",
+          "sourceType": "Email",
+          "sourceLink": ""
+        },
+        {
+          "id": "comm-phase1-02-008",
+          "date": "2026-05-27",
+          "subject": "Psoriasis extraction definitions",
+          "people": "Sean / Emilie / Meghan / Sivem",
+          "resp": "Review Team",
+          "due": "Immediate",
+          "status": "Open",
+          "summary": "Sean asked extractors to follow agreed definitions before AI extraction begins",
+          "linkedTaskId": "task-phase1-02-009",
+          "linkedAction": "Confirm no further data item changes before AI extraction",
+          "sourceType": "Email",
+          "sourceLink": ""
+        }
+      ],
       "files": {
         "RIS": true,
         "PDFs": false,
         "Criteria": false,
-        "Extraction": false,
+        "Extraction": true,
         "Protocol": true,
-        "Time Log": false
+        "Time Log": true
       },
       "stages": [
         {
@@ -905,9 +976,9 @@ const dashboardData = {
         },
         {
           "name": "Data Extraction / Analysis",
-          "human": 0,
-          "ai": 0,
-          "status": "Extraction status awaiting review team"
+          "human": 100,
+          "ai": 100,
+          "status": "Extraction complete; validation underway"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -999,11 +1070,11 @@ const dashboardData = {
           "id": "task-phase1-02-007",
           "task": "Enter data extraction fields into NK",
           "owner": "Meghan / Response Team",
-          "status": "In Progress",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-31",
           "dependency": "Final data item list",
-          "communication": "Meghan confirmed she would start entering data fields into NK",
+          "communication": "Nested Knowledge extraction setup and AI extraction completed",
           "source": "Email",
           "sourceDate": "2026-05-20"
         },
@@ -1011,11 +1082,11 @@ const dashboardData = {
           "id": "task-phase1-02-008",
           "task": "Confirm conventional extraction format",
           "owner": "Emilie / Robin / Sean",
-          "status": "In Progress",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-31",
           "dependency": "Standalone data item definitions",
-          "communication": "Conventional team clarified expected Excel and Word outputs",
+          "communication": "Conventional extraction file received",
           "source": "Email",
           "sourceDate": "2026-05-26"
         },
@@ -1023,11 +1094,11 @@ const dashboardData = {
           "id": "task-phase1-02-009",
           "task": "Confirm no further data item changes before AI extraction",
           "owner": "Sean / Review Team",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "High",
           "due": "Immediate",
           "dependency": "NK setup completion",
-          "communication": "Sean asked extractors to follow agreed instructions before AI extraction begins",
+          "communication": "Extraction completed using the agreed definitions",
           "source": "Email",
           "sourceDate": "2026-05-27"
         }
@@ -1042,10 +1113,15 @@ const dashboardData = {
         "setup": "Complete",
         "abstract": "Complete",
         "fullText": "Complete",
-        "extraction": "",
-        "analysis": ""
+        "extraction": "Complete",
+        "analysis": "Active"
       },
       "workflowStatus": {
+        "46161": "task-phase1-02-005",
+        "46162": "task-phase1-02-007",
+        "46167": "task-phase1-02-006",
+        "46168": "task-phase1-02-008",
+        "46169": "task-phase1-02-009",
         "w01": "Complete",
         "w02": "Complete",
         "w03": "Complete",
@@ -1086,21 +1162,21 @@ const dashboardData = {
         "w38": "Not Started",
         "w39": "Not Started",
         "w40": "Not Started",
-        "w41": "Not Started",
-        "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
-        "w47": "Under Review",
-        "w48": "Under Review",
-        "w49": "Not Started",
-        "w50": "Not Started",
+        "w41": "Complete",
+        "w42": "Complete",
+        "w43": "Complete",
+        "w44": "Complete",
+        "w45": "Complete",
+        "w46": "Complete",
+        "w47": "Complete",
+        "w48": "Complete",
+        "w49": "Complete",
+        "w50": "Complete",
         "w51": "Not Started",
         "w52": "Not Started",
         "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
+        "w54": "Under Review",
+        "w55": "Pending",
         "w56": "Not Started",
         "w57": "Not Started",
         "w58": "Not Started",
@@ -1119,11 +1195,6 @@ const dashboardData = {
         "Enter data extraction fields into NK": "Email",
         "Confirm conventional extraction format": "Email",
         "Confirm no further data item changes before AI extraction": "Email",
-        "comm-phase1-02-004": "Two new NK title and abstract screening survey responses received",
-        "comm-phase1-02-005": "Meghan confirmed she would start entering data fields into Nested Knowledge",
-        "comm-phase1-02-006": "Updated data item list uploaded to shared folder",
-        "comm-phase1-02-007": "Conventional team clarified planned Excel and Word outputs",
-        "comm-phase1-02-008": "Sean asked extractors to follow agreed definitions before AI extraction begins",
         "Severity": "Not Started",
         "Low": "Not Started",
         "High": "Not Started",
@@ -1131,26 +1202,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Screening complete; awaiting final extraction files and times",
-        "targetDate": "Awaiting review team",
-        "variance": "Final extraction completion and timing unconfirmed",
-        "assessment": "Waiting on Others"
+        "plannedGate": "Conventional and AI extraction files received; validation can begin",
+        "targetDate": "Immediate",
+        "variance": "Extraction complete; comparison and adjudication remain",
+        "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Data-extraction confirmation pending",
-          "state": "Data-extraction confirmation pending"
+          "value": "Data extraction complete; validation underway",
+          "state": "Data extraction complete; validation underway"
         },
         {
           "label": "Target",
-          "value": "Awaiting review team",
-          "state": "Data-extraction confirmation pending"
+          "value": "Immediate",
+          "state": "Data extraction complete; validation underway"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Data-extraction confirmation pending"
+          "state": "Data extraction complete; validation underway"
         }
       ]
     },
@@ -2844,11 +2915,11 @@ const dashboardData = {
       "id": "task-phase1-02-007",
       "task": "Enter data extraction fields into NK",
       "owner": "Meghan / Response Team",
-      "status": "In Progress",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-31",
       "dependency": "Final data item list",
-      "communication": "Meghan confirmed she would start entering data fields into NK",
+      "communication": "Nested Knowledge extraction setup and AI extraction completed",
       "source": "Email",
       "sourceDate": "2026-05-20",
       "linkedReviewId": "phase1-02"
@@ -2857,11 +2928,11 @@ const dashboardData = {
       "id": "task-phase1-02-008",
       "task": "Confirm conventional extraction format",
       "owner": "Emilie / Robin / Sean",
-      "status": "In Progress",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-31",
       "dependency": "Standalone data item definitions",
-      "communication": "Conventional team clarified expected Excel and Word outputs",
+      "communication": "Conventional extraction file received",
       "source": "Email",
       "sourceDate": "2026-05-26",
       "linkedReviewId": "phase1-02"
@@ -2870,11 +2941,11 @@ const dashboardData = {
       "id": "task-phase1-02-009",
       "task": "Confirm no further data item changes before AI extraction",
       "owner": "Sean / Review Team",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "High",
       "due": "Immediate",
       "dependency": "NK setup completion",
-      "communication": "Sean asked extractors to follow agreed instructions before AI extraction begins",
+      "communication": "Extraction completed using the agreed definitions",
       "source": "Email",
       "sourceDate": "2026-05-27",
       "linkedReviewId": "phase1-02"
@@ -2882,20 +2953,20 @@ const dashboardData = {
     {
       "task": "Confirm no further data item changes before AI extraction",
       "owner": "Sean / Review Team",
-      "status": "Open",
+      "status": "Closed",
       "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-02",
-      "communication": "Needed before AI-assisted data extraction begins in NK"
+      "communication": "Resolved; AI-assisted extraction completed"
     },
     {
       "task": "Conventional extraction format alignment",
       "owner": "Emilie / Robin / Sean",
-      "status": "In Progress",
+      "status": "Closed",
       "due": "2026-05-31",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-02",
-      "communication": "Conventional outputs need to match agreed standalone data item structure"
+      "communication": "Conventional extraction output received"
     },
     {
       "id": "task-phase1-03-005",
@@ -3265,7 +3336,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-08-24"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3280,7 +3351,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-08-24"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3295,37 +3366,37 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-08-24"
     },
     {
       "id": "critical-phase1-02-4",
       "phase": "Phase 1",
       "item": "Confirm no further data item changes before AI extraction",
-      "description": "Needed before AI-assisted data extraction begins in NK",
+      "description": "Resolved; AI-assisted extraction completed",
       "severity": "High",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Sean / Review Team",
       "due": "Immediate",
       "linkedReviewId": "phase1-02",
-      "mitigation": "Needed before AI-assisted data extraction begins in NK",
+      "mitigation": "Resolved; AI-assisted extraction completed",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-08-24"
     },
     {
       "id": "critical-phase1-02-5",
       "phase": "Phase 1",
       "item": "Conventional extraction format alignment",
-      "description": "Conventional outputs need to match agreed standalone data item structure",
+      "description": "Conventional extraction output received",
       "severity": "Medium",
-      "status": "In Progress",
+      "status": "Closed",
       "owner": "Emilie / Robin / Sean",
       "due": "2026-05-31",
       "linkedReviewId": "phase1-02",
-      "mitigation": "Conventional outputs need to match agreed standalone data item structure",
+      "mitigation": "Conventional extraction output received",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-08-24"
     },
     {
       "id": "critical-phase1-03-6",
