@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-08-27",
+  "lastUpdated": "2026-09-01",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -25,7 +25,7 @@ const dashboardData = {
         "governance",
         "Interim Analysis",
         "July&#8211;December 2026",
-        "In progress; CESAR-FM extension initiated"
+        "All five review groups consented; model and data-governance finalization underway"
       ],
       [
         "phase2",
@@ -54,7 +54,7 @@ const dashboardData = {
       {
         "phase": "Interim Analysis",
         "window": "July&#8211;December 2026",
-        "note": "In progress; CESAR-FM extension initiated"
+        "note": "All five review groups consented; model and data-governance finalization underway"
       },
       {
         "phase": "Phase 2",
@@ -552,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Reference standard clarified; adjudication preparation underway",
+      "status": "Adjudication dataset ready; panel catch-up pending",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Screening results finalized; reference standard confirmed as four reports; quality review underway",
-      "currentUpdate": "Thirty-one reports passed conventional full text; four entered harmonized extraction; conventional title/abstract screening detected 3/4",
-      "nextAction": "Finalize the data-extraction adjudication sheet and begin adjudication",
-      "lastUpdated": "2026-08-27",
-      "communicationSupport": "Thirty-one reports passed conventional full text; four entered harmonized extraction; conventional title/abstract screening detected 3/4",
+      "currentStage": "Reference standard confirmed; randomized adjudication dataset prepared",
+      "currentUpdate": "First dataset ready for adjudication; panel call requires rescheduling",
+      "nextAction": "Reschedule the adjudication-panel catch-up and begin adjudication",
+      "lastUpdated": "2026-09-01",
+      "communicationSupport": "First dataset ready for adjudication; panel call requires rescheduling",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -607,7 +607,7 @@ const dashboardData = {
       ],
       "files": {
         "RIS": true,
-        "PDFs": false,
+        "PDFs": true,
         "Criteria": true,
         "Extraction": true,
         "Protocol": true,
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 100,
           "ai": 100,
-          "status": "Extraction complete; adjudication preparation underway"
+          "status": "Extraction complete; adjudication dataset ready"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -812,9 +812,9 @@ const dashboardData = {
         "w51": "Not Started",
         "w52": "Not Started",
         "w53": "Not Started",
-        "w54": "Under Review",
-        "w55": "In Progress",
-        "w56": "Not Started",
+        "w54": "Complete",
+        "w55": "Complete",
+        "w56": "Pending",
         "w57": "Not Started",
         "w58": "Not Started",
         "w59": "Not Started",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Screening results finalized; reference standard confirmed as four reports; quality review underway",
-        "targetDate": "2026-08-27",
-        "variance": "Reference-standard issue resolved; adjudication dataset in preparation",
+        "plannedGate": "Reference standard confirmed; randomized adjudication dataset prepared",
+        "targetDate": "TBD - reschedule panel call",
+        "variance": "Adjudication data ready; panel meeting not yet held",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Reference standard clarified; adjudication preparation underway",
-          "state": "Reference standard clarified; adjudication preparation underway"
+          "value": "Adjudication dataset ready; panel catch-up pending",
+          "state": "Adjudication dataset ready; panel catch-up pending"
         },
         {
           "label": "Target",
-          "value": "2026-08-27",
-          "state": "Reference standard clarified; adjudication preparation underway"
+          "value": "TBD - reschedule panel call",
+          "state": "Adjudication dataset ready; panel catch-up pending"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Reference standard clarified; adjudication preparation underway"
+          "state": "Adjudication dataset ready; panel catch-up pending"
         }
       ]
     },
@@ -866,15 +866,15 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Data extraction complete; AI/NK output export pending",
+      "status": "Corrective full-text cross-screening setup underway",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
-      "risk": "Medium",
-      "currentStage": "Both extractions complete; conventional file received; AI/NK output awaiting export",
-      "currentUpdate": "Conventional file received; conventional time 2h45 and AI extraction time 2h10 confirmed",
-      "nextAction": "Export the AI/NK output, share it with Sean and begin validation",
-      "lastUpdated": "2026-08-27",
-      "communicationSupport": "Conventional file received; conventional time 2h45 and AI extraction time 2h10 confirmed",
+      "risk": "High",
+      "currentStage": "Both extraction outputs received; screening comparison identified unmatched full-text records",
+      "currentUpdate": "139 records require conventional screening and 25 require AI/NK screening",
+      "nextAction": "Send the 139-record list, configure 25 records in NK and complete corrective screening",
+      "lastUpdated": "2026-09-01",
+      "communicationSupport": "139 records require conventional screening and 25 require AI/NK screening",
       "communicationLog": [
         {
           "id": "comm-phase1-02-004",
@@ -949,9 +949,9 @@ const dashboardData = {
       ],
       "files": {
         "RIS": true,
-        "PDFs": false,
-        "Criteria": false,
-        "Extraction": false,
+        "PDFs": true,
+        "Criteria": true,
+        "Extraction": true,
         "Protocol": true,
         "Time Log": true
       },
@@ -972,13 +972,13 @@ const dashboardData = {
           "name": "Full-text Screening",
           "human": 100,
           "ai": 100,
-          "status": "Complete"
+          "status": "In Progress"
         },
         {
           "name": "Data Extraction / Analysis",
           "human": 100,
           "ai": 100,
-          "status": "Extraction complete; AI/NK output export pending"
+          "status": "Extraction complete; validation blocked by corrective screening"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -1112,9 +1112,9 @@ const dashboardData = {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Complete",
-        "fullText": "Complete",
+        "fullText": "Active",
         "extraction": "Complete",
-        "analysis": "Pending"
+        "analysis": "Active"
       },
       "workflowStatus": {
         "46161": "task-phase1-02-005",
@@ -1138,7 +1138,7 @@ const dashboardData = {
         "w14": "Complete",
         "w15": "Complete",
         "w16": "Complete",
-        "w17": "In Progress",
+        "w17": "Complete",
         "w18": "Complete",
         "w19": "Complete",
         "w20": "Complete",
@@ -1147,14 +1147,14 @@ const dashboardData = {
         "w23": "Not Started",
         "w24": "Not Started",
         "w25": "Not Started",
-        "w26": "Not Started",
+        "w26": "Complete",
         "w27": "Not Started",
         "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
+        "w29": "Complete",
+        "w30": "In Progress",
+        "w31": "Pending",
+        "w32": "Pending",
+        "w33": "Pending",
         "w34": "Not Started",
         "w35": "Not Started",
         "w36": "Not Started",
@@ -1170,13 +1170,13 @@ const dashboardData = {
         "w46": "Complete",
         "w47": "Complete",
         "w48": "Complete",
-        "w49": "Pending",
-        "w50": "Not Started",
+        "w49": "Complete",
+        "w50": "Complete",
         "w51": "Not Started",
         "w52": "Not Started",
         "w53": "Not Started",
-        "w54": "Not Started",
-        "w55": "Not Started",
+        "w54": "Blocked",
+        "w55": "Blocked",
         "w56": "Not Started",
         "w57": "Not Started",
         "w58": "Not Started",
@@ -1202,26 +1202,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Both extractions complete; conventional file received; AI/NK output awaiting export",
+        "plannedGate": "Both extraction outputs received; screening comparison identified unmatched full-text records",
         "targetDate": "Immediate",
-        "variance": "Extraction complete; AI/NK output export and validation pending",
-        "assessment": "Needs Action"
+        "variance": "Analysis paused pending corrective cross-screening",
+        "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Data extraction complete; AI/NK output export pending",
-          "state": "Data extraction complete; AI/NK output export pending"
+          "value": "Corrective full-text cross-screening setup underway",
+          "state": "Corrective full-text cross-screening setup underway"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Data extraction complete; AI/NK output export pending"
+          "state": "Corrective full-text cross-screening setup underway"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Data extraction complete; AI/NK output export pending"
+          "state": "Corrective full-text cross-screening setup underway"
         }
       ]
     },
@@ -1230,15 +1230,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Full-text workflow testing underway",
+      "status": "Full-text screening ready to start",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Abstract screening complete; combined full-text project prepared with 144 records",
-      "currentUpdate": "Duplicate removed; translated PDF received; AI-command testing pending",
-      "nextAction": "Upload the translated PDF, complete AI-command testing and open both screening arms",
-      "lastUpdated": "2026-08-27",
-      "communicationSupport": "Duplicate removed; translated PDF received; AI-command testing pending",
+      "currentStage": "Abstract screening complete; combined 144-record project ready",
+      "currentUpdate": "Translated PDF uploaded; AI workflow tested and issue resolved",
+      "nextAction": "Begin both full-text screening arms and record time",
+      "lastUpdated": "2026-09-01",
+      "communicationSupport": "Translated PDF uploaded; AI workflow tested and issue resolved",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1336,7 +1336,7 @@ const dashboardData = {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Setup in progress"
+          "status": "Ready"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -1507,11 +1507,11 @@ const dashboardData = {
         "w26": "Complete",
         "w27": "Complete",
         "w28": "Not Started",
-        "w29": "Under Review",
-        "w30": "In Progress",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
+        "w29": "Complete",
+        "w30": "Complete",
+        "w31": "Complete",
+        "w32": "Ready",
+        "w33": "Ready",
         "w34": "Not Started",
         "w35": "Not Started",
         "w36": "Not Started",
@@ -1558,26 +1558,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Abstract screening complete; combined full-text project prepared with 144 records",
+        "plannedGate": "Abstract screening complete; combined 144-record project ready",
         "targetDate": "Immediate",
-        "variance": "Full-text setup nearly complete; screening not yet started",
-        "assessment": "In Progress"
+        "variance": "Setup validated; screening not yet confirmed started",
+        "assessment": "Ready"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Full-text workflow testing underway",
-          "state": "Full-text workflow testing underway"
+          "value": "Full-text screening ready to start",
+          "state": "Full-text screening ready to start"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Full-text workflow testing underway"
+          "state": "Full-text screening ready to start"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Full-text workflow testing underway"
+          "state": "Full-text screening ready to start"
         }
       ]
     },
@@ -1586,15 +1586,15 @@ const dashboardData = {
       "title": "Vitamin C supplementation for prevention and treatment of pneumonia",
       "shortName": "Vitamin C",
       "phase": "Phase 1",
-      "status": "Laser AI setup complete; decision-flow approval pending",
+      "status": "Decision flow approved; abstract screening ready to start",
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Laser AI project created with 3,486 deduplicated references",
-      "currentUpdate": "Laser AI project created with 3,486 deduplicated references",
-      "nextAction": "Review team to approve decision flow; then provide access and start screening",
-      "lastUpdated": "2026-08-20",
-      "communicationSupport": "Laser AI project created with 3,486 deduplicated references",
+      "currentStage": "Project approved with 3,486 references; screening ready",
+      "currentUpdate": "Project approved with 3,486 references; screening ready",
+      "nextAction": "Begin parallel abstract screening and record time",
+      "lastUpdated": "2026-09-01",
+      "communicationSupport": "Project approved with 3,486 references; screening ready",
       "communicationLog": [
         {
           "id": "comm-phase1-05-001",
@@ -1624,7 +1624,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Setup complete-validation pending"
+          "status": "Complete"
         },
         {
           "name": "Abstract Screening",
@@ -1681,10 +1681,10 @@ const dashboardData = {
           "status": "DueDate"
         },
         {
-          "name": "Decision-flow approval pending",
+          "name": "Abstract screening ready to start",
           "human": 0,
           "ai": 0,
-          "status": "Awaiting review team approval"
+          "status": "Immediate"
         }
       ],
       "tasks": [
@@ -1692,34 +1692,34 @@ const dashboardData = {
           "id": "task-phase1-05-001",
           "task": "Approve Vitamin C decision flow",
           "owner": "Syeda Kanza Naqvi / Jai Das",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "High",
-          "due": "Awaiting review team approval",
+          "due": "2026-08-28",
           "dependency": "Laser AI setup complete",
-          "communication": "Decision flow prepared; approval required before screening begins.",
+          "communication": "Decision flow approved after review against the protocol",
           "source": "Email",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-08-28"
         },
         {
           "id": "task-phase1-05-002",
           "task": "Provide Laser AI access to allocated users",
           "owner": "Response Team / Laser AI",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "High",
-          "due": "After decision-flow approval",
+          "due": "2026-08-31",
           "dependency": "Decision-flow approval",
-          "communication": "Provide reviewer access after the team approves the configured flow.",
+          "communication": "Project opened and screening instructions provided",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-08-31"
         },
         {
           "id": "task-phase1-05-003",
           "task": "Start parallel abstract screening and time tracking",
           "owner": "Review Team / Krishna",
-          "status": "Not Started",
+          "status": "Ready",
           "risk": "Medium",
-          "due": "After access",
-          "dependency": "Tool access and team readiness",
+          "due": "Immediate",
+          "dependency": "Access provided and setup validated",
           "communication": "Begin both screening arms and confirm time-tracking method.",
           "source": "Project tracking",
           "sourceDate": "2026-08-20"
@@ -1738,13 +1738,13 @@ const dashboardData = {
         }
       ],
       "criticalItems": [
-        "Decision-flow approval pending"
+        "Abstract screening ready to start"
       ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
         "setup": "",
-        "abstract": "",
+        "abstract": "Active",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -1756,7 +1756,7 @@ const dashboardData = {
         "w04": "Complete",
         "w05": "Not Started",
         "w06": "Complete",
-        "w07": "Under Review",
+        "w07": "Complete",
         "w08": "Under Review",
         "w09": "Not Started",
         "w10": "Complete",
@@ -1765,9 +1765,9 @@ const dashboardData = {
         "w13": "Under Review",
         "w14": "Under Review",
         "w15": "Complete",
-        "w16": "Pending",
-        "w17": "Not Started",
-        "w18": "Not Started",
+        "w16": "Complete",
+        "w17": "Ready",
+        "w18": "Ready",
         "w19": "Not Started",
         "w20": "Not Started",
         "w21": "Not Started",
@@ -1825,26 +1825,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Laser AI project created with 3,486 deduplicated references",
-        "targetDate": "Awaiting review team approval",
-        "variance": "Setup complete; screening awaits validation",
-        "assessment": "Waiting on Others"
+        "plannedGate": "Project approved with 3,486 references; screening ready",
+        "targetDate": "Immediate",
+        "variance": "Setup validated; screening not yet confirmed started",
+        "assessment": "Ready"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Laser AI setup complete; decision-flow approval pending",
-          "state": "Laser AI setup complete; decision-flow approval pending"
+          "value": "Decision flow approved; abstract screening ready to start",
+          "state": "Decision flow approved; abstract screening ready to start"
         },
         {
           "label": "Target",
-          "value": "Awaiting review team approval",
-          "state": "Laser AI setup complete; decision-flow approval pending"
+          "value": "Immediate",
+          "state": "Decision flow approved; abstract screening ready to start"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Laser AI setup complete; decision-flow approval pending"
+          "state": "Decision flow approved; abstract screening ready to start"
         }
       ]
     },
@@ -2387,25 +2387,25 @@ const dashboardData = {
       "title": "Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
       "shortName": "LNS",
       "phase": "Phase 1",
-      "status": "Laser AI setup started; four searches outstanding",
+      "status": "Laser AI setup ready; reference-count confirmation pending",
       "tool": "Laser AI",
       "lead": "Syeda Kanza Naqvi / Jai Das",
       "risk": "Medium",
-      "currentStage": "Initial setup started; selected data items finalized; completion awaits four database searches",
-      "currentUpdate": "Initial setup started; selected data items finalized; completion awaits four database searches",
-      "nextAction": "Obtain four remaining searches, complete upload and validate decision flow",
-      "lastUpdated": "2026-08-20",
-      "communicationSupport": "Initial setup started; selected data items finalized; completion awaits four database searches",
+      "currentStage": "Decision flow approved; 14,743 references loaded before the final four searches",
+      "currentUpdate": "Decision flow approved; 14,743 references loaded before the final four searches",
+      "nextAction": "Confirm the 14,743-reference count and provide the final four searches",
+      "lastUpdated": "2026-09-01",
+      "communicationSupport": "Decision flow approved; 14,743 references loaded before the final four searches",
       "communicationLog": [
         {
           "id": "comm-phase1-08-001",
-          "date": "2026-08-20",
-          "subject": "LNS Laser AI setup started",
+          "date": "2026-09-01",
+          "subject": "LNS project ready; count confirmation pending",
           "people": "Syeda Kanza Naqvi / Jai Das / Krishna",
-          "resp": "Review Team",
-          "due": "Awaiting four searches",
+          "resp": "Syeda Kanza Naqvi / Jai Das",
+          "due": "Immediate",
           "status": "Waiting on Others",
-          "summary": "Initial setup started and selected data items saved; final upload awaits four outstanding database searches.",
+          "summary": "Project ready with 14,743 references before the four remaining searches",
           "linkedTaskId": "task-phase1-08-001",
           "linkedAction": "Obtain four outstanding database searches",
           "sourceType": "Project tracking",
@@ -2415,9 +2415,9 @@ const dashboardData = {
       "files": {
         "RIS": false,
         "PDFs": false,
-        "Criteria": false,
+        "Criteria": true,
         "Extraction": true,
-        "Protocol": false,
+        "Protocol": true,
         "Time Log": false
       },
       "stages": [
@@ -2425,7 +2425,7 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "In progress-search set incomplete"
+          "status": "Complete / Under Review"
         },
         {
           "name": "Abstract Screening",
@@ -2485,17 +2485,17 @@ const dashboardData = {
           "risk": "Medium",
           "due": "Awaiting four searches",
           "dependency": "Search completion",
-          "communication": "Four remaining database searches are needed before final upload and validation can complete.",
+          "communication": "Project currently contains 14,743 references; confirm expected count and provide four final searches",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-01"
         }
       ],
       "criticalItems": [],
       "history": [],
       "milestones": {
-        "onboarding": "Pending",
-        "setup": "",
-        "abstract": "",
+        "onboarding": "Complete",
+        "setup": "Active",
+        "abstract": "Pending",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2504,19 +2504,19 @@ const dashboardData = {
         "w01": "Complete",
         "w02": "Complete",
         "w03": "Complete",
-        "w04": "Pending",
+        "w04": "Complete",
         "w05": "Pending",
         "w06": "Pending",
         "w07": "Pending",
         "w08": "Pending",
         "w09": "Pending",
         "w10": "Pending",
-        "w11": "Pending",
+        "w11": "Complete",
         "w12": "Complete",
         "w13": "Pending",
         "w14": "Pending",
-        "w15": "In Progress",
-        "w16": "Not Started",
+        "w15": "Complete / Under Review",
+        "w16": "Under Review",
         "w17": "Not Started",
         "w18": "Not Started",
         "w19": "Not Started",
@@ -2566,30 +2566,30 @@ const dashboardData = {
         "w63": "Not Started",
         "Task": "Source",
         "Obtain four outstanding database searches": "Project tracking",
-        "2026-08-20": "task-phase1-08-001"
+        "2026-09-01": "task-phase1-08-001"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Initial setup started; selected data items finalized; completion awaits four database searches",
-        "targetDate": "Awaiting four searches",
-        "variance": "Setup partially complete; final search set unavailable",
+        "plannedGate": "Decision flow approved; 14,743 references loaded before the final four searches",
+        "targetDate": "Awaiting review-team confirmation",
+        "variance": "Setup ready; final reference set not yet confirmed",
         "assessment": "Waiting on Others"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Laser AI setup started; four searches outstanding",
-          "state": "Laser AI setup started; four searches outstanding"
+          "value": "Laser AI setup ready; reference-count confirmation pending",
+          "state": "Laser AI setup ready; reference-count confirmation pending"
         },
         {
           "label": "Target",
-          "value": "Awaiting four searches",
-          "state": "Laser AI setup started; four searches outstanding"
+          "value": "Awaiting review-team confirmation",
+          "state": "Laser AI setup ready; reference-count confirmation pending"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Laser AI setup started; four searches outstanding"
+          "state": "Laser AI setup ready; reference-count confirmation pending"
         }
       ]
     }
@@ -2855,36 +2855,36 @@ const dashboardData = {
       "id": "task-phase1-05-001",
       "task": "Approve Vitamin C decision flow",
       "owner": "Syeda Kanza Naqvi / Jai Das",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "High",
-      "due": "Awaiting review team approval",
+      "due": "2026-08-28",
       "dependency": "Laser AI setup complete",
-      "communication": "Decision flow prepared; approval required before screening begins.",
+      "communication": "Decision flow approved after review against the protocol",
       "source": "Email",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-08-28",
       "linkedReviewId": "phase1-05"
     },
     {
       "id": "task-phase1-05-002",
       "task": "Provide Laser AI access to allocated users",
       "owner": "Response Team / Laser AI",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "High",
-      "due": "After decision-flow approval",
+      "due": "2026-08-31",
       "dependency": "Decision-flow approval",
-      "communication": "Provide reviewer access after the team approves the configured flow.",
+      "communication": "Project opened and screening instructions provided",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-08-31",
       "linkedReviewId": "phase1-05"
     },
     {
       "id": "task-phase1-05-003",
       "task": "Start parallel abstract screening and time tracking",
       "owner": "Review Team / Krishna",
-      "status": "Not Started",
+      "status": "Ready",
       "risk": "Medium",
-      "due": "After access",
-      "dependency": "Tool access and team readiness",
+      "due": "Immediate",
+      "dependency": "Access provided and setup validated",
       "communication": "Begin both screening arms and confirm time-tracking method.",
       "source": "Project tracking",
       "sourceDate": "2026-08-20",
@@ -2904,13 +2904,13 @@ const dashboardData = {
       "linkedReviewId": "phase1-05"
     },
     {
-      "task": "Decision-flow approval pending",
+      "task": "Abstract screening ready to start",
       "owner": "Syeda Kanza Naqvi / Jai Das",
-      "status": "Open",
-      "due": "Awaiting review team approval",
+      "status": "Closed",
+      "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-05",
-      "communication": "Screening cannot start until the configured decision flow is approved."
+      "communication": "Decision flow approved; project ready for screening"
     },
     {
       "id": "task-phase1-06-001",
@@ -3042,9 +3042,9 @@ const dashboardData = {
       "risk": "Medium",
       "due": "Awaiting four searches",
       "dependency": "Search completion",
-      "communication": "Four remaining database searches are needed before final upload and validation can complete.",
+      "communication": "Project currently contains 14,743 references; confirm expected count and provide four final searches",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-01",
       "linkedReviewId": "phase1-08"
     },
     {
@@ -3114,7 +3114,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3129,7 +3129,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3144,7 +3144,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3159,7 +3159,7 @@ const dashboardData = {
       "mitigation": "Resolved; AI-assisted extraction completed",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3174,7 +3174,7 @@ const dashboardData = {
       "mitigation": "Conventional extraction output received",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3189,7 +3189,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3204,7 +3204,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3219,22 +3219,22 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-05-9",
       "phase": "Phase 1",
-      "item": "Decision-flow approval pending",
-      "description": "Screening cannot start until the configured decision flow is approved.",
+      "item": "Abstract screening ready to start",
+      "description": "Decision flow approved; project ready for screening",
       "severity": "High",
-      "status": "Open",
+      "status": "Closed",
       "owner": "Syeda Kanza Naqvi / Jai Das",
-      "due": "Awaiting review team approval",
+      "due": "Immediate",
       "linkedReviewId": "phase1-05",
-      "mitigation": "Screening cannot start until the configured decision flow is approved.",
+      "mitigation": "Decision flow approved; project ready for screening",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-09-01"
     },
     {
       "id": "critical-phase1-06-10",
