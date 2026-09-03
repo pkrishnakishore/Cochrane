@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-09-01",
+  "lastUpdated": "2026-09-03",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -25,7 +25,7 @@ const dashboardData = {
         "governance",
         "Interim Analysis",
         "July&#8211;December 2026",
-        "All five review groups consented; model and data-governance finalization underway"
+        "All five groups consented; model/data-governance work continues; the BP automated run awaits the complete PDF package, mapping and supplementary-material decision"
       ],
       [
         "phase2",
@@ -54,7 +54,7 @@ const dashboardData = {
       {
         "phase": "Interim Analysis",
         "window": "July&#8211;December 2026",
-        "note": "All five review groups consented; model and data-governance finalization underway"
+        "note": "All five groups consented; model/data-governance work continues; the BP automated run awaits the complete PDF package, mapping and supplementary-material decision"
       },
       {
         "phase": "Phase 2",
@@ -552,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Adjudication dataset ready; panel catch-up pending",
+      "status": "Adjudication dataset ready; panel meeting scheduled",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Reference standard confirmed; randomized adjudication dataset prepared",
-      "currentUpdate": "First dataset ready for adjudication; panel call requires rescheduling",
-      "nextAction": "Reschedule the adjudication-panel catch-up and begin adjudication",
-      "lastUpdated": "2026-09-01",
-      "communicationSupport": "First dataset ready for adjudication; panel call requires rescheduling",
+      "currentStage": "Reference standard confirmed; randomized adjudication dataset prepared; panel invitation sent",
+      "currentUpdate": "Panel invitation sent; no advance pilot is required",
+      "nextAction": "Hold the panel meeting and begin adjudication; complete the CESAR extension PDF/mapping package",
+      "lastUpdated": "2026-09-03",
+      "communicationSupport": "Panel invitation sent; no advance pilot is required",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 100,
           "ai": 100,
-          "status": "Extraction complete; adjudication dataset ready"
+          "status": "Extraction complete; adjudication ready; CESAR extension inputs incomplete"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -814,9 +814,9 @@ const dashboardData = {
         "w53": "Not Started",
         "w54": "Complete",
         "w55": "Complete",
-        "w56": "Pending",
+        "w56": "Scheduled",
         "w57": "Not Started",
-        "w58": "Not Started",
+        "w58": "Blocked",
         "w59": "Not Started",
         "w60": "Not Started",
         "w61": "Not Started",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Reference standard confirmed; randomized adjudication dataset prepared",
-        "targetDate": "TBD - reschedule panel call",
-        "variance": "Adjudication data ready; panel meeting not yet held",
+        "plannedGate": "Reference standard confirmed; randomized adjudication dataset prepared; panel invitation sent",
+        "targetDate": "Scheduled &#8212; see calendar invitation",
+        "variance": "Panel meeting scheduled; CESAR extension input gap remains",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Adjudication dataset ready; panel catch-up pending",
-          "state": "Adjudication dataset ready; panel catch-up pending"
+          "value": "Adjudication dataset ready; panel meeting scheduled",
+          "state": "Adjudication dataset ready; panel meeting scheduled"
         },
         {
           "label": "Target",
-          "value": "TBD - reschedule panel call",
-          "state": "Adjudication dataset ready; panel catch-up pending"
+          "value": "Scheduled &#8212; see calendar invitation",
+          "state": "Adjudication dataset ready; panel meeting scheduled"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Adjudication dataset ready; panel catch-up pending"
+          "state": "Adjudication dataset ready; panel meeting scheduled"
         }
       ]
     },
@@ -870,11 +870,11 @@ const dashboardData = {
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "High",
-      "currentStage": "Both extraction outputs received; screening comparison identified unmatched full-text records",
-      "currentUpdate": "139 records require conventional screening and 25 require AI/NK screening",
-      "nextAction": "Send the 139-record list, configure 25 records in NK and complete corrective screening",
-      "lastUpdated": "2026-09-01",
-      "communicationSupport": "139 records require conventional screening and 25 require AI/NK screening",
+      "currentStage": "Corrective screening preparation underway; the conventional package was sent and the existing NK project selected",
+      "currentUpdate": "The 139-record RIS/PDF package was sent; addition of 25 records to the existing NK project is pending",
+      "nextAction": "Add 25 records to the existing NK project and complete both corrective screening arms",
+      "lastUpdated": "2026-09-03",
+      "communicationSupport": "The 139-record RIS/PDF package was sent; addition of 25 records to the existing NK project is pending",
       "communicationLog": [
         {
           "id": "comm-phase1-02-004",
@@ -897,8 +897,8 @@ const dashboardData = {
           "people": "Meghan / Sivem / Sean",
           "resp": "Meghan",
           "due": "2026-05-31",
-          "status": "In Progress",
-          "summary": "Meghan confirmed she would start entering data fields into Nested Knowledge",
+          "status": "Complete",
+          "summary": "NK data-field setup and AI extraction completed",
           "linkedTaskId": "task-phase1-02-007",
           "linkedAction": "Enter data extraction fields into NK",
           "sourceType": "Email",
@@ -925,8 +925,8 @@ const dashboardData = {
           "people": "Emilie / Sean / Meghan",
           "resp": "Emilie / Robin",
           "due": "2026-05-31",
-          "status": "In Progress",
-          "summary": "Conventional team clarified planned Excel and Word outputs",
+          "status": "Complete",
+          "summary": "Conventional extraction output received",
           "linkedTaskId": "task-phase1-02-008",
           "linkedAction": "Confirm conventional extraction format",
           "sourceType": "Email",
@@ -939,8 +939,8 @@ const dashboardData = {
           "people": "Sean / Emilie / Meghan / Sivem",
           "resp": "Review Team",
           "due": "Immediate",
-          "status": "Open",
-          "summary": "Sean asked extractors to follow agreed definitions before AI extraction begins",
+          "status": "Closed",
+          "summary": "Definitions confirmed and extraction completed",
           "linkedTaskId": "task-phase1-02-009",
           "linkedAction": "Confirm no further data item changes before AI extraction",
           "sourceType": "Email",
@@ -1114,7 +1114,7 @@ const dashboardData = {
         "abstract": "Complete",
         "fullText": "Active",
         "extraction": "Complete",
-        "analysis": "Active"
+        "analysis": "Risk"
       },
       "workflowStatus": {
         "46161": "task-phase1-02-005",
@@ -1202,7 +1202,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Both extraction outputs received; screening comparison identified unmatched full-text records",
+        "plannedGate": "Corrective screening preparation underway; the conventional package was sent and the existing NK project selected",
         "targetDate": "Immediate",
         "variance": "Analysis paused pending corrective cross-screening",
         "assessment": "In Progress"
@@ -2120,27 +2120,27 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Criteria approved; abstract screening ready to start",
+      "status": "Abstract screening underway; expected completion this week; full-text screening planned next week",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "Medium",
-      "currentStage": "Criteria approved; AI responses generated; abstract screening open",
-      "currentUpdate": "Full-text criteria revised and approved; team cleared to begin abstract screening",
-      "nextAction": "Begin parallel abstract screening and record time",
-      "lastUpdated": "2026-08-27",
-      "communicationSupport": "Full-text criteria revised and approved; team cleared to begin abstract screening",
+      "currentStage": "Murali and Michelle are screening abstracts; completion expected this week",
+      "currentUpdate": "Abstract screening started; Mohan also confirmed likely project access",
+      "nextAction": "Complete abstract screening, notify the project team, circulate the survey and set up full-text screening",
+      "lastUpdated": "2026-09-03",
+      "communicationSupport": "Abstract screening started; Mohan also confirmed likely project access",
       "communicationLog": [
         {
           "id": "comm-phase1-07-001",
-          "date": "2026-08-20",
-          "subject": "Human Milk NK setup complete",
-          "people": "Krishna / Murali / Response Team",
-          "resp": "Murali / Review Team",
-          "due": "Awaiting review team approval",
-          "status": "Pending",
-          "summary": "NK project contains 2,024 references; Murali's access and screening-criteria approval remain the next actions.",
-          "linkedTaskId": "task-phase1-07-002",
-          "linkedAction": "Approve abstract and full-text criteria",
+          "date": "2026-09-02",
+          "subject": "Human Milk abstract screening underway",
+          "people": "Murali / Michelle / Mohan / Krishna / Meghan",
+          "resp": "Murali / Michelle / Krishna",
+          "due": "2026-09-06",
+          "status": "In Progress",
+          "summary": "Murali and Michelle started abstract screening; completion expected this week and full-text screening planned next week",
+          "linkedTaskId": "task-phase1-07-003",
+          "linkedAction": "Complete abstract screening and notify the project team",
           "sourceType": "Email",
           "sourceLink": ""
         }
@@ -2164,13 +2164,13 @@ const dashboardData = {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Ready"
+          "status": "In Progress"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Pending"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -2215,10 +2215,10 @@ const dashboardData = {
           "status": "DueDate"
         },
         {
-          "name": "Criteria approval pending",
+          "name": "Complete abstract screening and prepare full-text setup",
           "human": 0,
           "ai": 0,
-          "status": "Awaiting review team approval"
+          "status": "2026-09-06"
         }
       ],
       "tasks": [
@@ -2226,37 +2226,37 @@ const dashboardData = {
           "id": "task-phase1-07-001",
           "task": "Confirm Murali's Nested Knowledge access",
           "owner": "Murali / Response Team",
-          "status": "Under Review",
+          "status": "Complete",
           "risk": "High",
-          "due": "Awaiting review team approval",
+          "due": "Complete",
           "dependency": "NK invitation",
-          "communication": "Murali invited using both email addresses; access confirmation pending.",
+          "communication": "Murali&#8217;s access confirmed through active screening",
           "source": "Email",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-02"
         },
         {
           "id": "task-phase1-07-002",
           "task": "Approve abstract and full-text criteria",
           "owner": "Murali / Review Team",
-          "status": "Pending",
+          "status": "Complete",
           "risk": "High",
-          "due": "Awaiting review team approval",
+          "due": "Complete",
           "dependency": "NK project setup",
-          "communication": "Screening criteria configured and awaiting Murali's approval.",
+          "communication": "Abstract and full-text criteria approved; AI responses generated",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-08-26"
         },
         {
           "id": "task-phase1-07-003",
-          "task": "Begin Nested Knowledge screening after validation",
+          "task": "Complete abstract screening and notify the project team",
           "owner": "Review Team / Nested Knowledge",
-          "status": "Not Started",
+          "status": "In Progress",
           "risk": "Medium",
-          "due": "After criteria approval",
-          "dependency": "Access and criteria approval",
-          "communication": "Start screening once access and criteria validation are confirmed.",
+          "due": "2026-09-06",
+          "dependency": "Abstract screening underway",
+          "communication": "Screening underway; circulate the survey and prepare full-text setup after completion",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-02"
         },
         {
           "id": "task-phase1-07-004",
@@ -2272,14 +2272,14 @@ const dashboardData = {
         }
       ],
       "criticalItems": [
-        "Criteria approval pending"
+        "Complete abstract screening and prepare full-text setup"
       ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Active",
-        "fullText": "",
+        "fullText": "Pending",
         "extraction": "",
         "analysis": ""
       },
@@ -2290,7 +2290,7 @@ const dashboardData = {
         "w04": "Complete",
         "w05": "Complete",
         "w06": "Complete",
-        "w07": "Under Review",
+        "w07": "Complete / Under Review",
         "w08": "Under Review",
         "w09": "Not Started",
         "w10": "Complete",
@@ -2300,8 +2300,8 @@ const dashboardData = {
         "w14": "Under Review",
         "w15": "Complete",
         "w16": "Complete",
-        "w17": "Ready",
-        "w18": "Ready",
+        "w17": "In Progress",
+        "w18": "In Progress",
         "w19": "Not Started",
         "w20": "Not Started",
         "w21": "Not Started",
@@ -2312,7 +2312,7 @@ const dashboardData = {
         "w26": "Not Started",
         "w27": "Not Started",
         "w28": "Not Started",
-        "w29": "Not Started",
+        "w29": "Complete",
         "w30": "Not Started",
         "w31": "Not Started",
         "w32": "Not Started",
@@ -2350,35 +2350,35 @@ const dashboardData = {
         "Task": "Source",
         "Confirm Murali's Nested Knowledge access": "Email",
         "Approve abstract and full-text criteria": "Project tracking",
-        "Begin Nested Knowledge screening after validation": "Project tracking",
+        "Complete abstract screening and notify the project team": "Project tracking",
         "Confirm published review/protocol package": "Project tracking",
         "Date": "LinkedTaskID",
-        "2026-08-20": "task-phase1-07-002",
+        "2026-09-02": "task-phase1-07-003",
         "Severity": "Not Started",
-        "High": "Not Started"
+        "Medium": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Criteria approved; AI responses generated; abstract screening open",
-        "targetDate": "Immediate",
-        "variance": "Setup validated; screening ready to start",
-        "assessment": "Ready"
+        "plannedGate": "Murali and Michelle are screening abstracts; completion expected this week",
+        "targetDate": "2026-09-06 (expected)",
+        "variance": "Abstract screening underway; full-text setup planned next",
+        "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Criteria approved; abstract screening ready to start",
-          "state": "Criteria approved; abstract screening ready to start"
+          "value": "Abstract screening underway; expected completion this week; full-text screening planned next week",
+          "state": "Abstract screening underway; expected completion this week; full-text screening planned next week"
         },
         {
           "label": "Target",
-          "value": "Immediate",
-          "state": "Criteria approved; abstract screening ready to start"
+          "value": "2026-09-06 (expected)",
+          "state": "Abstract screening underway; expected completion this week; full-text screening planned next week"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Criteria approved; abstract screening ready to start"
+          "state": "Abstract screening underway; expected completion this week; full-text screening planned next week"
         }
       ]
     },
@@ -2977,39 +2977,39 @@ const dashboardData = {
       "id": "task-phase1-07-001",
       "task": "Confirm Murali's Nested Knowledge access",
       "owner": "Murali / Response Team",
-      "status": "Under Review",
+      "status": "Complete",
       "risk": "High",
-      "due": "Awaiting review team approval",
+      "due": "Complete",
       "dependency": "NK invitation",
-      "communication": "Murali invited using both email addresses; access confirmation pending.",
+      "communication": "Murali&#8217;s access confirmed through active screening",
       "source": "Email",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-02",
       "linkedReviewId": "phase1-07"
     },
     {
       "id": "task-phase1-07-002",
       "task": "Approve abstract and full-text criteria",
       "owner": "Murali / Review Team",
-      "status": "Pending",
+      "status": "Complete",
       "risk": "High",
-      "due": "Awaiting review team approval",
+      "due": "Complete",
       "dependency": "NK project setup",
-      "communication": "Screening criteria configured and awaiting Murali's approval.",
+      "communication": "Abstract and full-text criteria approved; AI responses generated",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-08-26",
       "linkedReviewId": "phase1-07"
     },
     {
       "id": "task-phase1-07-003",
-      "task": "Begin Nested Knowledge screening after validation",
+      "task": "Complete abstract screening and notify the project team",
       "owner": "Review Team / Nested Knowledge",
-      "status": "Not Started",
+      "status": "In Progress",
       "risk": "Medium",
-      "due": "After criteria approval",
-      "dependency": "Access and criteria approval",
-      "communication": "Start screening once access and criteria validation are confirmed.",
+      "due": "2026-09-06",
+      "dependency": "Abstract screening underway",
+      "communication": "Screening underway; circulate the survey and prepare full-text setup after completion",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-02",
       "linkedReviewId": "phase1-07"
     },
     {
@@ -3026,13 +3026,13 @@ const dashboardData = {
       "linkedReviewId": "phase1-07"
     },
     {
-      "task": "Criteria approval pending",
-      "owner": "Murali / Review Team",
-      "status": "Open",
-      "due": "Awaiting review team approval",
+      "task": "Complete abstract screening and prepare full-text setup",
+      "owner": "Review Team / Krishna / Nested Knowledge",
+      "status": "In Progress",
+      "due": "2026-09-06",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-07",
-      "communication": "Abstract and full-text screening should not start until criteria are approved."
+      "communication": "Screening underway; notify Krishna after completion so the survey and full-text setup can proceed"
     },
     {
       "id": "task-phase1-08-001",
@@ -3114,7 +3114,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-01"
+      "sourceDate": "2026-09-03"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3129,7 +3129,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-01"
+      "sourceDate": "2026-09-03"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3144,7 +3144,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-01"
+      "sourceDate": "2026-09-03"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3159,7 +3159,7 @@ const dashboardData = {
       "mitigation": "Resolved; AI-assisted extraction completed",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-01"
+      "sourceDate": "2026-09-03"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3174,7 +3174,7 @@ const dashboardData = {
       "mitigation": "Conventional extraction output received",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-01"
+      "sourceDate": "2026-09-03"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3254,17 +3254,17 @@ const dashboardData = {
     {
       "id": "critical-phase1-07-11",
       "phase": "Phase 1",
-      "item": "Criteria approval pending",
-      "description": "Abstract and full-text screening should not start until criteria are approved.",
-      "severity": "High",
-      "status": "Open",
-      "owner": "Murali / Review Team",
-      "due": "Awaiting review team approval",
+      "item": "Complete abstract screening and prepare full-text setup",
+      "description": "Screening underway; notify Krishna after completion so the survey and full-text setup can proceed",
+      "severity": "Medium",
+      "status": "In Progress",
+      "owner": "Review Team / Krishna / Nested Knowledge",
+      "due": "2026-09-06",
       "linkedReviewId": "phase1-07",
-      "mitigation": "Abstract and full-text screening should not start until criteria are approved.",
+      "mitigation": "Screening underway; notify Krishna after completion so the survey and full-text setup can proceed",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-27"
+      "sourceDate": "2026-09-03"
     }
   ],
   "resources": [
