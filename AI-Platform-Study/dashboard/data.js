@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-09-07",
+  "lastUpdated": "2026-09-10",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -25,7 +25,7 @@ const dashboardData = {
         "governance",
         "Interim Analysis",
         "July&#8211;December 2026",
-        "All five extension groups consented; BP mapping and PDF folder shared; adjudication Pilot 2 underway; Bi 2025 supporting-file check pending"
+        "All five extension groups consented; Pilot 2 underway; Bi 2025 supplements confirmed absent from Laser AI; available survey counts approved for interim analysis"
       ],
       [
         "phase2",
@@ -54,7 +54,7 @@ const dashboardData = {
       {
         "phase": "Interim Analysis",
         "window": "July&#8211;December 2026",
-        "note": "All five extension groups consented; BP mapping and PDF folder shared; adjudication Pilot 2 underway; Bi 2025 supporting-file check pending"
+        "note": "All five extension groups consented; Pilot 2 underway; Bi 2025 supplements confirmed absent from Laser AI; available survey counts approved for interim analysis"
       },
       {
         "phase": "Phase 2",
@@ -552,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Adjudication Pilot 2 underway; extension inputs shared",
+      "status": "Adjudication Pilot 2 underway; Bi 2025 supplementary-file omission confirmed",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Pilot 2 underway; all 19 BP records mapped and shared with Pawe&#322;",
-      "currentUpdate": "Mapping covers all 19 records: 17 PDFs and two ClinicalTrials.gov registry records",
-      "nextAction": "Complete Pilot 2, confirm Bi 2025 supporting-file coverage and obtain Pawe&#322;&#8217;s access confirmation",
-      "lastUpdated": "2026-09-05",
-      "communicationSupport": "Mapping covers all 19 records: 17 PDFs and two ClinicalTrials.gov registry records",
+      "currentStage": "Pilot 2 underway; all 19 records mapped; Bi 2025 source-file gap confirmed",
+      "currentUpdate": "All 19 records mapped; Laser AI contains only the Bi 2025 main paper and no supplementary files",
+      "nextAction": "Complete Pilot 2, document the Bi 2025 omission and obtain Pawe&#322;&#8217;s access/run confirmation",
+      "lastUpdated": "2026-09-10",
+      "communicationSupport": "All 19 records mapped; Laser AI contains only the Bi 2025 main paper and no supplementary files",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -569,8 +569,8 @@ const dashboardData = {
           "people": "Doreen Larvie / Krishna",
           "resp": "Review Team",
           "due": "2026-05-31",
-          "status": "Open",
-          "summary": "Abstract screening survey shared after AI-assisted screening completion",
+          "status": "Complete",
+          "summary": "Susan confirmed two BP abstract-screening responses",
           "linkedTaskId": "task-phase1-01-006",
           "linkedAction": "Collect AI abstract screening usability survey",
           "sourceType": "Email",
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 100,
           "ai": 100,
-          "status": "Extraction complete; Pilot 2 underway; Bi 2025 source-file check pending"
+          "status": "Extraction complete; Pilot 2 underway; Bi 2025 supplement omission confirmed"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -710,11 +710,11 @@ const dashboardData = {
           "id": "task-phase1-01-006",
           "task": "Collect AI abstract screening usability survey",
           "owner": "Review Team",
-          "status": "In Progress",
+          "status": "Complete",
           "risk": "Medium",
           "due": "2026-05-31",
           "dependency": "AI abstract screening completion",
-          "communication": "Survey shared with review team",
+          "communication": "Two abstract-screening responses received; counts confirmed for interim analysis",
           "source": "Email",
           "sourceDate": "2026-05-27"
         },
@@ -780,8 +780,8 @@ const dashboardData = {
         "w19": "Complete",
         "w20": "Complete",
         "w21": "Complete",
-        "w22": "Not Started",
-        "w23": "Not Started",
+        "w22": "Complete",
+        "w23": "Complete",
         "w24": "Not Started",
         "w25": "Not Started",
         "w26": "Not Started",
@@ -794,9 +794,9 @@ const dashboardData = {
         "w33": "Not Started",
         "w34": "Not Started",
         "w35": "Not Started",
-        "w36": "Not Started",
-        "w37": "Not Started",
-        "w38": "Not Started",
+        "w36": "Complete",
+        "w37": "Complete",
+        "w38": "Complete",
         "w39": "Not Started",
         "w40": "Not Started",
         "w41": "Complete",
@@ -809,9 +809,9 @@ const dashboardData = {
         "w48": "Complete",
         "w49": "Complete",
         "w50": "Complete",
-        "w51": "Not Started",
-        "w52": "Not Started",
-        "w53": "Not Started",
+        "w51": "Complete",
+        "w52": "Complete",
+        "w53": "Complete",
         "w54": "Complete",
         "w55": "Complete",
         "w56": "In Progress",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Pilot 2 underway; all 19 BP records mapped and shared with Pawe&#322;",
+        "plannedGate": "Pilot 2 underway; all 19 records mapped; Bi 2025 source-file gap confirmed",
         "targetDate": "Pilot 2 underway; completion TBD",
-        "variance": "Pilot 2 underway; Bi 2025 supplementary-file coverage requires confirmation",
+        "variance": "Pilot 2 underway; Bi 2025 supplements were not included in the Laser AI extraction",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Adjudication Pilot 2 underway; extension inputs shared",
-          "state": "Adjudication Pilot 2 underway; extension inputs shared"
+          "value": "Adjudication Pilot 2 underway; Bi 2025 supplementary-file omission confirmed",
+          "state": "Adjudication Pilot 2 underway; Bi 2025 supplementary-file omission confirmed"
         },
         {
           "label": "Target",
           "value": "Pilot 2 underway; completion TBD",
-          "state": "Adjudication Pilot 2 underway; extension inputs shared"
+          "state": "Adjudication Pilot 2 underway; Bi 2025 supplementary-file omission confirmed"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Adjudication Pilot 2 underway; extension inputs shared"
+          "state": "Adjudication Pilot 2 underway; Bi 2025 supplementary-file omission confirmed"
         }
       ]
     },
@@ -866,15 +866,15 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Corrective NK citations uploaded; PDFs received; validation pending",
+      "status": "Conventional corrective screening complete; NK corrective screening ready",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "High",
-      "currentStage": "Existing NK project populated with 24 unique corrective citations; full texts received",
-      "currentUpdate": "Meghan uploaded 25 citations&#8212;24 unique&#8212;and Sivem supplied the corresponding full texts",
-      "nextAction": "Upload and validate the corrective PDFs, then complete both screening arms",
-      "lastUpdated": "2026-09-05",
-      "communicationSupport": "Meghan uploaded 25 citations&#8212;24 unique&#8212;and Sivem supplied the corresponding full texts",
+      "currentStage": "The 139-record conventional corrective screening is complete; 25 NK full texts are ready",
+      "currentUpdate": "Sivem supplied updated decisions for 139 records; Meghan confirmed 25 full texts ready in NK",
+      "nextAction": "Complete the 25-record NK corrective screening and rerun the comparison",
+      "lastUpdated": "2026-09-10",
+      "communicationSupport": "Sivem supplied updated decisions for 139 records; Meghan confirmed 25 full texts ready in NK",
       "communicationLog": [
         {
           "id": "comm-phase1-02-004",
@@ -1144,22 +1144,22 @@ const dashboardData = {
         "w20": "Complete",
         "w21": "Complete",
         "w22": "Complete",
-        "w23": "Not Started",
+        "w23": "Complete",
         "w24": "Not Started",
         "w25": "Not Started",
         "w26": "Complete",
-        "w27": "Not Started",
+        "w27": "Complete",
         "w28": "Not Started",
         "w29": "Complete",
-        "w30": "In Progress",
-        "w31": "Pending",
-        "w32": "Pending",
-        "w33": "Pending",
+        "w30": "Complete",
+        "w31": "Complete",
+        "w32": "Complete",
+        "w33": "Ready",
         "w34": "Not Started",
         "w35": "Not Started",
-        "w36": "Not Started",
-        "w37": "Not Started",
-        "w38": "Not Started",
+        "w36": "Complete",
+        "w37": "Complete",
+        "w38": "Complete",
         "w39": "Not Started",
         "w40": "Not Started",
         "w41": "Complete",
@@ -1172,9 +1172,9 @@ const dashboardData = {
         "w48": "Complete",
         "w49": "Complete",
         "w50": "Complete",
-        "w51": "Not Started",
-        "w52": "Not Started",
-        "w53": "Not Started",
+        "w51": "Complete",
+        "w52": "Complete",
+        "w53": "Complete",
         "w54": "Blocked",
         "w55": "Blocked",
         "w56": "Not Started",
@@ -1202,26 +1202,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Existing NK project populated with 24 unique corrective citations; full texts received",
+        "plannedGate": "The 139-record conventional corrective screening is complete; 25 NK full texts are ready",
         "targetDate": "Immediate",
-        "variance": "Analysis paused pending PDF validation and corrective cross-screening",
+        "variance": "Analysis paused pending completion of the NK corrective screening",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Corrective NK citations uploaded; PDFs received; validation pending",
-          "state": "Corrective NK citations uploaded; PDFs received; validation pending"
+          "value": "Conventional corrective screening complete; NK corrective screening ready",
+          "state": "Conventional corrective screening complete; NK corrective screening ready"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Corrective NK citations uploaded; PDFs received; validation pending"
+          "state": "Conventional corrective screening complete; NK corrective screening ready"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Corrective NK citations uploaded; PDFs received; validation pending"
+          "state": "Conventional corrective screening complete; NK corrective screening ready"
         }
       ]
     },
@@ -1230,15 +1230,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Full-text project opened; reviewer interaction issue under review",
+      "status": "Full-text pool reopened to 138 records; reviewer confirmation pending",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
       "currentStage": "Abstract screening complete; combined 144-record full-text project opened",
-      "currentUpdate": "Kate cannot interact with the new project; Amin asked her to verify whether the issue has been resolved",
-      "nextAction": "Resolve Kate&#8217;s project-interaction issue and confirm both screening arms can begin",
-      "lastUpdated": "2026-09-07",
-      "communicationSupport": "Kate cannot interact with the new project; Amin asked her to verify whether the issue has been resolved",
+      "currentUpdate": "Amin returned 138 records to the open pool; Kate can now attempt self-distribution",
+      "nextAction": "Confirm Kate can claim records and that both screening arms have started",
+      "lastUpdated": "2026-09-10",
+      "communicationSupport": "Amin returned 138 records to the open pool; Kate can now attempt self-distribution",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1336,7 +1336,7 @@ const dashboardData = {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Needs Action"
+          "status": "Under Review"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -1500,18 +1500,18 @@ const dashboardData = {
         "w19": "Complete",
         "w20": "Complete",
         "w21": "Complete",
-        "w22": "Not Started",
-        "w23": "Not Started",
+        "w22": "Complete",
+        "w23": "Complete",
         "w24": "Complete",
         "w25": "Not Started",
         "w26": "Complete",
         "w27": "Complete",
         "w28": "Not Started",
         "w29": "Complete",
-        "w30": "Complete / Under Review",
+        "w30": "Complete",
         "w31": "Under Review",
         "w32": "Ready",
-        "w33": "Blocked",
+        "w33": "Ready",
         "w34": "Not Started",
         "w35": "Not Started",
         "w36": "Not Started",
@@ -1560,24 +1560,24 @@ const dashboardData = {
         "plannedWindow": "",
         "plannedGate": "Abstract screening complete; combined 144-record full-text project opened",
         "targetDate": "Immediate",
-        "variance": "Screening start remains unconfirmed pending Kate&#8217;s access check",
-        "assessment": "Needs Action"
+        "variance": "Pool reopened; screening start remains unconfirmed pending Kate&#8217;s response",
+        "assessment": "Under Review"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Full-text project opened; reviewer interaction issue under review",
-          "state": "Full-text project opened; reviewer interaction issue under review"
+          "value": "Full-text pool reopened to 138 records; reviewer confirmation pending",
+          "state": "Full-text pool reopened to 138 records; reviewer confirmation pending"
         },
         {
           "label": "Target",
           "value": "Immediate",
-          "state": "Full-text project opened; reviewer interaction issue under review"
+          "state": "Full-text pool reopened to 138 records; reviewer confirmation pending"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Full-text project opened; reviewer interaction issue under review"
+          "state": "Full-text pool reopened to 138 records; reviewer confirmation pending"
         }
       ]
     },
@@ -1853,27 +1853,27 @@ const dashboardData = {
       "title": "Probiotics for the prevention of paediatric antibiotic-associated diarrhoea",
       "shortName": "Probiotics AAD",
       "phase": "Phase 1",
-      "status": "Conventional screening complete; NK screening underway",
+      "status": "Both abstract-screening workflows complete; full-text screening reported underway",
       "tool": "Nested Knowledge",
       "lead": "Jeremy Steen / Bradley Johnston",
       "risk": "Medium",
-      "currentStage": "Calibration and conventional screening complete; NK screening continuing",
-      "currentUpdate": "Calibration and conventional screening complete; NK screening continuing",
-      "nextAction": "Complete NK screening/time capture, then begin full text",
-      "lastUpdated": "2026-08-20",
-      "communicationSupport": "Calibration and conventional screening complete; NK screening continuing",
+      "currentStage": "Covidence and NK abstract screening complete; both teams progressing through full-text screening",
+      "currentUpdate": "Covidence and NK abstract screening complete; both teams progressing through full-text screening",
+      "nextAction": "Confirm full-text setup and consolidation; complete screening and record time",
+      "lastUpdated": "2026-09-10",
+      "communicationSupport": "Covidence and NK abstract screening complete; both teams progressing through full-text screening",
       "communicationLog": [
         {
           "id": "comm-phase1-06-001",
-          "date": "2026-08-20",
-          "subject": "Probiotics full text paused",
+          "date": "2026-09-09",
+          "subject": "Probiotics abstract screening complete; full-text screening underway",
           "people": "Jeremy Steen / Bradley Johnston / Krishna",
-          "resp": "Review Team",
-          "due": "After NK abstract screening",
-          "status": "In Progress",
-          "summary": "Team confirmed Covidence full-text screening will remain paused until Nested Knowledge abstract screening is complete.",
-          "linkedTaskId": "task-phase1-06-001",
-          "linkedAction": "Complete Nested Knowledge abstract screening",
+          "resp": "Sean / Meghan / Review Team",
+          "due": "Immediate confirmation",
+          "status": "Under Review",
+          "summary": "Jeremy confirmed both abstract arms complete and reported full-text screening underway; study-side confirmation requested",
+          "linkedTaskId": "task-phase1-06-004",
+          "linkedAction": "Start full-text screening after both arms align",
           "sourceType": "Email",
           "sourceLink": ""
         }
@@ -1896,14 +1896,14 @@ const dashboardData = {
         {
           "name": "Abstract Screening",
           "human": 100,
-          "ai": 0,
-          "status": "Conventional complete; NK in progress"
+          "ai": 100,
+          "status": "Complete"
         },
         {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Not Started&#8212;sequencing dependency"
+          "status": "In Progress / Under Review"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -1948,10 +1948,10 @@ const dashboardData = {
           "status": "DueDate"
         },
         {
-          "name": "Full-text screening deliberately paused",
+          "name": "Full-text setup/consolidation confirmation pending",
           "human": 0,
           "ai": 0,
-          "status": "After NK abstract screening"
+          "status": "Immediate"
         }
       ],
       "tasks": [
@@ -1959,13 +1959,13 @@ const dashboardData = {
           "id": "task-phase1-06-001",
           "task": "Complete Nested Knowledge abstract screening",
           "owner": "Review Team / Nested Knowledge",
-          "status": "In Progress",
+          "status": "Complete",
           "risk": "Medium",
-          "due": "TBD",
+          "due": "2026-09-09",
           "dependency": "NK screening completion",
-          "communication": "Continue NK abstract screening before full-text work resumes.",
+          "communication": "Both abstract-screening workflows completed",
           "source": "Email",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-09"
         },
         {
           "id": "task-phase1-06-002",
@@ -1983,35 +1983,35 @@ const dashboardData = {
           "id": "task-phase1-06-003",
           "task": "Confirm NK screening completion and export",
           "owner": "Review Team / Response Team",
-          "status": "Not Started",
+          "status": "In Progress",
           "risk": "Medium",
-          "due": "After NK screening",
+          "due": "Immediate",
           "dependency": "NK abstract screening",
-          "communication": "Export output once NK screening is complete.",
+          "communication": "Confirm and export the final NK abstract-screening output",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-09"
         },
         {
           "id": "task-phase1-06-004",
           "task": "Start full-text screening after both arms align",
           "owner": "Review Team / Response Team",
-          "status": "Not Started",
+          "status": "Under Review",
           "risk": "Medium",
-          "due": "After abstract-screening closeout",
+          "due": "Next 1&#8211;2 weeks",
           "dependency": "NK and conventional abstract-screening completion",
-          "communication": "Resume full-text workflow only after abstract-screening outputs are ready.",
+          "communication": "Full-text screening reported underway; setup and consolidation confirmation pending",
           "source": "Project tracking",
-          "sourceDate": "2026-08-20"
+          "sourceDate": "2026-09-09"
         }
       ],
       "criticalItems": [
-        "Full-text screening deliberately paused"
+        "Full-text setup/consolidation confirmation pending"
       ],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
         "setup": "Complete",
-        "abstract": "",
+        "abstract": "Complete",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2031,25 +2031,25 @@ const dashboardData = {
         "w12": "Under Review",
         "w13": "Under Review",
         "w14": "Under Review",
-        "w15": "Under Review",
-        "w16": "Not Started",
+        "w15": "Complete",
+        "w16": "Complete",
         "w17": "Complete",
-        "w18": "In Progress",
-        "w19": "Not Started",
-        "w20": "Not Started",
-        "w21": "Not Started",
+        "w18": "Complete",
+        "w19": "Pending",
+        "w20": "Pending",
+        "w21": "Complete",
         "w22": "Not Started",
         "w23": "Not Started",
         "w24": "Not Started",
         "w25": "Not Started",
-        "w26": "Not Started",
+        "w26": "Under Review",
         "w27": "Not Started",
         "w28": "Not Started",
-        "w29": "Not Started",
-        "w30": "Not Started",
-        "w31": "Not Started",
-        "w32": "Not Started",
-        "w33": "Not Started",
+        "w29": "Under Review",
+        "w30": "Under Review",
+        "w31": "Under Review",
+        "w32": "In Progress",
+        "w33": "In Progress",
         "w34": "Not Started",
         "w35": "Not Started",
         "w36": "Not Started",
@@ -2086,32 +2086,32 @@ const dashboardData = {
         "Confirm NK screening completion and export": "Project tracking",
         "Start full-text screening after both arms align": "Project tracking",
         "Date": "LinkedTaskID",
-        "2026-08-20": "task-phase1-06-001",
+        "2026-09-09": "task-phase1-06-004",
         "Severity": "Not Started",
         "Medium": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Calibration and conventional screening complete; NK screening continuing",
-        "targetDate": "TBD",
-        "variance": "Conventional workflow ahead; full text awaits both workflows",
+        "plannedGate": "Covidence and NK abstract screening complete; both teams progressing through full-text screening",
+        "targetDate": "Next 1&#8211;2 weeks",
+        "variance": "Full-text screening reported underway; study-side confirmation pending",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Conventional screening complete; NK screening underway",
-          "state": "Conventional screening complete; NK screening underway"
+          "value": "Both abstract-screening workflows complete; full-text screening reported underway",
+          "state": "Both abstract-screening workflows complete; full-text screening reported underway"
         },
         {
           "label": "Target",
-          "value": "TBD",
-          "state": "Conventional screening complete; NK screening underway"
+          "value": "Next 1&#8211;2 weeks",
+          "state": "Both abstract-screening workflows complete; full-text screening reported underway"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Conventional screening complete; NK screening underway"
+          "state": "Both abstract-screening workflows complete; full-text screening reported underway"
         }
       ]
     },
@@ -2614,11 +2614,11 @@ const dashboardData = {
       "id": "task-phase1-01-006",
       "task": "Collect AI abstract screening usability survey",
       "owner": "Review Team",
-      "status": "In Progress",
+      "status": "Complete",
       "risk": "Medium",
       "due": "2026-05-31",
       "dependency": "AI abstract screening completion",
-      "communication": "Survey shared with review team",
+      "communication": "Two abstract-screening responses received; counts confirmed for interim analysis",
       "source": "Email",
       "sourceDate": "2026-05-27",
       "linkedReviewId": "phase1-01"
@@ -2916,13 +2916,13 @@ const dashboardData = {
       "id": "task-phase1-06-001",
       "task": "Complete Nested Knowledge abstract screening",
       "owner": "Review Team / Nested Knowledge",
-      "status": "In Progress",
+      "status": "Complete",
       "risk": "Medium",
-      "due": "TBD",
+      "due": "2026-09-09",
       "dependency": "NK screening completion",
-      "communication": "Continue NK abstract screening before full-text work resumes.",
+      "communication": "Both abstract-screening workflows completed",
       "source": "Email",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-09",
       "linkedReviewId": "phase1-06"
     },
     {
@@ -2942,36 +2942,36 @@ const dashboardData = {
       "id": "task-phase1-06-003",
       "task": "Confirm NK screening completion and export",
       "owner": "Review Team / Response Team",
-      "status": "Not Started",
+      "status": "In Progress",
       "risk": "Medium",
-      "due": "After NK screening",
+      "due": "Immediate",
       "dependency": "NK abstract screening",
-      "communication": "Export output once NK screening is complete.",
+      "communication": "Confirm and export the final NK abstract-screening output",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-09",
       "linkedReviewId": "phase1-06"
     },
     {
       "id": "task-phase1-06-004",
       "task": "Start full-text screening after both arms align",
       "owner": "Review Team / Response Team",
-      "status": "Not Started",
+      "status": "Under Review",
       "risk": "Medium",
-      "due": "After abstract-screening closeout",
+      "due": "Next 1&#8211;2 weeks",
       "dependency": "NK and conventional abstract-screening completion",
-      "communication": "Resume full-text workflow only after abstract-screening outputs are ready.",
+      "communication": "Full-text screening reported underway; setup and consolidation confirmation pending",
       "source": "Project tracking",
-      "sourceDate": "2026-08-20",
+      "sourceDate": "2026-09-09",
       "linkedReviewId": "phase1-06"
     },
     {
-      "task": "Full-text screening deliberately paused",
-      "owner": "Review Team",
-      "status": "Open",
-      "due": "After NK abstract screening",
+      "task": "Full-text setup/consolidation confirmation pending",
+      "owner": "Sean / Meghan / Review Team",
+      "status": "Under Review",
+      "due": "Immediate",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-06",
-      "communication": "Sequencing dependency is intentional and should be monitored."
+      "communication": "Both teams report full-text screening underway; confirm that study requirements are satisfied"
     },
     {
       "id": "task-phase1-07-001",
@@ -3114,7 +3114,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-05"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3129,7 +3129,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-05"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3144,7 +3144,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-05"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3159,7 +3159,7 @@ const dashboardData = {
       "mitigation": "Resolved; AI-assisted extraction completed",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-05"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3174,7 +3174,7 @@ const dashboardData = {
       "mitigation": "Conventional extraction output received",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-05"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3189,7 +3189,7 @@ const dashboardData = {
       "mitigation": "Needed because Krishna could not join the Laser AI tool training session",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-07"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3204,7 +3204,7 @@ const dashboardData = {
       "mitigation": "Needed to ensure AI-assisted and human workflows are tracked in parallel",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-07"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3219,7 +3219,7 @@ const dashboardData = {
       "mitigation": "Search was run around 20 May, but final completion/status needs confirmation",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-07"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3239,17 +3239,17 @@ const dashboardData = {
     {
       "id": "critical-phase1-06-10",
       "phase": "Phase 1",
-      "item": "Full-text screening deliberately paused",
-      "description": "Sequencing dependency is intentional and should be monitored.",
+      "item": "Full-text setup/consolidation confirmation pending",
+      "description": "Both teams report full-text screening underway; confirm that study requirements are satisfied",
       "severity": "Medium",
-      "status": "Open",
-      "owner": "Review Team",
-      "due": "After NK abstract screening",
+      "status": "Under Review",
+      "owner": "Sean / Meghan / Review Team",
+      "due": "Immediate",
       "linkedReviewId": "phase1-06",
-      "mitigation": "Sequencing dependency is intentional and should be monitored.",
+      "mitigation": "Both teams report full-text screening underway; confirm that study requirements are satisfied",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-08-20"
+      "sourceDate": "2026-09-10"
     },
     {
       "id": "critical-phase1-07-11",
