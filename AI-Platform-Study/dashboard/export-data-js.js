@@ -299,9 +299,20 @@ function milestoneValue(value) {
   const normalized = String(value ?? "").trim().toLowerCase();
   if (!normalized || normalized === "blank") return "";
   if (normalized === "complete" || normalized.startsWith("complete ")) return "Complete";
-  if (normalized === "active" || normalized.startsWith("active ")) return "Active";
+  if (
+    normalized === "active" ||
+    normalized.startsWith("active ") ||
+    normalized === "in progress" ||
+    normalized === "under review"
+  ) return "Active";
   if (normalized === "risk" || normalized.includes("blocked") || normalized.includes("needs action")) return "Risk";
-  if (normalized === "pending" || normalized.startsWith("pending ") || normalized.includes("scheduled")) return "Pending";
+  if (
+    normalized === "pending" ||
+    normalized.startsWith("pending ") ||
+    normalized === "ready" ||
+    normalized.includes("scheduled") ||
+    normalized.includes("waiting on others")
+  ) return "Pending";
   return "";
 }
 
