@@ -76,6 +76,8 @@ const WORKBOOK = findWorkbook();
 
 function decodeXml(value) {
   return String(value || "")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
@@ -305,14 +307,19 @@ function milestoneValue(value) {
     normalized === "in progress" ||
     normalized === "under review"
   ) return "Active";
-  if (normalized === "risk" || normalized.includes("blocked") || normalized.includes("needs action")) return "Risk";
+  if (
+    normalized === "risk" ||
+    normalized.startsWith("risk ") ||
+    normalized.includes("blocked") ||
+    normalized.includes("needs action")
+  ) return "Risk";
   if (
     normalized === "pending" ||
     normalized.startsWith("pending ") ||
-    normalized === "ready" ||
     normalized.includes("scheduled") ||
     normalized.includes("waiting on others")
   ) return "Pending";
+  if (normalized === "ready") return "Active";
   return "";
 }
 
