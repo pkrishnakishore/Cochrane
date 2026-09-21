@@ -299,9 +299,20 @@ function milestoneValue(value) {
   const normalized = String(value ?? "").trim().toLowerCase();
   if (!normalized || normalized === "blank") return "";
   if (normalized === "complete" || normalized.startsWith("complete ")) return "Complete";
-  if (normalized === "active" || normalized.startsWith("active ")) return "Active";
+  if (
+    normalized === "active" ||
+    normalized.startsWith("active ") ||
+    normalized === "in progress" ||
+    normalized === "under review"
+  ) return "Active";
   if (normalized === "risk" || normalized.includes("blocked") || normalized.includes("needs action")) return "Risk";
-  if (normalized === "pending" || normalized.startsWith("pending ") || normalized.includes("scheduled")) return "Pending";
+  if (
+    normalized === "pending" ||
+    normalized.startsWith("pending ") ||
+    normalized === "ready" ||
+    normalized.includes("scheduled") ||
+    normalized.includes("waiting on others")
+  ) return "Pending";
   return "";
 }
 
@@ -513,11 +524,14 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
 
     const communicationRows = sectionTable(rows, ["CommunicationID", "Date", "Summary"]);
     for (const row of communicationRows.filter(isDisplayed)) {
+      const communicationId = text(row.CommunicationID);
+      if (!/^comm-/i.test(communicationId)) continue;
+
       const linkedTaskId = text(row.LinkedTaskID);
       const linkedTask = linkedTaskId ? review.tasks.find((task) => task.id === linkedTaskId) : null;
 
       review.communicationLog.push({
-        id: text(row.CommunicationID),
+        id: communicationId,
         date: excelDate(row.Date) || "Recent",
         subject: text(row.Subject || row.ConversationName, "Mail follow-up"),
         people: text(row.People || row.FromPerson, review.lead),
@@ -534,9 +548,10 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     }
 
     const criticalRows = sectionTable(rows, ["CriticalItem", "Severity", "Status"]);
+    const ignoredCriticalLabels = new Set(["", "criticalitem", "critical items displayed in dashboard"]);
     for (const row of criticalRows.filter(isDisplayed)) {
       const itemTitle = text(row.CriticalItem);
-      if (!itemTitle) continue;
+      if (!itemTitle || ignoredCriticalLabels.has(itemTitle.toLowerCase())) continue;
 
       const item = {
         id: `critical-${review.id}-${criticalItems.length + 1}`,
