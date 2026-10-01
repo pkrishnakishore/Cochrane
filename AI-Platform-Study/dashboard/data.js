@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-09-24",
+  "lastUpdated": "2026-09-30",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -23,15 +23,15 @@ const dashboardData = {
       ],
       [
         "governance",
-        "Interim Analysis",
+        "Analysis",
         "End June",
-        "BP adjudication and analysis underway; CESAR analysis meetings scheduled; preliminary results targeted for the end of October"
+        "BP adjudication complete; time-on-task, automated and downstream-impact analyses underway; no interim report or mid-term review is planned"
       ],
       [
         "phase2",
         "Phase 2",
-        "Start July to End September",
-        "Deferred after Orthodontic Retention onboarding; no additional reviews currently planned"
+        "Not planned under current project",
+        "No Phase 2 under the current project; Orthodontic Retention is the final onboarded review"
       ],
       [
         "governance",
@@ -52,14 +52,14 @@ const dashboardData = {
         "note": "Focus on completing active reviews while onboarding the final Orthodontic Retention review"
       },
       {
-        "phase": "Interim Analysis",
+        "phase": "Analysis",
         "window": "End June",
-        "note": "BP adjudication and analysis underway; CESAR analysis meetings scheduled; preliminary results targeted for the end of October"
+        "note": "BP adjudication complete; time-on-task, automated and downstream-impact analyses underway; no interim report or mid-term review is planned"
       },
       {
         "phase": "Phase 2",
-        "window": "Start July to End September",
-        "note": "Deferred after Orthodontic Retention onboarding; no additional reviews currently planned"
+        "window": "Not planned under current project",
+        "note": "No Phase 2 under the current project; Orthodontic Retention is the final onboarded review"
       },
       {
         "phase": "Report",
@@ -552,15 +552,15 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "Extraction complete; adjudication and analysis underway",
+      "status": "Extraction and adjudication complete; analysis underway",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "Medium",
-      "currentStage": "Pilot 2 conflict resolution and analysis underway",
-      "currentUpdate": "Andreea circulated rationales for the remaining conflicts; the Bi 2025 paper and supplements were re-shared",
-      "nextAction": "Consolidate panel decisions, restore Paweł’s file access and prepare preliminary analysis",
-      "lastUpdated": "2026-09-24",
-      "communicationSupport": "Andreea circulated rationales for the remaining conflicts; the Bi 2025 paper and supplements were re-shared",
+      "currentStage": "Pilot 2 completed, including conflict resolution; analysis underway",
+      "currentUpdate": "Panel completed the first adjudication review, including conflict resolution; Bi 2025 remains documented",
+      "nextAction": "Complete the time-on-task, fully automated and downstream-impact analyses",
+      "lastUpdated": "2026-09-30",
+      "communicationSupport": "Panel completed the first adjudication review, including conflict resolution; Bi 2025 remains documented",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Extraction complete; full adjudication underway"
+          "status": "Extraction and adjudication complete; analysis underway"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -814,13 +814,13 @@ const dashboardData = {
         "w53": "Not Started",
         "w54": "Not Started",
         "w55": "Not Started",
-        "w56": "Not Started",
+        "w56": "Complete",
         "w57": "Not Started",
-        "w58": "Blocked",
+        "w58": "Scheduled",
         "w59": "Not Started",
-        "w60": "Not Started",
-        "w61": "Scheduled",
-        "w62": "Scheduling",
+        "w60": "Complete",
+        "w61": "In Progress",
+        "w62": "Scheduled",
         "w63": "Not Started",
         "Task": "Source",
         "Complete Laser AI setup readiness": "Email",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Pilot 2 conflict resolution and analysis underway",
-        "targetDate": "Preliminary results requested by end October",
-        "variance": "Bi 2025 remains a documented limitation; Paweł reports that the shared links do not work",
+        "plannedGate": "Pilot 2 completed, including conflict resolution; analysis underway",
+        "targetDate": "December 2026",
+        "variance": "Bi 2025 remains documented; a direct invitation and Teams link were sent for the automated-analysis meeting",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Extraction complete; adjudication and analysis underway",
-          "state": "Extraction complete; adjudication and analysis underway"
+          "value": "Extraction and adjudication complete; analysis underway",
+          "state": "Extraction and adjudication complete; analysis underway"
         },
         {
           "label": "Target",
-          "value": "Preliminary results requested by end October",
-          "state": "Extraction complete; adjudication and analysis underway"
+          "value": "December 2026",
+          "state": "Extraction and adjudication complete; analysis underway"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Extraction complete; adjudication and analysis underway"
+          "state": "Extraction and adjudication complete; analysis underway"
         }
       ]
     },
@@ -873,7 +873,7 @@ const dashboardData = {
       "currentStage": "Analysis: corrective validation in progress",
       "currentUpdate": "Psoriasis is currently the complete PDF package available to the extension team",
       "nextAction": "Complete the NK corrective screening, rerun the comparison and save the finalized export",
-      "lastUpdated": "2026-09-24",
+      "lastUpdated": "2026-09-30",
       "communicationSupport": "Psoriasis is currently the complete PDF package available to the extension team",
       "communicationLog": [],
       "files": {
@@ -1106,7 +1106,7 @@ const dashboardData = {
         "w58": "Not Started",
         "w59": "Not Started",
         "w60": "Not Started",
-        "w61": "Not Started",
+        "w61": "In Progress",
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
@@ -2002,15 +2002,15 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Both abstract arms complete; 74-study full-text set identified; reconciliation underway",
+      "status": "Abstract screening complete; reconciled 77-reference full-text set approved",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
-      "risk": "Medium",
-      "currentStage": "Mohan completed 2,024 AI-arm abstracts; AI selected 42 and the conventional arm selected 59",
-      "currentUpdate": "A 74-study combined set was identified; four conventional-only citations are absent from NK and one AI decision needs correction",
-      "nextAction": "Reconcile the full-text set, circulate the survey and begin both full-text arms",
-      "lastUpdated": "2026-09-24",
-      "communicationSupport": "A 74-study combined set was identified; four conventional-only citations are absent from NK and one AI decision needs correction",
+      "risk": "High",
+      "currentStage": "Both abstract arms complete; reconciled full-text set expanded to 77 references",
+      "currentUpdate": "Meghan cleared both arms to use the 77-reference set and will update Nested Knowledge",
+      "nextAction": "Send the abstract survey, confirm at least two conventional reviewers and complete both full-text arms",
+      "lastUpdated": "2026-09-30",
+      "communicationSupport": "Meghan cleared both arms to use the 77-reference set and will update Nested Knowledge",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -2037,7 +2037,7 @@ const dashboardData = {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Under Review"
+          "status": "Ready / Under Review"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -2082,10 +2082,10 @@ const dashboardData = {
           "status": "Not Started"
         },
         {
-          "name": "Reconcile the 74-study full-text set",
+          "name": "Complete full-text screening on the 77-reference set",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "2026-10-31"
         }
       ],
       "tasks": [
@@ -2120,7 +2120,7 @@ const dashboardData = {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Complete",
-        "fullText": "Active",
+        "fullText": "",
         "extraction": "",
         "analysis": ""
       },
@@ -2150,13 +2150,13 @@ const dashboardData = {
         "w23": "Not Started",
         "w24": "Not Started",
         "w25": "Not Started",
-        "w26": "Under Review",
+        "w26": "Complete",
         "w27": "Not Started",
         "w28": "Not Started",
         "w29": "Not Started",
-        "w30": "Under Review",
+        "w30": "In Progress",
         "w31": "Under Review",
-        "w32": "Under Review",
+        "w32": "Ready",
         "w33": "Under Review",
         "w34": "Not Started",
         "w35": "Not Started",
@@ -2191,31 +2191,32 @@ const dashboardData = {
         "Task": "Source",
         "Identify additional eligible review": "Project tracking",
         "Confirm team availability after candidate selection": "Project tracking",
-        "Reconcile the full-text set and begin full-text screening": "Project tracking",
-        "2026-09-22": "task-phase1-05-001"
+        "Complete full-text screening using the 77-reference set": "Project tracking",
+        "2026-09-30": "task-phase1-05-001",
+        "High": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Mohan completed 2,024 AI-arm abstracts; AI selected 42 and the conventional arm selected 59",
-        "targetDate": "Immediate",
-        "variance": "Abstract screening complete; full-text reconciliation underway",
+        "plannedGate": "Both abstract arms complete; reconciled full-text set expanded to 77 references",
+        "targetDate": "2026-10-31",
+        "variance": "Full-text set finalized; NK update and conventional-reviewer coverage pending",
         "assessment": "Full-text setup"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Both abstract arms complete; 74-study full-text set identified; reconciliation underway",
-          "state": "Both abstract arms complete; 74-study full-text set identified; reconciliation underway"
+          "value": "Abstract screening complete; reconciled 77-reference full-text set approved",
+          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
         },
         {
           "label": "Target",
-          "value": "Immediate",
-          "state": "Both abstract arms complete; 74-study full-text set identified; reconciliation underway"
+          "value": "2026-10-31",
+          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Both abstract arms complete; 74-study full-text set identified; reconciliation underway"
+          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
         }
       ]
     },
@@ -2224,27 +2225,27 @@ const dashboardData = {
       "title": "Preventive lipid-based nutrient supplements given with complementary foods to infants and young children 6 to 23 months of age for health, nutrition, and developmental outcomes",
       "shortName": "LNS",
       "phase": "Phase 1",
-      "status": "Latest searches uploaded; 16,891 citations deduplicated; decision-flow approval pending",
+      "status": "Decision flow approved; Laser AI access provided; abstract screening ready to start",
       "tool": "Laser AI",
       "lead": "Jai Das",
       "risk": "Medium",
       "currentStage": "The 14,743 baseline was confirmed; latest accessible searches increased the set to 16,891",
-      "currentUpdate": "All available searches supplied; seven databases were inaccessible; decision-flow syntax sent for approval",
-      "nextAction": "Approve the decision flow, provide Laser AI access and document the inaccessible databases",
-      "lastUpdated": "2026-09-24",
-      "communicationSupport": "All available searches supplied; seven databases were inaccessible; decision-flow syntax sent for approval",
+      "currentUpdate": "Kanza approved the decision flow; team members were added to Laser AI and citations can be distributed",
+      "nextAction": "Begin parallel abstract screening and record time",
+      "lastUpdated": "2026-09-30",
+      "communicationSupport": "Kanza approved the decision flow; team members were added to Laser AI and citations can be distributed",
       "communicationLog": [
         {
           "id": "comm-phase1-08-001",
-          "date": "2026-09-22",
-          "subject": "LNS latest searches uploaded; decision-flow approval pending",
+          "date": "2026-09-29",
+          "subject": "LNS setup complete; abstract screening ready to start",
           "people": "Siew Cheng Foong / review team / Cochrane elective students / project team",
           "resp": "Syeda Kanza Naqvi / Jai Das / Meghan",
           "due": "2026-08-10",
-          "status": "Under Review",
-          "summary": "Baseline count confirmed; latest uploads produced 16,891 deduplicated citations; seven databases inaccessible",
+          "status": "Ready",
+          "summary": "Kanza approved the decision flow; team access and citation distribution enabled",
           "linkedTaskId": "task-phase1-08-001",
-          "linkedAction": "Approve LNS decision flow and provide Laser AI access",
+          "linkedAction": "Begin LNS abstract screening and record time",
           "sourceType": "Project tracking",
           "sourceLink": ""
         }
@@ -2252,7 +2253,7 @@ const dashboardData = {
       "files": {
         "RIS": true,
         "PDFs": false,
-        "Criteria": false,
+        "Criteria": true,
         "Extraction": false,
         "Protocol": false,
         "Time Log": false
@@ -2262,13 +2263,13 @@ const dashboardData = {
           "name": "Setup / Coordination",
           "human": 0,
           "ai": 0,
-          "status": "Under Review"
+          "status": "Complete"
         },
         {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Withdrawn"
+          "status": "Ready"
         },
         {
           "name": "Full-text Screening",
@@ -2316,23 +2317,23 @@ const dashboardData = {
       "tasks": [
         {
           "id": "task-phase1-08-001",
-          "task": "Approve LNS decision flow and provide Laser AI access",
+          "task": "Begin LNS abstract screening and record time",
           "owner": "Krishna / Siew Cheng Foong / Project Team",
-          "status": "In Progress",
+          "status": "Ready",
           "risk": "Medium",
           "due": "Immediate",
-          "dependency": "Decision-flow approval",
-          "communication": "Latest searches uploaded; 16,891 citations deduplicated; approval required before access is provided",
+          "dependency": "Citation distribution",
+          "communication": "Decision flow approved and Laser AI access provided; reviewers can claim citations from the open pool",
           "source": "Project tracking",
-          "sourceDate": "2026-09-22"
+          "sourceDate": "2026-09-29"
         }
       ],
       "criticalItems": [],
       "history": [],
       "milestones": {
         "onboarding": "Complete",
-        "setup": "Active",
-        "abstract": "",
+        "setup": "Complete",
+        "abstract": "Active",
         "fullText": "",
         "extraction": "",
         "analysis": ""
@@ -2348,12 +2349,12 @@ const dashboardData = {
         "w08": "Not Started",
         "w09": "Not Started",
         "w10": "Complete",
-        "w11": "Under Review",
+        "w11": "Complete",
         "w12": "Not Started",
         "w13": "Not Started",
         "w14": "Not Started",
-        "w15": "Under Review",
-        "w16": "Pending",
+        "w15": "Complete",
+        "w16": "Complete",
         "w17": "Not Started",
         "w18": "Not Started",
         "w19": "Not Started",
@@ -2402,31 +2403,31 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Approve LNS decision flow and provide Laser AI access": "Project tracking",
-        "2026-09-22": "task-phase1-08-001"
+        "Begin LNS abstract screening and record time": "Project tracking",
+        "2026-09-29": "task-phase1-08-001"
       },
       "tracker": {
         "plannedWindow": "",
         "plannedGate": "The 14,743 baseline was confirmed; latest accessible searches increased the set to 16,891",
-        "targetDate": "Awaiting decision-flow approval",
-        "variance": "Final accessible reference set loaded; screening access pending approval",
-        "assessment": "Under Review"
+        "targetDate": "Immediate",
+        "variance": "Setup complete; reviewer distribution and screening commencement pending",
+        "assessment": "Ready"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Latest searches uploaded; 16,891 citations deduplicated; decision-flow approval pending",
-          "state": "Latest searches uploaded; 16,891 citations deduplicated; decision-flow approval pending"
+          "value": "Decision flow approved; Laser AI access provided; abstract screening ready to start",
+          "state": "Decision flow approved; Laser AI access provided; abstract screening ready to start"
         },
         {
           "label": "Target",
-          "value": "Awaiting decision-flow approval",
-          "state": "Latest searches uploaded; 16,891 citations deduplicated; decision-flow approval pending"
+          "value": "Immediate",
+          "state": "Decision flow approved; Laser AI access provided; abstract screening ready to start"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Latest searches uploaded; 16,891 citations deduplicated; decision-flow approval pending"
+          "state": "Decision flow approved; Laser AI access provided; abstract screening ready to start"
         }
       ]
     }
@@ -2441,10 +2442,10 @@ const dashboardData = {
       "tool": "TBD",
       "lead": "TBD",
       "risk": "Medium",
-      "currentStage": "Future batch planning",
+      "currentStage": "Not active; no Phase 2 under the current project",
       "currentUpdate": "No update recorded.",
-      "nextAction": "Keep placeholders until Phase 1 stabilizes.",
-      "lastUpdated": "2026-05-14",
+      "nextAction": "No action; retain only for future standalone consideration",
+      "lastUpdated": "2026-09-30",
       "communicationSupport": "No update recorded.",
       "communicationLog": [],
       "files": {
@@ -2526,15 +2527,15 @@ const dashboardData = {
       "tasks": [
         {
           "id": "task-phase2-01-001",
-          "task": "Keep Phase 2 placeholder until Phase 1 stabilizes",
+          "task": "Close Phase 2 under the current project",
           "owner": "Krishna / Core Team",
-          "status": "Scheduled",
-          "risk": "Medium",
-          "due": "After Phase 1",
-          "dependency": "Phase 1 lessons learned",
-          "communication": "Use Phase 1 lessons before scaling Phase 2.",
+          "status": "Complete",
+          "risk": "Low",
+          "due": "2026-09-30",
+          "dependency": "Project scope decision",
+          "communication": "No further AI-tool onboarding is planned; Orthodontic Retention is the final review",
           "source": "Project tracking",
-          "sourceDate": "2026-05-14"
+          "sourceDate": "2026-09-30"
         }
       ],
       "criticalItems": [],
@@ -2612,14 +2613,14 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Keep Phase 2 placeholder until Phase 1 stabilizes": "Project tracking",
+        "Close Phase 2 under the current project": "Project tracking",
         "Severity": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Future batch planning",
-        "targetDate": "TBD",
-        "variance": "Phase 2 depends on Phase 1 stabilization and lessons learned.",
+        "plannedGate": "Not active; no Phase 2 under the current project",
+        "targetDate": "Not applicable",
+        "variance": "Scope closed under the current project after the eighth review was onboarded",
         "assessment": "Not Started"
       },
       "timelineGates": [
@@ -2630,7 +2631,7 @@ const dashboardData = {
         },
         {
           "label": "Target",
-          "value": "TBD",
+          "value": "Not applicable",
           "state": "Scheduled"
         },
         {
@@ -3012,28 +3013,28 @@ const dashboardData = {
     },
     {
       "id": "task-phase1-08-001",
-      "task": "Approve LNS decision flow and provide Laser AI access",
+      "task": "Begin LNS abstract screening and record time",
       "owner": "Krishna / Siew Cheng Foong / Project Team",
-      "status": "In Progress",
+      "status": "Ready",
       "risk": "Medium",
       "due": "Immediate",
-      "dependency": "Decision-flow approval",
-      "communication": "Latest searches uploaded; 16,891 citations deduplicated; approval required before access is provided",
+      "dependency": "Citation distribution",
+      "communication": "Decision flow approved and Laser AI access provided; reviewers can claim citations from the open pool",
       "source": "Project tracking",
-      "sourceDate": "2026-09-22",
+      "sourceDate": "2026-09-29",
       "linkedReviewId": "phase1-08"
     },
     {
       "id": "task-phase2-01-001",
-      "task": "Keep Phase 2 placeholder until Phase 1 stabilizes",
+      "task": "Close Phase 2 under the current project",
       "owner": "Krishna / Core Team",
-      "status": "Scheduled",
-      "risk": "Medium",
-      "due": "After Phase 1",
-      "dependency": "Phase 1 lessons learned",
-      "communication": "Use Phase 1 lessons before scaling Phase 2.",
+      "status": "Complete",
+      "risk": "Low",
+      "due": "2026-09-30",
+      "dependency": "Project scope decision",
+      "communication": "No further AI-tool onboarding is planned; Orthodontic Retention is the final review",
       "source": "Project tracking",
-      "sourceDate": "2026-05-14",
+      "sourceDate": "2026-09-30",
       "linkedReviewId": "phase2-01"
     },
     {
@@ -3103,7 +3104,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-24"
+      "sourceDate": "2026-09-30"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3118,7 +3119,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-24"
+      "sourceDate": "2026-09-30"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3133,7 +3134,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-24"
+      "sourceDate": "2026-09-30"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3148,7 +3149,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-24"
+      "sourceDate": "2026-09-30"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3163,7 +3164,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-24"
+      "sourceDate": "2026-09-30"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3330,11 +3331,11 @@ const dashboardData = {
       "etTime": "TBD",
       "ukTime": "TBD",
       "title": "CESAR – Time-on-Task Analysis",
-      "agenda": "Review preliminary time-on-task analysis and agree next steps",
+      "agenda": "Time-on-task meeting held; BP and Psoriasis data confirmed and follow-up actions agreed",
       "attendees": "Amin Sharifan / Afroditi Kanellopoulou / Krishna",
       "owner": "Krishna",
       "focus": "Analysis",
-      "status": "Scheduled; Teams link needs adding",
+      "status": "Completed",
       "linkedReviewId": "",
       "meetingLink": ""
     },
@@ -3344,7 +3345,7 @@ const dashboardData = {
       "etTime": "TBD",
       "ukTime": "TBD",
       "title": "Cochrane AI Platform Study – Adjudication Panel",
-      "agenda": "Weekly adjudication meetings through 29 October",
+      "agenda": "Recurring Thursday adjudication meetings through December; first review completed",
       "attendees": "Adjudication Panel / Sean / Krishna",
       "owner": "Krishna",
       "focus": "Analysis / Adjudication",
@@ -3537,12 +3538,12 @@ const dashboardData = {
     {
       "id": "new-23",
       "reviewName": "Álvaro Limones — Retention procedures for stabilising tooth position after orthodontic treatment",
-      "category": "Shortlisted / Onboarding",
-      "status": "Preliminary eligibility confirmed; scope and onboarding materials shared",
+      "category": "Onboarding",
+      "status": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
       "targetPhase": "Phase 1",
-      "lead": "Álvaro Limones",
-      "expectedTiming": "Initial onboarding proposed for 28 September–2 October; searches expected in November",
-      "remarks": "Gerald approved onboarding; approximately 300–500 references expected; final eighth review under the current project",
+      "lead": "Álvaro Limones / Concepción Martín Álvaro",
+      "expectedTiming": "Initial onboarding completed; searches expected in November",
+      "remarks": "Crossed reviewer allocation proposed; Gerald’s approval is pending",
       "moveToFullSheet": "No",
       "display": "Yes"
     }
