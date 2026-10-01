@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-09-30",
+  "lastUpdated": "2026-10-01",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -2430,6 +2430,232 @@ const dashboardData = {
           "state": "Decision flow approved; Laser AI access provided; abstract screening ready to start"
         }
       ]
+    },
+    {
+      "id": "phase1-09",
+      "title": "Retention procedures for stabilising tooth position after treatment with orthodontic braces",
+      "shortName": "Orthodontic Retention",
+      "phase": "Phase 1",
+      "status": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
+      "tool": "TBD",
+      "lead": "Álvaro Limones / Concepción Martín Álvaro",
+      "risk": "High",
+      "currentStage": "Approximately 300–500 references expected; searches planned for November",
+      "currentUpdate": "Initial onboarding completed; crossed reviewer-allocation model proposed and awaiting Gerald's confirmation",
+      "nextAction": "Gerald to confirm the crossed reviewer allocation; then finalize team split, tool assignment and setup",
+      "lastUpdated": "2026-10-01",
+      "communicationSupport": "Initial onboarding completed; crossed reviewer-allocation model proposed and awaiting Gerald's confirmation",
+      "communicationLog": [
+        {
+          "id": "comm-phase1-09-001",
+          "date": "2026-10-01",
+          "subject": "Orthodontic Retention added as eighth review",
+          "people": "Álvaro Limones / Concepción Martín Álvaro / Gerald / Krishna",
+          "resp": "Gerald / Krishna",
+          "due": "December 2026",
+          "status": "Pending",
+          "summary": "Initial onboarding completed; Gerald to confirm crossed reviewer allocation before setup proceeds",
+          "linkedTaskId": "task-phase1-09-001",
+          "linkedAction": "Confirm crossed reviewer allocation and complete review team split",
+          "sourceType": "Project tracking",
+          "sourceLink": ""
+        }
+      ],
+      "files": {
+        "RIS": false,
+        "PDFs": false,
+        "Criteria": false,
+        "Extraction": false,
+        "Protocol": false,
+        "Time Log": false
+      },
+      "stages": [
+        {
+          "name": "Setup / Coordination",
+          "human": 0,
+          "ai": 0,
+          "status": "Onboarding"
+        },
+        {
+          "name": "Abstract Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Full-text Screening",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Data Extraction / Analysis",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Review Workflow Status: Full 63 Actions",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "63",
+          "human": 0,
+          "ai": 0,
+          "status": "Final analysis"
+        },
+        {
+          "name": "Review Tasks Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Recent Mail / Communication Log Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        },
+        {
+          "name": "Critical Items Displayed in Dashboard",
+          "human": 0,
+          "ai": 0,
+          "status": "Not Started"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-phase1-09-001",
+          "task": "Confirm crossed reviewer allocation and complete review team split",
+          "owner": "Gerald / Krishna / Review Team",
+          "status": "Pending",
+          "risk": "High",
+          "due": "December 2026",
+          "dependency": "Reviewer-allocation confirmation",
+          "communication": "Initial onboarding completed; crossed reviewer allocation awaits Gerald's confirmation",
+          "source": "Project tracking",
+          "sourceDate": "2026-10-01"
+        },
+        {
+          "id": "Reviewer-allocation confirmation needed before setup",
+          "task": "Reviewer allocation is not yet confirmed.",
+          "owner": "High",
+          "status": "Gerald / Krishna",
+          "risk": "December 2026",
+          "due": "Open",
+          "dependency": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+          "communication": "Setup cannot proceed until allocation and tool plan are confirmed.",
+          "source": "Project tracking",
+          "sourceDate": "2026-10-01"
+        }
+      ],
+      "criticalItems": [
+        "Reviewer-allocation confirmation needed before setup"
+      ],
+      "history": [],
+      "milestones": {
+        "onboarding": "Active",
+        "setup": "Pending",
+        "abstract": "",
+        "fullText": "",
+        "extraction": "",
+        "analysis": ""
+      },
+      "workflowStatus": {
+        "w01": "Complete",
+        "w02": "Complete",
+        "w03": "Complete",
+        "w04": "Pending",
+        "w05": "Pending",
+        "w06": "Pending",
+        "w07": "Pending",
+        "w08": "Pending",
+        "w09": "Pending",
+        "w10": "Not Started",
+        "w11": "Not Started",
+        "w12": "Not Started",
+        "w13": "Not Started",
+        "w14": "Not Started",
+        "w15": "Not Started",
+        "w16": "Not Started",
+        "w17": "Not Started",
+        "w18": "Not Started",
+        "w19": "Not Started",
+        "w20": "Not Started",
+        "w21": "Not Started",
+        "w22": "Not Started",
+        "w23": "Not Started",
+        "w24": "Not Started",
+        "w25": "Not Started",
+        "w26": "Not Started",
+        "w27": "Not Started",
+        "w28": "Not Started",
+        "w29": "Not Started",
+        "w30": "Not Started",
+        "w31": "Not Started",
+        "w32": "Not Started",
+        "w33": "Not Started",
+        "w34": "Not Started",
+        "w35": "Not Started",
+        "w36": "Not Started",
+        "w37": "Not Started",
+        "w38": "Not Started",
+        "w39": "Not Started",
+        "w40": "Not Started",
+        "w41": "Not Started",
+        "w42": "Not Started",
+        "w43": "Not Started",
+        "w44": "Not Started",
+        "w45": "Not Started",
+        "w46": "Not Started",
+        "w47": "Not Started",
+        "w48": "Not Started",
+        "w49": "Not Started",
+        "w50": "Not Started",
+        "w51": "Not Started",
+        "w52": "Not Started",
+        "w53": "Not Started",
+        "w54": "Not Started",
+        "w55": "Not Started",
+        "w56": "Not Started",
+        "w57": "Not Started",
+        "w58": "Not Started",
+        "w59": "Not Started",
+        "w60": "Not Started",
+        "w61": "Not Started",
+        "w62": "Not Started",
+        "w63": "Not Started",
+        "Task": "Source",
+        "Confirm crossed reviewer allocation and complete review team split": "Project tracking",
+        "2026-10-01": "task-phase1-09-001",
+        "Reviewer allocation is not yet confirmed.": "Project tracking"
+      },
+      "tracker": {
+        "plannedWindow": "",
+        "plannedGate": "Approximately 300–500 references expected; searches planned for November",
+        "targetDate": "December 2026",
+        "variance": "Final eighth review; onboarding completed and setup depends on reviewer-allocation confirmation",
+        "assessment": "Onboarding"
+      },
+      "timelineGates": [
+        {
+          "label": "Status",
+          "value": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
+          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+        },
+        {
+          "label": "Target",
+          "value": "December 2026",
+          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+        },
+        {
+          "label": "Tool",
+          "value": "TBD",
+          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+        }
+      ]
     }
   ],
   "phase2": [
@@ -3025,6 +3251,41 @@ const dashboardData = {
       "linkedReviewId": "phase1-08"
     },
     {
+      "id": "task-phase1-09-001",
+      "task": "Confirm crossed reviewer allocation and complete review team split",
+      "owner": "Gerald / Krishna / Review Team",
+      "status": "Pending",
+      "risk": "High",
+      "due": "December 2026",
+      "dependency": "Reviewer-allocation confirmation",
+      "communication": "Initial onboarding completed; crossed reviewer allocation awaits Gerald's confirmation",
+      "source": "Project tracking",
+      "sourceDate": "2026-10-01",
+      "linkedReviewId": "phase1-09"
+    },
+    {
+      "id": "Reviewer-allocation confirmation needed before setup",
+      "task": "Reviewer allocation is not yet confirmed.",
+      "owner": "High",
+      "status": "Gerald / Krishna",
+      "risk": "December 2026",
+      "due": "Open",
+      "dependency": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+      "communication": "Setup cannot proceed until allocation and tool plan are confirmed.",
+      "source": "Project tracking",
+      "sourceDate": "2026-10-01",
+      "linkedReviewId": "phase1-09"
+    },
+    {
+      "task": "Reviewer-allocation confirmation needed before setup",
+      "owner": "Gerald / Krishna",
+      "status": "Open",
+      "due": "December 2026",
+      "dependency": "Monitor risk",
+      "linkedReviewId": "phase1-09",
+      "communication": "Finalize crossed reviewer allocation, team split and tool assignment before setup."
+    },
+    {
       "id": "task-phase2-01-001",
       "task": "Close Phase 2 under the current project",
       "owner": "Krishna / Core Team",
@@ -3225,6 +3486,21 @@ const dashboardData = {
       "impact": "",
       "source": "Review sheet",
       "sourceDate": "2026-08-10"
+    },
+    {
+      "id": "critical-phase1-09-10",
+      "phase": "Phase 1",
+      "item": "Reviewer-allocation confirmation needed before setup",
+      "description": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+      "severity": "High",
+      "status": "Open",
+      "owner": "Gerald / Krishna",
+      "due": "December 2026",
+      "linkedReviewId": "phase1-09",
+      "mitigation": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+      "impact": "",
+      "source": "Review sheet",
+      "sourceDate": "2026-10-01"
     }
   ],
   "resources": [
@@ -3532,18 +3808,6 @@ const dashboardData = {
       "lead": "Eva Madrid",
       "expectedTiming": "No current update",
       "remarks": "Keep in mind for future calls when an eligible Cochrane review update is available.",
-      "moveToFullSheet": "No",
-      "display": "Yes"
-    },
-    {
-      "id": "new-23",
-      "reviewName": "Álvaro Limones — Retention procedures for stabilising tooth position after orthodontic treatment",
-      "category": "Onboarding",
-      "status": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
-      "targetPhase": "Phase 1",
-      "lead": "Álvaro Limones / Concepción Martín Álvaro",
-      "expectedTiming": "Initial onboarding completed; searches expected in November",
-      "remarks": "Crossed reviewer allocation proposed; Gerald’s approval is pending",
       "moveToFullSheet": "No",
       "display": "Yes"
     }
