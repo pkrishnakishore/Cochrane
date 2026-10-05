@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-10-01",
+  "lastUpdated": "2026-10-04",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -18,14 +18,14 @@ const dashboardData = {
       [
         "phase1",
         "Phase 1",
-        "Mid April to End June",
-        "Focus on completing active reviews while onboarding the final Orthodontic Retention review"
+        "Mid April to mid-December 2026",
+        "Complete active reviews and onboard Orthodontic Retention; project-management support confirmed at 20% FTE through mid-December"
       ],
       [
         "governance",
         "Analysis",
         "End June",
-        "BP adjudication complete; time-on-task, automated and downstream-impact analyses underway; no interim report or mid-term review is planned"
+        "BP adjudication complete; time-on-task and downstream-impact analyses underway; automated-analysis meeting to be rescheduled around 20 October; Psoriasis accuracy review scheduled for 7 October"
       ],
       [
         "phase2",
@@ -48,13 +48,13 @@ const dashboardData = {
       },
       {
         "phase": "Phase 1",
-        "window": "Mid April to End June",
-        "note": "Focus on completing active reviews while onboarding the final Orthodontic Retention review"
+        "window": "Mid April to mid-December 2026",
+        "note": "Complete active reviews and onboard Orthodontic Retention; project-management support confirmed at 20% FTE through mid-December"
       },
       {
         "phase": "Analysis",
         "window": "End June",
-        "note": "BP adjudication complete; time-on-task, automated and downstream-impact analyses underway; no interim report or mid-term review is planned"
+        "note": "BP adjudication complete; time-on-task and downstream-impact analyses underway; automated-analysis meeting to be rescheduled around 20 October; Psoriasis accuracy review scheduled for 7 October"
       },
       {
         "phase": "Phase 2",
@@ -557,10 +557,10 @@ const dashboardData = {
       "lead": "Doreen Larvie",
       "risk": "Medium",
       "currentStage": "Pilot 2 completed, including conflict resolution; analysis underway",
-      "currentUpdate": "Panel completed the first adjudication review, including conflict resolution; Bi 2025 remains documented",
-      "nextAction": "Complete the time-on-task, fully automated and downstream-impact analyses",
-      "lastUpdated": "2026-09-30",
-      "communicationSupport": "Panel completed the first adjudication review, including conflict resolution; Bi 2025 remains documented",
+      "currentUpdate": "Adjudication complete; questions sent to James on 1 October; Doreen connected with Jo-Ana and Max on 4 October",
+      "nextAction": "Obtain James’s responses, reschedule the automated-analysis meeting around 20 October and continue downstream-impact work",
+      "lastUpdated": "2026-10-04",
+      "communicationSupport": "Adjudication complete; questions sent to James on 1 October; Doreen connected with Jo-Ana and Max on 4 October",
       "communicationLog": [
         {
           "id": "comm-phase1-01-004",
@@ -816,11 +816,11 @@ const dashboardData = {
         "w55": "Not Started",
         "w56": "Complete",
         "w57": "Not Started",
-        "w58": "Scheduled",
+        "w58": "Rescheduling",
         "w59": "Not Started",
         "w60": "Complete",
         "w61": "In Progress",
-        "w62": "Scheduled",
+        "w62": "In Progress",
         "w63": "Not Started",
         "Task": "Source",
         "Complete Laser AI setup readiness": "Email",
@@ -840,7 +840,7 @@ const dashboardData = {
         "plannedWindow": "",
         "plannedGate": "Pilot 2 completed, including conflict resolution; analysis underway",
         "targetDate": "December 2026",
-        "variance": "Bi 2025 remains documented; a direct invitation and Teams link were sent for the automated-analysis meeting",
+        "variance": "Automated meeting postponed at Paweł’s request; target around 20 October; James’s response remains pending",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -866,15 +866,15 @@ const dashboardData = {
       "title": "Systemic pharmacological treatments for chronic plaque psoriasis",
       "shortName": "Psoriasis",
       "phase": "Phase 1",
-      "status": "Analysis underway; corrective validation and final reconciliation in progress",
+      "status": "Analysis and final reconciliation underway; report-to-trial mapping being clarified",
       "tool": "Nested Knowledge",
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "High",
-      "currentStage": "Analysis: corrective validation in progress",
-      "currentUpdate": "Psoriasis is currently the complete PDF package available to the extension team",
-      "nextAction": "Complete the NK corrective screening, rerun the comparison and save the finalized export",
-      "lastUpdated": "2026-09-30",
-      "communicationSupport": "Psoriasis is currently the complete PDF package available to the extension team",
+      "currentStage": "Conventional corrective screening complete; 25-record NK screening remains pending; accuracy meeting scheduled",
+      "currentUpdate": "Sivem added DOI mapping; ICONIC Advance 1/2 are separate trials and ICONIC Lead is excluded",
+      "nextAction": "Complete the 25-record NK screening, finalize report-to-trial mapping and rerun the comparison",
+      "lastUpdated": "2026-10-02",
+      "communicationSupport": "Sivem added DOI mapping; ICONIC Advance 1/2 are separate trials and ICONIC Lead is excluded",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -1131,26 +1131,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Analysis: corrective validation in progress",
-        "targetDate": "Overdue / confirmation required",
+        "plannedGate": "Conventional corrective screening complete; 25-record NK screening remains pending; accuracy meeting scheduled",
+        "targetDate": "2026-10-07 — accuracy meeting",
         "variance": "Analysis active, but final outputs remain dependent on corrective NK screening and reconciliation",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Analysis underway; corrective validation and final reconciliation in progress",
-          "state": "Analysis underway; corrective validation and final reconciliation in progress"
+          "value": "Analysis and final reconciliation underway; report-to-trial mapping being clarified",
+          "state": "Analysis and final reconciliation underway; report-to-trial mapping being clarified"
         },
         {
           "label": "Target",
-          "value": "Overdue / confirmation required",
-          "state": "Analysis underway; corrective validation and final reconciliation in progress"
+          "value": "2026-10-07 — accuracy meeting",
+          "state": "Analysis and final reconciliation underway; report-to-trial mapping being clarified"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Analysis underway; corrective validation and final reconciliation in progress"
+          "state": "Analysis and final reconciliation underway; report-to-trial mapping being clarified"
         }
       ]
     },
@@ -1781,15 +1781,15 @@ const dashboardData = {
       "title": "Probiotics for the prevention of paediatric antibiotic-associated diarrhoea",
       "shortName": "Probiotics AAD",
       "phase": "Phase 1",
-      "status": "Abstract outputs reconciled; both full-text arms cleared to proceed; missing PDFs remain",
+      "status": "Full-text screening underway; missing PDFs remain; NK extraction form prepared",
       "tool": "Nested Knowledge",
       "lead": "Jeremy Steen / Bradley Johnston",
       "risk": "Medium",
-      "currentStage": "Full-text screening underway",
-      "currentUpdate": "NK updated with 16 Covidence-only citations; 14 AI-only citations were identified; both arms are aligned",
-      "nextAction": "Retrieve missing PDFs, complete both full-text arms and record time",
-      "lastUpdated": "2026-09-24",
-      "communicationSupport": "NK updated with 16 Covidence-only citations; 14 AI-only citations were identified; both arms are aligned",
+      "currentStage": "Both full-text arms progressing; NK extraction form built and tested",
+      "currentUpdate": "NK form built from the 22 June Excel template; Jeremy asked to review and adjust it",
+      "nextAction": "Retrieve missing PDFs, finish both full-text arms, review the NK extraction form and record time",
+      "lastUpdated": "2026-10-02",
+      "communicationSupport": "NK form built from the 22 June Excel template; Jeremy asked to review and adjust it",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -1822,7 +1822,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Preparation underway"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -1946,10 +1946,10 @@ const dashboardData = {
         "w40": "Not Started",
         "w41": "Not Started",
         "w42": "Not Started",
-        "w43": "Not Started",
-        "w44": "Not Started",
-        "w45": "Not Started",
-        "w46": "Not Started",
+        "w43": "Under Review",
+        "w44": "Under Review",
+        "w45": "Complete / Under Review",
+        "w46": "Under Review",
         "w47": "Not Started",
         "w48": "Not Started",
         "w49": "Not Started",
@@ -1974,7 +1974,7 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Full-text screening underway",
+        "plannedGate": "Both full-text arms progressing; NK extraction form built and tested",
         "targetDate": "TBD",
         "variance": "Meghan confirmed both arms are aligned and cleared to proceed; missing PDFs remain",
         "assessment": "In Progress"
@@ -1982,18 +1982,18 @@ const dashboardData = {
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract outputs reconciled; both full-text arms cleared to proceed; missing PDFs remain",
-          "state": "Abstract outputs reconciled; both full-text arms cleared to proceed; missing PDFs remain"
+          "value": "Full-text screening underway; missing PDFs remain; NK extraction form prepared",
+          "state": "Full-text screening underway; missing PDFs remain; NK extraction form prepared"
         },
         {
           "label": "Target",
           "value": "TBD",
-          "state": "Abstract outputs reconciled; both full-text arms cleared to proceed; missing PDFs remain"
+          "state": "Full-text screening underway; missing PDFs remain; NK extraction form prepared"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Abstract outputs reconciled; both full-text arms cleared to proceed; missing PDFs remain"
+          "state": "Full-text screening underway; missing PDFs remain; NK extraction form prepared"
         }
       ]
     },
@@ -2002,15 +2002,15 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Abstract screening complete; reconciled 77-reference full-text set approved",
+      "status": "Abstract screening complete; full-text plan under review following reviewer withdrawal and record-set differences",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "High",
       "currentStage": "Both abstract arms complete; reconciled full-text set expanded to 77 references",
-      "currentUpdate": "Meghan cleared both arms to use the 77-reference set and will update Nested Knowledge",
-      "nextAction": "Send the abstract survey, confirm at least two conventional reviewers and complete both full-text arms",
-      "lastUpdated": "2026-09-30",
-      "communicationSupport": "Meghan cleared both arms to use the 77-reference set and will update Nested Knowledge",
+      "currentUpdate": "Michelle withdrew; Murali will be the sole conventional reviewer; follow-up call requested to resolve record differences and next steps",
+      "nextAction": "Hold the follow-up call, confirm the one-reviewer arrangement and resolve record differences before screening continues",
+      "lastUpdated": "2026-10-04",
+      "communicationSupport": "Michelle withdrew; Murali will be the sole conventional reviewer; follow-up call requested to resolve record differences and next steps",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -2037,7 +2037,7 @@ const dashboardData = {
           "name": "Full-text Screening",
           "human": 0,
           "ai": 0,
-          "status": "Ready / Under Review"
+          "status": "Under Review"
         },
         {
           "name": "Data Extraction / Analysis",
@@ -2082,7 +2082,7 @@ const dashboardData = {
           "status": "Not Started"
         },
         {
-          "name": "Complete full-text screening on the 77-reference set",
+          "name": "Resolve reviewer structure and screening-record differences",
           "human": 0,
           "ai": 0,
           "status": "2026-10-31"
@@ -2129,7 +2129,7 @@ const dashboardData = {
         "w02": "Complete",
         "w03": "Complete",
         "w04": "Complete",
-        "w05": "Complete",
+        "w05": "Under Review",
         "w06": "Complete",
         "w07": "Complete",
         "w08": "Under Review",
@@ -2156,7 +2156,7 @@ const dashboardData = {
         "w29": "Not Started",
         "w30": "In Progress",
         "w31": "Under Review",
-        "w32": "Ready",
+        "w32": "Under Review",
         "w33": "Under Review",
         "w34": "Not Started",
         "w35": "Not Started",
@@ -2192,31 +2192,31 @@ const dashboardData = {
         "Identify additional eligible review": "Project tracking",
         "Confirm team availability after candidate selection": "Project tracking",
         "Complete full-text screening using the 77-reference set": "Project tracking",
-        "2026-09-30": "task-phase1-05-001",
+        "2026-10-04": "task-phase1-05-001",
         "High": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
         "plannedGate": "Both abstract arms complete; reconciled full-text set expanded to 77 references",
         "targetDate": "2026-10-31",
-        "variance": "Full-text set finalized; NK update and conventional-reviewer coverage pending",
+        "variance": "Seventy-seven-reference set approved; reviewer structure and screening-record differences remain under review",
         "assessment": "Full-text setup"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Abstract screening complete; reconciled 77-reference full-text set approved",
-          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
+          "value": "Abstract screening complete; full-text plan under review following reviewer withdrawal and record-set differences",
+          "state": "Abstract screening complete; full-text plan under review following reviewer withdrawal and record-set differences"
         },
         {
           "label": "Target",
           "value": "2026-10-31",
-          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
+          "state": "Abstract screening complete; full-text plan under review following reviewer withdrawal and record-set differences"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Abstract screening complete; reconciled 77-reference full-text set approved"
+          "state": "Abstract screening complete; full-text plan under review following reviewer withdrawal and record-set differences"
         }
       ]
     },
@@ -2436,15 +2436,15 @@ const dashboardData = {
       "title": "Retention procedures for stabilising tooth position after treatment with orthodontic braces",
       "shortName": "Orthodontic Retention",
       "phase": "Phase 1",
-      "status": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
-      "tool": "TBD",
+      "status": "Onboarding in progress; non-overlapping reviewer groups required and updated searches being arranged",
+      "tool": "Laser AI",
       "lead": "Álvaro Limones / Concepción Martín Álvaro",
       "risk": "High",
-      "currentStage": "Approximately 300–500 references expected; searches planned for November",
-      "currentUpdate": "Initial onboarding completed; crossed reviewer-allocation model proposed and awaiting Gerald's confirmation",
-      "nextAction": "Gerald to confirm the crossed reviewer allocation; then finalize team split, tool assignment and setup",
-      "lastUpdated": "2026-10-01",
-      "communicationSupport": "Initial onboarding completed; crossed reviewer-allocation model proposed and awaiting Gerald's confirmation",
+      "currentStage": "About 300–500 references expected; separate reviewer groups required; Irma will update Embase from April 2022 onward",
+      "currentUpdate": "Gerald rejected crossed allocation; Conchita agreed to follow the protocol; both groups must receive identical records",
+      "nextAction": "Finalize two non-overlapping groups, complete searches, share RIS files and configure Laser AI",
+      "lastUpdated": "2026-10-04",
+      "communicationSupport": "Gerald rejected crossed allocation; Conchita agreed to follow the protocol; both groups must receive identical records",
       "communicationLog": [
         {
           "id": "comm-phase1-09-001",
@@ -2539,20 +2539,20 @@ const dashboardData = {
           "sourceDate": "2026-10-01"
         },
         {
-          "id": "Reviewer-allocation confirmation needed before setup",
-          "task": "Reviewer allocation is not yet confirmed.",
+          "id": "Separate reviewer groups and updated searches required before setup",
+          "task": "Crossed allocation was rejected; distinct reviewer groups must now be named and confirmed",
           "owner": "High",
-          "status": "Gerald / Krishna",
-          "risk": "December 2026",
-          "due": "Open",
-          "dependency": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
-          "communication": "Setup cannot proceed until allocation and tool plan are confirmed.",
-          "source": "Project tracking",
-          "sourceDate": "2026-10-01"
+          "status": "Review Team / Irma / Krishna",
+          "risk": "Before setup",
+          "due": "In Progress",
+          "dependency": "Finalize two separate groups, complete the database searches and share the resulting RIS files",
+          "communication": "Laser AI setup cannot proceed until the team split and complete search set are available",
+          "source": "Email",
+          "sourceDate": "2026-10-04"
         }
       ],
       "criticalItems": [
-        "Reviewer-allocation confirmation needed before setup"
+        "Separate reviewer groups and updated searches required before setup"
       ],
       "history": [],
       "milestones": {
@@ -2567,14 +2567,14 @@ const dashboardData = {
         "w01": "Complete",
         "w02": "Complete",
         "w03": "Complete",
-        "w04": "Pending",
+        "w04": "Complete",
         "w05": "Pending",
         "w06": "Pending",
         "w07": "Pending",
         "w08": "Pending",
         "w09": "Pending",
         "w10": "Not Started",
-        "w11": "Not Started",
+        "w11": "Under Review",
         "w12": "Not Started",
         "w13": "Not Started",
         "w14": "Not Started",
@@ -2630,30 +2630,30 @@ const dashboardData = {
         "Task": "Source",
         "Confirm crossed reviewer allocation and complete review team split": "Project tracking",
         "2026-10-01": "task-phase1-09-001",
-        "Reviewer allocation is not yet confirmed.": "Project tracking"
+        "Crossed allocation was rejected; distinct reviewer groups must now be named and confirmed": "Email"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Approximately 300–500 references expected; searches planned for November",
+        "plannedGate": "About 300–500 references expected; separate reviewer groups required; Irma will update Embase from April 2022 onward",
         "targetDate": "December 2026",
-        "variance": "Final eighth review; onboarding completed and setup depends on reviewer-allocation confirmation",
+        "variance": "Final eighth review; reviewer model resolved, but team names and updated searches remain pending",
         "assessment": "Onboarding"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Initial onboarding completed; reviewer-allocation model awaiting confirmation",
-          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+          "value": "Onboarding in progress; non-overlapping reviewer groups required and updated searches being arranged",
+          "state": "Onboarding in progress; non-overlapping reviewer groups required and updated searches being arranged"
         },
         {
           "label": "Target",
           "value": "December 2026",
-          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+          "state": "Onboarding in progress; non-overlapping reviewer groups required and updated searches being arranged"
         },
         {
           "label": "Tool",
-          "value": "TBD",
-          "state": "Initial onboarding completed; reviewer-allocation model awaiting confirmation"
+          "value": "Laser AI",
+          "state": "Onboarding in progress; non-overlapping reviewer groups required and updated searches being arranged"
         }
       ]
     }
@@ -3264,26 +3264,26 @@ const dashboardData = {
       "linkedReviewId": "phase1-09"
     },
     {
-      "id": "Reviewer-allocation confirmation needed before setup",
-      "task": "Reviewer allocation is not yet confirmed.",
+      "id": "Separate reviewer groups and updated searches required before setup",
+      "task": "Crossed allocation was rejected; distinct reviewer groups must now be named and confirmed",
       "owner": "High",
-      "status": "Gerald / Krishna",
-      "risk": "December 2026",
-      "due": "Open",
-      "dependency": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
-      "communication": "Setup cannot proceed until allocation and tool plan are confirmed.",
-      "source": "Project tracking",
-      "sourceDate": "2026-10-01",
+      "status": "Review Team / Irma / Krishna",
+      "risk": "Before setup",
+      "due": "In Progress",
+      "dependency": "Finalize two separate groups, complete the database searches and share the resulting RIS files",
+      "communication": "Laser AI setup cannot proceed until the team split and complete search set are available",
+      "source": "Email",
+      "sourceDate": "2026-10-04",
       "linkedReviewId": "phase1-09"
     },
     {
-      "task": "Reviewer-allocation confirmation needed before setup",
-      "owner": "Gerald / Krishna",
-      "status": "Open",
-      "due": "December 2026",
+      "task": "Separate reviewer groups and updated searches required before setup",
+      "owner": "Review Team / Irma / Krishna",
+      "status": "In Progress",
+      "due": "Before setup",
       "dependency": "Monitor risk",
       "linkedReviewId": "phase1-09",
-      "communication": "Finalize crossed reviewer allocation, team split and tool assignment before setup."
+      "communication": "Finalize two separate groups, complete the database searches and share the resulting RIS files"
     },
     {
       "id": "task-phase2-01-001",
@@ -3365,7 +3365,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-30"
+      "sourceDate": "2026-10-04"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3380,7 +3380,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-30"
+      "sourceDate": "2026-10-04"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3395,7 +3395,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-30"
+      "sourceDate": "2026-10-04"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3410,7 +3410,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-30"
+      "sourceDate": "2026-10-02"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3425,7 +3425,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-09-30"
+      "sourceDate": "2026-10-02"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3490,17 +3490,17 @@ const dashboardData = {
     {
       "id": "critical-phase1-09-10",
       "phase": "Phase 1",
-      "item": "Reviewer-allocation confirmation needed before setup",
-      "description": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+      "item": "Separate reviewer groups and updated searches required before setup",
+      "description": "Finalize two separate groups, complete the database searches and share the resulting RIS files",
       "severity": "High",
-      "status": "Open",
-      "owner": "Gerald / Krishna",
-      "due": "December 2026",
+      "status": "In Progress",
+      "owner": "Review Team / Irma / Krishna",
+      "due": "Before setup",
       "linkedReviewId": "phase1-09",
-      "mitigation": "Finalize crossed reviewer allocation, team split and tool assignment before setup.",
+      "mitigation": "Finalize two separate groups, complete the database searches and share the resulting RIS files",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-01"
+      "sourceDate": "2026-10-04"
     }
   ],
   "resources": [
@@ -3508,8 +3508,8 @@ const dashboardData = {
       "id": "res-001",
       "title": "2026 AI platform study shared folder",
       "type": "Folder",
-      "purpose": "Repository for finalized exports and protocols; working RIS and PDF sets remain in the relevant platform until consolidation.",
-      "description": "Repository for finalized exports and protocols; working RIS and PDF sets remain in the relevant platform until consolidation.",
+      "purpose": "Current review-specific folders contain RIS files and protocols; Sean will add full-text PDFs after each review’s adjudication",
+      "description": "Current review-specific folders contain RIS files and protocols; Sean will add full-text PDFs after each review’s adjudication",
       "audience": "Project team",
       "owner": "Krishna",
       "status": "Active",
@@ -3621,11 +3621,25 @@ const dashboardData = {
       "etTime": "TBD",
       "ukTime": "TBD",
       "title": "Cochrane AI Platform Study – Adjudication Panel",
-      "agenda": "Recurring Thursday adjudication meetings through December; first review completed",
+      "agenda": "BP adjudication complete; further adjudication awaits finalized review datasets",
       "attendees": "Adjudication Panel / Sean / Krishna",
       "owner": "Krishna",
       "focus": "Analysis / Adjudication",
       "status": "Active",
+      "linkedReviewId": "",
+      "meetingLink": ""
+    },
+    {
+      "id": "mtg-11",
+      "date": "7 October 2026",
+      "etTime": "10:00–11:00 AM EDT",
+      "ukTime": "3:00–4:00 PM BST",
+      "title": "CESAR – Screening Accuracy Review",
+      "agenda": "Discuss Psoriasis accuracy data and reconciliation",
+      "attendees": "Gerald / Sean / Afroditi / Krishna",
+      "owner": "Krishna",
+      "focus": "Analysis",
+      "status": "Scheduled",
       "linkedReviewId": "",
       "meetingLink": ""
     }
