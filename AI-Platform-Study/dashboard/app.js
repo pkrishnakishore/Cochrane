@@ -1173,8 +1173,9 @@ function phaseReviewCountBadge(phase) {
     return '<em class="phase-count"><span>Reviews</span><b>' + total + ' / ' + total + '</b></em>';
   }
   if (key === "phase1") {
-    const confirmed = (dashboardData.phase1 || []).filter((review) => !/tbd|under review|pending/i.test(String(review.status || ""))).length;
-    return '<em class="phase-count"><span>Reviews</span><b>' + confirmed + ' / ' + (dashboardData.phase1 || []).length + '</b></em>';
+    const reviews = dashboardData.phase1 || [];
+    const confirmed = reviews.filter((review) => !isPlaceholder(review)).length;
+    return '<em class="phase-count"><span>Reviews</span><b>' + confirmed + ' / ' + reviews.length + '</b></em>';
   }
   return "";
 }
