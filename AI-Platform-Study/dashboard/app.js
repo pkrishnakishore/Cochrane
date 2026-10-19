@@ -743,6 +743,8 @@ function setView(view) {
 }
 
 function renderDashboard() {
+  renderWorkstreamSnapshot();
+  renderReportPreparation();
   document.getElementById("lastUpdated").textContent = dashboardData.lastUpdated || "Not set";
   renderPhaseStrip();
   renderSelectionPipeline();
@@ -760,6 +762,25 @@ function renderDashboard() {
   renderSearchList();
   renderDetail();
   setView(currentView);
+}
+
+function snapshotStatus(status) {
+  const key = String(status || '').toLowerCase();
+  const kind = ['received', 'delivered', 'complete'].includes(key) ? 'received' : key === 'in progress' ? 'progress' : ['partial', 'pending', 'scheduled'].includes(key) ? 'pending' : 'neutral';
+  return '<span class="snapshot-status snapshot-' + kind + '">' + escapeHtml(status) + '</span>';
+}
+
+function renderWorkstreamSnapshot() {
+  const target = document.getElementById('workstreamSnapshot');
+  const data = dashboardData.workstreamSnapshot;
+  if (!target || !data) return;
+  target.innerHTML = '<div class="table-wrap" tabindex="0" role="region" aria-label="Eight-review workstream matrix"><table class="snapshot-matrix"><thead><tr><th scope="col">Activity</th>' + data.reviews.map(name => '<th scope="col">' + escapeHtml(name) + '</th>').join('') + '</tr></thead><tbody>' + data.sections.map(section => '<tr class="snapshot-section"><th scope="rowgroup" colspan="9">' + escapeHtml(section.name) + '<span>' + escapeHtml(section.lead) + '</span></th></tr>' + section.activities.map(item => '<tr><th scope="row">' + escapeHtml(item.activity) + '</th>' + item.statuses.map(status => '<td>' + snapshotStatus(status) + '</td>').join('') + '</tr>').join('')).join('') + '</tbody></table></div><p class="small-note snapshot-gates">' + escapeHtml(data.gates) + '</p><p class="small-note">' + escapeHtml(data.interpretation) + '</p><details class="snapshot-evidence"><summary>Evidence links</summary><div>' + data.evidence.map(item => '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.label) + '</a>').join('') + '</div></details>';
+}
+
+function renderReportPreparation() {
+  const target = document.getElementById('reportPreparation');
+  if (!target) return;
+  target.innerHTML = '<div class="table-wrap" tabindex="0" role="region" aria-label="Report preparation status"><table class="report-preparation"><thead><tr><th scope="col">Deliverable</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Target / delivered</th><th scope="col">Next action / dependency</th></tr></thead><tbody>' + (dashboardData.reportPreparation || []).map(row => '<tr><th scope="row">' + escapeHtml(row.deliverable) + '</th><td>' + escapeHtml(row.owner) + '</td><td>' + snapshotStatus(row.status) + '</td><td>' + escapeHtml(row.target) + '</td><td>' + escapeHtml(row.nextAction) + '</td></tr>').join('') + '</tbody></table></div>';
 }
 
 function executiveScopeLabel() {
