@@ -28,6 +28,7 @@
       <button class="tab active" data-view="executive" onclick="setView('executive')">Executive</button>
       <button class="tab" data-view="review" onclick="setView('review')">Review Detail</button>
       <button class="tab" data-view="operations" onclick="setView('operations')">Operations</button>
+      <button class="tab" data-view="report" onclick="setView('report')">Report preparation status</button>
       <button class="tab" data-view="meetings" onclick="setView('meetings')">Upcoming Meetings</button>
       <button class="tab" data-view="protocol" onclick="setView('protocol')">Protocol & Governance</button>
       <button class="tab" data-view="resources" onclick="setView('resources')">Resources</button>
@@ -39,7 +40,7 @@
         <div class="head"><div><p class="kicker">CESAR workstreams</p><h2 id="workstreamHeading">Eight-Review Workstream Status Matrix</h2><p class="small-note">As of 18 October 2026. Received = documented; Partial = incomplete or one arm only; Unconfirmed = no review-level evidence; Not ready = not yet submittable.</p></div></div>
         <div id="workstreamSnapshot"></div>
       </section>
-      <section class="panel" data-panel="executive" aria-labelledby="reportPreparationHeading">
+      <section class="panel" data-panel="report" aria-labelledby="reportPreparationHeading" hidden>
         <div class="head"><div><p class="kicker">Reporting milestones</p><h2 id="reportPreparationHeading">Report preparation status</h2><p class="small-note">Delivered outputs, upcoming targets and dependencies as of 18 October 2026.</p></div></div>
         <div id="reportPreparation"></div>
       </section>
