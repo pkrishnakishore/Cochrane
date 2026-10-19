@@ -712,6 +712,30 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     });
 
   const phaseGroups = splitByPhase(reviews);
+  const matrixRows = sheetRows(sheetMap, root, sharedStrings, "Workstream_Status");
+  const matrixHeader = matrixRows.findIndex((row) => row[0] === "ACTIVITY");
+  const workstreamSections = [];
+  let currentWorkstream;
+  for (const row of matrixRows.slice(matrixHeader + 1)) {
+    if (/^\d\s/.test(row[0] || "")) {
+      currentWorkstream = { name: row[0], lead: row[1] || "", activities: [] };
+      workstreamSections.push(currentWorkstream);
+    } else if (currentWorkstream && row.slice(2, 10).some(Boolean)) {
+      currentWorkstream.activities.push({ activity: row[0], statuses: Array.from({ length: 8 }, (_, i) => row[i + 2] || "Unconfirmed") });
+    }
+  }
+  const reportPreparation = tableFromRows(
+    sheetRows(sheetMap, root, sharedStrings, "Report_Preparation"),
+    ["Deliverable", "Owner", "Status", "Target / delivered", "Next action / dependency"]
+  ).filter((row) => row.Deliverable && row.Status).map((row) => ({ deliverable: row.Deliverable, owner: row.Owner, status: row.Status, target: row["Target / delivered"], nextAction: row["Next action / dependency"] }));
+  const workstreamSnapshot = matrixHeader < 0 ? null : {
+    asOf: "2026-10-18",
+    reviews: matrixRows[matrixHeader].slice(2, 10),
+    sections: workstreamSections,
+    gates: (matrixRows.find((row) => String(row[0]).startsWith("KEY GATES")) || [])[0] || "",
+    interpretation: (matrixRows.find((row) => String(row[0]).startsWith("Interpretation:")) || [])[0] || "",
+    evidence: matrixRows.filter((row) => /^https:\/\/mail\.google\.com\//.test(row[1] || "")).map((row) => ({ label: row[0], url: row[1] }))
+  };
   const today = new Date().toISOString().slice(0, 10);
   const lastUpdated = reviews
     .map((review) => review.lastUpdated)
@@ -733,7 +757,9 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
       criticalItems,
       resources,
       upcomingMeetings,
-      newReviews
+      newReviews,
+      workstreamSnapshot,
+      reportPreparation
     },
     counts
   };

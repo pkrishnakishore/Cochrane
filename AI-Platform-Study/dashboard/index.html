@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261018-workstreams-report" />
 </head>
 <body>
   <main class="page">
@@ -35,6 +35,14 @@
     </nav>
 <section class="phase-strip" id="phaseStrip" data-panel="executive"></section>
 
+      <section class="panel" data-panel="executive" aria-labelledby="workstreamHeading">
+        <div class="head"><div><p class="kicker">CESAR workstreams</p><h2 id="workstreamHeading">Eight-Review Workstream Status Matrix</h2><p class="small-note">As of 18 October 2026. Received = documented; Partial = incomplete or one arm only; Unconfirmed = no review-level evidence; Not ready = not yet submittable.</p></div></div>
+        <div id="workstreamSnapshot"></div>
+      </section>
+      <section class="panel" data-panel="executive" aria-labelledby="reportPreparationHeading">
+        <div class="head"><div><p class="kicker">Reporting milestones</p><h2 id="reportPreparationHeading">Report preparation status</h2><p class="small-note">Delivered outputs, upcoming targets and dependencies as of 18 October 2026.</p></div></div>
+        <div id="reportPreparation"></div>
+      </section>
       <section class="panel" data-panel="executive">
         <div class="head">
           <div>
@@ -234,8 +242,8 @@
     </section>
   </main>
 
-  <script src="data.js?v=20261014-email-refresh"></script>
-  <script src="app.js?v=20261014-email-refresh"></script>
+  <script src="data.js?v=20261018-workstreams-report"></script>
+  <script src="app.js?v=20261018-workstreams-report"></script>
 </body>
 </html>
 

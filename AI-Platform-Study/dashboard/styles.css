@@ -5108,3 +5108,23 @@ body {
 .executive-score .milestone-blank strong {
   opacity: 0 !important;
 }
+/* Workbook-backed workstream and reporting snapshots. */
+.snapshot-matrix, .report-preparation { width:100%; border-collapse:collapse; font-size:12px; line-height:1.5; }
+.snapshot-matrix { min-width:1100px; }
+.report-preparation { min-width:850px; }
+.snapshot-matrix th, .snapshot-matrix td, .report-preparation th, .report-preparation td { padding:10px 12px; border-bottom:1px solid #e3e8ee; text-align:left; vertical-align:top; }
+.snapshot-matrix thead th, .report-preparation thead th { background:#17324d; color:white; font-weight:600; }
+.snapshot-matrix tbody th { min-width:200px; font-weight:500; }
+.snapshot-matrix .snapshot-section th { background:#edf2f7; color:#17324d; font-weight:700; }
+.snapshot-section span { margin-left:20px; font-weight:500; }
+.snapshot-status { display:inline-block; padding:3px 7px; border-radius:5px; white-space:nowrap; font-size:11px; font-weight:600; }
+.snapshot-received { background:#e8f4ed; color:#245b3a; }
+.snapshot-progress { background:#e8f0fa; color:#244b7a; }
+.snapshot-pending { background:#fff3da; color:#78540a; }
+.snapshot-neutral { background:#f0f2f5; color:#586273; }
+.snapshot-gates { margin-top:16px; font-weight:600; }
+.snapshot-evidence { margin-top:14px; font-size:12px; }
+.snapshot-evidence summary { cursor:pointer; font-weight:600; }
+.snapshot-evidence div { display:flex; gap:12px 20px; flex-wrap:wrap; margin-top:12px; }
+.report-preparation tbody th { min-width:170px; font-weight:600; }
+.report-preparation td:last-child { min-width:280px; }
