@@ -98,10 +98,10 @@ function unzipWorkbook(workbookPath) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "cochrane-dashboard-xlsx-"));
   const zipPath = path.join(tmp, "workbook.zip");
   fs.copyFileSync(workbookPath, zipPath);
+  const safeZip = zipPath.replace(/'/g, "''");
+  const safeTmp = tmp.replace(/'/g, "''");
 
   try {
-    const safeZip = zipPath.replace(/'/g, "''");
-    const safeTmp = tmp.replace(/'/g, "''");
     childProcess.execFileSync("powershell", [
       "-NoProfile",
       "-Command",
@@ -109,9 +109,17 @@ function unzipWorkbook(workbookPath) {
     ], { stdio: "ignore" });
   } catch {
     try {
-      childProcess.execFileSync("unzip", ["-q", "-o", zipPath, "-d", tmp], { stdio: "ignore" });
-    } catch {
-      throw new Error("Could not unzip workbook. Install PowerShell or unzip.");
+      childProcess.execFileSync("powershell", [
+        "-NoProfile",
+        "-Command",
+        `Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory('${safeZip}', '${safeTmp}')`
+      ], { stdio: "pipe" });
+    } catch (dotNetError) {
+      try {
+        childProcess.execFileSync("unzip", ["-q", "-o", zipPath, "-d", tmp], { stdio: "ignore" });
+      } catch (error) {
+        throw new Error(`Could not unzip workbook. ${String(dotNetError.stderr || dotNetError.message).trim()}; ${String(error.stderr || error.message).trim()}`);
+      }
     }
   }
 
@@ -728,21 +736,20 @@ function buildReviewBasedDashboard(sheetMap, root, sharedStrings) {
     sheetRows(sheetMap, root, sharedStrings, "Report_Preparation"),
     ["Deliverable", "Owner", "Status", "Target / delivered", "Next action / dependency"]
   ).filter((row) => row.Deliverable && row.Status).map((row) => ({ deliverable: row.Deliverable, owner: row.Owner, status: row.Status, target: row["Target / delivered"], nextAction: row["Next action / dependency"] }));
-  const workstreamSnapshot = matrixHeader < 0 ? null : {
-    asOf: "2026-10-18",
-    reviews: matrixRows[matrixHeader].slice(2, 10),
-    sections: workstreamSections,
-    gates: (matrixRows.find((row) => String(row[0]).startsWith("KEY GATES")) || [])[0] || "",
-    interpretation: (matrixRows.find((row) => String(row[0]).startsWith("Interpretation:")) || [])[0] || "",
-    evidence: matrixRows.filter((row) => /^https:\/\/mail\.google\.com\//.test(row[1] || "")).map((row) => ({ label: row[0], url: row[1] }))
-  };
   const today = new Date().toISOString().slice(0, 10);
   const lastUpdated = reviews
     .map((review) => review.lastUpdated)
     .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
     .sort()
     .at(-1) || today;
-
+  const workstreamSnapshot = matrixHeader < 0 ? null : {
+    asOf: lastUpdated,
+    reviews: matrixRows[matrixHeader].slice(2, 10),
+    sections: workstreamSections,
+    gates: (matrixRows.find((row) => String(row[0]).startsWith("KEY GATES")) || [])[0] || "",
+    interpretation: (matrixRows.find((row) => String(row[0]).startsWith("Interpretation:")) || [])[0] || "",
+    evidence: matrixRows.filter((row) => /^https:\/\/mail\.google\.com\//.test(row[1] || "")).map((row) => ({ label: row[0], url: row[1] }))
+  };
   return {
     data: {
       lastUpdated,
