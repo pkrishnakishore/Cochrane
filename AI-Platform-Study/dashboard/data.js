@@ -2,7 +2,7 @@
 // GENERATED FROM cochrane_dashboard_backend_template.xlsx. Do not edit generated data by hand.
 
 const dashboardData = {
-  "lastUpdated": "2026-10-28",
+  "lastUpdated": "2026-11-01",
   "projectName": "Cochrane AI Platform Study",
   "dashboardSubtitle": "Executive and Operations Dashboard",
   "timelineReference": {
@@ -19,13 +19,13 @@ const dashboardData = {
         "phase1",
         "Phase 1",
         "Mid April to mid-December 2026",
-        "Complete active reviews; Vitamin C and LNS screening starts await confirmation; Orthodontic NK is ready while editorial access remains pending"
+        "Human Milk conventional extraction complete; Orthodontic manual abstract screening underway; Vitamin C and LNS starts remain unconfirmed"
       ],
       [
         "governance",
         "Analysis",
         "End June",
-        "BP adjudication reconciliation and 2x2 analysis underway; Psoriasis nine-study adjudication partially complete; interim data handoff targeted for 30 October"
+        "BP screening and extraction results shared on 30 October; Psoriasis adjudication remains incomplete; Fruit & Veg reference standard pending"
       ],
       [
         "phase2",
@@ -49,12 +49,12 @@ const dashboardData = {
       {
         "phase": "Phase 1",
         "window": "Mid April to mid-December 2026",
-        "note": "Complete active reviews; Vitamin C and LNS screening starts await confirmation; Orthodontic NK is ready while editorial access remains pending"
+        "note": "Human Milk conventional extraction complete; Orthodontic manual abstract screening underway; Vitamin C and LNS starts remain unconfirmed"
       },
       {
         "phase": "Analysis",
         "window": "End June",
-        "note": "BP adjudication reconciliation and 2x2 analysis underway; Psoriasis nine-study adjudication partially complete; interim data handoff targeted for 30 October"
+        "note": "BP screening and extraction results shared on 30 October; Psoriasis adjudication remains incomplete; Fruit & Veg reference standard pending"
       },
       {
         "phase": "Phase 2",
@@ -552,14 +552,14 @@ const dashboardData = {
       "title": "Blood pressure targets for hypertension in people with diabetes mellitus",
       "shortName": "BP Targets",
       "phase": "Phase 1",
-      "status": "BP adjudication reconciliation and 2x2 analysis underway",
+      "status": "BP screening and extraction results shared; analysis validation ongoing",
       "tool": "Laser AI",
       "lead": "Doreen Larvie",
       "risk": "High",
-      "currentStage": "Dominic completed assigned BP adjudication; Sean is building 2x2 tables while final reconciliation continues",
+      "currentStage": "Sean shared BP screening and data-extraction results with Gerald and Afroditi on 30 October",
       "currentUpdate": "Doreen and James supplied responses on 22 October; unsupported data is to be coded as a false positive",
-      "nextAction": "Resolve any remaining panel rows, finalize 2x2 tables and verify automated-arm RIS and output",
-      "lastUpdated": "2026-10-28",
+      "nextAction": "Confirm final adjudication, validate 2x2 analysis and automated-arm output",
+      "lastUpdated": "2026-10-30",
       "communicationSupport": "Doreen and James supplied responses on 22 October; unsupported data is to be coded as a false positive",
       "communicationLog": [
         {
@@ -636,7 +636,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Adjudication reconciliation and 2x2 analysis underway"
+          "status": "Results handed over; analysis validation underway"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -714,9 +714,9 @@ const dashboardData = {
           "risk": "High",
           "due": "2026-10-30",
           "dependency": "Adjudicated rows and discrepancy coding",
-          "communication": "Code unsupported data as false positives and prepare tables for available adjudicated rows",
+          "communication": "BP screening and extraction results shared on 30 October; confirm the final 2x2 analysis",
           "source": "Email",
-          "sourceDate": "2026-10-28"
+          "sourceDate": "2026-10-30"
         },
         {
           "id": "task-phase1-01-007",
@@ -838,26 +838,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Dominic completed assigned BP adjudication; Sean is building 2x2 tables while final reconciliation continues",
+        "plannedGate": "Sean shared BP screening and data-extraction results with Gerald and Afroditi on 30 October",
         "targetDate": "2026-10-30 - interim data target",
-        "variance": "RIS concern appears resolved; analysis is underway, but final adjudicated outputs and automated results are pending",
+        "variance": "Results have been handed over; final validation and automated-arm results are still pending",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "BP adjudication reconciliation and 2x2 analysis underway",
-          "state": "BP adjudication reconciliation and 2x2 analysis underway"
+          "value": "BP screening and extraction results shared; analysis validation ongoing",
+          "state": "BP screening and extraction results shared; analysis validation ongoing"
         },
         {
           "label": "Target",
           "value": "2026-10-30 - interim data target",
-          "state": "BP adjudication reconciliation and 2x2 analysis underway"
+          "state": "BP screening and extraction results shared; analysis validation ongoing"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "BP adjudication reconciliation and 2x2 analysis underway"
+          "state": "BP screening and extraction results shared; analysis validation ongoing"
         }
       ]
     },
@@ -871,10 +871,10 @@ const dashboardData = {
       "lead": "Laurence Le Cleach / Sivem Afach",
       "risk": "High",
       "currentStage": "Nine study reports were distributed to the panel; some have completed all three adjudication rounds",
-      "currentUpdate": "Other study reports remain pending while Sean prepares extraction analysis in parallel",
-      "nextAction": "Complete the remaining adjudication rounds and final consensus columns",
-      "lastUpdated": "2026-10-27",
-      "communicationSupport": "Other study reports remain pending while Sean prepares extraction analysis in parallel",
+      "currentUpdate": "Sean reported extraction adjudication is still ongoing; no meaningful extraction results were ready on 30 October",
+      "nextAction": "Complete panel consensus, exclude quality-of-life rows 280-283 from AI-study analysis and assess extraction accuracy",
+      "lastUpdated": "2026-10-30",
+      "communicationSupport": "Sean reported extraction adjudication is still ongoing; no meaningful extraction results were ready on 30 October",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -1133,7 +1133,7 @@ const dashboardData = {
         "plannedWindow": "",
         "plannedGate": "Nine study reports were distributed to the panel; some have completed all three adjudication rounds",
         "targetDate": "End October 2026 - adjudication target",
-        "variance": "Screening metrics are complete; extraction results still depend on panel consensus",
+        "variance": "Screening metrics are complete; extraction results still await final panel consensus",
         "assessment": "In Progress"
       },
       "timelineGates": [
@@ -1159,15 +1159,15 @@ const dashboardData = {
       "title": "Interventions for increasing fruit and vegetable consumption in children aged five years and under",
       "shortName": "Fruit & Veg",
       "phase": "Phase 1",
-      "status": "Both full-text arms have screening decisions; reconciliation and extraction selection pending",
+      "status": "Both full-text arms have decisions; reference standard pending; extraction tasks assigned",
       "tool": "Laser AI",
       "lead": "Rebecca K. Hodder",
       "risk": "Medium",
-      "currentStage": "Laser AI full-text screening complete; conventional team consolidated decisions on 27 October",
-      "currentUpdate": "Conventional included/excluded RIS files and screening time sheets received; six oversized PDFs lacked model suggestions",
-      "nextAction": "Reconcile both full-text sets, select extraction studies and finalize the extraction form",
-      "lastUpdated": "2026-10-28",
-      "communicationSupport": "Conventional included/excluded RIS files and screening time sheets received; six oversized PDFs lacked model suggestions",
+      "currentStage": "Full-text decisions are available from both arms; reference-standard reconciliation remains open",
+      "currentUpdate": "Laser AI extraction tasks were assigned on 30 October, but the study set and extraction start are unconfirmed",
+      "nextAction": "Establish the full-text reference standard and extraction study set, then confirm extraction start",
+      "lastUpdated": "2026-10-30",
+      "communicationSupport": "Laser AI extraction tasks were assigned on 30 October, but the study set and extraction start are unconfirmed",
       "communicationLog": [
         {
           "id": "comm-phase1-03-004",
@@ -1271,7 +1271,7 @@ const dashboardData = {
           "name": "Data Extraction / Analysis",
           "human": 0,
           "ai": 0,
-          "status": "Preparation Under Review"
+          "status": "Setup assigned; extraction unconfirmed"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -1487,26 +1487,26 @@ const dashboardData = {
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Laser AI full-text screening complete; conventional team consolidated decisions on 27 October",
+        "plannedGate": "Full-text decisions are available from both arms; reference-standard reconciliation remains open",
         "targetDate": "Immediate - full-text reconciliation",
-        "variance": "Screening decisions are available from both arms; extraction has not started",
+        "variance": "No reference standard yet; extraction tasks assigned but actual extraction not confirmed",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Both full-text arms have screening decisions; reconciliation and extraction selection pending",
-          "state": "Both full-text arms have screening decisions; reconciliation and extraction selection pending"
+          "value": "Both full-text arms have decisions; reference standard pending; extraction tasks assigned",
+          "state": "Both full-text arms have decisions; reference standard pending; extraction tasks assigned"
         },
         {
           "label": "Target",
           "value": "Immediate - full-text reconciliation",
-          "state": "Both full-text arms have screening decisions; reconciliation and extraction selection pending"
+          "state": "Both full-text arms have decisions; reference standard pending; extraction tasks assigned"
         },
         {
           "label": "Tool",
           "value": "Laser AI",
-          "state": "Both full-text arms have screening decisions; reconciliation and extraction selection pending"
+          "state": "Both full-text arms have decisions; reference standard pending; extraction tasks assigned"
         }
       ]
     },
@@ -2002,15 +2002,15 @@ const dashboardData = {
       "title": "Human milk-derived versus bovine milk-derived fortifier for prevention of mortality and morbidity in preterm neonates",
       "shortName": "Human Milk Fortifier",
       "phase": "Phase 1",
-      "status": "Conventional full-text complete; NK AI rerun and human screening ready",
+      "status": "Both arms have screening data recorded; conventional extraction complete",
       "tool": "Nested Knowledge",
       "lead": "Mohan Pammi",
       "risk": "High",
-      "currentStage": "Murali completed conventional full-text screening; Nicholas uploaded full texts to NK",
-      "currentUpdate": "NK AI screening was rerun after criteria changes on 26 October; Mohan can now screen",
-      "nextAction": "Confirm NK human full-text screening, reconcile both arms and collect remaining time sheets",
-      "lastUpdated": "2026-10-28",
-      "communicationSupport": "NK AI screening was rerun after criteria changes on 26 October; Mohan can now screen",
+      "currentStage": "Gerald confirmed abstract and full-text screening data were recorded for both groups",
+      "currentUpdate": "Murali completed conventional data extraction and confirmed blinding; AI-arm extraction progress was not reported",
+      "nextAction": "Confirm AI-arm extraction status, preserve blinding, collect time sheets and prepare separate outputs",
+      "lastUpdated": "2026-11-01",
+      "communicationSupport": "Murali completed conventional data extraction and confirmed blinding; AI-arm extraction progress was not reported",
       "communicationLog": [],
       "files": {
         "RIS": true,
@@ -2036,14 +2036,14 @@ const dashboardData = {
         {
           "name": "Full-text Screening",
           "human": 100,
-          "ai": 0,
-          "status": "AI ready / human complete"
+          "ai": 100,
+          "status": "Screening data recorded in both arms"
         },
         {
           "name": "Data Extraction / Analysis",
-          "human": 0,
+          "human": 100,
           "ai": 0,
-          "status": "Not Started"
+          "status": "Conventional extraction complete; AI status unconfirmed"
         },
         {
           "name": "Review Workflow Status: Full 63 Actions",
@@ -2091,15 +2091,15 @@ const dashboardData = {
       "tasks": [
         {
           "id": "task-phase1-07-001",
-          "task": "Confirm NK human full-text screening",
-          "owner": "Mohan / Nicholas / Meghan",
+          "task": "Confirm AI-arm extraction status and time sheets",
+          "owner": "Mohan / Nicholas / Meghan / Amin",
           "status": "In Progress",
           "risk": "High",
-          "due": "2026-10-31",
-          "dependency": "NK full texts and AI suggestions",
-          "communication": "NK setup and AI rerun complete; confirm Mohan has screened the records",
+          "due": "Immediate",
+          "dependency": "Separate AI-arm extraction and reviewer time logs",
+          "communication": "Murali completed conventional extraction; confirm AI-arm progress and collect remaining time sheets",
           "source": "Project tracking",
-          "sourceDate": "2026-10-28"
+          "sourceDate": "2026-11-01"
         },
         {
           "id": "task-phase1-07-002",
@@ -2115,15 +2115,15 @@ const dashboardData = {
         },
         {
           "id": "task-phase1-07-003",
-          "task": "Harmonize full-text decisions across both arms",
+          "task": "Confirm screening outputs and extraction data handoff",
           "owner": "Sean / Murali / Mohan",
           "status": "Pending",
           "risk": "High",
           "due": "TBD",
-          "dependency": "NK human screening",
-          "communication": "Conventional screening complete; compare against final NK decisions",
+          "dependency": "Recorded screening data and separate extraction arms",
+          "communication": "Both arms have screening data recorded; conventional extraction complete, AI-arm progress unconfirmed",
           "source": "Project tracking",
-          "sourceDate": "2026-10-28"
+          "sourceDate": "2026-11-01"
         }
       ],
       "criticalItems": [],
@@ -2132,8 +2132,8 @@ const dashboardData = {
         "onboarding": "Complete",
         "setup": "Complete",
         "abstract": "Complete",
-        "fullText": "Active",
-        "extraction": "",
+        "fullText": "Complete",
+        "extraction": "Active",
         "analysis": ""
       },
       "workflowStatus": {
@@ -2169,7 +2169,7 @@ const dashboardData = {
         "w30": "Complete",
         "w31": "Complete",
         "w32": "Complete",
-        "w33": "Ready",
+        "w33": "Complete",
         "w34": "Not Started",
         "w35": "Not Started",
         "w36": "Not Started",
@@ -2183,8 +2183,8 @@ const dashboardData = {
         "w44": "Not Started",
         "w45": "Not Started",
         "w46": "Not Started",
-        "w47": "Not Started",
-        "w48": "Not Started",
+        "w47": "Complete",
+        "w48": "Pending",
         "w49": "Not Started",
         "w50": "Not Started",
         "w51": "Not Started",
@@ -2201,34 +2201,34 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Confirm NK human full-text screening": "Project tracking",
+        "Confirm AI-arm extraction status and time sheets": "Project tracking",
         "Collect remaining Human Milk time sheets": "Project tracking",
-        "Harmonize full-text decisions across both arms": "Project tracking",
+        "Confirm screening outputs and extraction data handoff": "Project tracking",
         "2026-10-28": "task-phase1-07-001",
         "High": "Not Started"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Murali completed conventional full-text screening; Nicholas uploaded full texts to NK",
-        "targetDate": "2026-10-31 - full-text target",
-        "variance": "Conventional arm complete; NK reviewer screening remains to be confirmed",
+        "plannedGate": "Gerald confirmed abstract and full-text screening data were recorded for both groups",
+        "targetDate": "Immediate - AI extraction status",
+        "variance": "Conventional extraction complete; AI-arm extraction and data handoff unconfirmed",
         "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "Conventional full-text complete; NK AI rerun and human screening ready",
-          "state": "Conventional full-text complete; NK AI rerun and human screening ready"
+          "value": "Both arms have screening data recorded; conventional extraction complete",
+          "state": "Both arms have screening data recorded; conventional extraction complete"
         },
         {
           "label": "Target",
-          "value": "2026-10-31 - full-text target",
-          "state": "Conventional full-text complete; NK AI rerun and human screening ready"
+          "value": "Immediate - AI extraction status",
+          "state": "Both arms have screening data recorded; conventional extraction complete"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "Conventional full-text complete; NK AI rerun and human screening ready"
+          "state": "Both arms have screening data recorded; conventional extraction complete"
         }
       ]
     },
@@ -2448,15 +2448,15 @@ const dashboardData = {
       "title": "Retention procedures for stabilising tooth position after treatment with orthodontic braces",
       "shortName": "Orthodontic Retention",
       "phase": "Phase 1",
-      "status": "NK abstract setup complete; conventional screening authorized; editorial access pending",
+      "status": "Conventional abstract screening underway; NK human reviewer handoff pending",
       "tool": "Nested Knowledge",
       "lead": "Álvaro Limones / Concepción Martín Álvaro",
       "risk": "High",
-      "currentStage": "Nicholas configured Nested Knowledge and ran AI screening on 23 October",
-      "currentUpdate": "The conventional team may screen independently in Excel while Covidence and RevMan access are pending",
-      "nextAction": "Confirm reviewer allocation and both screening starts; resolve editorial access",
-      "lastUpdated": "2026-10-23",
-      "communicationSupport": "The conventional team may screen independently in Excel while Covidence and RevMan access are pending",
+      "currentStage": "Alvaro and Ignacio are manually screening titles and abstracts in Excel",
+      "currentUpdate": "Conchita confirmed Nested Knowledge access; AI suggestions ran, but human AI-assisted screening start is unconfirmed",
+      "nextAction": "Complete NK reviewer handoff, confirm AI-assisted screening start and resolve Covidence/RevMan access",
+      "lastUpdated": "2026-10-30",
+      "communicationSupport": "Conchita confirmed Nested Knowledge access; AI suggestions ran, but human AI-assisted screening start is unconfirmed",
       "communicationLog": [
         {
           "id": "comm-phase1-09-001",
@@ -2468,7 +2468,7 @@ const dashboardData = {
           "status": "In Progress",
           "summary": "NK abstract setup and AI run complete; manual conventional screening authorized",
           "linkedTaskId": "task-phase1-09-001",
-          "linkedAction": "Confirm screening starts and editorial access",
+          "linkedAction": "Complete NK reviewer handoff and editorial access",
           "sourceType": "Project tracking",
           "sourceLink": ""
         }
@@ -2492,7 +2492,7 @@ const dashboardData = {
           "name": "Abstract Screening",
           "human": 0,
           "ai": 0,
-          "status": "Ready"
+          "status": "Conventional in progress; AI human start unconfirmed"
         },
         {
           "name": "Full-text Screening",
@@ -2540,15 +2540,15 @@ const dashboardData = {
       "tasks": [
         {
           "id": "task-phase1-09-001",
-          "task": "Confirm screening starts and editorial access",
+          "task": "Complete NK reviewer handoff and editorial access",
           "owner": "Conchita / Álvaro / Nicholas / Ella",
           "status": "In Progress",
           "risk": "High",
           "due": "Immediate",
-          "dependency": "Reviewer allocation and Covidence/RevMan access",
-          "communication": "NK is configured; conventional screening may proceed manually while editorial access is pending",
+          "dependency": "AI-assisted reviewer instructions and Covidence/RevMan access",
+          "communication": "Manual screening is underway; Conchita has NK access and requested instructions for human screening",
           "source": "Project tracking",
-          "sourceDate": "2026-10-23"
+          "sourceDate": "2026-10-30"
         },
         {
           "id": "Covidence and RevMan access pending",
@@ -2592,7 +2592,7 @@ const dashboardData = {
         "w14": "Not Started",
         "w15": "Complete",
         "w16": "Complete",
-        "w17": "Ready",
+        "w17": "In Progress",
         "w18": "Ready",
         "w19": "Not Started",
         "w20": "Not Started",
@@ -2640,32 +2640,32 @@ const dashboardData = {
         "w62": "Not Started",
         "w63": "Not Started",
         "Task": "Source",
-        "Confirm screening starts and editorial access": "Project tracking",
+        "Complete NK reviewer handoff and editorial access": "Project tracking",
         "2026-10-23": "task-phase1-09-001",
         "Proposed reviewer groups, final RIS, protocol and criteria received": "Email"
       },
       "tracker": {
         "plannedWindow": "",
-        "plannedGate": "Nicholas configured Nested Knowledge and ran AI screening on 23 October",
-        "targetDate": "Immediate - screening start confirmation",
-        "variance": "Both arms are authorized to begin; no reviewer start has been confirmed",
-        "assessment": "Ready"
+        "plannedGate": "Alvaro and Ignacio are manually screening titles and abstracts in Excel",
+        "targetDate": "Immediate - NK reviewer handoff",
+        "variance": "Conventional screening is underway; NK human reviewer instructions and editorial access remain pending",
+        "assessment": "In Progress"
       },
       "timelineGates": [
         {
           "label": "Status",
-          "value": "NK abstract setup complete; conventional screening authorized; editorial access pending",
-          "state": "NK abstract setup complete; conventional screening authorized; editorial access pending"
+          "value": "Conventional abstract screening underway; NK human reviewer handoff pending",
+          "state": "Conventional abstract screening underway; NK human reviewer handoff pending"
         },
         {
           "label": "Target",
-          "value": "Immediate - screening start confirmation",
-          "state": "NK abstract setup complete; conventional screening authorized; editorial access pending"
+          "value": "Immediate - NK reviewer handoff",
+          "state": "Conventional abstract screening underway; NK human reviewer handoff pending"
         },
         {
           "label": "Tool",
           "value": "Nested Knowledge",
-          "state": "NK abstract setup complete; conventional screening authorized; editorial access pending"
+          "state": "Conventional abstract screening underway; NK human reviewer handoff pending"
         }
       ]
     }
@@ -2903,9 +2903,9 @@ const dashboardData = {
       "risk": "High",
       "due": "2026-10-30",
       "dependency": "Adjudicated rows and discrepancy coding",
-      "communication": "Code unsupported data as false positives and prepare tables for available adjudicated rows",
+      "communication": "BP screening and extraction results shared on 30 October; confirm the final 2x2 analysis",
       "source": "Email",
-      "sourceDate": "2026-10-28",
+      "sourceDate": "2026-10-30",
       "linkedReviewId": "phase1-01"
     },
     {
@@ -3225,15 +3225,15 @@ const dashboardData = {
     },
     {
       "id": "task-phase1-07-001",
-      "task": "Confirm NK human full-text screening",
-      "owner": "Mohan / Nicholas / Meghan",
+      "task": "Confirm AI-arm extraction status and time sheets",
+      "owner": "Mohan / Nicholas / Meghan / Amin",
       "status": "In Progress",
       "risk": "High",
-      "due": "2026-10-31",
-      "dependency": "NK full texts and AI suggestions",
-      "communication": "NK setup and AI rerun complete; confirm Mohan has screened the records",
+      "due": "Immediate",
+      "dependency": "Separate AI-arm extraction and reviewer time logs",
+      "communication": "Murali completed conventional extraction; confirm AI-arm progress and collect remaining time sheets",
       "source": "Project tracking",
-      "sourceDate": "2026-10-28",
+      "sourceDate": "2026-11-01",
       "linkedReviewId": "phase1-07"
     },
     {
@@ -3251,15 +3251,15 @@ const dashboardData = {
     },
     {
       "id": "task-phase1-07-003",
-      "task": "Harmonize full-text decisions across both arms",
+      "task": "Confirm screening outputs and extraction data handoff",
       "owner": "Sean / Murali / Mohan",
       "status": "Pending",
       "risk": "High",
       "due": "TBD",
-      "dependency": "NK human screening",
-      "communication": "Conventional screening complete; compare against final NK decisions",
+      "dependency": "Recorded screening data and separate extraction arms",
+      "communication": "Both arms have screening data recorded; conventional extraction complete, AI-arm progress unconfirmed",
       "source": "Project tracking",
-      "sourceDate": "2026-10-28",
+      "sourceDate": "2026-11-01",
       "linkedReviewId": "phase1-07"
     },
     {
@@ -3277,15 +3277,15 @@ const dashboardData = {
     },
     {
       "id": "task-phase1-09-001",
-      "task": "Confirm screening starts and editorial access",
+      "task": "Complete NK reviewer handoff and editorial access",
       "owner": "Conchita / Álvaro / Nicholas / Ella",
       "status": "In Progress",
       "risk": "High",
       "due": "Immediate",
-      "dependency": "Reviewer allocation and Covidence/RevMan access",
-      "communication": "NK is configured; conventional screening may proceed manually while editorial access is pending",
+      "dependency": "AI-assisted reviewer instructions and Covidence/RevMan access",
+      "communication": "Manual screening is underway; Conchita has NK access and requested instructions for human screening",
       "source": "Project tracking",
-      "sourceDate": "2026-10-23",
+      "sourceDate": "2026-10-30",
       "linkedReviewId": "phase1-09"
     },
     {
@@ -3390,7 +3390,7 @@ const dashboardData = {
       "mitigation": "",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-01-2",
@@ -3405,7 +3405,7 @@ const dashboardData = {
       "mitigation": "Needed to confirm whether AI and conventional workflows are aligned before next stage",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-01-3",
@@ -3420,7 +3420,7 @@ const dashboardData = {
       "mitigation": "Required for study analysis and comparison",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-02-4",
@@ -3435,7 +3435,7 @@ const dashboardData = {
       "mitigation": "Needed before AI-assisted data extraction begins in NK",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-27"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-02-5",
@@ -3450,7 +3450,7 @@ const dashboardData = {
       "mitigation": "Conventional outputs need to match agreed standalone data item structure",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-27"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-03-6",
@@ -3465,7 +3465,7 @@ const dashboardData = {
       "mitigation": "Conventional RIS files received; compare with Laser AI results",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-03-7",
@@ -3480,7 +3480,7 @@ const dashboardData = {
       "mitigation": "Extraction has not started; agree the final included studies first",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-03-8",
@@ -3495,7 +3495,7 @@ const dashboardData = {
       "mitigation": "Submitted sheets include screening and coordination activities",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-28"
+      "sourceDate": "2026-10-30"
     },
     {
       "id": "critical-phase1-05-9",
@@ -3525,7 +3525,7 @@ const dashboardData = {
       "mitigation": "Confirm the reviewer allocation, configure NK and activate Covidence/RevMan",
       "impact": "",
       "source": "Review sheet",
-      "sourceDate": "2026-10-23"
+      "sourceDate": "2026-10-30"
     }
   ],
   "resources": [
@@ -3920,7 +3920,7 @@ const dashboardData = {
     }
   ],
   "workstreamSnapshot": {
-    "asOf": "2026-10-28",
+    "asOf": "2026-11-01",
     "reviews": [
       "Blood Pressure",
       "Psoriasis",
@@ -3946,7 +3946,7 @@ const dashboardData = {
               "Pending",
               "Not ready",
               "Pending",
-              "Not ready"
+              "Pending"
             ]
           },
           {
@@ -4178,7 +4178,7 @@ const dashboardData = {
               "Partial",
               "Pending",
               "Pending",
-              "Not ready"
+              "Pending"
             ]
           },
           {
@@ -4200,7 +4200,7 @@ const dashboardData = {
               "Received",
               "Received",
               "Not ready",
-              "Not ready",
+              "Partial",
               "Not ready",
               "Not ready",
               "Not ready",
@@ -4275,7 +4275,7 @@ const dashboardData = {
           {
             "activity": "Data handed over",
             "statuses": [
-              "Partial",
+              "Received",
               "Partial",
               "Not ready",
               "Not ready",
@@ -4372,16 +4372,16 @@ const dashboardData = {
         ]
       }
     ],
-    "gates": "KEY GATES  |  21 OCT: automation scope discussed   •   29 OCT: Afroditi handover target   •   30 OCT: interim data target   •   20 NOV: results to Gerald   •   EARLY DEC: Colloquium",
-    "interpretation": "Interpretation: BP 2x2 analysis underway; Psoriasis adjudication partly complete; Fruit & Veg screening time sheets and conventional RIS received. Unconfirmed reviewer starts remain unconfirmed.",
+    "gates": "KEY GATES: 30 OCT BP results shared; 31 OCT partial time-on-task data shared; 20 NOV results to Gerald; EARLY DEC Colloquium",
+    "interpretation": "Interpretation: BP results handed over; Psoriasis adjudication incomplete; Fruit & Veg reference standard missing; Human Milk conventional extraction complete; Orthodontic manual screening underway. Consolidated time data remain incomplete.",
     "evidence": [
       {
         "label": "Blood Pressure",
-        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a181bbc70f15cb0"
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a18d5f54a19bc79"
       },
       {
         "label": "Psoriasis",
-        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a17f33eb03785e9"
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a18ccfc49d4002f"
       },
       {
         "label": "Fruit & Veg",
@@ -4389,7 +4389,7 @@ const dashboardData = {
       },
       {
         "label": "Human Milk",
-        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a177871cbbaea66"
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a196fade5198b00"
       },
       {
         "label": "Probiotics",
@@ -4405,7 +4405,7 @@ const dashboardData = {
       },
       {
         "label": "Retention",
-        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a168758afa3adf4"
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a18c5697d82ecc8"
       },
       {
         "label": "Usability / receipts",
@@ -4421,7 +4421,7 @@ const dashboardData = {
       },
       {
         "label": "Sean / processing",
-        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a181bebc7f7dbac"
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a18d5f54a19bc79"
       },
       {
         "label": "Afroditi / analysis",
@@ -4430,6 +4430,14 @@ const dashboardData = {
       {
         "label": "Downstream",
         "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a1360debbf427a9"
+      },
+      {
+        "label": "Time on task",
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a191b387c3b2346"
+      },
+      {
+        "label": "Analysis follow-up",
+        "url": "https://mail.google.com/mail/u/?authuser=kp3076%40columbia.edu#all/1a19859a52076cb4"
       }
     ]
   },
@@ -4451,23 +4459,23 @@ const dashboardData = {
     {
       "deliverable": "Analysis handover",
       "owner": "Sean / Afroditi",
-      "status": "Pending",
+      "status": "Partial",
       "target": "29 Oct 2026",
-      "nextAction": "Sean is preparing BP 2x2 tables; Psoriasis panel adjudication is partial. Hand over only verified data."
+      "nextAction": "Sean shared BP screening and extraction results on 30 October. Psoriasis adjudication remains incomplete and Fruit & Veg lacks a reference standard. Check with Afroditi for missing group data."
     },
     {
       "deliverable": "Interim data package",
       "owner": "Sean / workstream leads",
-      "status": "Pending",
+      "status": "Partial",
       "target": "31 Oct 2026",
-      "nextAction": "Prepare available fully adjudicated data by 30 October; incomplete review outputs remain pending."
+      "nextAction": "BP results and an incomplete consolidated time-on-task dataset were shared. A complete interim package and missing group submissions remain unconfirmed."
     },
     {
       "deliverable": "Results to Gerald",
       "owner": "Afroditi / workstream leads",
       "status": "Not ready",
       "target": "20 Nov 2026",
-      "nextAction": "Finalize statistical results and incorporate time-on-task, usability, automation and downstream-impact inputs."
+      "nextAction": "Use verified BP results and partial time-on-task data; obtain remaining group submissions before final analysis."
     },
     {
       "deliverable": "Colloquium report / presentation",
